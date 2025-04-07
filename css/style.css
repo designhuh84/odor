@@ -1,1 +1,433 @@
-/*# sourceMappingURL=style.css.map */
+@import url(../fonts/pretendard.css);
+:root {
+  font-size: 16px;
+  --primary: #359735;
+  --primary-hover: #14B814;
+  --primary-press: #178217;
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard";
+  font-weight: 400;
+  color: #000;
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+button * {
+  cursor: inherit;
+}
+
+label {
+  font: inherit;
+  color: inherit;
+}
+
+input {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+.inner {
+  width: 100%;
+  max-width: 91.4375rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+global-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4.75rem;
+  background-color: var(--primary);
+  padding: 0 3rem;
+}
+global-header .logo {
+  position: absolute;
+  top: 50%;
+  left: 3rem;
+  transform: translateY(-50%);
+  height: 1.5rem;
+}
+
+.btn-header-login {
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../image/user.svg);
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+nav a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFF;
+}
+
+golbal-footer {
+  display: block;
+  width: 100%;
+  background-color: #1F2F47;
+}
+golbal-footer .inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem;
+}
+golbal-footer .footer-logo {
+  width: 10.75rem;
+}
+golbal-footer .footer-logo img {
+  width: 100%;
+}
+golbal-footer .info {
+  font-size: 0.875rem;
+  line-height: 140%;
+  color: #FFF;
+}
+golbal-footer .footer-terms {
+  margin-left: auto;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #FFF;
+}
+
+.main-banner {
+  width: 100%;
+  height: 40rem;
+  overflow: hidden;
+}
+.main-banner .inner {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.main-banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.main-banner-img .mb-01 {
+  width: 100%;
+  height: 100%;
+  background-image: url(../image/main-banner.png);
+}
+
+.main-banner-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.37rem 3.63rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  max-width: 49rem;
+  height: 32.75rem;
+}
+.main-banner-contents .main-text {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%;
+}
+.main-banner-contents .main-text span {
+  color: var(--primary);
+}
+.main-banner-contents .search {
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  margin-top: 0.75rem;
+}
+.main-banner-contents .search input {
+  display: block;
+  flex-grow: 1;
+  border-radius: 0.5rem 0 0 0.5rem;
+  height: 100%;
+  padding: 0 2.38rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: 0;
+}
+.main-banner-contents .search input:focus {
+  outline: none;
+}
+.main-banner-contents .search input::-moz-placeholder {
+  color: #A3C2A3;
+}
+.main-banner-contents .search input::placeholder {
+  color: #A3C2A3;
+}
+.main-banner-contents .search .btn-search {
+  width: 6.75rem;
+  height: 100%;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background-color: var(--primary);
+  background-image: url(../image/Magnifer.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: center;
+}
+.main-banner-contents .search .btn-search:hover {
+  background-color: var(--primary-hover);
+}
+.main-banner-contents .search .btn-search:active {
+  background-color: var(--primary-press);
+}
+.main-banner-contents .row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 3.63rem;
+}
+.main-banner-contents .row button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.62rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 6rem;
+  background-color: var(--primary);
+}
+.main-banner-contents .row button img {
+  width: 3.5rem;
+}
+.main-banner-contents .row button label {
+  font-size: 1.5rem;
+  line-height: 100%;
+  color: #FFF;
+}
+.main-banner-contents .row button:hover {
+  background-color: var(--primary-hover);
+}
+.main-banner-contents .row button:active {
+  background-color: var(--primary-press);
+}
+
+.main-notice-area .inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+  padding: 11rem 1rem;
+}
+.main-notice-area .title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 2px var(--primary);
+  width: 100%;
+}
+.main-notice-area .title-row .title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+.main-notice-area .title-row .sub-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.main-notice-area .title-row .more {
+  font-size: 0.875rem;
+  color: #85AD85;
+  margin-left: auto;
+}
+.main-notice-area .col {
+  overflow: hidden;
+}
+.main-notice-area .list .row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  padding: 1.5rem 1rem;
+  border-bottom: solid 1px #BCC1C8;
+}
+.main-notice-area .list .row:hover {
+  background-color: #F4FBF4;
+}
+.main-notice-area .list .row .subject {
+  flex-grow: 1;
+  flex-basis: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+.main-notice-area .list .row .subject:hover {
+  color: var(--primary);
+}
+.main-notice-area .list .row .date {
+  flex-shrink: 0;
+  font-size: 1rem;
+  color: #666;
+  text-align: right;
+}
+
+.main-complaints-area {
+  background-color: #F4FBF4;
+}
+.main-complaints-area .inner {
+  padding: 5.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.25rem;
+}
+.main-complaints-area .complaints {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+main-complaints {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.62rem;
+  padding: 3rem;
+  background-color: #FFF;
+  border-radius: 6.75rem;
+  overflow: hidden;
+}
+main-complaints img {
+  width: 3.5rem;
+}
+main-complaints .name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+main-complaints .datas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.62rem;
+  width: 100%;
+}
+main-complaints .datas .row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+main-complaints .datas .row label {
+  font-size: 1rem;
+  line-height: 100%;
+}
+main-complaints .datas .row .data {
+  font-size: 1rem;
+  line-height: 100%;
+  text-align: right;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.38rem;
+}
+.section-title .caption {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--primary);
+}
+.section-title .title {
+  font-size: 2.75rem;
+  font-weight: 700;
+}
+.section-title .p {
+  font-size: 1.0625rem;
+}
+
+.main-odor-control-tips-area .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  padding: 9rem 1rem;
+}
+.main-odor-control-tips-area .odor-control-tips {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+.main-odor-control-tips-area .odor-control-tips .col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: #DBF0DB;
+}
+.main-odor-control-tips-area .odor-control-tips .col:nth-of-type(2), .main-odor-control-tips-area .odor-control-tips .col:nth-of-type(4) {
+  background-color: #ECF8EC;
+}
+.main-odor-control-tips-area .odor-control-tips .img {
+  width: 100%;
+}
+.main-odor-control-tips-area .odor-control-tips .img img {
+  width: 100%;
+}
+.main-odor-control-tips-area .odor-control-tips .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.62rem;
+  padding: 0 1.5rem;
+  padding-bottom: 2rem;
+}
+.main-odor-control-tips-area .odor-control-tips .num {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.main-odor-control-tips-area .odor-control-tips .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.main-odor-control-tips-area .odor-control-tips .p {
+  font-size: 1.0625rem;
+  color: #4D4D4D;
+}/*# sourceMappingURL=style.css.map */
