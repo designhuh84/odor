@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/flickity.css">
+    <link rel="stylesheet" href="./css/flickity-fade.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/flickity.pkgd.min.js"></script>
+    <script src="./js/flickity-fade.js"></script>
     <script src="./js/ui.js"></script>
     <title>악취통합관리시스템</title>
 </head>
@@ -38,6 +42,8 @@
         </div>
         <div class="main-banner-img">
             <div class="mb-01"></div>
+            <div class="mb-02"></div>
+            <div class="mb-03"></div>
         </div>
     </div>
 
@@ -163,6 +169,17 @@
         loadNotice();
         loadArchives();
         loadComplaints();
+
+        let mainBanner = new Flickity('.main-banner-img', {
+            imagesLoaded: true,
+            fade: true,
+            draggable: false,
+            prevNextButtons: false,
+            pageDots: false,
+            wrapAround: true,
+            autoPlay: true,
+            
+        });
     });
 
     function loadNotice() {

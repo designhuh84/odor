@@ -20,15 +20,19 @@ class GlobalHeaderUI extends HTMLElement {
 customElements.define('global-header', GlobalHeaderUI);
 
 GlobalHeaderUI.html = `
-    <a href="./" class="logo">
-        <img src="./image/logo.svg">
-    </a>
-    <nav>
-        <a href="./">민원서비스</a>
-        <a href="./">민원현황</a>
-        <a href="./">고객센터</a>
-    </nav>
-    <button type="button" class="btn-header-login"></button>
+    <div class="container">
+        <a href="./" class="logo">
+            <img src="./image/logo.svg">
+        </a>
+        <nav>
+            <a href="./">배출사업장</a>
+            <a href="./">실태조사</a>
+            <a href="./">통계현황</a>
+            <a href="./">민원서비스</a>
+            <a href="./">고객센터</a>
+        </nav>
+        <button type="button" class="btn-header-login"></button>
+    </div>
 `;
 
 class GlobalFooterUI extends HTMLElement {
