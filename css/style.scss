@@ -143,7 +143,8 @@ golbal-footer{
         z-index: 2;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
+        align-items: flex-end;
         height: 100%;
     }
 }
@@ -184,11 +185,10 @@ golbal-footer{
     flex-direction: column;
     align-items: center;
     padding: 3.37rem 3.63rem;
-    border-radius: 1.5rem 1.5rem 0 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.00) 100%);
+    border-radius: 1.5rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
     width: 100%;
     max-width: 49rem;
-    height: 32.75rem;
 
     .main-text{
         font-size: 2rem;
@@ -212,7 +212,8 @@ golbal-footer{
             padding: 0 2.38rem;
             font-size: 1.125rem;
             font-weight: 600;
-            border: 0;
+            border: solid 1px #BCC1C8;
+            border-right: 0;
             &:focus{
                 outline: none;
             }
