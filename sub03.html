@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            통계현황 > 배출사업장현황 > 악취배출사업장
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">배출사업장현황</div>
+                <a href="./sub03.html" class="menu">악취배출사업장</a>
+            </div>
+            <div class="main">
+                <div class="page-title">악취배출사업장</div>
+                <div class="contents">
+                    
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">총계</div>
+                        <div class="tab" data-name="02">신고대상</div>
+                        <div class="tab" data-name="03">신고대상 외</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <div class="search-area">
+                            <div class="col">
+                                <label>연도</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>2023</option>
+                                        <option>2024</option>
+                                    </select>
+                                    <div>~</div>
+                                    <select>
+                                        <option>2024</option>
+                                        <option>2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>시도</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>서울</option>
+                                    <option>인천</option>
+                                    <option>경기</option>
+                                    <option>강원</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>여</option>
+                                    <option>부</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>신고대상시설 여부</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>여</option>
+                                    <option>부</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search-button-area">
+                            <button type="button" class="btn-primary btn-search">조회</button>
+                        </div>
+
+                        <div class="table-button-row">
+                            <button type="button" class="btn-secondary">엑셀다운로드</button>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="stat">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">기관별(시도)</th>
+                                        <th rowspan="2">구분</th>
+                                        <th colspan="5">① 사업장수</th>
+                                        <th colspan="5">② 지도·점검대상 사업장수</th>
+                                    </tr>
+                                    <tr>
+                                        <th>계</th>
+                                        <th>순수악취</th>
+                                        <th>악취대기 공통</th>
+                                        <th>악취수질 공통</th>
+                                        <th>악취대기 수질공통</th>
+                                        <th>계</th>
+                                        <th>순수악취</th>
+                                        <th>악취대기 공통</th>
+                                        <th>악취수질 공통</th>
+                                        <th>악취대기 수질공통</th>
+                                    </tr>
+                                    <tr>
+                                        <th>계</th>
+                                        <th>합계</th>
+                                        <th>155,353</th>
+                                        <th>113,122</th>
+                                        <th>13,893</th>
+                                        <th>15,886</th>
+                                        <th>12,452</th>
+                                        <th>27,417</th>
+                                        <th>13,236</th>
+                                        <th>5,048</th>
+                                        <th>4,011</th>
+                                        <th>5,122</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+                        <div class="search-area">
+                            <div class="col">
+                                <label>연도</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>2023</option>
+                                        <option>2024</option>
+                                    </select>
+                                    <div>~</div>
+                                    <select>
+                                        <option>2024</option>
+                                        <option>2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>시도</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>서울</option>
+                                    <option>인천</option>
+                                    <option>경기</option>
+                                    <option>강원</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>여</option>
+                                    <option>부</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>신고대상시설 여부</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>여</option>
+                                    <option>부</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search-button-area">
+                            <button type="button" class="btn-primary btn-search">조회</button>
+                        </div>
+                    </div>
+
+                    <div class="tab-contents" data-name="03">
+                        <div class="search-area">
+                            <div class="col">
+                                <label>연도</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>2023</option>
+                                        <option>2024</option>
+                                    </select>
+                                    <div>~</div>
+                                    <select>
+                                        <option>2024</option>
+                                        <option>2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>시도</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>서울</option>
+                                    <option>인천</option>
+                                    <option>경기</option>
+                                    <option>강원</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>여</option>
+                                    <option>부</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>신고대상시설 여부</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>여</option>
+                                    <option>부</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="search-button-area">
+                            <button type="button" class="btn-primary btn-search">조회</button>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    const tableData = [
+        {
+            name: '계',
+            type: '관리지역 내 신고대상',
+            col1: 6655,
+            col2: 1490,
+            col3: 1595,
+            col4: 440,
+            col5: 3130,
+            col6: 4168,
+            col7: 1173,
+            col8: 769,
+            col9: 196,
+            col10: 2030,
+        },
+        {
+            name: '계',
+            type: '관리지역 내 신고대상',
+            col1: 6655,
+            col2: 1490,
+            col3: 1595,
+            col4: 440,
+            col5: 3130,
+            col6: 4168,
+            col7: 1173,
+            col8: 769,
+            col9: 196,
+            col10: 2030,
+        },
+        {
+            name: '계',
+            type: '관리지역 내 신고대상',
+            col1: 234,
+            col2: 334,
+            col3: 153395,
+            col4: 44,
+            col5: 543,
+            col6: 232,
+            col7: 12,
+            col8: 534,
+            col9: 234,
+            col10: 4545,
+        },
+        {
+            name: '계',
+            type: '서울',
+            col1: 234234,
+            col2: 12312,
+            col3: 233,
+            col4: 54234,
+            col5: 223,
+            col6: 445,
+            col7: 33,
+            col8: 65,
+            col9: 5454,
+            col10: 234234,
+        },
+        {
+            name: '계',
+            type: '서울',
+            col1: 565,
+            col2: 5656,
+            col3: 546,
+            col4: 345,
+            col5: 5678,
+            col6: 4325,
+            col7: 765,
+            col8: 324435,
+            col9: 546,
+            col10: 324,
+        },
+        {
+            name: '계',
+            type: '부산',
+            col1: 12,
+            col2: 32,
+            col3: 534,
+            col4: 234,
+            col5: 3214,
+            col6: 345,
+            col7: 654,
+            col8: 456,
+            col9: 456,
+            col10: 1243,
+        },
+        {
+            name: '계',
+            type: '부산',
+            col1: 567,
+            col2: 5675,
+            col3: 23,
+            col4: 456456,
+            col5: 4356,
+            col6: 876,
+            col7: 235,
+            col8: 4356,
+            col9: 56475,
+            col10: 4356,
+        },
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+        for(let row of tableData){
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${row.name}</td>
+                <td>${row.type}</td>
+                <td>${row.col1.toLocaleString('ko-KR')}</td>
+                <td>${row.col2.toLocaleString('ko-KR')}</td>
+                <td>${row.col3.toLocaleString('ko-KR')}</td>
+                <td>${row.col4.toLocaleString('ko-KR')}</td>
+                <td>${row.col5.toLocaleString('ko-KR')}</td>
+                <td>${row.col6.toLocaleString('ko-KR')}</td>
+                <td>${row.col7.toLocaleString('ko-KR')}</td>
+                <td>${row.col8.toLocaleString('ko-KR')}</td>
+                <td>${row.col9.toLocaleString('ko-KR')}</td>
+                <td>${row.col10.toLocaleString('ko-KR')}</td>
+            `;
+            document.querySelector('table.stat tbody').append(tr);
+        }
+    });
+
+    
+
+    
+
+</script>
+</html>

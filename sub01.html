@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            배출사업장 > 사업장정보관리 > 사업장관리
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">사업장정보관리</div>
+                <a href="./sub01.html" class="menu">사업장관리</a>
+                <a href="#!" class="menu">지도점검 및 행정처분</a>
+            </div>
+            <div class="main">
+                <div class="page-title">사업장관리</div>
+                <div class="contents">
+                    
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">악취배출시설 사업장</div>
+                        <div class="tab" data-name="02">규모미만 사업장</div>
+                        <div class="tab" data-name="03">생활악취 사업장</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <div class="search-area">
+                            <div class="col">
+                                <label>사업장명</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>사업자등록번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>산업분류번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>주소</label>
+                                <div class="col__row">
+                                    <select class="city">
+                                        <option>시도</option>
+                                        <option>서울</option>
+                                        <option>인천</option>
+                                        <option>경기</option>
+                                        <option>강원</option>
+                                    </select>
+                                    <select class="city">
+                                        <option>시군구</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>산업ㆍ농공단지 대상 여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>중점관리 사업장 대상 여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>신고대상 시설여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-button-area">
+                            <button type="button" class="btn-primary btn-search">조회</button>
+                        </div>
+                        <div class="infobox">
+                            <p>※ “사업장 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “사업장 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
+                            <div class="button-row">
+                                <button type="button" class="btn-secondary">사업장 양식 다운로드</button>
+                                <button type="button" class="btn-secondary">사업장 양식 업로드</button>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <button type="button" class="btn-secondary" id="showStatus">악취배출사업장 현황</button>
+                            <button type="button" class="btn-secondary" id="addRow">행 추가</button>
+                            <button type="button" class="btn-secondary" id="save">저장</button>
+                            <button type="button" class="btn-secondary">엑셀다운로드</button>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="status">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">No</th>
+                                        <th rowspan="2">사업장명</th>
+                                        <th rowspan="2">사업자번호</th>
+                                        <th rowspan="2">대표자</th>
+                                        <th rowspan="2">주소</th>
+                                        <th rowspan="2">전화번호</th>
+                                        <th rowspan="2">가동개시 예정일</th>
+                                        <th rowspan="2">산업분류번호 /업종</th>
+                                        <th rowspan="2">분류</th>
+                                        <th rowspan="2">주생산품</th>
+                                        <th colspan="3">중점관리사업장</th>
+                                        <th colspan="2">산업,농공단지</th>
+                                        <th rowspan="2">신고대상 시설여부</th>
+                                        <th rowspan="2">엄격기준 적용여부</th>
+                                        <th colspan="2">악취관리지역</th>
+                                        <th colspan="2">사업장 규모</th>
+                                    </tr>
+                                    <tr>
+                                        <th>대상여부</th>
+                                        <th>선정사유</th>
+                                        <th>선정사유 상세</th>
+                                        <th>대상여부</th>
+                                        <th>명칭</th>
+                                        <th>여부</th>
+                                        <th>지정지역</th>
+                                        <th>년간 매출액</th>
+                                        <th>종업원 수</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td>자몽농장</td>
+                                        <td>111-11-12345</td>
+                                        <td>박대표</td>
+                                        <td>강원도 영월군 한반로 123</td>
+                                        <td>033-123-1234</td>
+                                        <td>2025-01-12</td>
+                                        <td>00000/제조업</td>
+                                        <td>순수악취</td>
+                                        <td>자몽열매</td>
+                                        <td class="center">Y</td>
+                                        <td>선정사유코드</td>
+                                        <td>강원도 영월군 한반로 123</td>
+                                        <td>033-123-1234</td>
+                                        <td>가축분뇨</td>
+                                        <td class="center">Y</td>
+                                        <td class="center">N</td>
+                                        <td class="center">Y</td>
+                                        <td>남동국가산업단지</td>
+                                        <td class="right">1,100,000,000</td>
+                                        <td class="right">11</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="section-header">이력</div>
+
+                        <div class="table-container">
+                            <table class="history">
+                                <thead>
+                                    <tr>
+                                        <th>등록/수정일시</th>
+                                        <th>수정자</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">2025-02-15 20:24</td>
+                                        <td class="center">나이력</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2024-12-13 13:00</td>
+                                        <td class="center">홍길동</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="section-header">상세이력</div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">No</th>
+                                        <th rowspan="2">사업장명</th>
+                                        <th rowspan="2">사업자번호</th>
+                                        <th rowspan="2">대표자</th>
+                                        <th rowspan="2">주소</th>
+                                        <th rowspan="2">전화번호</th>
+                                        <th rowspan="2">가동개시 예정일</th>
+                                        <th rowspan="2">산업분류번호 /업종</th>
+                                        <th rowspan="2">분류</th>
+                                        <th rowspan="2">주생산품</th>
+                                        <th colspan="3">중점관리사업장</th>
+                                        <th colspan="2">산업,농공단지</th>
+                                        <th rowspan="2">신고대상 시설여부</th>
+                                        <th rowspan="2">엄격기준 적용여부</th>
+                                        <th colspan="2">악취관리지역</th>
+                                        <th colspan="2">사업장 규모</th>
+                                    </tr>
+                                    <tr>
+                                        <th>대상여부</th>
+                                        <th>선정사유</th>
+                                        <th>선정사유 상세</th>
+                                        <th>대상여부</th>
+                                        <th>명칭</th>
+                                        <th>여부</th>
+                                        <th>지정지역</th>
+                                        <th>년간 매출액</th>
+                                        <th>종업원 수</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td>자몽농장</td>
+                                        <td>111-11-12345</td>
+                                        <td>박대표</td>
+                                        <td>강원도 영월군 한반로 123</td>
+                                        <td class="changed">033-123-1234</td>
+                                        <td>2025-01-12</td>
+                                        <td>00000/제조업</td>
+                                        <td>순수악취</td>
+                                        <td>자몽열매</td>
+                                        <td class="center">Y</td>
+                                        <td>선정사유코드</td>
+                                        <td>강원도 영월군 한반로 123</td>
+                                        <td>033-123-1234</td>
+                                        <td>가축분뇨</td>
+                                        <td class="center">Y</td>
+                                        <td class="center">N</td>
+                                        <td class="center">Y</td>
+                                        <td>남동국가산업단지</td>
+                                        <td class="right">1,100,000,000</td>
+                                        <td class="right">11</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+                        <div class="search-area">
+                            <div class="col">
+                                <label>사업장명</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>사업자등록번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>산업분류번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>주소</label>
+                                <div class="col__row">
+                                    <select class="city">
+                                        <option>시도</option>
+                                        <option>서울</option>
+                                        <option>인천</option>
+                                        <option>경기</option>
+                                        <option>강원</option>
+                                    </select>
+                                    <select class="city">
+                                        <option>시군구</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취배출시설</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-button-area">
+                            <button type="button" class="btn-primary btn-search">조회</button>
+                        </div>
+                        <div class="infobox">
+                            <p>※ “사업장 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “사업장 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
+                            <div class="button-row">
+                                <button type="button" class="btn-secondary">사업장 양식 다운로드</button>
+                                <button type="button" class="btn-secondary">사업장 양식 업로드</button>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <button type="button" class="btn-secondary">행 추가</button>                            
+                            <button type="button" class="btn-secondary">저장</button>
+                            <button type="button" class="btn-secondary">삭제</button>
+                            <button type="button" class="btn-secondary">엑셀다운로드</button>
+                        </div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">No</th>
+                                        <th rowspan="2">사업장명</th>
+                                        <th rowspan="2">사업자번호</th>
+                                        <th rowspan="2">대표자</th>
+                                        <th rowspan="2">주소</th>
+                                        <th rowspan="2">전화번호</th>
+                                        <th rowspan="2">산업분류번호</th>
+                                        <th rowspan="2">분류</th>
+                                        <th colspan="2">악취배출시설</th>
+                                        <th colspan="2">악취관리지역</th>
+                                    </tr>
+                                    <tr>
+                                        <th>배출시설종류</th>
+                                        <th>기타</th>
+                                        <th>여부</th>
+                                        <th>지정지역</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td>자몽식품</td>
+                                        <td>111-11-12345</td>
+                                        <td>박대표</td>
+                                        <td>강원도 영월군 한반로 123</td>
+                                        <td>033-123-1234</td>
+                                        <td>00000</td>
+                                        <td>순수악취</td>
+                                        <td>식품 제조시설</td>
+                                        <td>음식점 기타 내용 기타 내용</td>
+                                        <td class="center">Y</td>
+                                        <td>시화국가산업단지</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-container">
+                            <table class="etc">
+                                <colgroup>
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <tr>
+                                    <th>기타사항</th>
+                                    <td><textarea>민원이 빈번한 사업장으로 지속적으로 관리 필요</textarea></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="section-header">이력</div>
+
+                        <div class="table-container">
+                            <table class="history">
+                                <thead>
+                                    <tr>
+                                        <th>등록/수정일시</th>
+                                        <th>수정자</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">2025-02-15 20:24</td>
+                                        <td class="center">나이력</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2024-12-13 13:00</td>
+                                        <td class="center">홍길동</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="section-header">상세이력</div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">No</th>
+                                        <th rowspan="2">사업장명</th>
+                                        <th rowspan="2">사업자번호</th>
+                                        <th rowspan="2">대표자</th>
+                                        <th rowspan="2">주소</th>
+                                        <th rowspan="2">전화번호</th>
+                                        <th rowspan="2">산업분류번호</th>
+                                        <th rowspan="2">분류</th>
+                                        <th colspan="2">악취배출시설</th>
+                                        <th colspan="2">악취관리지역</th>
+                                    </tr>
+                                    <tr>
+                                        <th>배출시설종류</th>
+                                        <th>기타</th>
+                                        <th>여부</th>
+                                        <th>지정지역</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td>자몽식품</td>
+                                        <td>111-11-12345</td>
+                                        <td>박대표</td>
+                                        <td>강원도 영월군 한반로 123</td>
+                                        <td>033-123-1234</td>
+                                        <td>00000</td>
+                                        <td>순수악취</td>
+                                        <td>식품 제조시설</td>
+                                        <td>음식점 기타 내용 기타 내용</td>
+                                        <td class="center">Y</td>
+                                        <td>시화국가산업단지</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="tab-contents" data-name="03">
+
+                        <div class="search-area">
+                            <div class="col">
+                                <label>사업장명</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>사업자등록번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>산업분류번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>주소</label>
+                                <div class="col__row">
+                                    <select class="city">
+                                        <option>시도</option>
+                                        <option>서울</option>
+                                        <option>인천</option>
+                                        <option>경기</option>
+                                        <option>강원</option>
+                                    </select>
+                                    <select class="city">
+                                        <option>시군구</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취배출시설</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-button-area">
+                            <button type="button" class="btn-primary btn-search">조회</button>
+                        </div>
+                        <div class="infobox">
+                            <p>※ “사업장 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “사업장 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
+                            <div class="button-row">
+                                <button type="button" class="btn-secondary">사업장 양식 다운로드</button>
+                                <button type="button" class="btn-secondary">사업장 양식 업로드</button>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <button type="button" class="btn-secondary">행 추가</button>                            
+                            <button type="button" class="btn-secondary">저장</button>
+                            <button type="button" class="btn-secondary">삭제</button>
+                            <button type="button" class="btn-secondary">엑셀다운로드</button>
+                        </div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">No</th>
+                                        <th rowspan="2">사업장명</th>
+                                        <th rowspan="2">사업자번호</th>
+                                        <th rowspan="2">대표자</th>
+                                        <th rowspan="2">주소</th>
+                                        <th rowspan="2">전화번호</th>
+                                        <th rowspan="2">업종</th>
+                                        <th rowspan="2">산업분류번호</th>
+                                        <th rowspan="2">분류</th>
+                                        <th colspan="2">악취배출시설</th>
+                                        <th colspan="2">악취관리지역</th>
+                                    </tr>
+                                    <tr>
+                                        <th>배출시설종류</th>
+                                        <th>기타</th>
+                                        <th>여부</th>
+                                        <th>지정지역</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td>자몽흑염소</td>
+                                        <td>111-11-12345</td>
+                                        <td>박대표</td>
+                                        <td>강원도 영월군 한반로 123</td>
+                                        <td>033-123-1234</td>
+                                        <td>음식점</td>
+                                        <td>00000</td>
+                                        <td>순수악취</td>
+                                        <td>식품 제조시설</td>
+                                        <td>음식점 기타 내용 기타 내용</td>
+                                        <td class="center">Y</td>
+                                        <td>시화국가산업단지</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-container">
+                            <table class="etc">
+                                <colgroup>
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <tr>
+                                    <th>기타사항</th>
+                                    <td><textarea>민원이 빈번한 사업장으로 지속적으로 관리 필요</textarea></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="section-header">이력</div>
+
+                        <div class="table-container">
+                            <table class="history">
+                                <thead>
+                                    <tr>
+                                        <th>등록/수정일시</th>
+                                        <th>수정자</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">2025-02-15 20:24</td>
+                                        <td class="center">나이력</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2024-12-13 13:00</td>
+                                        <td class="center">홍길동</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="section-header">상세이력</div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">No</th>
+                                        <th rowspan="2">사업장명</th>
+                                        <th rowspan="2">사업자번호</th>
+                                        <th rowspan="2">대표자</th>
+                                        <th rowspan="2">주소</th>
+                                        <th rowspan="2">전화번호</th>
+                                        <th rowspan="2">업종</th>
+                                        <th rowspan="2">산업분류번호</th>
+                                        <th rowspan="2">분류</th>
+                                        <th colspan="2">악취배출시설</th>
+                                        <th colspan="2">악취관리지역</th>
+                                    </tr>
+                                    <tr>
+                                        <th>배출시설종류</th>
+                                        <th>기타</th>
+                                        <th>여부</th>
+                                        <th>지정지역</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td>자몽흑염소</td>
+                                        <td>111-11-12345</td>
+                                        <td>박대표</td>
+                                        <td>강원도 영월군 한반로 123</td>
+                                        <td>033-123-1234</td>
+                                        <td>음식점</td>
+                                        <td>00000</td>
+                                        <td>순수악취</td>
+                                        <td>식품 제조시설</td>
+                                        <td>음식점 기타 내용 기타 내용</td>
+                                        <td class="center">Y</td>
+                                        <td>시화국가산업단지</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        document.querySelector('table.history').addEventListener('click', () => {
+            document.querySelectorAll('.changed').forEach(el => {
+                el.classList.add('red');
+            });
+        });
+
+        document.querySelector('#showStatus').addEventListener('click', () => {
+            alert('popup');
+        });
+
+        document.querySelector('#save').addEventListener('click', () => {
+            alert('저장되었습니다.');
+        });
+
+        let rowCount = 1;
+
+        document.querySelector('#addRow').addEventListener('click', () => {            
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="center">${rowCount + 1}</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            `;
+            document.querySelector('table.status tbody').append(row);
+            rowCount ++;
+        });
+        
+
+    });
+
+    
+
+    
+
+</script>
+</html>
