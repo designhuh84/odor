@@ -780,7 +780,7 @@ global-header-menu{
     justify-content: flex-end;
     gap: 0.5rem;
     padding: 1rem 0;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .table-container{
@@ -819,17 +819,13 @@ global-header-menu{
 .section-header{
     font-size: 1rem;
     font-weight: 700;
-    padding: 3rem 0 0.5rem 0;
+    padding: 2rem 0 0.5rem 0;
     margin-bottom: 1rem;
     border-bottom: solid 2px var(--primary);
 }
 
-table.history{
-    width: 100%;
-}
 
 table.etc{
-    width: 100%;
     margin-top: 1rem;
     colgroup{
         col{
@@ -843,5 +839,46 @@ table.etc{
 table.stat{
     td{
         text-align: center;
+    }
+}
+
+.popup-window{
+    padding: 1rem;
+    font-size: 0.875rem;
+
+    .headers{
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding: 0.5rem 0;
+        margin-bottom: 1rem;
+        border-bottom: solid 2px var(--primary);
+        margin-top: 1rem;
+        &:nth-of-type(1){
+            margin-top: 0;
+        }
+    }
+
+    .headers-sub{
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 0.5rem 0;
+        margin-top: 1rem;
+    }
+
+    .summary{
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        background-color: #F4FBF4;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .button-row{
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        padding: 1rem;
     }
 }

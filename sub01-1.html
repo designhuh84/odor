@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            배출사업장 > 사업장정보관리 > 지도점검 및 행정처분
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">사업장정보관리</div>
+                <a href="./sub01.html" class="menu">사업장관리</a>
+                <a href="./sub01-1.html" class="menu">지도점검 및 행정처분</a>
+            </div>
+            <div class="main">
+                <div class="page-title">지도점검 및 행정처분</div>
+                <div class="contents">
+
+                    
+                        <div class="search-area">
+                            <div class="col">
+                                <label>사업장명</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>시도</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>서울</option>
+                                    <option>인천</option>
+                                    <option>경기</option>
+                                    <option>강원</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>여</option>
+                                    <option>부</option>                                    
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>신고대상시설 여부</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>여</option>
+                                    <option>부</option>                                    
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>지도점검 일자</label>
+                                <div class="col__row">
+                                    <input type="date">
+                                    <div>~</div>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>위반 여부</label>
+                                <select class="city">
+                                    <option>전체</option>
+                                    <option>여</option>
+                                    <option>부</option>                                    
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <div class="search-button-area">
+                            <button type="button" class="btn-primary btn-search">조회</button>
+                        </div>
+                        <div class="infobox">
+                            <p>※ “엑셀양식다운로드” 버튼 클릭 후 양식을 다운받아 데이터 입력 후 “엑셀업로드” 버튼을 활용하여 작성한 데이터를 일괄로 업로드하실 수 있습니다.</p>
+                            <div class="button-row">
+                                <button type="button" class="btn-secondary">엑셀양식다운로드</button>
+                                <button type="button" class="btn-secondary">엑셀업로드</button>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <button type="button" class="btn-secondary" id="">신규작성</button>
+                            <button type="button" class="btn-secondary">엑셀다운로드</button>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="sub01-1">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>사업장 명</th>
+                                        <th>사업자등록번호</th>
+                                        <th>소재지</th>
+                                        <th>악취배출시설 종류</th>
+                                        <th>지도점검 일자</th>
+                                        <th>지도점검 결과</th>
+                                        <th>위반 여부</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">1</td>
+                                        <td>자몽테크</td>
+                                        <td>111-11-12345</td>
+                                        <td class="center">강원</td>
+                                        <td>27. 화학제품 제조시설</td>
+                                        <td>2024-02-02</td>
+                                        <td>위반내역 확인</td>
+                                        <td class="center">Y</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        document.querySelector('table.history').addEventListener('click', () => {
+            document.querySelectorAll('.changed').forEach(el => {
+                el.classList.add('red');
+            });
+        });
+
+        document.querySelector('#showStatus').addEventListener('click', () => {
+            alert('popup');
+        });
+
+        document.querySelector('#save').addEventListener('click', () => {
+            alert('저장되었습니다.');
+        });
+
+        let rowCount = 1;
+
+        document.querySelector('#addRow').addEventListener('click', () => {            
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td class="center">${rowCount + 1}</td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            `;
+            document.querySelector('table.status tbody').append(row);
+            rowCount ++;
+        });
+        
+
+    });
+
+    
+
+    
+
+</script>
+</html>

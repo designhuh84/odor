@@ -130,7 +130,7 @@ GlobalHeaderMenuUI.html = `
             <div class="category">배출사업장</div>
             <div class="sub-category">사업장정보관리</div>
             <a href="./sub01.html" class="menu">사업장관리</a>
-            <a href="#!" class="menu">지도점검 및 행정처분</a>
+            <a href="./sub01-1.html" class="menu">지도점검 및 행정처분</a>
         </div>
 
         <div class="col">
@@ -166,6 +166,16 @@ GlobalHeaderMenuUI.html = `
     </div>
 `;
 
+const setTableWidth = () => {
+    document.querySelectorAll('.table-container table').forEach(table => {
+        const parentWidth = table.parentElement.getBoundingClientRect().width;
+        const tableWidth = table.getBoundingClientRect().width;
+        if(parentWidth > tableWidth){
+            table.style.width = '100%';
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.tab-row .tab').forEach(tab => {
         tab.addEventListener('click', event => {
@@ -176,4 +186,5 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.tab-contents[data-name="' + tabName + '"]').classList.add('on');
         });
     });
+    setTableWidth();
 });
