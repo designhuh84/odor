@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            배출사업장 > 사업장정보관리 > 지도점검 및 행정처분
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">사업장정보관리</div>
+                <a href="./sub01.html" class="menu">사업장관리</a>
+                <a href="./sub01-1.html" class="menu">지도점검 및 행정처분</a>
+            </div>
+            <div class="main">
+                <div class="page-title">지도점검 및 행정처분 상세</div>
+                <div class="contents">
+
+                    <div class="section-header padding-top-0">사업장 정보</div>
+
+                    <div class="table-container">
+                        <table class="sub01-1-tables">
+                            <colgroup>
+                                <col>
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">사업장명</th>
+                                <td><input type="text" value="자몽테크" disabled></td>
+                                <th>사업자등록번호</th>
+                                <td><input type="text" value="111-11-12345" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>소재지</th>
+                                <td><input type="text" value="강원도 영월군 한반로 123" disabled></td>
+                                <th>대표자</th>
+                                <td><input type="text" value="유자몽" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>업종</th>
+                                <td><input type="text" value="계면활성제제조업" disabled></td>
+                                <th>악취배출시설 종류</th>
+                                <td><input type="text" value="27. 화학제품 제조시설" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>악취관리지역 여부</th>
+                                <td><input type="text" value="Y" disabled></td>
+                                <th>신고대상시설 여부</th>
+                                <td><input type="text" value="Y" disabled></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="section-header">민원 정보</div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>접수번호</th>
+                                    <th>민원내용</th>
+                                    <th>악취분류</th>
+                                    <th>악취종류</th>
+                                    <th>감지일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">1</td>
+                                    <td class="center">2024112900001</td>
+                                    <td>아침, 저녁으로 건물 인근에서 냄새가 심하게 나요.</td>
+                                    <td>약품냄새</td>
+                                    <td>기타</td>
+                                    <td class="center">2024-01-20</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="section-header">지도점검 정보</div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>지도점검 일자</th>
+                                    <th>지도점검 차수</th>
+                                    <th>지도점검 결과</th>
+                                    <th>위반 여부</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">1</td>
+                                    <td class="center">2024-04-05</td>
+                                    <td class="center">3차</td>
+                                    <td>위반내역 확인</td>
+                                    <td class="center">Y</td>
+                                    <td class="center"><button type="button" class="btn-primary">수정</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="center">2</td>
+                                    <td class="center">2024-03-02</td>
+                                    <td class="center">2차</td>
+                                    <td>위반</td>
+                                    <td class="center">Y</td>
+                                    <td class="center"><button type="button" class="btn-primary">수정</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="center">3</td>
+                                    <td class="center">2024-02-02</td>
+                                    <td class="center">1차</td>
+                                    <td>위반</td>
+                                    <td class="center">Y</td>
+                                    <td class="center"><button type="button" class="btn-primary">수정</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="section-header">행정처분 정보</div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>지도점검 일자</th>
+                                    <th>위반 명</th>
+                                    <th>위반 내용</th>
+                                    <th>행정처분 일자</th>
+                                    <th>행정처분 명</th>
+                                    <th>행정처분 내용</th>
+                                    <th>처분 기간</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">1</td>
+                                    <td class="center">2024-04-05</td>
+                                    <td>개선명령 미이행</td>
+                                    <td></td>
+                                    <td class="center">2024-04-05</td>
+                                    <td>과징금</td>
+                                    <td></td>
+                                    <td class="center">2024-04-05~2024-04-26</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">2</td>
+                                    <td class="center">2024-03-02</td>
+                                    <td>개선명령 미이행</td>
+                                    <td></td>
+                                    <td class="center">2024-03-08</td>
+                                    <td>과태료</td>
+                                    <td></td>
+                                    <td class="center">2024-03-08~2024-03-29</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">3</td>
+                                    <td class="center">2024-02-02</td>
+                                    <td>악취방지조치 미이행</td>
+                                    <td></td>
+                                    <td class="center">2024-02-02</td>
+                                    <td>개선명령</td>
+                                    <td></td>
+                                    <td class="center">2024-02-02~2024-02-23</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="section-header">행정처분 정보</div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>부과일자</th>
+                                    <th>부과기간</th>
+                                    <th>부과금(천원)</th>
+                                    <th>가산금</th>
+                                    <th>납부 상태</th>
+                                    <th>납부 일자</th>
+                                    <th>납부액</th>
+                                    <th>체납처분현황</th>
+                                    <th>미징수사유</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">1</td>
+                                    <td class="center">2024-04-05</td>
+                                    <td class="center">2024-04-05~2024-04-26</td>
+                                    <td>98</td>
+                                    <td></td>
+                                    <td>미납</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="center">기한 미도래</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">2</td>
+                                    <td class="center">2024-03-08</td>
+                                    <td class="center">2024-03-08~2024-03-29</td>
+                                    <td>6</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="center"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="section-header">행정처분 정보</div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">순번</th>
+                                    <th rowspan="2">분석항목 (시료명)</th>
+                                    <th rowspan="2">복합 악취 (희석배수)</th>
+                                    <th colspan="4">황화합물 4종</th>
+                                    <th rowspan="2">암모니아</th>
+                                    <th rowspan="2">트라이메틸아민</th>
+                                    <th colspan="4">지방산 4종</th>
+                                </tr>
+                                <tr>
+                                    <th>황화수소</th>
+                                    <th>메틸메르캅탄</th>
+                                    <th>다이메틸설파이드</th>
+                                    <th>다이메틸다이설파이드</th>
+                                    <th>프로피온산</th>
+                                    <th>n-뷰틸산</th>
+                                    <th>n-발레르산</th>
+                                    <th>i-발레르산</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">1</td>
+                                    <td>시료 명 1</td>
+                                    <td class="right">1,000</td>
+                                    <td class="right">1.71</td>
+                                    <td class="center">불검출</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">2</td>
+                                    <td>시료 명 2</td>
+                                    <td class="right">1,442</td>
+                                    <td class="right">0.01</td>
+                                    <td class="center">불검출</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                    <td class="right">0.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    
+                    <div class="contents-bottom-button-row">
+                        <button type="button" class="btn-primary" onclick="location.href = './sub01-1.html'">목록</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+    
+
+    
+
+    
+
+</script>
+</html>

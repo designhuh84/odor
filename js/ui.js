@@ -184,7 +184,23 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.tab-row .tab[data-name="' + tabName + '"]').classList.add('on');
             document.querySelectorAll('.tab-contents').forEach(tabContents => { tabContents.classList.remove('on') });
             document.querySelector('.tab-contents[data-name="' + tabName + '"]').classList.add('on');
+            setTableWidth();
         });
     });
     setTableWidth();
+
+    document.querySelectorAll('.checkbox-row label').forEach(label => {
+        label.addEventListener('click', event => {
+            const checkbox = event.target.parentElement.querySelector('input[type=checkbox]');
+            checkbox.checked = checkbox.checked ? false : true;
+        });
+    });
+
+    document.querySelectorAll('.common__radio-group label').forEach(label => {
+        label.addEventListener('click', event => {
+            const radio = event.target.parentElement.querySelector('input[type=radio]');
+            radio.click();
+        });
+    });
+
 });

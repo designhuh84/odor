@@ -64,6 +64,10 @@ input:focus {
   outline: none;
   border-color: var(--primary);
 }
+input:disabled {
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.05);
+}
 
 select {
   font: inherit;
@@ -325,7 +329,7 @@ golbal-footer .footer-terms {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4.5rem;
-  padding: 11rem 1rem;
+  padding: 6rem 1rem;
 }
 .main-notice-area .title-row {
   display: flex;
@@ -465,7 +469,7 @@ main-complaints .datas .row .data {
   flex-direction: column;
   align-items: center;
   gap: 5rem;
-  padding: 9rem 1rem;
+  padding: 6rem 1rem;
 }
 .main-odor-control-tips-area .odor-control-tips {
   display: grid;
@@ -615,6 +619,20 @@ global-header-menu .col .menu:hover {
   font-size: 0.875rem;
   width: 100%;
 }
+.layout .main .contents .summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #F4FBF4;
+  padding: 1.5rem;
+  width: 100%;
+}
+.layout .main .contents .summary section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.75rem;
+}
 
 .tab-row {
   display: flex;
@@ -683,6 +701,7 @@ global-header-menu .col .menu:hover {
   display: flex;
   justify-content: flex-end;
   margin-top: 0.5rem;
+  gap: 0.5rem;
 }
 
 .btn-primary {
@@ -772,9 +791,13 @@ global-header-menu .col .menu:hover {
 .table-container table th, .table-container table td {
   border: solid 1px #BFBFBF;
   padding: 0.7rem 1rem;
+  vertical-align: middle;
 }
 .table-container table th.center, .table-container table td.center {
   text-align: center;
+}
+.table-container table th.center button, .table-container table td.center button {
+  margin: 0 auto;
 }
 .table-container table th.right, .table-container table td.right {
   text-align: right;
@@ -788,8 +811,19 @@ global-header-menu .col .menu:hover {
   background-color: #F8FBF8;
   border: solid 1px var(--primary);
 }
+.table-container table th.required::after {
+  content: "*";
+  display: inline-block;
+  color: red;
+  margin-left: 0.2rem;
+}
 .table-container table td {
   color: #4D4D4D;
+}
+.table-container table td input[type=text],
+.table-container table td input[type=date],
+.table-container table td select {
+  width: 100%;
 }
 
 .section-header {
@@ -799,12 +833,22 @@ global-header-menu .col .menu:hover {
   margin-bottom: 1rem;
   border-bottom: solid 2px var(--primary);
 }
+.section-header.mt-0 {
+  margin-top: 0;
+}
+.section-header.padding-top-0 {
+  padding-top: 0;
+}
 
 table.etc {
   margin-top: 1rem;
 }
 table.etc colgroup col:nth-of-type(1) {
   width: 10rem;
+}
+
+table.status tbody td {
+  cursor: pointer;
 }
 
 table.stat td {
@@ -846,4 +890,120 @@ table.stat td {
   gap: 0.5rem;
   width: 100%;
   padding: 1rem;
+}
+
+.section-header-row {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 0.5rem 0;
+  width: 100%;
+  border-bottom: solid 2px var(--primary);
+  margin-bottom: 1rem;
+}
+.section-header-row .section-header {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.section-header-row .button-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+.checkbox-row label {
+  display: block;
+  min-width: 5rem;
+  cursor: pointer;
+}
+.checkbox-row input[type=checkbox] {
+  width: 1.3em;
+}
+
+table.history tbody td {
+  cursor: pointer;
+}
+
+.common__search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: 2.25rem;
+  background-color: #FFF;
+  border: solid 1px #BFBFBF;
+  padding: 0 0.5rem;
+}
+.common__search input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  flex-grow: 1;
+}
+.common__search:has(input:focus) {
+  border-color: var(--primary);
+}
+.common__search button {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-image: url(../image/icon-search.svg);
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: center;
+}
+
+table.sub01-1-tables {
+  table-layout: fixed;
+}
+table.sub01-1-tables th {
+  text-align: left;
+}
+table.sub01-1-tables colgroup col:nth-of-type(1), table.sub01-1-tables colgroup col:nth-of-type(3) {
+  width: 8.75rem;
+}
+table.sub01-1-tables input, table.sub01-1-tables select {
+  max-width: 25.46875rem;
+}
+
+.common__radio-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.common__radio-group .radio {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.common__radio-group input[type=radio] {
+  display: block;
+  width: 1.3em;
+  cursor: pointer;
+}
+.common__radio-group label {
+  display: block;
+  cursor: pointer;
+}
+
+.contents-bottom-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+table.sub01-1 tbody td {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

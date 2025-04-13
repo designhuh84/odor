@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            배출사업장 > 사업장정보관리 > 사업장관리
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">사업장정보관리</div>
+                <a href="./sub01.html" class="menu">사업장관리</a>
+                <a href="./sub01-1.html" class="menu">지도점검 및 행정처분</a>
+            </div>
+            <div class="main">
+                <div class="page-title">사업장관리 상세</div>
+                <div class="contents">
+                    
+                    <div class="summary">
+                        
+                        <section>
+                            <div class="col">사업장명: 자몽농장</div>
+                            <div class="col">사업자등록번호: 111-11-12345</div>
+                            <div class="col">법인등록번호: 123456-1234567</div>
+                            <div class="col">분류: 악취대기 공통</div>
+                            <div class="col">사업장 전화번호: 032-123-1234</div>
+                            <div class="col">산업분류번호: 00000 / OO업종</div>
+                            <div class="col">소재지: 강원도 영월군 한반로 123</div>
+                            <div class="col">대표자: 박대표</div>
+                            <div class="col">생년월일: 1954-12-25</div>
+                            <div class="col">주 생산품명: 자몽음료</div>
+                            <div class="col">악취관리지역여부 여부: Y (남동국가산업단지)</div>
+                        </section>
+                        <section>
+                            <div class="col">신고대상시설 여부: N</div>
+                            <div class="col">중점관리 사업장 대상 여부: Y</div>
+                            <div class="col">산업농공단지 대상 여부: Y (창원산업단지)</div>
+                            <div class="col">설치예정일: 2023-11-12</div>
+                            <div class="col">가동 개시 예정일: 2023-11-20</div>
+                            <div class="col">종업원 수: 00명</div>
+                            <div class="col">연간매출금액: 10,000,000,000 원</div>
+                            <div class="col">계좌번호: 00은행 12323-01-31243</div>
+                        </section>
+                        
+                    </div>
+
+                    <div class="search-button-area">
+                        <button type="button" class="btn-primary" id="gotoList">목록</button>
+                        <button type="button" class="btn-primary">삭제</button>
+                        <button type="button" class="btn-primary">시료검사현황</button>
+                    </div>
+                    <div class="infobox">
+                        <p>※ “배출시설 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “배출시설 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
+                        <div class="button-row">
+                            <button type="button" class="btn-secondary">배출시설 양식 다운로드</button>
+                            <button type="button" class="btn-secondary">배출시설 양식 업로드 </button>
+                        </div>
+                    </div>
+
+                    <div class="section-header-row">
+                        <div class="section-header">
+                            악취 배출시설
+                        </div>
+                        <div class="button-row">
+                            <button type="button" class="btn-secondary">행 추가</button>
+                            <button type="button" class="btn-secondary">저장</button>
+                            <button type="button" class="btn-secondary">엑셀다운로드</button>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="status-detail">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">#</th>
+                                    <th colspan="6">악취 배출시설</th>
+                                    <th colspan="5">악취 방지시설</th>
+                                    <th colspan="3">악취 배출구시설</th>
+                                    <th rowspan="2"></th>
+                                </tr>
+                                <tr>
+                                    <th>종류</th>
+                                    <th colspan="2">주요배출공정</th>
+                                    <th>원료</th>
+                                    <th>규격(용량)</th>
+                                    <th>수량</th>
+                                    <th>악취유발물질</th>
+                                    <th>지정악취유발물질</th>
+                                    <th>방지시설종류</th>
+                                    <th>규격(용량)</th>
+                                    <th>수량</th>
+                                    <th>배출구번호</th>
+                                    <th>발생용량</th>
+                                    <th>자가측정면제여부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">1</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>34. 기타 금속 가공제품</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>공정공정</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>공정공정</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label></label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td class="center">1</td>
+                                    <td class="center">1</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>복합+지정악취</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>황화수소 프로피온산</td>
+                                    <td>흡수에 의한 시설</td>
+                                    <td>100 1000 100</td>
+                                    <td class="center">2</td>
+                                    <td class="center">2025040401</td>
+                                    <td class="center">100</td>
+                                    <td class="center">N</td>
+                                    <td class="center"><button type="button" class="btn-primary">행 삭제</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="center">2</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>1. 섬유 염색 및 가공시설</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>가공공정</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>건조시설</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>스팀
+                                            </label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td class="center">3</td>
+                                    <td class="center">2</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>복합악취</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td>덮개 시설</td>
+                                    <td>0.5</td>
+                                    <td class="center">1</td>
+                                    <td class="center">2025040402</td>
+                                    <td class="center">200</td>
+                                    <td class="center">Y</td>
+                                    <td class="center"><button type="button" class="btn-primary">행 삭제</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="center">3</td>
+                                    <td></td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>염색공정</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>염색시설(사염기)</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>가성소다12</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td class="center">7</td>
+                                    <td class="center">3</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>복합악취</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td>밀폐 시설</td>
+                                    <td>3</td>
+                                    <td class="center">4</td>
+                                    <td class="center"></td>
+                                    <td class="center"></td>
+                                    <td class="center"></td>
+                                    <td class="center"><button type="button" class="btn-primary">행 삭제</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="etc">
+                            <colgroup>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>기타사항</th>
+                                <td>
+                                    <textarea>민원이 빈번한 사업장으로 지속적으로 관리 필요</textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="section-header">첨부파일</div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>첨부파일 명</th>
+                                    <th>첨부 파일 크기(Kb)</th>
+                                    <th>비고</th>
+                                    <th>등록일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="#!">악취배출시설 설치운영신고 확인서</a></td>
+                                    <td class="right">12040</td>
+                                    <td></td>
+                                    <td class="center">2025-01-22</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="section-header">배출시설 수정 이력</div>
+
+                    <div class="table-container">
+                        <table class="history">
+                            <thead>
+                                <tr>
+                                    <th>수정일시</th>
+                                    <th>수정자</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">2025-02-15 20:24</td>
+                                    <td class="center">나이력</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">2024-12-13 13:00</td>
+                                    <td class="center">홍길동</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="section-header detail">배출시설 수정 상세이력</div>
+
+                    <div class="table-container detail">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">#</th>
+                                    <th colspan="6">악취 배출시설</th>
+                                    <th colspan="5">악취 방지시설</th>
+                                    <th colspan="3">악취 배출구시설</th>
+                                </tr>
+                                <tr>
+                                    <th>종류</th>
+                                    <th colspan="2">주요배출공정</th>
+                                    <th>원료</th>
+                                    <th>규격(용량)</th>
+                                    <th>수량</th>
+                                    <th>악취유발물질</th>
+                                    <th>지정악취유발물질</th>
+                                    <th>방지시설종류</th>
+                                    <th>규격(용량)</th>
+                                    <th>수량</th>
+                                    <th>배출구번호</th>
+                                    <th>발생용량</th>
+                                    <th>자가측정면제여부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">1</td>
+                                    <td>34. 기타 금속 가공제품</td>
+                                    <td>공정공정</td>
+                                    <td>공정공정</td>
+                                    <td>스팀</td>
+                                    <td class="center">1</td>
+                                    <td class="center">1</td>
+                                    <td>복합+지정악취</td>
+                                    <td>황화수소 프로피온산</td>
+                                    <td>흡수에 의한 시설</td>
+                                    <td>100 1000 100</td>
+                                    <td class="center">2</td>
+                                    <td class="center">2025040401</td>
+                                    <td class="center">100</td>
+                                    <td class="center">N</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">2</td>
+                                    <td>15. 신발제조시설</td>
+                                    <td>공정공정</td>
+                                    <td>공정공정</td>
+                                    <td>가성소다</td>
+                                    <td class="center">2</td>
+                                    <td class="center">2</td>
+                                    <td>복합악취</td>
+                                    <td></td>
+                                    <td>덮개 시설</td>
+                                    <td>100 20 100</td>
+                                    <td class="center">1</td>
+                                    <td class="center">2025040402</td>
+                                    <td class="center">200</td>
+                                    <td class="center">Y</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        document.querySelector('#gotoList').addEventListener('click', () => {
+            location.href = './sub01.html';
+        });
+
+        document.querySelectorAll('.detail').forEach(detail => {
+            detail.style.display = 'none';
+        });
+
+        document.querySelectorAll('table.history tbody td').forEach(td => {
+            td.addEventListener('click', () => {
+                document.querySelectorAll('.detail').forEach(detail => {
+                    detail.style.display = 'block';
+                });
+            });
+        });
+        
+
+    });
+
+    
+
+    
+
+</script>
+</html>

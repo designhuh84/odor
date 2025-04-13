@@ -90,7 +90,7 @@
                         </div>
 
                         <div class="table-button-row">
-                            <button type="button" class="btn-secondary" id="">신규작성</button>
+                            <button type="button" class="btn-secondary" id="add-new">신규작성</button>
                             <button type="button" class="btn-secondary">엑셀다운로드</button>
                         </div>
 
@@ -137,49 +137,14 @@
 
     document.addEventListener('DOMContentLoaded', () => {
 
-        document.querySelector('table.history').addEventListener('click', () => {
-            document.querySelectorAll('.changed').forEach(el => {
-                el.classList.add('red');
+        document.querySelector('#add-new').addEventListener('click', () => {
+            location.href = './sub01-1-write.html';
+        });
+
+        document.querySelectorAll('table.sub01-1 tbody td').forEach(td => {
+            td.addEventListener('dblclick', () => {
+                location.href = './sub01-1-detail.html';
             });
-        });
-
-        document.querySelector('#showStatus').addEventListener('click', () => {
-            alert('popup');
-        });
-
-        document.querySelector('#save').addEventListener('click', () => {
-            alert('저장되었습니다.');
-        });
-
-        let rowCount = 1;
-
-        document.querySelector('#addRow').addEventListener('click', () => {            
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td class="center">${rowCount + 1}</td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-            `;
-            document.querySelector('table.status tbody').append(row);
-            rowCount ++;
         });
         
 
