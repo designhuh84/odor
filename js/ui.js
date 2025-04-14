@@ -33,7 +33,6 @@ GlobalHeaderUI.html = `
         </a>
         <nav>
             <a href="./sub01.html">배출사업장</a>
-            <a href="#!">실태조사</a>
             <a href="./sub03.html">통계현황</a>
             <a href="#!">민원서비스</a>
             <a href="#!">고객센터</a>
@@ -134,15 +133,16 @@ GlobalHeaderMenuUI.html = `
         </div>
 
         <div class="col">
-            <div class="category">실태조사</div>
-            <div class="sub-category">실태조사</div>
-            <a href="#!" class="menu">지자체 실태조사</a>
-        </div>
-
-        <div class="col">
             <div class="category">통계현황</div>
             <div class="sub-category">배출사업장현황</div>
             <a href="./sub03.html" class="menu">악취배출사업장</a>
+            <a href="#!" class="menu">업종별현황</a>
+            <a href="#!" class="menu">중점관리사업장</a>
+            <a href="#!" class="menu">악취검사현황</a>
+            <a href="#!" class="menu">악취검사결과</a>
+            <a href="#!" class="menu">과징금현황</a>
+            <a href="#!" class="menu">위반내역</a>
+            <a href="#!" class="menu">행정처분현황</a>
         </div>
 
         <div class="col">
