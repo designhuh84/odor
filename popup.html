@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/flickity.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/flickity.pkgd.min.js"></script>
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body>
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div 
+        style="
+            width: 100%; 
+            height: calc(100vh - 4.75rem - 6.0625rem); 
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem;
+        ">
+        <button type="button" class="btn-primary" id="popup1">윈도우 팝업</button>
+        <button type="button" class="btn-primary" id="popup2">모달 팝업</button>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        document.querySelector('#popup2').addEventListener('click', () => {
+            const popup = new CommonModal('팝업창 타이틀', '팝업창 메세지 입니다.<br>HTML 태그 가능');
+            popup.show().then(result => {
+                console.log(result);
+            });
+        });
+
+        document.querySelector('#popup1').addEventListener('click', () => {
+            commonWindowPopup('./test-popup.html');
+        });
+
+    });
+
+
+</script>
+</html>

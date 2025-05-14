@@ -166,6 +166,100 @@ GlobalHeaderMenuUI.html = `
     </div>
 `;
 
+class CommonPopupComponent {
+    constructor(element) {
+        this.element = element;
+    }
+
+    show() {
+        document.body.append(this.element);
+        document.body.style.overflowY = 'hidden';
+        return new Promise(resolve => {
+            this.resolve = resolve;
+        });
+    }
+
+    close(value) {
+        this.element.remove();
+        document.body.style.overflowY = 'auto';
+        this.resolve(value);
+    }
+}
+
+class CommonModal extends CommonPopupComponent {
+    constructor(title, message) {
+        const root = document.createElement('div');
+        super(root);
+        this.root = root;
+
+        if(title) { this.title = title };
+        if(message) { this.message = message };
+
+        this.root.classList.add('popup');
+            
+        const container = document.createElement('div');
+        container.classList.add('container');
+
+        const header = document.createElement('div');
+        header.classList.add('header');
+
+        const titleDiv = document.createElement('div');
+        titleDiv.classList.add('title');
+        if(this.title){
+            titleDiv.textContent = this.title;
+        }
+
+        const headerCloseButton = document.createElement('button');
+        headerCloseButton.setAttribute('type', 'button');
+        headerCloseButton.classList.add('btn-popup-close');
+
+        header.append(titleDiv);
+        header.append(headerCloseButton);
+
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message');
+        messageDiv.innerHTML = this.message;
+
+        const footer = document.createElement('div');
+        footer.classList.add('footer');
+
+        const confirmButton = document.createElement('button');
+        confirmButton.setAttribute('type', 'button');
+        confirmButton.setAttribute('class','btn-primary confirm');
+        confirmButton.textContent = '확인';
+
+        const cancelButton = document.createElement('button');
+        cancelButton.setAttribute('type', 'button');
+        cancelButton.setAttribute('class','btn-secondary confirm');
+        cancelButton.textContent = '취소';
+
+        footer.append(cancelButton);
+        footer.append(confirmButton);
+
+        container.append(header);
+        container.append(messageDiv);
+        container.append(footer);
+
+        this.root.append(container);
+
+        headerCloseButton.addEventListener('click', () => {
+            this.close(false);
+        });
+
+        cancelButton.addEventListener('click', () => {
+            this.close(false);
+        });
+
+        confirmButton.addEventListener('click', () => {
+            this.close(true);
+        });
+    }
+}
+
+const commonWindowPopup = (url, option) => {
+    window.open(url, '_blank', option ? option : 'width=600, height=600, left=100, top=100, menubar=no, toolbar=no, location=no, status=no');
+}
+
 const setTableWidth = () => {
     document.querySelectorAll('.table-container table').forEach(table => {
         const parentWidth = table.parentElement.getBoundingClientRect().width;
