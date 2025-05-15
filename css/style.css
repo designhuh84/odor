@@ -799,12 +799,21 @@ global-header-menu .col .menu:hover {
 .table-container table th.center button, .table-container table td.center button {
   margin: 0 auto;
 }
+.table-container table th.center .checkbox-row label, .table-container table td.center .checkbox-row label {
+  text-indent: 1.3rem;
+}
 .table-container table th.right, .table-container table td.right {
   text-align: right;
 }
 .table-container table th.red, .table-container table td.red {
   background-color: rgba(255, 0, 0, 0.1);
   color: #000;
+}
+.table-container table th .button-row, .table-container table td .button-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
 }
 .table-container table th {
   font-weight: 600;
@@ -1105,4 +1114,11 @@ table.sub01-1 tbody td {
 .popup .footer button {
   font-size: 1rem;
   flex-grow: 1;
+}
+
+.btn-code-search {
+  height: 2rem;
+}
+.btn-code-search img {
+  width: 1rem;
 }/*# sourceMappingURL=style.css.map */

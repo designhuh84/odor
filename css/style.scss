@@ -821,6 +821,11 @@ global-header-menu{
                 button{
                     margin: 0 auto;
                 }
+                .checkbox-row{
+                    label{
+                        text-indent: 1.3rem;
+                    }
+                }
             }
             &.right{
                 text-align: right;
@@ -828,6 +833,12 @@ global-header-menu{
             &.red{
                 background-color: rgba(255,0,0,0.1);
                 color: #000;
+            }
+            .button-row{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                gap: 1rem;
             }
         }
         th{
@@ -1172,5 +1183,12 @@ table.sub01-1{
             font-size: 1rem;
             flex-grow: 1;
         }
+    }
+}
+
+.btn-code-search{
+    height: 2rem;
+    img{
+        width: 1rem;
     }
 }
