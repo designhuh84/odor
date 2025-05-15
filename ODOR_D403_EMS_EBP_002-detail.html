@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            배출사업장 > 사업장정보관리 > 사업장관리
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">사업장정보관리</div>
+                <a href="./sub01.html" class="menu">사업장관리</a>
+                <a href="./sub01-1.html" class="menu">지도점검 및 행정처분</a>
+            </div>
+            <div class="main">
+                <div class="page-title">사업장관리 상세</div>
+                <div class="contents">
+                    
+                    <div class="summary">
+                        
+                        <section>
+                            <div class="col">사업장명: 자몽농장</div>
+                            <div class="col">사업자등록번호: 111-11-12345</div>
+                            <div class="col">법인등록번호: 123456-1234567</div>
+                            <div class="col">분류: 악취대기 공통</div>
+                            <div class="col">사업장 전화번호: 032-123-1234</div>
+                            <div class="col">산업분류번호: 00000 / OO업종</div>
+                            <div class="col">소재지: 강원도 영월군 한반로 123</div>
+                            <div class="col">대표자: 박대표</div>
+                            <div class="col">생년월일: 1954-12-25</div>
+                            <div class="col">주 생산품명: 자몽음료</div>
+                            <div class="col">악취관리지역여부 여부: Y (남동국가산업단지)</div>
+                        </section>
+                        <section>
+                            <div class="col">신고대상시설 여부: N</div>
+                            <div class="col">중점관리 사업장 대상 여부: Y</div>
+                            <div class="col">산업농공단지 대상 여부: Y (창원산업단지)</div>
+                            <div class="col">설치예정일: 2023-11-12</div>
+                            <div class="col">가동 개시 예정일: 2023-11-20</div>
+                            <div class="col">종업원 수: 00명</div>
+                            <div class="col">연간매출금액: 10,000,000,000 원</div>
+                            <div class="col">계좌번호: 00은행 12323-01-31243</div>
+                        </section>
+                        
+                    </div>
+
+                    <div class="search-button-area">
+                        <button type="button" class="btn-primary" id="gotoList">목록</button>
+                    </div>
+
+                    <div class="section-header-row">
+                        <div class="section-header">
+                            악취 배출시설
+                        </div>
+                        <div class="button-row">
+                            <button type="button" class="btn-secondary">저장</button>
+                            <button type="button" class="btn-secondary">엑셀다운로드</button>
+                        </div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="status-detail">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">#</th>
+                                    <th colspan="6">악취 배출시설</th>
+                                    <th colspan="5">악취 방지시설</th>
+                                    <th colspan="3">악취 배출구시설</th>
+                                    <th rowspan="2"></th>
+                                </tr>
+                                <tr>
+                                    <th>종류</th>
+                                    <th colspan="2">주요배출공정</th>
+                                    <th>원료</th>
+                                    <th>규격(용량)</th>
+                                    <th>수량</th>
+                                    <th>악취유발물질</th>
+                                    <th>지정악취유발물질</th>
+                                    <th>방지시설종류</th>
+                                    <th>규격(용량)</th>
+                                    <th>수량</th>
+                                    <th>배출구번호</th>
+                                    <th>발생용량</th>
+                                    <th>자가측정면제여부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">1</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>34. 기타 금속 가공제품</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>공정공정</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>공정공정</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label></label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td class="center">1</td>
+                                    <td class="center">1</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>복합+지정악취</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>황화수소 프로피온산</td>
+                                    <td>흡수에 의한 시설</td>
+                                    <td>100 1000 100</td>
+                                    <td class="center">2</td>
+                                    <td class="center">2025040401</td>
+                                    <td class="center">100</td>
+                                    <td class="center">N</td>
+                                    <td class="center"><button type="button" class="btn-primary">행 삭제</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="center">2</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>1. 섬유 염색 및 가공시설</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>가공공정</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>건조시설</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>스팀
+                                            </label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td class="center">3</td>
+                                    <td class="center">2</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>복합악취</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td>덮개 시설</td>
+                                    <td>0.5</td>
+                                    <td class="center">1</td>
+                                    <td class="center">2025040402</td>
+                                    <td class="center">200</td>
+                                    <td class="center">Y</td>
+                                    <td class="center"><button type="button" class="btn-primary">행 삭제</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="center">3</td>
+                                    <td></td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>염색공정</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td>염색시설(사염기)</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>가성소다12</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td class="center">7</td>
+                                    <td class="center">3</td>
+                                    <td>
+                                        <div class="checkbox-row">
+                                            <label>복합악취</label>
+                                            <input type="checkbox">
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td>밀폐 시설</td>
+                                    <td>3</td>
+                                    <td class="center">4</td>
+                                    <td class="center"></td>
+                                    <td class="center"></td>
+                                    <td class="center"></td>
+                                    <td class="center"><button type="button" class="btn-primary">행 삭제</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">변경일</th>
+                                    <th rowspan="2">수정자</th>
+                                    <th rowspan="2">구분</th>
+                                    <th colspan="6">악취 배출시설 <span class="red">변경 이력</span></th>
+                                    <th rowspan="2"></th>
+                                </tr>
+                                <tr>
+                                    <th>종류</th>
+                                    <th colspan="2">주요배출공정</th>
+                                    <th>원료</th>
+                                    <th>규격(용량)</th>
+                                    <th>수량</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">25.01.15</td>
+                                    <td class="center">유미나</td>
+                                    <td class="center">수정</td>
+                                    <td>1. 축산시설</td>
+                                    <td>공정공정</td>
+                                    <td>공정공정</td>
+                                    <td>원료 원료</td>
+                                    <td class="center red">3</td>
+                                    <td class="center red">4</td>
+                                    <td class="center"><button type="button" class="btn-primary">행 삭제</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        document.querySelector('#gotoList').addEventListener('click', () => {
+            location.href = './sub01.html';
+        });
+
+        document.querySelectorAll('.detail').forEach(detail => {
+            detail.style.display = 'none';
+        });
+
+        document.querySelectorAll('table.history tbody td').forEach(td => {
+            td.addEventListener('click', () => {
+                document.querySelectorAll('.detail').forEach(detail => {
+                    detail.style.display = 'block';
+                });
+            });
+        });
+
+        document.querySelector('#place-manage-save').addEventListener('click', () => {
+            const popup = new PlaceManageSaveModal('변경신고서 여부 확인', '변경신고서로 등록을 하실 경우<br>"변경신고" 버튼을,<br>일반수정으로 등록을 하실 경우<br>"확인" 버튼을 클릭해주세요');
+            popup.show().then(result => {
+                if(result === true){
+                    console.log('확인버튼 눌렀음');
+                }else if(result === false){
+                    console.log('변경신고 눌렀음');
+                }else{
+                    //그냥 닫기
+                }
+            });
+        });
+        
+
+    });
+
+
+    class PlaceManageSaveModal extends CommonPopupComponent {
+        constructor(title, message) {
+            const root = document.createElement('div');
+            super(root);
+            this.root = root;
+
+            if(title) { this.title = title };
+            if(message) { this.message = message };
+
+            this.root.classList.add('popup');
+                
+            const container = document.createElement('div');
+            container.classList.add('container');
+
+            const header = document.createElement('div');
+            header.classList.add('header');
+
+            const titleDiv = document.createElement('div');
+            titleDiv.classList.add('title');
+            if(this.title){
+                titleDiv.textContent = this.title;
+            }
+
+            const headerCloseButton = document.createElement('button');
+            headerCloseButton.setAttribute('type', 'button');
+            headerCloseButton.classList.add('btn-popup-close');
+
+            header.append(titleDiv);
+            header.append(headerCloseButton);
+
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+            messageDiv.innerHTML = this.message;
+
+            const footer = document.createElement('div');
+            footer.classList.add('footer');
+
+            const confirmButton = document.createElement('button');
+            confirmButton.setAttribute('type', 'button');
+            confirmButton.setAttribute('class','btn-primary confirm');
+            confirmButton.textContent = '확인';
+
+            const cancelButton = document.createElement('button');
+            cancelButton.setAttribute('type', 'button');
+            cancelButton.setAttribute('class','btn-secondary confirm');
+            cancelButton.textContent = '변경신고';
+
+            footer.append(cancelButton);
+            footer.append(confirmButton);
+
+            container.append(header);
+            container.append(messageDiv);
+            container.append(footer);
+
+            this.root.append(container);
+
+            headerCloseButton.addEventListener('click', () => {
+                this.close();
+            });
+
+            cancelButton.addEventListener('click', () => {
+                this.close(false);
+            });
+
+            confirmButton.addEventListener('click', () => {
+                this.close(true);
+            });
+        }
+    }
+
+    
+
+    
+
+</script>
+</html>
