@@ -16,9 +16,10 @@ class GlobalHeaderUI extends HTMLElement {
     onload() {
         document.addEventListener('mousemove', event => {
             if(event.target.closest('nav') || event.target.closest('global-header-menu')){
-                document.querySelector('global-header-menu').classList.add('on');
+                const globalHeaderMenuHeight = document.querySelector('global-header-menu').scrollHeight;
+                document.querySelector('global-header-menu').style.height = globalHeaderMenuHeight + 'px';
             }else{
-                document.querySelector('global-header-menu').classList.remove('on');
+                document.querySelector('global-header-menu').style.height = '0px';
             }
         });
         
@@ -33,8 +34,12 @@ GlobalHeaderUI.html = `
         </a>
         <nav>
             <a href="./sub01.html">배출사업장</a>
+            <a href="#!">기술지원</a>
+            <a href="#!">기술진단</a>
+            <a href="#!">시료관리</a>
             <a href="./sub03.html">통계현황</a>
             <a href="#!">민원서비스</a>
+            <a href="#!">민원현황</a>
             <a href="#!">고객센터</a>
         </nav>
         <button type="button" class="btn-header-login"></button>
@@ -127,40 +132,129 @@ GlobalHeaderMenuUI.html = `
 
         <div class="col">
             <div class="category">배출사업장</div>
-            <div class="sub-category">사업장정보관리</div>
-            <a href="./sub01.html" class="menu">사업장관리</a>
-            <a href="./sub01-1.html" class="menu">지도점검 및 행정처분</a>
+            <div class="rows">
+                <div class="row">
+                    <div class="sub-category">사업장정보관리</div>
+                    <div class="menus">
+                        <a href="./sub01.html" class="menu">사업장관리</a>
+                        <a href="#!" class="menu">변경신고서관리</a>
+                        <a href="./sub01-1.html" class="menu">지도점검 및 행정처분</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category">기술지원</div>
+            <div class="rows">
+                <div class="row">
+                    <div class="sub-category">기술지원</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">신청정보</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category">기술진단</div>
+            <div class="rows">
+                <div class="row">
+                    <div class="sub-category">전문기관</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">전문기관관리</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category">시료관리</div>
+            <div class="rows">
+                <div class="row">
+                    <div class="sub-category">악취시료</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">외부 분석</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sub-category">검사기관</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">검사기관관리</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="col">
             <div class="category">통계현황</div>
-            <div class="sub-category">배출사업장현황</div>
-            <a href="./sub03.html" class="menu">악취배출사업장</a>
-            <a href="#!" class="menu">업종별현황</a>
-            <a href="#!" class="menu">중점관리사업장</a>
-            <a href="#!" class="menu">악취검사현황</a>
-            <a href="#!" class="menu">악취검사결과</a>
-            <a href="#!" class="menu">과징금현황</a>
-            <a href="#!" class="menu">위반내역</a>
-            <a href="#!" class="menu">행정처분현황</a>
+            <div class="rows">
+                <div class="row">
+                    <div class="sub-category">악취민원실태조사</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">조치결과현황</a>
+                        <a href="#!" class="menu">악취배출사업장</a>
+                        <a href="#!" class="menu">업종별현황</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="col">
             <div class="category">민원서비스</div>
-            <div class="sub-category">민원관리</div>
-            <a href="#!" class="menu">민원접수</a>
-            <a href="#!" class="menu">현장조사</a>
-            <a href="#!" class="menu">시료채취</a>
-            <a href="#!" class="menu">행정처분</a>
+            <div class="rows">
+                <div class="row">
+                    <div class="sub-category">민원서비스</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">민원신청(국민신문고)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category">민원현황</div>
+            <div class="rows">
+                <div class="row">
+                    <div class="sub-category">민원현황</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">민원MAP</a>
+                        <a href="#!" class="menu">기간별 현황</a>
+                        <a href="#!" class="menu">지역별현황</a>
+                        <a href="#!" class="menu">생활악취현황</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="col">
             <div class="category">고객센터</div>
-            <div class="sub-category">고객센터</div>
-            <a href="#!" class="menu">공지사항</a>
-            <a href="#!" class="menu">FAQ</a>
-            <a href="#!" class="menu">자료실</a>
-            <a href="#!" class="menu">우수사례</a>
+            <div class="rows">
+                <div class="row">
+                    <div class="sub-category">공지사항</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">공지사항</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sub-category">FAQ</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">FAQ</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sub-category">자료실</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">자료실</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sub-category">우수사례</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">우수사례</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

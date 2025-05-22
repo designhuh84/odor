@@ -21,8 +21,10 @@
         <div class="inner">
             <div class="lnb">
                 <div class="title">사업장정보관리</div>
-                <a href="./sub01.html" class="menu">사업장관리</a>
+                <a href="./sub01.html" class="menu current">사업장관리</a>
+                <a href="./sub01-1.html" class="menu">변경신고서관리</a>
                 <a href="./sub01-1.html" class="menu">지도점검 및 행정처분</a>
+                <a href="./sub01-1.html" class="menu">악취관리지역</a>
             </div>
             <div class="main">
                 <div class="page-title">사업장관리</div>
@@ -35,7 +37,9 @@
                     </div>
 
                     <div class="tab-contents on" data-name="01">
+
                         <div class="search-area">
+
                             <div class="col">
                                 <label>사업장명</label>
                                 <input type="text">
@@ -108,22 +112,45 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="search-button-area">
-                            <button type="button" class="btn-primary btn-search">조회</button>
+                            <button type="button" class="btn-primary" id="search">
+                                <img src="./image/Magnifer.svg">
+                                조회
+                            </button>
                         </div>
                         <div class="infobox">
                             <p>※ “사업장 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “사업장 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
                             <div class="button-row">
-                                <button type="button" class="btn-secondary">사업장 양식 다운로드</button>
-                                <button type="button" class="btn-secondary">사업장 양식 업로드</button>
+                                <button type="button" class="btn-secondary">
+                                    <img src="./image/Download-Minimalistic.svg">
+                                    사업장 양식 다운로드
+                                </button>
+                                <button type="button" class="btn-secondary">
+                                    <img src="./image/Upload-Minimalistic.svg">
+                                    사업장 양식 업로드
+                                </button>
                             </div>
                         </div>
 
                         <div class="table-button-row">
-                            <button type="button" class="btn-secondary" id="showStatus">악취배출사업장 현황</button>
-                            <button type="button" class="btn-secondary" id="addRow">행 추가</button>
-                            <button type="button" class="btn-secondary" id="save">저장</button>
-                            <button type="button" class="btn-secondary">엑셀다운로드</button>
+                            <button type="button" class="btn-secondary" id="showStatus">
+                                <img src="./image/Square-Top-Down.svg">
+                                악취배출사업장 현황
+                            </button>
+                            <button type="button" class="btn-secondary" id="addRow">
+                                <img src="./image/Add-Square.svg">
+                                행 추가
+                            </button>
+                            <button type="button" class="btn-secondary" id="save">
+                                <img src="./image/Diskette.svg">
+                                저장
+                            </button>
+                            <button type="button" class="btn-secondary" id="excel">
+                                <img src="./image/Explicit.svg">
+                                엑셀다운로드
+                            </button>
                         </div>
 
                         <div class="table-container">
