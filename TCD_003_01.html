@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            기술진단 > 기술진단 접수 목록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">기술진단</div>
+                <a href="./TCS_001_01.html" class="menu current">접수 및 수행관리</a>
+            </div>
+            <div class="main">
+                <div class="page-title">기술진단 접수 목록</div>
+                <div class="contents">
+
+
+                    <div class="section-header padding-top-0">조회 조건</div>
+
+                    <div class="search-area">
+
+                        <div class="col">
+                            <label>시설명</label>
+                            <input type="text">
+                        </div>
+                        <div class="col">
+                            <label>시설ID</label>
+                            <input type="text">
+                        </div>
+                        <div class="col">
+                            <label>시도 / 시군구</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <div class="col">
+                            <label>지역 구분</label>
+                            <select>
+                                <option>기타</option>
+                                <option>01</option>
+                                <option>02</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>시설 구분</label>
+                            <select>
+                                <option>하수</option>
+                                <option>01</option>
+                                <option>02</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="search-button-area">
+                        <button type="button" class="btn-primary" id="search">
+                            <img src="./image/Magnifer.svg">
+                            조회
+                        </button>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">조회 결과</div>
+                        <div class="color-label green">자료 있음</div>
+                        <div class="color-label blue">자료 없음</div>
+                        <button type="button" class="btn-primary" id="add-new">
+                            <img src="./image/Add-Square.svg">
+                            진단신청 등록
+                        </button>
+                        <button type="button" class="btn-secondary" id="excel">
+                            <img src="./image/Explicit.svg">
+                            엑셀다운로드
+                        </button>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table id="TCD_003_01_search-result">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">시설 ID</th>
+                                    <th rowspan="2">시설명</th>
+                                    <th rowspan="2">시설구분</th>
+                                    <th rowspan="2">지역구분</th>
+                                    <th colspan="3">소재지</th>
+                                    <th rowspan="2">가동일자</th>
+                                </tr>
+                                <tr>
+                                    <th>시도</th>
+                                    <th>시군구</th>
+                                    <th>주소</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">2024001</td>
+                                    <td>OOO 공공하수처리시설</td>
+                                    <td class="center">하수</td>
+                                    <td class="center">기타</td>
+                                    <td class="center">서울</td>
+                                    <td class="center">강남구</td>
+                                    <td>서울특별시 강남구 XXX-XXX</td>
+                                    <td class="center">2019-00-00</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">2024002</td>
+                                    <td>OOO 공공하수처리시설</td>
+                                    <td class="center">하수</td>
+                                    <td class="center">기타</td>
+                                    <td class="center">인천</td>
+                                    <td class="center">서구</td>
+                                    <td>인천광역시 서구 XXX-XXX</td>
+                                    <td class="center">2024-00-00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div id="TCD_003_01_search-detail" style="display: none;">
+                        <div class="section-header">시설 상세 조회 결과</div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>실적연도</th>
+                                        <th>신청일자</th>
+                                        <th>진단신청</th>
+                                        <th>진단비용 및 수입처리</th>
+                                        <th>진단정보</th>
+                                        <th>분석결과</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">2019년</td>
+                                        <td class="center">2024-00-00</td>
+                                        <td class="center"><button type="button" class="color-label green">신청관리</button></td>
+                                        <td class="center"><button type="button" class="color-label green">진단비용 및 수입처리</button></td>
+                                        <td class="center"><button type="button" class="color-label green">진단정보</button></td>
+                                        <td class="center"><button type="button" class="color-label green">분석결과</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2024년</td>
+                                        <td class="center">2024-00-00</td>
+                                        <td class="center"><button type="button" class="color-label green">신청관리</button></td>
+                                        <td class="center"><button type="button" class="color-label green">진단비용 및 수입처리</dbuttoniv></td>
+                                        <td class="center"><button type="button" class="color-label blue">진단정보</button></td>
+                                        <td class="center"><button type="button" class="color-label blue">분석결과</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">2024년</td>
+                                        <td class="center">2024-00-00</td>
+                                        <td class="center"><button type="button" class="color-label green">신청관리</button></td>
+                                        <td class="center"><button type="button" class="color-label green">진단비용 및 수입처리</button></td>
+                                        <td class="center"><button type="button" class="color-label green">진단정보</button></td>
+                                        <td class="center"><button type="button" class="color-label green">분석결과</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        document.querySelectorAll('#TCD_003_01_search-result tbody td').forEach(td => {
+            td.addEventListener('dblclick', () => {
+                document.querySelector('#TCD_003_01_search-detail').style.display = 'block';
+                setTableWidth();
+
+                document.querySelectorAll('#TCD_003_01_search-detail .color-label.green').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        location.href = './TCD_003_03.html';
+                    });
+                });
+            });
+        });
+
+    });
+
+</script>
+</html>

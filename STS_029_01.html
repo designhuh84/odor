@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            통계현황 > 민원현황(악취민원실태조사) > 지역별현황
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">악취민원실태조사</div>
+                <a href="./STS_028_03.html" class="menu">월별현황</a>
+                <a href="./STS_029_01.html" class="menu current">지역별현황</a>
+                <a href="./STS_031_02.html" class="menu">환경기초시설현황</a>
+            </div>
+            <div class="main">
+                <div class="page-title">지역별현황</div>
+                <div class="contents">
+
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">총계</div>
+                        <div class="tab" data-name="02">지역별</div>
+                        <div class="tab" data-name="03">악취배출시설별</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <div class="search-area">
+                            <div class="col">
+                                <label>연도</label>
+                                <div class="col__row">
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>시도</label>
+                                <select>
+                                    <option>선택</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="search-button-area">
+                            <button type="button" class="btn-primary">
+                                <img src="./image/Magnifer.svg">
+                                조회
+                            </button>
+                        </div>
+
+                        <div class="table-button-row">
+                            <button type="button" class="btn-secondary excel">
+                                <img src="./image/Explicit.svg">
+                                엑셀다운로드
+                            </button>
+                        </div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="3">구분</th>
+                                        <th rowspan="3">연도</th>
+                                        <th rowspan="2" colspan="2">총괄</th>
+                                        <th colspan="3">악취배출시설 설치 사업장</th>
+                                        <th colspan="3">
+                                            생활악취<br>
+                                            (생활악취 + 규모미만사업장)
+                                        </th>
+                                        <th rowspan="2">원인불명</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">소계</th>
+                                        <th>...</th>
+                                        <th colspan="2">소계</th>
+                                        <th>...</th>
+                                    </tr>
+                                    <tr>
+                                        <th>민원건수</th>
+                                        <th>피민원업체수</th>
+                                        <th>민원건수</th>
+                                        <th>피민원업체수</th>
+                                        <th>...</th>
+                                        <th>민원건수</th>
+                                        <th>피민원업체수</th>
+                                        <th>...</th>
+                                        <th>민원건수</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="total">
+                                        <td class="center">합계</td>
+                                        <td class="center">'23</td>
+                                        <td class="right">33,592</td>
+                                        <td class="right">13,551</td>
+                                        <td class="right">21,671</td>
+                                        <td class="right">7,859</td>
+                                        <td class="right"></td>
+                                        <td class="right">9,487</td>
+                                        <td class="right">5,692</td>
+                                        <td class="right"></td>
+                                        <td class="right">2,434</td>
+                                    </tr>
+                                    <tr class="total">
+                                        <td class="center">합계</td>
+                                        <td class="center">'22</td>
+                                        <td class="right">33,592</td>
+                                        <td class="right">13,551</td>
+                                        <td class="right">21,671</td>
+                                        <td class="right">7,859</td>
+                                        <td class="right"></td>
+                                        <td class="right">9,487</td>
+                                        <td class="right">5,692</td>
+                                        <td class="right"></td>
+                                        <td class="right">2,434</td>
+                                    </tr>
+                                    <tr class="total">
+                                        <td class="center">합계</td>
+                                        <td class="center">'21</td>
+                                        <td class="right">33,592</td>
+                                        <td class="right">13,551</td>
+                                        <td class="right">21,671</td>
+                                        <td class="right">7,859</td>
+                                        <td class="right"></td>
+                                        <td class="right">9,487</td>
+                                        <td class="right">5,692</td>
+                                        <td class="right"></td>
+                                        <td class="right">2,434</td>
+                                    </tr>
+                                    <tr class="total">
+                                        <td class="center">합계</td>
+                                        <td class="center">'20</td>
+                                        <td class="right">33,592</td>
+                                        <td class="right">13,551</td>
+                                        <td class="right">21,671</td>
+                                        <td class="right">7,859</td>
+                                        <td class="right"></td>
+                                        <td class="right">9,487</td>
+                                        <td class="right">5,692</td>
+                                        <td class="right"></td>
+                                        <td class="right">2,434</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">서울</td>
+                                        <td class="center">'23</td>
+                                        <td class="right">33,592</td>
+                                        <td class="right">13,551</td>
+                                        <td class="right">21,671</td>
+                                        <td class="right">7,859</td>
+                                        <td class="right"></td>
+                                        <td class="right">9,487</td>
+                                        <td class="right">5,692</td>
+                                        <td class="right"></td>
+                                        <td class="right">2,434</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">서울</td>
+                                        <td class="center">'22</td>
+                                        <td class="right">33,592</td>
+                                        <td class="right">13,551</td>
+                                        <td class="right">21,671</td>
+                                        <td class="right">7,859</td>
+                                        <td class="right"></td>
+                                        <td class="right">9,487</td>
+                                        <td class="right">5,692</td>
+                                        <td class="right"></td>
+                                        <td class="right">2,434</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="chart-row">
+                            <div class="chart-col">
+                                <div class="section-header">악취 민원건수 및 피민원업체수 연도별 추이</div>
+                                <div class="chart">
+                                    chart
+                                </div>
+                            </div>
+                            <div class="chart-col">
+                                <div class="section-header">연도별 악취민원건수 추이</div>
+                                <div class="chart">
+                                    chart
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+
+                        <div class="search-area">
+                            <div class="col">
+                                <label>연도</label>
+                                <div class="col__row">
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>시도</label>
+                                <select>
+                                    <option>선택</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="search-button-area">
+                            <button type="button" class="btn-primary">
+                                <img src="./image/Magnifer.svg">
+                                조회
+                            </button>
+                        </div>
+
+                        <div class="table-button-row">
+                            <button type="button" class="btn-secondary excel">
+                                <img src="./image/Explicit.svg">
+                                엑셀다운로드
+                            </button>
+                        </div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th rowspan="3" colspan="2">구분</th>
+                                        <th rowspan="2" colspan="2">총괄</th>
+                                        <th colspan="3">악취배출시설 설치 사업장</th>
+                                        <th colspan="3">생활악취<br>(생활악취 + 규모미만사업장)</th>
+                                        <th rowspan="2">원인불명</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">소계</th>
+                                        <th>...</th>
+                                        <th colspan="2">소계</th>
+                                        <th>...</th>
+                                    </tr>
+                                    <tr>
+                                        <th>민원건수</th>
+                                        <th>피민원업소수</th>
+                                        <th>민원건수</th>
+                                        <th>피민원업체수</th>
+                                        <th>...</th>
+                                        <th>민원건수</th>
+                                        <th>피민원업체수</th>
+                                        <th>...</th>
+                                        <th>민원건수</th>
+                                    </tr>                                    
+                                </thead>
+                                <tbody>
+                                    <tr class="total">
+                                        <td colspan="2" class="center">합계</td>
+                                        <td class="right">33,592</td>
+                                        <td class="right">13,551</td>
+                                        <td class="right">21,671</td>
+                                        <td class="right">7,859</td>
+                                        <td class="right"></td>
+                                        <td class="right">9,487</td>
+                                        <td class="right">5,692</td>
+                                        <td class="right"></td>
+                                        <td class="right">2,434</td>
+                                    </tr>
+                                    <tr class="sub-total">
+                                        <td class="center">서울</td>
+                                        <td class="center">합계</td>
+                                        <td class="right">1,441</td>
+                                        <td class="right">853</td>
+                                        <td class="right">51</td>
+                                        <td class="right">27</td>
+                                        <td class="right"></td>
+                                        <td class="right">1,316</td>
+                                        <td class="right">826</td>
+                                        <td class="right"></td>
+                                        <td class="right">74</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">서울</td>
+                                        <td class="center">종로구</td>
+                                        <td class="right">1,441</td>
+                                        <td class="right">853</td>
+                                        <td class="right">51</td>
+                                        <td class="right">27</td>
+                                        <td class="right"></td>
+                                        <td class="right">1,316</td>
+                                        <td class="right">826</td>
+                                        <td class="right"></td>
+                                        <td class="right">74</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">서울</td>
+                                        <td class="center">중구</td>
+                                        <td class="right">1,441</td>
+                                        <td class="right">853</td>
+                                        <td class="right">51</td>
+                                        <td class="right">27</td>
+                                        <td class="right"></td>
+                                        <td class="right">1,316</td>
+                                        <td class="right">826</td>
+                                        <td class="right"></td>
+                                        <td class="right">74</td>
+                                    </tr>
+                                    <tr class="sub-total">
+                                        <td class="center">부산</td>
+                                        <td class="center">합계</td>
+                                        <td class="right">1,441</td>
+                                        <td class="right">853</td>
+                                        <td class="right">51</td>
+                                        <td class="right">27</td>
+                                        <td class="right"></td>
+                                        <td class="right">1,316</td>
+                                        <td class="right">826</td>
+                                        <td class="right"></td>
+                                        <td class="right">74</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="chart-row">
+                            <div class="chart-col">
+                                <div class="section-header">기초 자치단체별 민원 발생 특성 구분(상위 10개)</div>
+                                <div class="chart">
+                                    chart
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-contents" data-name="03"></div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

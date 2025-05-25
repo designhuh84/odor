@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            기술지원 > 신청정보 > 등록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">기술지원</div>
+                <a href="./TCS_001_01.html" class="menu current">신청정보</a>
+            </div>
+            <div class="main">
+                <div class="page-title">신청정보 등록</div>
+                <div class="contents">
+
+                    <div class="tab-row border">
+                        <div class="tab on" data-name="01">기술지원</div>
+                        <div class="tab" data-name="02">사후관리</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <div class="section-header">기술지원 신청정보</div>
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th class="required">신청경로</th>
+                                    <td>
+                                        <select>
+                                            <option>지자체</option>
+                                            <option>사업장</option>
+                                            <option>기타</option>
+                                        </select>
+                                    </td>
+                                    <th class="required">진행상황</th>
+                                    <td>
+                                        <div class="row">
+                                            <select>
+                                                <option>대기</option>
+                                            </select>
+                                            <input type="text" placeholder="취소사유입력">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">사업장 유형</th>
+                                    <td>
+                                        <select>
+                                            <option>일반사업장</option>
+                                        </select>
+                                    </td>
+                                    <th>농협연계 여부</th>
+                                    <td>
+                                        <div class="row">
+                                            <select>
+                                                <option>선택</option>
+                                            </select>
+                                            <input type="text" placeholder="기타입력">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="section-header">기술지원 신청정보</div>
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th class="required">사업장 명</th>
+                                    <td>
+                                        <div class="row">
+                                            <input type="text" value="OO산업" disabled>
+                                            <button type="button" class="btn-primary">사업장 검색</button>
+                                        </div>
+                                    </td>
+                                    <th class="required">대표자(성명)</th>
+                                    <td>
+                                        <input type="text" value="김대표" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">사업장 소재지</th>
+                                    <td>
+                                        <input type="text" value="충남 부여군 XX면 XX리 123-1" disabled>
+                                    </td>
+                                    <th class="required">전화번호</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">신청부서 및 담당자</th>
+                                    <td>
+                                        <input type="text" value="XX군 행정환경과">
+                                    </td>
+                                    <th>담당자 이메일</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="section-header">신청내용</div>
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th class="required">업종</th>
+                                    <td>
+                                        <input type="text" value="육우 사육업(01212)" disabled>
+                                    </td>
+                                    <th>종업원 수</th>
+                                    <td>
+                                        <input type="text" value="20" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>주요 생산품</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <th>주요 생산 공정</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>주요 악취배출공정</th>
+                                    <td colspan="3">
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>악취방지시설 종류</th>
+                                    <td colspan="3">
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">기술지원 신청일</th>
+                                    <td>
+                                        <input type="date">
+                                    </td>
+                                    <th>기술지원 희망일</th>
+                                    <td>
+                                        <input type="text" value="2024.3.15~(최대한 빨리)">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">
+                                        기술지원 요청사항 (악취관련 문세시설 요약 등 가능한 상세히 기술)
+                                    </th>
+                                    <td colspan="3">
+                                        <textarea></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">신청내용</div>
+                            <button type="button" class="btn-primary">파일추가</button>
+                            <button type="button" class="btn-secondary">파일삭제</button>
+                        </div>
+                        
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="all-files"></th>
+                                        <th>구분</th>
+                                        <th>첨부파일</th>
+                                        <th>등록일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center"><input type="checkbox"></td>
+                                        <td>악취저감기술 지원 신청서</td>
+                                        <td>
+                                            <a href="#!">OO사업장기술지원신청서.hwp</a>
+                                        </td>
+                                        <td class="center">2023-00-00 00:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="contents-bottom-button-row">
+                            <button type="button" class="btn-primary" onclick="alert('저장되었습니다.')">저장</button>
+                            <button type="button" class="btn-primary" onclick="location.href = './TCS_001_01.html'">목록</button>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-contents" data-name="02"></div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

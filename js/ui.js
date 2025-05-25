@@ -150,7 +150,7 @@ GlobalHeaderMenuUI.html = `
                 <div class="row">
                     <div class="sub-category">기술지원</div>
                     <div class="menus">
-                        <a href="#!" class="menu">신청정보</a>
+                        <a href="./TCS_001_01.html" class="menu">신청정보</a>
                     </div>
                 </div>
             </div>
@@ -165,6 +165,12 @@ GlobalHeaderMenuUI.html = `
                         <a href="#!" class="menu">전문기관관리</a>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="sub-category">기술진단</div>
+                    <div class="menus">
+                        <a href="./TCD_003_01.html" class="menu">접수 및 수행관리</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -174,6 +180,7 @@ GlobalHeaderMenuUI.html = `
                 <div class="row">
                     <div class="sub-category">악취시료</div>
                     <div class="menus">
+                        <a href="./SCM_001_01.html" class="menu">기술지원 분석</a>
                         <a href="#!" class="menu">외부 분석</a>
                     </div>
                 </div>
@@ -192,9 +199,9 @@ GlobalHeaderMenuUI.html = `
                 <div class="row">
                     <div class="sub-category">악취민원실태조사</div>
                     <div class="menus">
-                        <a href="#!" class="menu">조치결과현황</a>
-                        <a href="#!" class="menu">악취배출사업장</a>
-                        <a href="#!" class="menu">업종별현황</a>
+                        <a href="./STS_028_03.html" class="menu">월별현황</a>
+                        <a href="./STS_029_01.html" class="menu">지역별현황</a>
+                        <a href="./STS_031_02.html" class="menu">환경기초시설현황</a>
                     </div>
                 </div>
             </div>
@@ -391,4 +398,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    document.querySelectorAll('.common-radio label').forEach(label => {
+        label.addEventListener('click', event => {
+            event.target.closest('.common-radio').querySelector('input[type="radio"]').checked = true;
+        });
+    });
+
+    document.querySelectorAll('table td textarea').forEach(textarea => {
+        observer.observe(textarea);
+    });
+
 });
+
+const observer = new IntersectionObserver(elements => {
+    console.log(elements);
+    elements.forEach(element => {
+        if(element.isIntersecting){
+            setTextAreaHeight(element.target);
+        }
+    });
+});
+
+const setTextAreaHeight = element => {
+    const target = element.parentElement.previousElementSibling;
+    const targetHeight = target.getBoundingClientRect().height;
+    const targetPaddingTop = parseFloat(window.getComputedStyle(target).paddingTop);
+    const targetPaddingBottom = parseFloat(window.getComputedStyle(target).paddingBottom);
+    element.style.height = targetHeight - targetPaddingTop - targetPaddingBottom + 'px';
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            통계현황 > 민원현황(악취민원실태조사) > 월별현황
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">악취민원실태조사</div>
+                <a href="./STS_028_03.html" class="menu current">월별현황</a>
+                <a href="./STS_029_01.html" class="menu">지역별현황</a>
+                <a href="./STS_031_02.html" class="menu">환경기초시설현황</a>
+            </div>
+            <div class="main">
+                <div class="page-title">월별현황</div>
+                <div class="contents">
+
+                    <div class="tab-row">
+                        <div class="tab" data-name="01">총계</div>
+                        <div class="tab" data-name="02">악취배출시설별</div>
+                        <div class="tab on" data-name="03">산업농공단지별</div>
+                    </div>
+
+                    <div class="tab-contents" data-name="01"></div>
+                    <div class="tab-contents" data-name="02"></div>
+
+                    <div class="tab-contents on" data-name="03">
+                        <div class="search-area">
+                            <div class="col">
+                                <label>연도</label>
+                                <div class="col__row">
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>시도</label>
+                                <select>
+                                    <option>선택</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="search-button-area">
+                            <button type="button" class="btn-primary">
+                                <img src="./image/Magnifer.svg">
+                                조회
+                            </button>
+                        </div>
+
+                        <div class="table-button-row">
+                            <button type="button" class="btn-secondary excel">
+                                <img src="./image/Explicit.svg">
+                                엑셀다운로드
+                            </button>
+                        </div>
+
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2" colspan="2">구분</th>
+                                            <th rowspan="2">악취관리지역 여부</th>
+                                            <th colspan="13">악취민원 발생 현황</th>
+                                        </tr>
+                                        <tr>
+                                            <th class="total">합계</th>
+                                            <th>1월</th>
+                                            <th>2월</th>
+                                            <th>3월</th>
+                                            <th>4월</th>
+                                            <th>5월</th>
+                                            <th>6월</th>
+                                            <th>7월</th>
+                                            <th>8월</th>
+                                            <th>9월</th>
+                                            <th>10월</th>
+                                            <th>11월</th>
+                                            <th>12월</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="total">
+                                            <td colspan="3" class="center">합계</td>
+                                            <td class="right total">3,077</td>
+                                            <td class="right">108</td>
+                                            <td class="right">64</td>
+                                            <td class="right">148</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">134</td>
+                                        </tr>
+                                        <tr class="sub-total">
+                                            <td colspan="3" class="center">서울 계</td>
+                                            <td class="right total">3,077</td>
+                                            <td class="right">108</td>
+                                            <td class="right">64</td>
+                                            <td class="right">148</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">134</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">서울</td>
+                                            <td>한국수출국가산업단지</td>
+                                            <td class="center">X</td>
+                                            <td class="right total">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">서울</td>
+                                            <td>서울온수산업단지</td>
+                                            <td class="center">X</td>
+                                            <td class="right total">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                        </tr>
+                                        <tr class="sub-total">
+                                            <td colspan="3" class="center">부산 계</td>
+                                            <td class="right total">3,077</td>
+                                            <td class="right">108</td>
+                                            <td class="right">64</td>
+                                            <td class="right">148</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">134</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">부산</td>
+                                            <td>명지·녹산국가단지</td>
+                                            <td class="center">X</td>
+                                            <td class="right total">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="center">부산</td>
+                                            <td>부산과학일반산업단지<br>(부산진해경제자유구역)</td>
+                                            <td class="center">X</td>
+                                            <td class="right total">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                            <td class="right">0</td>
+                                        </tr>
+                                    </tbody>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="chart-row">
+                            <div class="chart-col">
+                                <div class="section-header">산업단지의 월별 민원 발생 현황</div>
+                                <div class="chart">
+                                    chart
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>
