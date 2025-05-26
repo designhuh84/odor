@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            민원현황 > 민원현황 > 민원MAP
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">민원현황</div>
+                <a href="./SCM_001_01.html" class="menu current">민원MAP</a>
+            </div>
+            <div class="main">
+                <div class="page-title">민원MAP</div>
+                <div class="contents">
+
+
+                    <div id="minwon-map">
+                        <div class="sidebar">
+                            <div class="row">
+                                <div class="title">주소검색</div>
+                                <input type="text">
+                            </div>
+                            <div class="row">
+                                <div class="title-row">
+                                    <div class="title">악취 종류</div>
+                                    <div class="title-row-buttons">
+                                        <button type="button" class="btn-primary">전체선택</button>
+                                        <button type="button" class="btn-secondary">전체해제</button>
+                                    </div>
+                                </div>
+                                <div class="type-row">
+                                    <div class="type">
+                                        <input type="checkbox" id="ch1">
+                                        <label for="ch1">썩는 냄새</label>
+                                    </div>
+                                    <div class="type">
+                                        <input type="checkbox" id="ch2">
+                                        <label for="ch2">약품 냄새</label>
+                                    </div>
+                                    <div class="type">
+                                        <input type="checkbox" id="ch3">
+                                        <label for="ch3">타는 냄새</label>
+                                    </div>
+                                    <div class="type">
+                                        <input type="checkbox" id="ch4">
+                                        <label for="ch4">비린냄새</label>
+                                    </div>
+                                    <div class="type">
+                                        <input type="checkbox" id="ch5">
+                                        <label for="ch5">석유계 냄새</label>
+                                    </div>
+                                    <div class="type">
+                                        <input type="checkbox" id="ch6">
+                                        <label for="ch6">축산 냄새</label>
+                                    </div>
+                                    <div class="type">
+                                        <input type="checkbox" id="ch7">
+                                        <label for="ch7">달콤한 냄새</label>
+                                    </div>
+                                    <div class="type">
+                                        <input type="checkbox" id="ch8">
+                                        <label for="ch8">기타</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="title">표시 정보</div>
+                                <div class="radio-row">
+                                    <div class="radio">
+                                        <input type="radio" name="radio1" id="rd1">
+                                        <label for="rd1">민원</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio1" id="rd2">
+                                        <label for="rd2">악취관리지역</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio1" id="rd3">
+                                        <label for="rd3">악취배출</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="map-area" style="height: 655px;">
+                            <div class="rank">
+                                <div class="title">현 재역 내 대기 오염도 순위</div>
+                                <div class="rank-datas">
+                                    <div class="rank-data" level="5">
+                                        <div class="num">1</div>
+                                        <div class="name">약품 냄새</div>
+                                        <div class="level">강도5</div>
+                                        <svg viewBox="0 0 24 24" class="arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355ZM7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L12.4697 9.53033C12.1768 9.23744 12.1768 8.76256 12.4697 8.46967C12.7626 8.17678 13.2374 8.17678 13.5303 8.46967L16.5303 11.4697C16.671 11.6103 16.75 11.8011 16.75 12C16.75 12.1989 16.671 12.3897 16.5303 12.5303L13.5303 15.5303C13.2374 15.8232 12.7626 15.8232 12.4697 15.5303C12.1768 15.2374 12.1768 14.7626 12.4697 14.4697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z"/>
+                                        </svg>
+                                        <div class="count">36건</div>
+                                    </div>
+                                    <div class="rank-data" level="4">
+                                        <div class="num">2</div>
+                                        <div class="name">썩는 냄새</div>
+                                        <div class="level">강도4</div>
+                                        <svg viewBox="0 0 24 24" class="arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355ZM7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L12.4697 9.53033C12.1768 9.23744 12.1768 8.76256 12.4697 8.46967C12.7626 8.17678 13.2374 8.17678 13.5303 8.46967L16.5303 11.4697C16.671 11.6103 16.75 11.8011 16.75 12C16.75 12.1989 16.671 12.3897 16.5303 12.5303L13.5303 15.5303C13.2374 15.8232 12.7626 15.8232 12.4697 15.5303C12.1768 15.2374 12.1768 14.7626 12.4697 14.4697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z"/>
+                                        </svg>
+                                        <div class="count">22건</div>
+                                    </div>
+                                    <div class="rank-data" level="3">
+                                        <div class="num">3</div>
+                                        <div class="name">썩는 냄새</div>
+                                        <div class="level">강도3</div>
+                                        <svg viewBox="0 0 24 24" class="arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355ZM7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L12.4697 9.53033C12.1768 9.23744 12.1768 8.76256 12.4697 8.46967C12.7626 8.17678 13.2374 8.17678 13.5303 8.46967L16.5303 11.4697C16.671 11.6103 16.75 11.8011 16.75 12C16.75 12.1989 16.671 12.3897 16.5303 12.5303L13.5303 15.5303C13.2374 15.8232 12.7626 15.8232 12.4697 15.5303C12.1768 15.2374 12.1768 14.7626 12.4697 14.4697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z"/>
+                                        </svg>
+                                        <div class="count">22건</div>
+                                    </div>
+                                    <div class="rank-data" level="2">
+                                        <div class="num">4</div>
+                                        <div class="name">썩는 냄새</div>
+                                        <div class="level">강도2</div>
+                                        <svg viewBox="0 0 24 24" class="arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355ZM7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L12.4697 9.53033C12.1768 9.23744 12.1768 8.76256 12.4697 8.46967C12.7626 8.17678 13.2374 8.17678 13.5303 8.46967L16.5303 11.4697C16.671 11.6103 16.75 11.8011 16.75 12C16.75 12.1989 16.671 12.3897 16.5303 12.5303L13.5303 15.5303C13.2374 15.8232 12.7626 15.8232 12.4697 15.5303C12.1768 15.2374 12.1768 14.7626 12.4697 14.4697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z"/>
+                                        </svg>
+                                        <div class="count">22건</div>
+                                    </div>
+                                    <div class="rank-data" level="1">
+                                        <div class="num">5</div>
+                                        <div class="name">썩는 냄새</div>
+                                        <div class="level">강도1</div>
+                                        <svg viewBox="0 0 24 24" class="arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355ZM7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L12.4697 9.53033C12.1768 9.23744 12.1768 8.76256 12.4697 8.46967C12.7626 8.17678 13.2374 8.17678 13.5303 8.46967L16.5303 11.4697C16.671 11.6103 16.75 11.8011 16.75 12C16.75 12.1989 16.671 12.3897 16.5303 12.5303L13.5303 15.5303C13.2374 15.8232 12.7626 15.8232 12.4697 15.5303C12.1768 15.2374 12.1768 14.7626 12.4697 14.4697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z"/>
+                                        </svg>
+                                        <div class="count">22건</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cluster" style="top: 100px; left: 200px;">87</div>
+                            <div class="marker" style="top: 200px; left: 100px;"></div>
+
+                            <div class="odor-data" style="top: 200px; left: 136px;">
+                                <table>
+                                    <tr>
+                                        <th rowspan="3" class="minwon">민원</th>
+                                        <th class="minwon">지역</th>
+                                        <td class="minwon">인천 서구 정서진8로 55</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="minwon">내용</th>
+                                        <td class="minwon">무슨 약품 내새 같은가 너무 심하게 나요!!</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="minwon">신고일시</th>
+                                        <td class="minwon">2023-12-27 13:22</td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2">악취</th>
+                                        <th>종류</th>
+                                        <td>약품 냄새</td>
+                                    </tr>
+                                    <tr>
+                                        <th>세기</th>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">처리상태</th>
+                                        <td>접수 완료</td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">조치결과</th>
+                                        <td>처리 중</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+
+                            <div class="odor-list" style="top: 300px; left: 500px;">
+                                <div class="title">악취 목록</div>
+                                <div class="list">
+                                    <div class="rank-data" level="5">
+                                        <div class="name">약품 냄새</div>
+                                        <div class="level">강도5</div>
+                                        <svg viewBox="0 0 24 24" class="arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355ZM7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L12.4697 9.53033C12.1768 9.23744 12.1768 8.76256 12.4697 8.46967C12.7626 8.17678 13.2374 8.17678 13.5303 8.46967L16.5303 11.4697C16.671 11.6103 16.75 11.8011 16.75 12C16.75 12.1989 16.671 12.3897 16.5303 12.5303L13.5303 15.5303C13.2374 15.8232 12.7626 15.8232 12.4697 15.5303C12.1768 15.2374 12.1768 14.7626 12.4697 14.4697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z"/>
+                                        </svg>
+                                        <div class="count">36건</div>
+                                    </div>
+                                    <div class="rank-data" level="4">
+                                        <div class="name">썩는 냄새</div>
+                                        <div class="level">강도4</div>
+                                        <svg viewBox="0 0 24 24" class="arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355ZM7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L12.4697 9.53033C12.1768 9.23744 12.1768 8.76256 12.4697 8.46967C12.7626 8.17678 13.2374 8.17678 13.5303 8.46967L16.5303 11.4697C16.671 11.6103 16.75 11.8011 16.75 12C16.75 12.1989 16.671 12.3897 16.5303 12.5303L13.5303 15.5303C13.2374 15.8232 12.7626 15.8232 12.4697 15.5303C12.1768 15.2374 12.1768 14.7626 12.4697 14.4697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z"/>
+                                        </svg>
+                                        <div class="count">22건</div>
+                                    </div>
+                                    <div class="rank-data" level="3">
+                                        <div class="name">썩는 냄새</div>
+                                        <div class="level">강도3</div>
+                                        <svg viewBox="0 0 24 24" class="arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355ZM7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L12.4697 9.53033C12.1768 9.23744 12.1768 8.76256 12.4697 8.46967C12.7626 8.17678 13.2374 8.17678 13.5303 8.46967L16.5303 11.4697C16.671 11.6103 16.75 11.8011 16.75 12C16.75 12.1989 16.671 12.3897 16.5303 12.5303L13.5303 15.5303C13.2374 15.8232 12.7626 15.8232 12.4697 15.5303C12.1768 15.2374 12.1768 14.7626 12.4697 14.4697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z"/>
+                                        </svg>
+                                        <div class="count">22건</div>
+                                    </div>
+                                    <div class="rank-data" level="2">
+                                        <div class="name">썩는 냄새</div>
+                                        <div class="level">강도2</div>
+                                        <svg viewBox="0 0 24 24" class="arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355ZM7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L12.4697 9.53033C12.1768 9.23744 12.1768 8.76256 12.4697 8.46967C12.7626 8.17678 13.2374 8.17678 13.5303 8.46967L16.5303 11.4697C16.671 11.6103 16.75 11.8011 16.75 12C16.75 12.1989 16.671 12.3897 16.5303 12.5303L13.5303 15.5303C13.2374 15.8232 12.7626 15.8232 12.4697 15.5303C12.1768 15.2374 12.1768 14.7626 12.4697 14.4697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z"/>
+                                        </svg>
+                                        <div class="count">22건</div>
+                                    </div>
+                                    <div class="rank-data" level="1">
+                                        <div class="name">썩는 냄새</div>
+                                        <div class="level">강도1</div>
+                                        <svg viewBox="0 0 24 24" class="arrow" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.46447 20.5355C4.92893 22 7.28595 22 12 22C16.714 22 19.0711 22 20.5355 20.5355C22 19.0711 22 16.714 22 12C22 7.28595 22 4.92893 20.5355 3.46447C19.0711 2 16.714 2 12 2C7.28595 2 4.92893 2 3.46447 3.46447C2 4.92893 2 7.28595 2 12C2 16.714 2 19.0711 3.46447 20.5355ZM7.25 12C7.25 11.5858 7.58579 11.25 8 11.25H14.1893L12.4697 9.53033C12.1768 9.23744 12.1768 8.76256 12.4697 8.46967C12.7626 8.17678 13.2374 8.17678 13.5303 8.46967L16.5303 11.4697C16.671 11.6103 16.75 11.8011 16.75 12C16.75 12.1989 16.671 12.3897 16.5303 12.5303L13.5303 15.5303C13.2374 15.8232 12.7626 15.8232 12.4697 15.5303C12.1768 15.2374 12.1768 14.7626 12.4697 14.4697L14.1893 12.75H8C7.58579 12.75 7.25 12.4142 7.25 12Z"/>
+                                        </svg>
+                                        <div class="count">22건</div>
+                                    </div>
+                                </div>
+                                <div class="odor-summary">약품 냄새에 대한 대기오염 심각</div>
+                            </div>
+
+                            <!-- 지도 부분은 삭제하시면 됩니다. -->
+                            <img src="./image/map-sample.png" style="position: absolute; top: 0; left: 0; z-index: 1; width: auto; height: 100%;">
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        
+
+    });
+
+</script>
+</html>

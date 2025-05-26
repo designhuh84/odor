@@ -170,7 +170,7 @@ nav {
 nav a {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #FFF;
   height: 100%;
@@ -557,7 +557,7 @@ global-header-menu .inner {
   max-height: 30rem;
   overflow-y: auto;
   overscroll-behavior: none;
-  margin: 2.5rem auto;
+  margin: 1rem auto;
 }
 global-header-menu .inner > .col:last-of-type {
   border-bottom: 0;
@@ -604,10 +604,11 @@ global-header-menu .col .category {
 global-header-menu .col .sub-category {
   font-size: 1rem;
   font-weight: 600;
-  flex-basis: 9rem;
+  flex-basis: 10rem;
   flex-shrink: 0;
   padding: 0 0.75rem;
   cursor: default;
+  padding-left: 1.5rem;
 }
 global-header-menu .col .menus {
   flex-grow: 1;
@@ -1499,4 +1500,268 @@ table.sub01-1 tbody td {
   flex-grow: 1;
   display: flex;
   align-items: center;
+}
+
+#minwon-map {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 16.875rem 1fr;
+  border: solid 1px #BFBFBF;
+}
+#minwon-map .sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  border-right: solid 1px #BFBFBF;
+}
+#minwon-map .sidebar .row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.38rem;
+}
+#minwon-map .sidebar .title {
+  font-weight: 700;
+}
+#minwon-map .sidebar .title-row {
+  display: flex;
+  align-items: center;
+}
+#minwon-map .sidebar .title-row-buttons {
+  display: flex;
+  gap: 0.38rem;
+  margin-left: auto;
+}
+#minwon-map .sidebar .title-row-buttons button {
+  padding: 0;
+  min-width: 4rem;
+  height: 1.5rem;
+  font-size: 0.75rem;
+}
+#minwon-map .sidebar .type-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.25rem;
+  border-top: solid 1px #000;
+  padding-top: 0.5rem;
+}
+#minwon-map .sidebar .type-row .type {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  word-break: keep-all;
+}
+#minwon-map .sidebar .radio-row {
+  display: flex;
+  gap: 0.75rem;
+}
+#minwon-map .sidebar .radio-row .radio {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+#minwon-map .sidebar .radio-row .radio label {
+  font-size: 0.75rem;
+}
+#minwon-map .map-area {
+  overflow: hidden;
+}
+#minwon-map .rank {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#minwon-map .rank .title {
+  display: block;
+  font-weight: 700;
+  line-height: 140%;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: #FFF;
+}
+#minwon-map .rank .rank-datas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+#minwon-map .rank-data {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+#minwon-map .rank-data .num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  color: #FFF;
+}
+#minwon-map .rank-data .level {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  border-radius: 0.5rem;
+  padding: 0 0.3rem;
+  color: #FFF;
+}
+#minwon-map .rank-data .arrow {
+  width: 1rem;
+  height: 1rem;
+}
+#minwon-map .rank-data[level="5"] .num, #minwon-map .rank-data[level="5"] .level {
+  background-color: #FF4C00;
+}
+#minwon-map .rank-data[level="5"] .name, #minwon-map .rank-data[level="5"] .count {
+  color: #FF4C00;
+}
+#minwon-map .rank-data[level="5"] .arrow path {
+  fill: #FF4C00;
+}
+#minwon-map .rank-data[level="4"] .num, #minwon-map .rank-data[level="4"] .level {
+  background-color: #E08300;
+}
+#minwon-map .rank-data[level="4"] .name, #minwon-map .rank-data[level="4"] .count {
+  color: #E08300;
+}
+#minwon-map .rank-data[level="4"] .arrow path {
+  fill: #E08300;
+}
+#minwon-map .rank-data[level="3"] .num, #minwon-map .rank-data[level="3"] .level {
+  background-color: #873597;
+}
+#minwon-map .rank-data[level="3"] .name, #minwon-map .rank-data[level="3"] .count {
+  color: #873597;
+}
+#minwon-map .rank-data[level="3"] .arrow path {
+  fill: #873597;
+}
+#minwon-map .rank-data[level="2"] .num, #minwon-map .rank-data[level="2"] .level {
+  background-color: #359797;
+}
+#minwon-map .rank-data[level="2"] .name, #minwon-map .rank-data[level="2"] .count {
+  color: #359797;
+}
+#minwon-map .rank-data[level="2"] .arrow path {
+  fill: #359797;
+}
+#minwon-map .rank-data[level="1"] .num, #minwon-map .rank-data[level="1"] .level {
+  background-color: #359735;
+}
+#minwon-map .rank-data[level="1"] .name, #minwon-map .rank-data[level="1"] .count {
+  color: #359735;
+}
+#minwon-map .rank-data[level="1"] .arrow path {
+  fill: #359735;
+}
+#minwon-map .cluster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(53, 151, 53, 0.7);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFF;
+  cursor: pointer;
+}
+#minwon-map .marker {
+  position: absolute;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../image/Map-Point.svg);
+  background-size: cover;
+  background-position: center;
+}
+#minwon-map .odor-data {
+  position: absolute;
+  z-index: 2;
+  background-color: #FFF;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+#minwon-map .odor-data table {
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+#minwon-map .odor-data table th {
+  background-color: #F8FBF8;
+  border: solid 1px var(--primary);
+  color: #000;
+}
+#minwon-map .odor-data table th.minwon {
+  background-color: var(--primary);
+  color: #FFF;
+  border: solid 1px #FFF;
+}
+#minwon-map .odor-data table td {
+  color: #000;
+  border: solid 1px #BFBFBF;
+}
+#minwon-map .odor-data table td.minwon {
+  background-color: #F3F3F3;
+}
+#minwon-map .odor-data table th, #minwon-map .odor-data table td {
+  vertical-align: middle;
+  padding: 0.25rem 0.5rem;
+}
+#minwon-map .odor-list {
+  position: absolute;
+  z-index: 2;
+  background-color: #FFF;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  width: 13.125rem;
+  height: 20rem;
+  overflow: hidden;
+}
+#minwon-map .odor-list .title {
+  display: block;
+  font-weight: 700;
+  line-height: 140%;
+  padding: 0.2rem 1rem;
+  background-color: var(--primary);
+  color: #FFF;
+  flex-shrink: 0;
+}
+#minwon-map .odor-list .list {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  overflow-y: auto;
+}
+#minwon-map .odor-list .rank-data {
+  width: 100%;
+  justify-content: space-between;
+}
+#minwon-map .odor-list .odor-summary {
+  flex-shrink: 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  background-color: #F4FBF4;
 }/*# sourceMappingURL=style.css.map */
