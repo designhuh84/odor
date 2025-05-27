@@ -74,6 +74,10 @@ input[type=radio] {
   padding: 0;
 }
 
+input.number {
+  text-align: right;
+}
+
 input.zipcode {
   max-width: 7rem;
 }
@@ -1091,8 +1095,14 @@ global-header-menu .col .menu:hover {
 .table-container table th.total {
   background-color: #ECFEEC;
 }
+.table-container table th + td:has(+ th) {
+  border-right: 0;
+}
 .table-container table td {
   color: #4D4D4D;
+}
+.table-container table td .common__search {
+  height: 1.75rem;
 }
 .table-container table td input[type=text],
 .table-container table td input[type=date],
@@ -1129,7 +1139,7 @@ global-header-menu .col .menu:hover {
 .table-container table thead {
   border-bottom: solid 2px var(--primary);
 }
-.table-container table tbody tr:hover td {
+.table-container table tbody tr:hover td:not(.red) {
   background-color: #F7F9EC;
 }
 .table-container table.write {
@@ -1693,6 +1703,9 @@ table.sub01-1 tbody td {
   background-size: cover;
   background-position: center;
 }
+#minwon-map .marker.blue {
+  background-image: url(../image/Map-Point-blue.svg);
+}
 #minwon-map .odor-data {
   position: absolute;
   z-index: 2;
@@ -1704,11 +1717,6 @@ table.sub01-1 tbody td {
   font-size: 0.75rem;
 }
 #minwon-map .odor-data table th {
-  background-color: #F8FBF8;
-  border: solid 1px var(--primary);
-  color: #000;
-}
-#minwon-map .odor-data table th.minwon {
   background-color: var(--primary);
   color: #FFF;
   border: solid 1px #FFF;
@@ -1723,6 +1731,15 @@ table.sub01-1 tbody td {
 #minwon-map .odor-data table th, #minwon-map .odor-data table td {
   vertical-align: middle;
   padding: 0.25rem 0.5rem;
+}
+#minwon-map .odor-data table tr:nth-of-type(even) td {
+  background-color: #F7F9EC;
+}
+#minwon-map .odor-data table.blue th {
+  background-color: #207FDF;
+}
+#minwon-map .odor-data table.blue tr:nth-of-type(even) td {
+  background-color: #ECF2F9;
 }
 #minwon-map .odor-list {
   position: absolute;

@@ -78,6 +78,10 @@ input[type='radio']{
     padding: 0;
 }
 
+input.number{
+    text-align: right;
+}
+
 input.zipcode{
     max-width: 7rem;
 }
@@ -1136,9 +1140,17 @@ global-header-menu{
             &.total{
                 background-color: #ECFEEC;
             }
+
+            & + td:has(+ th){
+                border-right: 0;
+            }
         }
         td{
             color: #4D4D4D;
+
+            .common__search{
+                height: 1.75rem;
+            }
 
             input[type='text'],
             input[type='date'],
@@ -1181,7 +1193,7 @@ global-header-menu{
         tbody{
             tr{
                 &:hover{
-                    td{
+                    td:not(.red){
                         background-color: #F7F9EC;
                     }
                 }
@@ -1835,6 +1847,9 @@ table.sub01-1{
         background-image: url(../image/Map-Point.svg);
         background-size: cover;
         background-position: center;
+        &.blue{
+            background-image: url(../image/Map-Point-blue.svg);
+        }
     }
 
     .odor-data{
@@ -1844,16 +1859,11 @@ table.sub01-1{
         box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         table{
             border-collapse: collapse;
-            font-size: 0.75rem;            
+            font-size: 0.75rem;
             th{
-                background-color: #F8FBF8;
-                border: solid 1px var(--primary);
-                color: #000;
-                &.minwon{
-                    background-color: var(--primary);
-                    color: #FFF;
-                    border: solid 1px #FFF;
-                }
+                background-color: var(--primary);
+                color: #FFF;
+                border: solid 1px #FFF;
             }
             td{
                 color: #000;
@@ -1866,6 +1876,26 @@ table.sub01-1{
                 vertical-align: middle;
                 padding: 0.25rem 0.5rem;
             }
+            tr{
+                &:nth-of-type(even){
+                    td{
+                        background-color: #F7F9EC;
+                    }
+                }
+            }
+            &.blue{
+                th{
+                    background-color: #207FDF;
+                }
+                tr{
+                &:nth-of-type(even){
+                    td{
+                        background-color: #ECF2F9;
+                    }
+                }
+            }
+            }
+            
         }
     }
 

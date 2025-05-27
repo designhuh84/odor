@@ -136,9 +136,9 @@ GlobalHeaderMenuUI.html = `
                 <div class="row">
                     <div class="sub-category">사업장정보관리</div>
                     <div class="menus">
-                        <a href="./sub01.html" class="menu">사업장관리</a>
-                        <a href="#!" class="menu">변경신고서관리</a>
-                        <a href="./sub01-1.html" class="menu">지도점검 및 행정처분</a>
+                        <a href="./EBP_001.html" class="menu">사업장관리</a>
+                        <a href="EBP_002.html" class="menu">변경신고서관리</a>
+                        <a href="./EBP_003_01.html" class="menu">지도점검 및 행정처분</a>
                     </div>
                 </div>
             </div>
@@ -225,7 +225,7 @@ GlobalHeaderMenuUI.html = `
                 <div class="row">
                     <div class="sub-category">민원현황</div>
                     <div class="menus">
-                        <a href="#!" class="menu">민원MAP</a>
+                        <a href="./SOC_001_01.html" class="menu">민원MAP</a>
                         <a href="#!" class="menu">기간별 현황</a>
                         <a href="#!" class="menu">지역별현황</a>
                         <a href="#!" class="menu">생활악취현황</a>
