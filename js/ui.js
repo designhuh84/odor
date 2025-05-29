@@ -22,7 +22,14 @@ class GlobalHeaderUI extends HTMLElement {
                 document.querySelector('global-header-menu').style.height = '0px';
             }
         });
-        
+        document.querySelector('.btn-header-login').addEventListener('click', () => {
+            document.querySelector('.header-login-sub').classList.add('show');
+            document.querySelector('.header-login-sub-before').classList.add('show');
+        });
+        document.querySelector('.header-login-sub-before').addEventListener('click', () => {
+            document.querySelector('.header-login-sub').classList.remove('show');
+            document.querySelector('.header-login-sub-before').classList.remove('show');
+        });
     }
 }
 customElements.define('global-header', GlobalHeaderUI);
@@ -33,16 +40,36 @@ GlobalHeaderUI.html = `
             <img src="./image/logo.svg">
         </a>
         <nav>
-            <a href="./sub01.html">배출사업장</a>
-            <a href="#!">기술지원</a>
-            <a href="#!">기술진단</a>
-            <a href="#!">시료관리</a>
-            <a href="./sub03.html">통계현황</a>
+            <a href="./EBP_001.html">배출사업장</a>
+            <a href="./TCS_001_01.html">기술지원</a>
+            <a href="./TCD_003_01.html">기술진단</a>
+            <a href="./SCM_001_01.html">시료관리</a>
+            <a href="./STS_028_03.html">통계현황</a>
             <a href="#!">민원서비스</a>
-            <a href="#!">민원현황</a>
+            <a href="./SOC_001_01.html">민원현황</a>
             <a href="#!">고객센터</a>
         </nav>
         <button type="button" class="btn-header-login"></button>
+        <button type="button" class="btn-header-logout">로그아웃</button>
+        <div class="header-login-sub">
+            <a href="#!">
+                <img src="./image/User-bk.svg">
+                로그인
+            </a>
+            <a href="#!">
+                <img src="./image/Document-Add.svg">
+                회원가입
+            </a>
+            <a href="#!" class="admin">
+                <img src="./image/User-bk.svg">
+                관리자 로그인
+            </a>
+            <a href="#!" class="admin">
+                <img src="./image/Document-Add.svg">
+                관리자 회원가입
+            </a>
+        </div>
+        <div class="header-login-sub-before"></div>
     </div>
 `;
 
