@@ -353,12 +353,12 @@ class CommonModal extends CommonPopupComponent {
 
         const confirmButton = document.createElement('button');
         confirmButton.setAttribute('type', 'button');
-        confirmButton.setAttribute('class','btn-primary confirm');
+        confirmButton.setAttribute('class','btn primary confirm');
         confirmButton.textContent = '확인';
 
         const cancelButton = document.createElement('button');
         cancelButton.setAttribute('type', 'button');
-        cancelButton.setAttribute('class','btn-secondary confirm');
+        cancelButton.setAttribute('class','btn secondary confirm');
         cancelButton.textContent = '취소';
 
         footer.append(cancelButton);

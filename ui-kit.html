@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://sbgrid.co.kr/SBGridV3/api/lib/SBGrid3/sbgrid3.js"></script>
+    <link rel="stylesheet" href="https://sbgrid.co.kr/SBGridV3/api/lib/SBGrid3/css/sbgrid3.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            breadcrumb
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            breadcrumb
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            breadcrumb
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="title">LNB Page Category</div>
+                <a href="./#!" class="menu current">Current Menu</a>
+                <a href="./#!" class="menu">Menu</a>
+                <a href="./#!" class="menu">Menu</a>
+                <a href="#!" class="menu">Menu</a>
+            </div>
+            <div class="main">
+                <div class="page-title">Page Title</div>
+                <div class="contents">
+                    
+
+                    <div class="section-header">Tabs</div>
+
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">Current Tab</div>
+                        <div class="tab" data-name="02">Tab 02</div>
+                        <div class="tab" data-name="03">Tab 03</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <br>
+                        Current Tab Contents
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+                        <br>
+                        tab 02 contents
+                    </div>
+
+                    <div class="tab-contents" data-name="03">
+                        <br>
+                        tab 03 contents
+                    </div>
+                    
+
+                    <div class="section-header">Buttons</div>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <button type="button" class="btn primary">Primary</button>
+                        <button type="button" class="btn secondary">Secondary</button>
+                        <button type="button" class="btn blue">Blue</button>
+                        <button type="button" class="btn excel">Excel</button>
+                        <button type="button" class="btn green">Green</button>
+                        <button type="button" class="btn red">Red</button>
+                        <button type="button" class="btn skyblue">Skyblue</button>
+                        <button type="button" class="btn cancel">Cancel</button>
+                        <button type="button" class="btn brown">Brown</button>
+                        <button type="button" class="btn yellow">Yellow</button>
+                        <button type="button" class="btn dark">Dark</button>
+                        <button type="button" class="btn black">Black</button>
+                    </div>
+
+                    <div class="section-header">Icon Buttons</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <button type="button" class="btn icon search primary">Search 01</button>
+                        <button type="button" class="btn icon search secondary">Search 02</button>
+                        <button type="button" class="btn icon excel">Excel</button>
+                        <button type="button" class="btn icon save blue">Save</button>
+                        <button type="button" class="btn icon add green">Add</button>
+                        <button type="button" class="btn icon delete red">Delete</button>
+                        <button type="button" class="btn icon list black">List</button>
+                        <button type="button" class="btn icon print skyblue">Print</button>
+                        <button type="button" class="btn icon link secondary">Link</button>
+                        <button type="button" class="btn icon plus secondary">행 추가</button>
+                        <button type="button" class="btn icon minus secondary">행 삭제</button>
+                        <button type="button" class="btn icon download secondary">Download</button>
+                        <button type="button" class="btn icon upload secondary">Upload</button>
+                        <button type="button" class="btn icon write green">write</button>
+                    </div>
+
+                    <div class="section-header">검색 조건 영역</div>
+                    <div class="search-area">
+                        <div class="col">
+                            <label>Label</label>
+                            <input type="text">
+                        </div>
+                        <div class="col">
+                            <label>Select Lable</label>
+                            <select>
+                                <option>Option</option>
+                                <option>Option</option>
+                                <option>Option</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>Select Multi</label>
+                            <div class="col__row">
+                                <select class="city">
+                                    <option>시도</option>
+                                    <option>서울</option>
+                                    <option>인천</option>
+                                    <option>경기</option>
+                                    <option>강원</option>
+                                </select>
+                                <select class="city">
+                                    <option>시군구</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>Date Label</label>
+                            <input type="date">
+                        </div>
+                        <div class="col">
+                            <label>Date Multi</label>
+                            <div class="col__row">
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-header">Info box</div>
+                    <div class="infobox">
+                        <p>Info text</p>
+                        <p>Info text</p>
+                        <p>Info text</p>
+                        <div class="button-row">
+                            <button type="button" class="btn icon download secondary">
+                                다운로드
+                            </button>
+                            <button type="button" class="btn icon upload secondary">
+                                업로드
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="section-header">Grid</div>
+                    <div id="grid"></div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    var localData = [
+        { 'class': '매화반', 'name': '홍길동',  'number': '30534', 'korean': '75', 'english': '50', 'math': '88' },
+        { 'class': '매화반', 'name': '김철수',  'number': '30115', 'korean': '94', 'english': '84', 'math': '79' },
+        { 'class': '국화반', 'name': '최민지',  'number': '30742', 'korean': '84', 'english': '98', 'math': '62' },
+        { 'class': '국화반', 'name': '김갑수',  'number': '31124', 'korean': '61', 'english': '64', 'math': '77' },
+        { 'class': '국화반', 'name': '이순신',  'number': '40534', 'korean': '95', 'english': '85', 'math': '78' },
+        { 'class': '국화반', 'name': '임꺽정',  'number': '40115', 'korean': '91', 'english': '74', 'math': '89' },
+        { 'class': '국화반', 'name': '을지문덕','number': '40311', 'korean': '75', 'english': '81', 'math': '91' },
+        { 'class': '난초반', 'name': '신사임당','number': '51124', 'korean': '81', 'english': '74', 'math': '67' },
+        { 'class': '난초반', 'name': '국영수',  'number': '51125', 'korean': '80', 'english': '80', 'math': '80' },
+        { 'class': '난초반', 'name': '영수',    'number': '51126', 'korean': '70', 'english': '80', 'math': '80' },
+        { 'class': '난초반', 'name': '국영',    'number': '51127', 'korean': '80', 'english': '80', 'math': '60' },
+    ];
+    let gridConfig = {
+        dataSource: localData,    // 상단에 정의되어 있는 데이터를 이용
+        container: '#grid',
+        width: '100%',
+        height: '400px',
+        theme: 'common-grid', //grid에 theme: 'common-grid' 속성을 추가해주세요.
+        columns: [
+            { field: 'class' , caption:'반',   width:100 },
+            { field: 'name' ,  caption:'성명', width:100 },
+            { field: 'number', caption:'학번', width:100 },
+            { field: 'korean', caption:'국어', width:50 ,align:'right'},
+            { field: 'english',caption:'영어', width:50 ,align:'right'},
+            { field: 'math',   caption:'수학', width:50 ,align:'right'},
+        ],
+    }
+
+    datagrid = SBGrid3.createGrid(gridConfig);
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>
