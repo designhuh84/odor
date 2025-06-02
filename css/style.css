@@ -1948,6 +1948,9 @@ table.sub01-1 tbody td {
 .sbgrid-theme-common-grid .sbgrid-panel.sbgrid-scroll {
   border: 0;
 }
+.sbgrid-theme-common-grid .sbgrid-panel.sbgrid-caption .sbgrid-row .sbgrid-col {
+  padding: 0.7rem 1rem;
+}
 .sbgrid-theme-common-grid .sbgrid-caption .sbgrid-thead {
   background-color: #F8FBF8;
   border: solid 1px var(--primary);
@@ -1972,4 +1975,14 @@ table.sub01-1 tbody td {
 .sbgrid-theme-common-grid .sbgrid-panel.sbgrid-body {
   border: solid 1px #BFBFBF;
   border-top: 0;
+}
+.sbgrid-theme-common-grid .sbgrid-panel.sbgrid-body .sbgrid-row:hover {
+  background-color: #F7F9EC;
+}
+.sbgrid-theme-common-grid .sbgrid-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.sbgrid-theme-common-grid .sbgrid-cell {
+  font-size: 0.875rem;
 }/*# sourceMappingURL=style.css.map */

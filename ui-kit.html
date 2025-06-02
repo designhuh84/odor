@@ -99,6 +99,27 @@
                     </div>
 
                     <div class="section-header">검색 조건 영역</div>
+                    <div style="display: flex; gap: 1rem;">
+                        <button 
+                            type="button" 
+                            class="btn icon link primary"
+                            onclick="new CommonModal('팝업타이틀','팝업메세지 내용<br>HTML태그도 됨').show()"
+                        >
+                            Modal Popup
+                        </button>
+                        <button 
+                            type="button" 
+                            class="btn icon link primary"
+                            onclick="alert('준비중입니다.')"
+                        >
+                            Layer Popup
+                        </button>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">검색 조건 영역</div>
+                        <button  type="button" class="btn icon search primary">검색</button>
+                    </div>
                     <div class="search-area">
                         <div class="col">
                             <label>Label</label>
@@ -193,21 +214,23 @@
         container: '#grid',
         width: '100%',
         height: '400px',
+        captionHeight: 41,
+        rowHeight: 41,
         theme: 'common-grid', //grid에 theme: 'common-grid' 속성을 추가해주세요.
         columns: [
-            { field: 'class' , caption:'반',   width:100 },
-            { field: 'name' ,  caption:'성명', width:100 },
-            { field: 'number', caption:'학번', width:100 },
-            { field: 'korean', caption:'국어', width:50 ,align:'right'},
-            { field: 'english',caption:'영어', width:50 ,align:'right'},
-            { field: 'math',   caption:'수학', width:50 ,align:'right'},
+            { field: 'class' , caption:'반',   },
+            { field: 'name' ,  caption:'성명', },
+            { field: 'number', caption:'학번', },
+            { field: 'korean', caption:'국어', align:'right'},
+            { field: 'english',caption:'영어', align:'right'},
+            { field: 'math',   caption:'수학', align:'right'},
         ],
     }
 
     datagrid = SBGrid3.createGrid(gridConfig);
 
     document.addEventListener('DOMContentLoaded', () => {
-
+        
     });
 
 </script>

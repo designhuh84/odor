@@ -2161,8 +2161,17 @@ table.sub01-1{
     &.sbgrid-grid{
         border: 0;
     }
-    .sbgrid-panel.sbgrid-scroll{
-        border: 0;
+    .sbgrid-panel{
+        &.sbgrid-scroll{
+            border: 0;
+        }
+        &.sbgrid-caption{
+            .sbgrid-row{
+                .sbgrid-col{
+                    padding: 0.7rem 1rem;
+                }
+            }
+        }
     }
     .sbgrid-caption{
         .sbgrid-thead{
@@ -2198,5 +2207,18 @@ table.sub01-1{
     .sbgrid-panel.sbgrid-body{
         border: solid 1px #BFBFBF;
         border-top: 0;
+        .sbgrid-row{
+            &:hover{
+                background-color: #F7F9EC;
+            }
+        }
+    }
+    
+    .sbgrid-title{
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+    .sbgrid-cell{
+        font-size: 0.875rem;
     }
 }
