@@ -384,6 +384,48 @@ class CommonModal extends CommonPopupComponent {
     }
 }
 
+class CommonLayerPopup {
+    constructor(title, html, option) {
+        this.root = document.createElement('div');
+        this.root.classList.add('layer-popup');
+        this.root.style.top = option.top + 'px';
+        this.root.style.left = option.left + 'px';
+        this.root.style.width = option.width + 'px';
+        this.root.style.height = option.height + 'px';
+
+        const titleBar = document.createElement('div');
+        titleBar.classList.add('title-bar');
+
+        const titleText = document.createElement('div');
+        titleText.classList.add('title');
+        titleText.textContent = title;
+
+        const closeBtn = document.createElement('button');
+        closeBtn.setAttribute('type', 'button');
+        closeBtn.classList.add('btn-close-layer-popup');
+        closeBtn.addEventListener('click', () => {
+            this.close();
+        });
+
+        titleBar.append(titleText);
+        titleBar.append(closeBtn);
+        this.root.append(titleBar);
+
+        const contents = document.createElement('div');
+        contents.classList.add('contents');
+        contents.innerHTML = html;
+
+        this.root.append(contents);
+    }
+    
+    show() {
+        document.body.append(this.root);
+    }
+    close() {
+        this.root.remove();
+    }
+}
+
 const commonWindowPopup = (url, option) => {
     window.open(url, '_blank', option ? option : 'width=600, height=600, left=100, top=100, menubar=no, toolbar=no, location=no, status=no');
 }
