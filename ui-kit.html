@@ -28,11 +28,37 @@
     <div class="layout">
         <div class="inner">
             <div class="lnb">
-                <div class="title">LNB Page Category</div>
-                <a href="./#!" class="menu current">Current Menu</a>
-                <a href="./#!" class="menu">Menu</a>
-                <a href="./#!" class="menu">Menu</a>
-                <a href="#!" class="menu">Menu</a>
+
+                <div class="group on">
+                    <div class="title">LNB Page Category</div>
+                    <div class="menus">
+                        <a href="./#!" class="menu current">Current Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="#!" class="menu">Menu</a>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="title">LNB Page Category Page Category</div>
+                    <div class="menus">
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="#!" class="menu">Menu</a>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="title">LNB Page Category</div>
+                    <div class="menus">
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="#!" class="menu">Menu</a>
+                    </div>
+                </div>
+                
             </div>
             <div class="main">
                 <div class="page-title">Page Title</div>
@@ -78,6 +104,7 @@
                         <button type="button" class="btn yellow">Yellow</button>
                         <button type="button" class="btn dark">Dark</button>
                         <button type="button" class="btn black">Black</button>
+                        <button type="button" class="btn primary" disabled>Disabled</button>
                     </div>
 
                     <div class="section-header">Icon Buttons</div>
@@ -96,6 +123,7 @@
                         <button type="button" class="btn icon download secondary">Download</button>
                         <button type="button" class="btn icon upload secondary">Upload</button>
                         <button type="button" class="btn icon write green">write</button>
+                        <button type="button" class="btn icon write green" disabled>Disabled</button>
                     </div>
 
                     <div class="section-header">검색 조건 영역</div>
@@ -106,6 +134,13 @@
                             onclick="new CommonModal('팝업타이틀','팝업메세지 내용<br>HTML태그도 됨').show()"
                         >
                             Modal Popup
+                        </button>
+                        <button 
+                            type="button" 
+                            class="btn icon link blue"
+                            onclick="openCustomPopup('custom-01')"
+                        >
+                            HTML Modal Popup
                         </button>
                         <button 
                             type="button" 
@@ -193,6 +228,23 @@
 
     <golbal-footer></golbal-footer>
 
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container">
+            
+            <div class="header">
+                <div class="title">팝업타이틀</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                이곳에 html 작성
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
 </body>
 <script>
 
@@ -214,8 +266,6 @@
         container: '#grid',
         width: '100%',
         height: '400px',
-        captionHeight: 41,
-        rowHeight: 41,
         theme: 'common-grid', //grid에 theme: 'common-grid' 속성을 추가해주세요.
         columns: [
             { field: 'class' , caption:'반',   },

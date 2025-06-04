@@ -9,6 +9,10 @@
     --admin-primary-hover: #0066CC;
 }
 
+body.admin{
+    --primary: red;
+}
+
 *{
     position: relative;
     box-sizing: border-box;
@@ -326,7 +330,7 @@ golbal-footer{
     left: 0;
     z-index: 1;
     width: 100%;
-    aspect-ratio: 1920 / 750;
+    height: 100%;
 
     .mb-01{
         aspect-ratio: 1920 / 750;
@@ -777,11 +781,46 @@ global-header-menu{
         width: 14.375rem;
         display: flex;
         flex-direction: column;
+        .group{
+            &.on{
+                .title{
+                    font-weight: 700;
+                    pointer-events: none;
+                    &::after{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            &:not(.on){
+                .menus{
+                    height: 0;
+                }
+            }
+        }
         .title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             font-size: 1.25rem;
-            font-weight: 700;
+            font-weight: 400;
             padding: 0.5rem 0;
             border-bottom: solid 2px #000;
+            cursor: pointer;
+            &::after{
+                content: '';
+                display: block;
+                width: 1.5rem;
+                height: 1.5rem;
+                background-image: url(../image/Alt-Arrow-Down.svg);
+                background-size: cover;
+                background-position: center;
+                transform: rotate(0);
+                transition: transform 0.3s ease;
+            }
+        }
+        .menus{
+            overflow: hidden;
+            transition: height 0.3s ease;
         }
         .menu{
             display: flex;
@@ -1172,6 +1211,15 @@ global-header-menu{
     &.write{
         &::before{
             background-image: url(../image/Pen-2.svg);
+        }
+    }
+
+    &:disabled{
+        background-color: #EEE;
+        color: #999;
+        pointer-events: none;
+        &::before{
+            filter: brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(0%) hue-rotate(149deg) brightness(103%) contrast(87%);
         }
     }
 }
@@ -1715,6 +1763,9 @@ table.sub01-1{
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
+    &.custom{
+        display: none;
+    }
     &::before{
         content: '';
         position: absolute;
@@ -1731,12 +1782,13 @@ table.sub01-1{
         max-height: 90vh;
         min-height: 20rem;
         border-radius: 1rem;
+        background-color: #FFF;
         z-index: 2;
         display: flex;
         flex-direction: column;
         box-shadow: 0px 0px 1rem rgba(0,0,0,0.2);
         transform-origin: center;
-        animation: popupContainerIn 0.3s ease-in-out forwards;
+        // animation: popupContainerIn 0.3s ease-in-out forwards;
         @keyframes popupContainerIn {
             0%{
                 opacity: 0;
@@ -1746,6 +1798,10 @@ table.sub01-1{
                 opacity: 1;
                 transform: scale(1);
             }
+        }
+        &:has(.htmls){
+            max-width: 100%;
+            width: fit-content;
         }
     }
     .header{
@@ -1800,6 +1856,9 @@ table.sub01-1{
             font-size: 1rem;
             flex-grow: 1;
         }
+    }
+    .htmls{
+        padding: 2rem;
     }
 }
 
@@ -2201,6 +2260,12 @@ table.sub01-1{
     &.sbgrid-grid{
         border: 0;
     }
+    // .sbgrid-panel.sbgrid-body .sbgrid-row .sbgrid-col{
+    //     padding-inline: 1rem;
+    //     .sbgrid-cell{
+    //         padding: 0;
+    //     }
+    // }
     .sbgrid-panel{
         &.sbgrid-scroll{
             border: 0;
@@ -2208,7 +2273,7 @@ table.sub01-1{
         &.sbgrid-caption{
             .sbgrid-row{
                 .sbgrid-col{
-                    padding: 0.7rem 1rem;
+                    padding: 0 1rem;
                 }
             }
         }

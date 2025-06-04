@@ -384,6 +384,47 @@ class CommonModal extends CommonPopupComponent {
     }
 }
 
+class CommonHTMLModal extends CommonPopupComponent {
+    constructor(title, html) {
+        const root = document.createElement('div');
+        super(root);
+        this.root = root;
+
+        this.root.classList.add('popup');
+
+        const container = document.createElement('div');
+        container.classList.add('container');
+
+        if(title) { 
+            const header = document.createElement('div');
+            header.classList.add('header');
+
+            const titleDiv = document.createElement('div');
+            titleDiv.classList.add('title');
+            titleDiv.innerHTML = title;
+
+            const headerCloseButton = document.createElement('button');
+            headerCloseButton.setAttribute('type', 'button');
+            headerCloseButton.classList.add('btn-popup-close');
+            headerCloseButton.addEventListener('click', () => {
+                this.close(false);
+            });
+
+            header.append(titleDiv);
+            header.append(headerCloseButton);
+            container.append(header)
+        };
+
+        const htmlDiv = document.createElement('div');
+        htmlDiv.classList.add('htmls');
+        htmlDiv.innerHTML = html;
+
+        container.append(htmlDiv);
+
+        this.root.append(container);
+    }
+}
+
 class CommonLayerPopup {
     constructor(title, html, option) {
         this.root = document.createElement('div');
@@ -477,6 +518,28 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(textarea);
     });
 
+    document.querySelector('.lnb .group.on .menus').style.height = document.querySelector('.lnb .group.on .menus').scrollHeight + 'px';
+
+    document.querySelectorAll('.lnb .title').forEach(item => {
+        item.addEventListener('click', event => {
+            const group = event.target.closest('.group');
+            const menus = group.querySelector('.menus');
+            document.querySelectorAll('.lnb .group').forEach(group => { group.classList.remove('on') });
+            document.querySelectorAll('.group .menus').forEach(menus => { menus.style.height = '0px' });
+            group.classList.add('on');
+            menus.style.height = menus.scrollHeight + 'px';
+        });
+    });
+
+    document.body.addEventListener('click', event => {
+        if(event.target.classList.contains('btn-popup-close') && event.target.closest('.popup.custom')){
+            const id = event.target.closest('.popup.custom').id;
+            if(id){
+                closeCustomPopup(id);
+            }
+        }
+    });
+
 });
 
 const observer = new IntersectionObserver(elements => {
@@ -494,4 +557,12 @@ const setTextAreaHeight = element => {
     const targetPaddingTop = parseFloat(window.getComputedStyle(target).paddingTop);
     const targetPaddingBottom = parseFloat(window.getComputedStyle(target).paddingBottom);
     element.style.height = targetHeight - targetPaddingTop - targetPaddingBottom + 'px';
+}
+
+const openCustomPopup = id => {
+    document.getElementById(id).style.display = 'flex';
+}
+
+const closeCustomPopup = id => {
+    document.getElementById(id).style.display = 'none';
 }
