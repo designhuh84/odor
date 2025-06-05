@@ -315,7 +315,8 @@ class CommonPopupComponent {
 }
 
 class CommonModal extends CommonPopupComponent {
-    constructor(title, message) {
+    // 버튼 수 : 2(확인, 취소), 1(확인) / 타이틀 텍스트 / 메세지 내용
+    constructor(buttonCount, title, message) {
         const root = document.createElement('div');
         super(root);
         this.root = root;
@@ -356,12 +357,19 @@ class CommonModal extends CommonPopupComponent {
         confirmButton.setAttribute('class','btn primary confirm');
         confirmButton.textContent = '확인';
 
-        const cancelButton = document.createElement('button');
-        cancelButton.setAttribute('type', 'button');
-        cancelButton.setAttribute('class','btn secondary confirm');
-        cancelButton.textContent = '취소';
+        if(buttonCount > 1){
+            const cancelButton = document.createElement('button');
+            cancelButton.setAttribute('type', 'button');
+            cancelButton.setAttribute('class','btn secondary confirm');
+            cancelButton.textContent = '취소';
 
-        footer.append(cancelButton);
+            cancelButton.addEventListener('click', () => {
+                this.close(false);
+            });
+
+            footer.append(cancelButton);
+        }
+        
         footer.append(confirmButton);
 
         container.append(header);
@@ -371,10 +379,6 @@ class CommonModal extends CommonPopupComponent {
         this.root.append(container);
 
         headerCloseButton.addEventListener('click', () => {
-            this.close(false);
-        });
-
-        cancelButton.addEventListener('click', () => {
             this.close(false);
         });
 

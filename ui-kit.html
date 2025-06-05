@@ -131,9 +131,16 @@
                         <button 
                             type="button" 
                             class="btn icon link primary"
-                            onclick="new CommonModal('팝업타이틀','팝업메세지 내용<br>HTML태그도 됨').show()"
+                            onclick="new CommonModal(2, '팝업타이틀','팝업메세지 내용<br>HTML태그도 됨').show()"
                         >
                             Modal Popup
+                        </button>
+                        <button 
+                            type="button" 
+                            class="btn icon link primary"
+                            onclick="new CommonModal(1, '팝업타이틀','팝업메세지 내용<br>HTML태그도 됨').show()"
+                        >
+                            확인버튼만 있는 팝업
                         </button>
                         <button 
                             type="button" 
@@ -239,6 +246,7 @@
 
             <div class="htmls">
                 이곳에 html 작성
+                <div style="width: 720px"></div>
             </div>
 
         </div>

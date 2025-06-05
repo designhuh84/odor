@@ -12,7 +12,7 @@ body.admin {
   --primary: red;
 }
 
-* {
+*:not(.sbgrid-grid *, .sbgrid-grid) {
   position: relative;
   box-sizing: border-box;
 }
@@ -1591,6 +1591,12 @@ table.sub01-1 tbody td {
 .popup.custom {
   display: none;
 }
+.popup.custom .header .title {
+  text-align: left;
+  text-indent: 0;
+  padding: 0;
+  padding-left: 1rem;
+}
 .popup::before {
   content: "";
   position: absolute;
@@ -1605,7 +1611,6 @@ table.sub01-1 tbody td {
   width: 100%;
   max-width: 30rem;
   max-height: 90vh;
-  min-height: 20rem;
   border-radius: 1rem;
   background-color: #FFF;
   z-index: 2;
@@ -1660,9 +1665,9 @@ table.sub01-1 tbody td {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  flex-basis: 0;
+  flex-basis: 7rem;
   overflow-y: auto;
-  padding: 2rem;
+  padding: 1rem 2rem;
   padding-bottom: 0;
   text-align: center;
   line-height: 140%;
@@ -1674,7 +1679,7 @@ table.sub01-1 tbody td {
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
   background-color: #FFF;
   border-radius: 0 0 1rem 1rem;
 }
