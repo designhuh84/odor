@@ -522,7 +522,10 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(textarea);
     });
 
-    document.querySelector('.lnb .group.on .menus').style.height = document.querySelector('.lnb .group.on .menus').scrollHeight + 'px';
+    const lnb = document.querySelector('.lnb');
+    if(lnb){
+        lnb.querySelector('.group.on .menus').style.height = lnb.querySelector('.group.on .menus').scrollHeight + 'px';
+    }
 
     document.querySelectorAll('.lnb .title').forEach(item => {
         item.addEventListener('click', event => {

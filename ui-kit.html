@@ -126,7 +126,7 @@
                         <button type="button" class="btn icon write green" disabled>Disabled</button>
                     </div>
 
-                    <div class="section-header">검색 조건 영역</div>
+                    <div class="section-header">Popup</div>
                     <div style="display: flex; gap: 1rem;">
                         <button 
                             type="button" 
@@ -175,7 +175,7 @@
                                 <option>Option</option>
                             </select>
                         </div>
-                        <div class="col">
+                        <div class="col full-width">
                             <label>Select Multi</label>
                             <div class="col__row">
                                 <select class="city">
@@ -184,6 +184,13 @@
                                     <option>인천</option>
                                     <option>경기</option>
                                     <option>강원</option>
+                                </select>
+                                <select class="city">
+                                    <option>시군구</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
                                 </select>
                                 <select class="city">
                                     <option>시군구</option>
@@ -257,17 +264,17 @@
 <script>
 
     var localData = [
-        { 'class': '매화반', 'name': '홍길동',  'number': '30534', 'korean': '75', 'english': '50', 'math': '88' },
-        { 'class': '매화반', 'name': '김철수',  'number': '30115', 'korean': '94', 'english': '84', 'math': '79' },
-        { 'class': '국화반', 'name': '최민지',  'number': '30742', 'korean': '84', 'english': '98', 'math': '62' },
-        { 'class': '국화반', 'name': '김갑수',  'number': '31124', 'korean': '61', 'english': '64', 'math': '77' },
-        { 'class': '국화반', 'name': '이순신',  'number': '40534', 'korean': '95', 'english': '85', 'math': '78' },
-        { 'class': '국화반', 'name': '임꺽정',  'number': '40115', 'korean': '91', 'english': '74', 'math': '89' },
-        { 'class': '국화반', 'name': '을지문덕','number': '40311', 'korean': '75', 'english': '81', 'math': '91' },
-        { 'class': '난초반', 'name': '신사임당','number': '51124', 'korean': '81', 'english': '74', 'math': '67' },
-        { 'class': '난초반', 'name': '국영수',  'number': '51125', 'korean': '80', 'english': '80', 'math': '80' },
-        { 'class': '난초반', 'name': '영수',    'number': '51126', 'korean': '70', 'english': '80', 'math': '80' },
-        { 'class': '난초반', 'name': '국영',    'number': '51127', 'korean': '80', 'english': '80', 'math': '60' },
+        { 'class': '매화반', 'name': '홍길동',  'number': '30534', 'korean': '75', 'english': '50', 'math': '88', 'btn': 'test' },
+        { 'class': '매화반', 'name': '김철수',  'number': '30115', 'korean': '94', 'english': '84', 'math': '79', 'btn': 'test' },
+        { 'class': '국화반', 'name': '최민지',  'number': '30742', 'korean': '84', 'english': '98', 'math': '62', 'btn': 'test' },
+        { 'class': '국화반', 'name': '김갑수',  'number': '31124', 'korean': '61', 'english': '64', 'math': '77', 'btn': 'test' },
+        { 'class': '국화반', 'name': '이순신',  'number': '40534', 'korean': '95', 'english': '85', 'math': '78', 'btn': 'test' },
+        { 'class': '국화반', 'name': '임꺽정',  'number': '40115', 'korean': '91', 'english': '74', 'math': '89', 'btn': 'test' },
+        { 'class': '국화반', 'name': '을지문덕','number': '40311', 'korean': '75', 'english': '81', 'math': '91', 'btn': 'test' },
+        { 'class': '난초반', 'name': '신사임당','number': '51124', 'korean': '81', 'english': '74', 'math': '67', 'btn': 'test' },
+        { 'class': '난초반', 'name': '국영수',  'number': '51125', 'korean': '80', 'english': '80', 'math': '80', 'btn': 'test' },
+        { 'class': '난초반', 'name': '영수',    'number': '51126', 'korean': '70', 'english': '80', 'math': '80', 'btn': 'test' },
+        { 'class': '난초반', 'name': '국영',    'number': '51127', 'korean': '80', 'english': '80', 'math': '60', 'btn': 'test' },
     ];
     let gridConfig = {
         dataSource: localData,    // 상단에 정의되어 있는 데이터를 이용
@@ -281,7 +288,32 @@
             { field: 'number', caption:'학번', },
             { field: 'korean', caption:'국어', align:'right'},
             { field: 'english',caption:'영어', align:'right'},
-            { field: 'math',   caption:'수학', align:'right'},
+            { 
+                field: 'math',
+                type: 'button',
+                caption:'Icon Buttons',
+                align:'center',
+                command: container => {
+                    const button = document.createElement('button');
+                    button.setAttribute('class', 'btn icon minus primary');
+                    button.innerText = '행 삭제';
+                    button.onclick = () => alert('행 삭제');
+                    container.append(button);
+                }
+            },
+            { 
+                field: 'btn',
+                type: 'button',
+                caption:'Buttons',
+                align:'center',
+                command: container => {
+                    const button = document.createElement('button');
+                    button.setAttribute('class', 'btn red');
+                    button.innerText = '행 삭제';
+                    button.onclick = () => alert('행 삭제');
+                    container.append(button);
+                }
+            },
         ],
     }
 

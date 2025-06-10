@@ -26,10 +26,14 @@
     <div class="layout">
         <div class="inner">
             <div class="lnb">
-                <div class="title">악취민원실태조사</div>
-                <a href="./STS_028_03.html" class="menu current">월별현황</a>
-                <a href="./STS_029_01.html" class="menu">지역별현황</a>
-                <a href="./STS_031_02.html" class="menu">환경기초시설현황</a>
+                <div class="group on">
+                    <div class="title">악취민원실태조사</div>
+                    <div class="menus">
+                        <a href="./STS_028_03.html" class="menu current">월별현황</a>
+                        <a href="./STS_029_01.html" class="menu">지역별현황</a>
+                        <a href="./STS_031_02.html" class="menu">환경기초시설현황</a>
+                    </div>
+                </div>
             </div>
             <div class="main">
                 <div class="page-title">월별현황</div>
@@ -45,6 +49,13 @@
                     <div class="tab-contents" data-name="02"></div>
 
                     <div class="tab-contents on" data-name="03">
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+
                         <div class="search-area">
                             <div class="col">
                                 <label>연도</label>
@@ -61,13 +72,7 @@
                                 </select>
                             </div>
                         </div>
-
-                        <div class="search-button-area">
-                            <button type="button" class="btn icon search primary">
-                                조회
-                            </button>
-                        </div>
-
+                        
                         <div class="table-button-row">
                             <button type="button" class="btn icon excel">
                                 엑셀다운로드

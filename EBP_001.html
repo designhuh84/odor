@@ -26,11 +26,15 @@
     <div class="layout">
         <div class="inner">
             <div class="lnb">
-                <div class="title">사업장정보관리</div>
-                <a href="./EBP_001.html" class="menu current">사업장관리</a>
-                <a href="./EBP_002.html" class="menu">변경신고서관리</a>
-                <a href="./EBP_003_01.html" class="menu">지도점검 및 행정처분</a>
-                <a href="#!" class="menu">악취관리지역</a>
+                <div class="group on">
+                    <div class="title">사업장정보관리</div>
+                    <div class="menus">
+                        <a href="./EBP_001.html" class="menu current">사업장관리</a>
+                        <a href="./EBP_002.html" class="menu">변경신고서관리</a>
+                        <a href="./EBP_003_01.html" class="menu">지도점검 및 행정처분</a>
+                        <a href="#!" class="menu">악취관리지역</a>
+                    </div>
+                </div>
             </div>
             <div class="main">
                 <div class="page-title">사업장관리</div>
@@ -43,6 +47,13 @@
                     </div>
 
                     <div class="tab-contents on" data-name="01">
+
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
 
                         <div class="search-area">
 
@@ -118,13 +129,7 @@
                                 </div>
                             </div>
                         </div>
-
-
-                        <div class="search-button-area">
-                            <button type="button" class="btn icon search primary">
-                                조회
-                            </button>
-                        </div>
+                        
                         <div class="infobox">
                             <p>※ “사업장 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “사업장 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
                             <div class="button-row">
@@ -312,6 +317,13 @@
                     </div>
 
                     <div class="tab-contents" data-name="02">
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+
                         <div class="search-area">
                             <div class="col">
                                 <label>사업장명</label>
@@ -365,9 +377,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="search-button-area">
-                            <button type="button" class="btn icon search primary">조회</button>
-                        </div>
+                        
                         <div class="infobox">
                             <p>※ “사업장 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “사업장 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
                             <div class="button-row">
@@ -524,7 +534,12 @@
                     </div>
 
                     <div class="tab-contents" data-name="03">
-
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
                         <div class="search-area">
                             <div class="col">
                                 <label>사업장명</label>
@@ -578,22 +593,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="search-button-area">
-                            <button type="button" class="btn-primary btn-search">조회</button>
-                        </div>
+                        
                         <div class="infobox">
                             <p>※ “사업장 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “사업장 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
                             <div class="button-row">
-                                <button type="button" class="btn-secondary">사업장 양식 다운로드</button>
-                                <button type="button" class="btn-secondary">사업장 양식 업로드</button>
+                                <button type="button" class="btn icon download secondary">사업장 양식 다운로드</button>
+                                <button type="button" class="btn icon upload secondary">사업장 양식 업로드</button>
                             </div>
                         </div>
 
                         <div class="table-button-row">
-                            <button type="button" class="btn-secondary">행 추가</button>                            
-                            <button type="button" class="btn-secondary">저장</button>
-                            <button type="button" class="btn-secondary">삭제</button>
-                            <button type="button" class="btn-secondary">엑셀다운로드</button>
+                            <button type="button" class="btn icon plus secondary">행 추가</button>                            
+                            <button type="button" class="btn icon save blue">저장</button>
+                            <button type="button" class="btn icon delete red">삭제</button>
+                            <button type="button" class="btn icon excel">엑셀다운로드</button>
                         </div>
 
                         <div class="table-container">

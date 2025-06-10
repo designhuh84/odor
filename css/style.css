@@ -12,7 +12,7 @@ body.admin {
   --primary: red;
 }
 
-*:not(.sbgrid-grid *, .sbgrid-grid) {
+* {
   position: relative;
   box-sizing: border-box;
 }
@@ -157,7 +157,7 @@ global-header .logo {
 }
 global-header .logo img {
   display: block;
-  height: 1.5rem;
+  height: 1.7rem;
 }
 
 .btn-header-login {
@@ -819,10 +819,18 @@ global-header-menu .col .menu:hover {
   padding-bottom: 5rem;
 }
 .layout .main .page-title {
+  display: flex;
+  align-items: center;
   padding: 0.5rem 0;
   border-bottom: solid 2px #000;
   font-size: 1.25rem;
   font-weight: 700;
+}
+.layout .main .page-title .buttons {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .layout .main .contents {
   margin-top: 1rem;
@@ -847,6 +855,7 @@ global-header-menu .col .menu:hover {
 .tab-row {
   display: flex;
   gap: 0.25rem;
+  border-bottom: solid 1px var(--primary);
 }
 .tab-row .tab {
   display: flex;
@@ -898,7 +907,7 @@ global-header-menu .col .menu:hover {
 }
 .search-area .col {
   display: grid;
-  grid-template-columns: 0.45fr 1fr;
+  grid-template-columns: 10.3125rem 1fr;
   align-items: center;
   gap: 0.5rem;
 }
@@ -916,6 +925,10 @@ global-header-menu .col .menu:hover {
   height: 0.25rem;
   border-radius: 0.125rem;
   background-color: var(--primary);
+}
+.search-area .col.full-width {
+  grid-column: 1/-1;
+  grid-template-columns: 10.3125rem auto;
 }
 .search-area .col__row {
   display: flex;
@@ -1171,8 +1184,14 @@ global-header-menu .col .menu:hover {
   justify-content: flex-end;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 0;
+  padding: 1rem 0 0.5rem 0;
   margin-top: 1rem;
+}
+.table-button-row.padding-top-0 {
+  padding-top: 0;
+}
+.table-button-row.margin-top-0 {
+  margin-top: 0;
 }
 .table-button-row .section-header {
   margin: 0;
@@ -1645,10 +1664,8 @@ table.sub01-1 tbody td {
 }
 .popup .header .title {
   flex-grow: 1;
-  text-align: center;
   font-weight: 600;
-  padding: 0 2rem;
-  text-indent: 2rem;
+  padding-left: 1rem;
   color: #FFF;
 }
 .popup .header .btn-popup-close {
@@ -2037,6 +2054,13 @@ table.sub01-1 tbody td {
   padding: 1rem;
 }
 
+.sbgrid-grid {
+  position: static;
+}
+.sbgrid-grid * {
+  position: static;
+}
+
 .sbgrid-theme-common-grid.sbgrid-grid {
   border: 0;
 }
@@ -2080,4 +2104,180 @@ table.sub01-1 tbody td {
 }
 .sbgrid-theme-common-grid .sbgrid-cell {
   font-size: 0.875rem;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.primary {
+  background-color: var(--primary);
+  color: #FFF;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.primary:hover {
+  background-color: var(--primary-hover);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.primary::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.secondary {
+  background-color: #FFF;
+  border: solid 1px #666;
+  color: #4D4D4D;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.secondary:hover {
+  background-color: #F2F2F2;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.blue {
+  background-color: #347DC5;
+  color: #FFF;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.blue:hover {
+  background-color: #2A649D;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.blue::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.excel {
+  background-color: #107C41;
+  color: #FFF;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.excel:hover {
+  background-color: #0C5A2F;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.excel::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.green {
+  background-color: #359787;
+  color: #FFF;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.green:hover {
+  background-color: #2C7D6F;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.green::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.red {
+  background-color: #D2691E;
+  color: #FFF;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.red:hover {
+  background-color: #AA5518;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.red::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.skyblue {
+  background-color: #2FB8C6;
+  color: #FFF;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.skyblue:hover {
+  background-color: #25929D;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.skyblue::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.cancel {
+  background-color: #6B9C70;
+  color: #FFF;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.cancel:hover {
+  background-color: #56805A;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.cancel::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.brown {
+  background-color: #B29535;
+  color: #FFF;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.brown:hover {
+  background-color: #8A7329;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.brown::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.yellow {
+  background-color: #F1CD0E;
+  color: #FFF;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.yellow:hover {
+  background-color: #C1A40B;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.yellow::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.dark {
+  background-color: #165B5A;
+  color: #FFF;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.dark:hover {
+  background-color: #0E3939;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.dark::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.black {
+  background-color: #06393F;
+  color: #FFF;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.black:hover {
+  background-color: #03191C;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.black::before {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.icon {
+  gap: 0.38rem;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.icon::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.search::before {
+  background-image: url(../image/Magnifer-bk.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.save::before {
+  background-image: url(../image/Diskette.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.excel::before {
+  background-image: url(../image/Explicit.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.add::before {
+  background-image: url(../image/Add-Square.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.link::before {
+  background-image: url(../image/Square-Top-Down.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.delete::before {
+  background-image: url(../image/Trash-Bin-Minimalistic-2.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.list::before {
+  background-image: url(../image/Document.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.plus::before {
+  background-image: url(../image/plus.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.minus::before {
+  background-image: url(../image/minus.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.print::before {
+  background-image: url(../image/Printer-Minimalistic.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.download::before {
+  background-image: url(../image/Download-Minimalistic.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.upload::before {
+  background-image: url(../image/Upload-Minimalistic.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.write::before {
+  background-image: url(../image/Pen-2.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button:disabled {
+  background-color: #EEE;
+  color: #999;
+  pointer-events: none;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button:disabled::before {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(0%) hue-rotate(149deg) brightness(103%) contrast(87%);
 }/*# sourceMappingURL=style.css.map */

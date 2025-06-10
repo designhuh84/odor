@@ -14,10 +14,8 @@ body.admin{
 }
 
 *{
-    &:not(.sbgrid-grid *, .sbgrid-grid){
-        position: relative;
-        box-sizing: border-box;
-    }
+    position: relative;
+    box-sizing: border-box;
 }
 
 html, body{
@@ -165,7 +163,7 @@ global-header{
         flex-shrink: 0;
         img{
             display: block;
-            height: 1.5rem;
+            height: 1.7rem;
         }
     }
 }
@@ -856,10 +854,18 @@ global-header-menu{
         padding-bottom: 5rem;
 
         .page-title{
+            display: flex;
+            align-items: center;
             padding: 0.5rem 0;
             border-bottom: solid 2px #000;
             font-size: 1.25rem;
             font-weight: 700;
+            .buttons{
+                margin-left: auto;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
         }
         .contents{
             margin-top: 1rem;
@@ -888,7 +894,8 @@ global-header-menu{
 
 .tab-row{
     display: flex;
-    gap: 0.25rem;    
+    gap: 0.25rem;
+    border-bottom: solid 1px var(--primary);
     .tab{
         display: flex;
         justify-content: center;
@@ -940,7 +947,7 @@ global-header-menu{
     }
     .col{
         display: grid;
-        grid-template-columns: 0.45fr 1fr;
+        grid-template-columns: 10.3125rem 1fr;
         align-items: center;
         gap: 0.5rem;
 
@@ -958,6 +965,11 @@ global-header-menu{
                 border-radius: calc(0.25rem * 0.5);
                 background-color: var(--primary);
             }
+        }
+
+        &.full-width{
+            grid-column: 1 / -1;
+            grid-template-columns: 10.3125rem auto;
         }
     }
     .col__row{
@@ -1269,8 +1281,16 @@ global-header-menu{
     justify-content: flex-end;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem 0;
+    padding: 1rem 0 0.5rem 0;
     margin-top: 1rem;
+
+    &.padding-top-0{
+        padding-top: 0;
+    }
+
+    &.margin-top-0{
+        margin-top: 0;
+    }
 
     .section-header{
         margin: 0;
@@ -1823,10 +1843,8 @@ table.sub01-1{
         width: 100%;
         .title{
             flex-grow: 1;
-            text-align: center;
             font-weight: 600;
-            padding: 0 2rem;
-            text-indent: 2rem;
+            padding-left: 1rem;
             color: #FFF;
         }
         .btn-popup-close{
@@ -2264,6 +2282,13 @@ table.sub01-1{
     }
 }
 
+.sbgrid-grid{
+    position: static;
+    *{
+        position: static;
+    }
+}
+
 //grid에 theme: 'common-grid' 속성을 추가해주세요.
 .sbgrid-theme-common-grid{
     &.sbgrid-grid{
@@ -2334,5 +2359,236 @@ table.sub01-1{
     }
     .sbgrid-cell{
         font-size: 0.875rem;
+    }
+
+    .sbgrid-custom > button{
+        &.primary{
+            background-color: var(--primary);
+            color: #FFF;
+            &:hover{
+                background-color: var(--primary-hover);
+            }
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+        }
+
+        &.secondary{
+            background-color: #FFF;
+            border: solid 1px #666;
+            color: #4D4D4D;
+            &:hover{
+                background-color: #F2F2F2;
+            }
+        }
+
+        &.blue{
+            background-color: #347DC5;
+            color: #FFF;
+            &:hover{
+                background-color: #2A649D;
+            }
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+        }
+
+        &.excel{
+            background-color: #107C41;
+            color: #FFF;
+            &:hover{
+                background-color: #0C5A2F;
+            }
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+        }
+
+        &.green{
+            background-color: #359787;
+            color: #FFF;
+            &:hover{
+                background-color: #2C7D6F;
+            }
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+        }
+
+        &.red{
+            background-color: #D2691E;
+            color: #FFF;
+            &:hover{
+                background-color: #AA5518;
+            }
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+        }
+
+        &.skyblue{
+            background-color: #2FB8C6;
+            color: #FFF;
+            &:hover{
+                background-color: #25929D;
+            }
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+        }
+
+        &.cancel{
+            background-color: #6B9C70;
+            color: #FFF;
+            &:hover{
+                background-color: #56805A;
+            }
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+        }
+
+        &.brown{
+            background-color: #B29535;
+            color: #FFF;
+            &:hover{
+                background-color: #8A7329;
+            }
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+        }
+
+        &.yellow{
+            background-color: #F1CD0E;
+            color: #FFF;
+            &:hover{
+                background-color: #C1A40B;
+            }
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+        }
+
+        &.dark{
+            background-color: #165B5A;
+            color: #FFF;
+            &:hover{
+                background-color: #0E3939;
+            }
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+        }
+
+        &.black{
+            background-color: #06393F;
+            color: #FFF;
+            &:hover{
+                background-color: #03191C;
+            }
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            }
+        }
+
+        &.icon{
+            gap: 0.38rem;
+            &::before{
+                content: '';
+                width: 0.75rem;
+                height: 0.75rem;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        &.search{
+            &::before{
+                background-image: url(../image/Magnifer-bk.svg);
+            }
+        }
+
+        &.save{
+            &::before{
+                background-image: url(../image/Diskette.svg);
+            }
+        }
+
+        &.excel{
+            &::before{
+                background-image: url(../image/Explicit.svg);
+            }
+        }
+
+        &.add{
+            &::before{
+                background-image: url(../image/Add-Square.svg);
+            }
+        }
+
+        &.link{
+            &::before{
+                background-image: url(../image/Square-Top-Down.svg);
+            }
+        }
+
+        &.delete{
+            &::before{
+                background-image: url(../image/Trash-Bin-Minimalistic-2.svg);
+            }
+        }
+
+        &.list{
+            &::before{
+                background-image: url(../image/Document.svg);
+            }
+        }
+
+        &.plus{
+            &::before{
+                background-image: url(../image/plus.svg);
+            }
+        }
+
+        &.minus{
+            &::before{
+                background-image: url(../image/minus.svg);
+            }
+        }
+
+        &.print{
+            &::before{
+                background-image: url(../image/Printer-Minimalistic.svg);
+            }
+        }
+
+        &.download{
+            &::before{
+                background-image: url(../image/Download-Minimalistic.svg);
+            }
+        }
+
+        &.upload{
+            &::before{
+                background-image: url(../image/Upload-Minimalistic.svg);
+            }
+        }
+
+        &.write{
+            &::before{
+                background-image: url(../image/Pen-2.svg);
+            }
+        }
+
+        &:disabled{
+            background-color: #EEE;
+            color: #999;
+            pointer-events: none;
+            &::before{
+                filter: brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(0%) hue-rotate(149deg) brightness(103%) contrast(87%);
+            }
+        }
     }
 }
