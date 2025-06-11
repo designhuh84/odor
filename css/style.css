@@ -13,7 +13,6 @@ body.admin {
 }
 
 * {
-  position: relative;
   box-sizing: border-box;
 }
 
@@ -300,12 +299,14 @@ golbal-footer .footer-terms {
 }
 
 .main-banner {
+  position: relative;
   width: 100%;
   aspect-ratio: 1920/750;
   overflow: hidden;
   background: linear-gradient(180deg, #DFEBAD 0%, #82C082 100%);
 }
 .main-banner .inner {
+  position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -1809,6 +1810,7 @@ table.sub01-1 tbody td {
 }
 #minwon-map .map-area {
   overflow: hidden;
+  position: relative;
 }
 #minwon-map .rank {
   position: absolute;
@@ -2052,13 +2054,6 @@ table.sub01-1 tbody td {
   width: 100%;
   background-color: #FFF;
   padding: 1rem;
-}
-
-.sbgrid-grid {
-  position: static;
-}
-.sbgrid-grid * {
-  position: static;
 }
 
 .sbgrid-theme-common-grid.sbgrid-grid {

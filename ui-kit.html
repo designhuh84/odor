@@ -315,6 +315,12 @@
                 }
             },
         ],
+        resizable: {
+            mode: 'column',       // 'guideLine' 또는 'column'
+            minWidth: 10,          // 최소 너비
+            maxWidth: 200,         // 최대 너비
+            autoFit: ['caption', 'data']  // 자동 리사이즈 기준
+        }
     }
 
     datagrid = SBGrid3.createGrid(gridConfig);
