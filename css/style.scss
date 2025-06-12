@@ -149,6 +149,7 @@ global-header{
     background-color: var(--primary);
 
     .container{
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: flex-start;
