@@ -158,6 +158,13 @@
                         </button>
                     </div>
 
+                    <div class="section-header">Grid</div>
+                    <div style="display: flex; gap: 1rem;">
+                        <button type="button" class="btn primary" id="show-loading">Show Loading UI</button>
+                        <button type="button" class="btn primary" id="hide-loading">Hide Loading UI</button>
+                    </div>
+                    
+
                     <div class="table-button-row">
                         <div class="section-header">검색 조건 영역</div>
                         <button  type="button" class="btn icon search primary">검색</button>
@@ -326,7 +333,13 @@
     datagrid = SBGrid3.createGrid(gridConfig);
 
     document.addEventListener('DOMContentLoaded', () => {
-        
+        const loading = new LoadingUI('로딩중입니다.<br>잠시만 기다려 주세요.');
+        document.querySelector('#show-loading').addEventListener('click', () => {
+            loading.show();
+        });
+        document.querySelector('#hide-loading').addEventListener('click', () => {
+            loading.hide();
+        });
     });
 
 </script>

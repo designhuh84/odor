@@ -573,3 +573,27 @@ const openCustomPopup = id => {
 const closeCustomPopup = id => {
     document.getElementById(id).style.display = 'none';
 }
+
+class LoadingUI {
+    constructor(message){
+        this.root = document.createElement('div');
+        this.root.classList.add('loading');
+
+        const loadingIcon = document.createElement('img');
+        loadingIcon.setAttribute('src', './image/loading-icon.png');
+        loadingIcon.classList.add('loading-icon');
+
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message');
+        messageDiv.innerHTML = message;
+
+        this.root.append(loadingIcon);
+        this.root.append(messageDiv);
+    }
+    show() {
+        document.body.append(this.root);        
+    }
+    hide() {
+        this.root.remove();
+    }
+}
