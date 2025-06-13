@@ -161,7 +161,6 @@
                     <div class="section-header">Grid</div>
                     <div style="display: flex; gap: 1rem;">
                         <button type="button" class="btn primary" id="show-loading">Show Loading UI</button>
-                        <button type="button" class="btn primary" id="hide-loading">Hide Loading UI</button>
                     </div>
                     
 
@@ -333,13 +332,25 @@
     datagrid = SBGrid3.createGrid(gridConfig);
 
     document.addEventListener('DOMContentLoaded', () => {
-        const loading = new LoadingUI('로딩중입니다.<br>잠시만 기다려 주세요.');
+        
+        const showLoadingUI = (loading) => {
+            return new Promise(resolve => {
+                loading.show();
+                setTimeout(() => {
+                    resolve();
+                }, 5000);
+            });
+        }
+
         document.querySelector('#show-loading').addEventListener('click', () => {
-            loading.show();
+            const loading = new LoadingUI('로딩중입니다.<br>잠시만 기다려 주세요.');
+            showLoadingUI(loading).then(() => {
+                loading.hide();
+            });
         });
-        document.querySelector('#hide-loading').addEventListener('click', () => {
-            loading.hide();
-        });
+
+        
+        
     });
 
 </script>
