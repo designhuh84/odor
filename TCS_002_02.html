@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술지원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술지원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            등록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">기술지원</div>
+                    <div class="menus">
+                        <a href="./TCS_001_01.html" class="menu">신청정보</a>
+                        <a href="./TCS_002_01.html" class="menu current">기술지원</a>                        
+                        <a href="./TCS_003_01.html" class="menu">분석결과</a>
+                        <a href="./TCS_004_01.html" class="menu">공정코드관리</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">기술지원 등록</div>
+                <div class="contents">
+
+
+                    <div class="table-button-row padding-top-0">
+                        <div class="section-header">사업장 정보</div>
+                        <button type="button" class="btn icon list black">목록</button>
+                        <button type="button" class="btn icon excel">엑셀다운로드</button>
+                    </div>
+                    
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>사업장 명</th>
+                                <td>
+                                    <input type="text" value="OO산업" disabled>
+                                </td>
+                                <th>사업자등록번호</th>
+                                <td>
+                                    <input type="text" value="111-11-1234" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>대표자</th>
+                                <td>
+                                    <input type="text" value="김대표" disabled>
+                                </td>
+                                <th>전화번호</th>
+                                <td>
+                                    <input type="text" value="032-111-2222" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>주소</th>
+                                <td colspan="3">
+                                    <input type="text" value="충남 부여군 XX면 XX리 123-1" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사업장 종류</th>
+                                <td>
+                                    <input type="text" value="악취배출시설" disabled>
+                                </td>
+                                <th>업종(산업분류번호)</th>
+                                <td>
+                                    <input type="text" value="육우 사육업(01212)" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>악취배출시설종류</th>
+                                <td>
+                                    <input type="text" value="1.축산시설" disabled>
+                                </td>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>악취관리지역여부</th>
+                                <td>
+                                    <input type="text" value="Y" disabled>
+                                </td>
+                                <th>신고대상시설여부</th>
+                                <td>
+                                    <input type="text" value="N" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>사업장 유형</th>
+                                <td>
+                                    <input type="text" value="축사" disabled>
+                                </td>
+                                <th>농협연계 여부</th>
+                                <td>
+                                    <input type="text" value="기타 (환경부)" disabled>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="section-header">기술지원 내역</div>
+                    <div id="grid_tcs_002_02">grid area<button type="button" class="btn primary" onclick="gridTcs00202Popup();">신청정보 보기</button></div>
+                    <br><br>
+                    <div class="tab-row">
+                        <button type="button" class="tab on" data-name="01">기본정보</button>
+                        <button type="button" class="tab" data-name="02">악취발생 및 관리현황</button>
+                        <button type="button" class="tab" data-name="03">악취 방지시설</button>
+                        <button type="button" class="tab" data-name="04">악취 측정결과</button>
+                        <button type="button" class="tab" data-name="05">악취 저감방안 및 개선사항</button>
+                    </div>
+                    
+                    <div class="tab-contents on" data-name="01">
+                        <div class="section-header">기본 정보</div>
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>기술지원일자</th>
+                                    <td>
+                                        <input type="date">
+                                    </td>
+                                    <th>진행상황</th>
+                                    <td>
+                                        <select>
+                                            <option>대기</option>
+                                            <option>완료</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>보고서 작성자</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <th>지원단계</th>
+                                    <td>
+                                        <input type="text" value="사후" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>보고서 제출일</th>
+                                    <td>
+                                        <input type="date">
+                                    </td>
+                                    <th>실태조사 여부</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="radio_tcs_002_02-01" value="Y">
+                                                <label>Y</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio_tcs_002_02-01" value="N" checked>
+                                                <label>N</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>복합악취배출 허용기준</th>
+                                    <td>
+                                        <div class="row">
+                                            <input type="text">
+                                            배
+                                        </div>
+                                    </td>
+                                    <th>취약지역 여부</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="radio_tcs_002_02-02" value="Y">
+                                                <label>Y</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio_tcs_002_02-02" value="N" checked>
+                                                <label>N</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>민원현황 여부</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="radio_tcs_002_02-03" value="Y">
+                                                <label>있음</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio_tcs_002_02-03" value="N" checked>
+                                                <label>없음</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th>민원발생지역과 이격거리</th>
+                                    <td>
+                                        <select>
+                                            <option>10m 이내</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table-button-row">
+                            <div class="section-header">첨부파일</div>
+                            <button type="button" class="btn icon plus primary">파일추가</button>
+                            <button type="button" class="btn icon minus secondary">파일삭제</button>
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th><input type="checkbox" id="all-files"></th>
+                                        <th>구분</th>
+                                        <th>첨부파일</th>
+                                        <th>등록일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center"><input type="checkbox"></td>
+                                        <td>악취저감 기술지원 사후관리 보고서</td>
+                                        <td>
+                                            <a href="#!">악취저감 기술지원 보고서[㈜OO산업].hwp</a>
+                                        </td>
+                                        <td class="center">2023-00-00 00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center"><input type="checkbox"></td>
+                                        <td>생산공정</td>
+                                        <td>
+                                            <a href="#!">OO생산공정.png</a>
+                                        </td>
+                                        <td class="center">2023-00-00 00:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="contents-bottom-button-row">
+                            <button type="button" class="btn icon save blue">저장</button>
+                        </div>
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+                        <div class="section-header">퇴비장 운영 현황</div>
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>원료</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select>
+                                                <option>돈분</option>
+                                            </select>
+                                            <select>
+                                                <option>돈분</option>
+                                            </select>
+                                            <select>
+                                                <option>돈분</option>
+                                            </select>
+                                            <input type="text">
+                                            <span> 비율: </span>
+                                            <input type="text">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>퇴비화 방식</th>
+                                    <td>
+                                        <select>
+                                            <option>단순퇴적식</option>
+                                        </select>
+                                    </td>
+                                    <th>수분 조절제</th>
+                                    <td>
+                                        <div class="row">
+                                            <select>
+                                                <option>톱밥</option>
+                                            </select>
+                                            <input type="text">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>소풍교반식 교반설비</th>
+                                    <td>
+                                        <select>
+                                            <option>에스컬레이터식</option>
+                                        </select>
+                                    </td>
+                                    <th>교반기가동횟수</th>
+                                    <td>
+                                        <div class="row">
+                                            <input type="text">
+                                            <span>회/일</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>송풍기</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" class="mid">
+                                            <span>㎥/min x</span>
+
+                                            <input type="text" class="mid">
+                                            <span>mmAg x</span>
+
+                                            <input type="text" class="mid">
+                                            <div class="common__radio-group">
+                                                <div class="radio">
+                                                    <input type="radio" name="radio_tcs_002_02-04" value="" checked>
+                                                    <label>Kw</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input type="radio" name="radio_tcs_002_02-04" value="">
+                                                    <label>Hp x</label>
+                                                </div>
+                                            </div>
+
+                                            <input type="text" class="mid">
+                                            <span>대</span>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="category">
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <td rowspan="3" class="category">발효기간</td>
+                                    <th>전공정</th>
+                                    <td>
+                                        <div class="row">
+                                            <input type="text" class="mid">
+                                            <span>일</span>
+                                        </div>
+                                    </td>
+                                    <th rowspan="3">비고</th>
+                                    <td rowspan="3">
+                                        <textarea></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>통풍▪교반</th>
+                                    <td>
+                                        <div class="row">
+                                            <input type="text" class="mid">
+                                            <span>일</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>후숙</th>
+                                    <td>
+                                        <div class="row">
+                                            <input type="text" class="mid">
+                                            <span>일</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="contents-bottom-button-row">
+                            <button type="button" class="btn icon save blue">저장</button>
+                            <button type="button" class="btn icon delete red">삭제</button>
+                        </div>
+                    </div>
+
+                    <div class="tab-contents" data-name="03">
+                        <div class="table-button-row">
+                            <div class="section-header">악취 방지시설</div>
+                            <button type="button" class="btn icon plus secondary">행추가</button>
+                            <button type="button" class="btn icon save blue">저장</button>
+                        </div>
+                        <div id="grid_tcs_002_02-2">grid area</div>
+                    </div>
+
+                    <div class="tab-contents" data-name="04">
+                        <div class="section-header">악취 측정결과</div>
+                        <div id="grid_tcs_002_02-3">grid area</div>
+                    </div>
+
+                    <div class="tab-contents" data-name="05">
+                        <div class="table-button-row">
+                            <div class="section-header">악취 저감방안 및 개선사항</div>
+                            <button type="button" class="btn icon save blue">저장</button>
+                        </div>
+                        <div id="grid_tcs_002_02-4">grid area</div>
+                        <button type="button" class="btn primary" onclick="selectPopup()">방지시설선택</button>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <div class="popup custom" id="tcs_002_02_popup">
+        <div class="container" style="width: 100%; max-width: 960px;">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="section-header padding-top-0">기술지원 신청정보</div>
+                <div class="table-container">
+                    <table class="write" style="width: 100%;">
+                        <colgroup>
+                            <col class="header">
+                            <col>
+                            <col class="header">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th class="required">신청경로</th>
+                            <td colspan="3">지자체</td>
+                        </tr>
+                        <tr>
+                            <th class="required">사업장 명칭</th>
+                            <td>OO산업</td>
+                            <th class="required">대표자(성명)</th>
+                            <td>김대표</td>
+                        </tr>
+                        <tr>
+                            <th class="required">사업장 소재지</th>
+                            <td colspan="3">충남 부여군 XX면 XX리 123-1</td>
+                        </tr>
+                        <tr>
+                            <th class="required">신청부서 및 담당자</th>
+                            <td>XX군 행정환경과</td>
+                            <th>담당자 이메일</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th class="required">업종</th>
+                            <td>육우 사육업(01212)</td>
+                            <th>종업원 수</th>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th>주요 생산품</th>
+                            <td></td>
+                            <th>주요 생산 공정</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>주요 악취배출공정</th>
+                            <td colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <th>악취방지시설 종류</th>
+                            <td colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <th class="required">기술지원 신청일</th>
+                            <td>2024-04-22</td>
+                            <th>기술지원 희망일</th>
+                            <td>2024.3.15~(최대한 빨리)</td>
+                        </tr>
+                        <tr>
+                            <th class="required">
+                                기술지원 요청사항<br>
+                                (악취관련 문세시설 요약 등 가능한 상세히 기술)
+                            </th>
+                            <td colspan="3">
+                                호기성 분해시설 운영중 악취발생
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <br><br>
+
+                <div class="section-header padding-top-0">첨부파일</div>
+                <div class="table-container">
+                    <table style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="all-files"></th>
+                                <th>구분</th>
+                                <th>첨부파일</th>
+                                <th>등록일시</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="center"><input type="checkbox"></td>
+                                <td>악취저감기술 지원 신청서</td>
+                                <td>
+                                    <a href="#!">OO사업장기술지원신청서.hwp</a>
+                                </td>
+                                <td class="center">2023-00-00 00:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="footer">
+                <button type="button" class="btn secondary">닫기</button>
+            </div>
+
+            <script>
+                document.querySelector('#tcs_002_02_popup .btn.secondary').addEventListener('click', () => {
+                    console.log('cancel');
+                    closeCustomPopup('tcs_002_02_popup');
+                });
+            </script>
+
+        </div>
+    </div>
+
+
+
+    <div class="popup custom" id="tcs_002_02-4_popup">
+        <div class="container">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="section-header padding-top-0">방지시설 선택</div>
+                <div class="tcs_002_02-4_popup_checks">
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>세정시설</label>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>흡착시설</label>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>집진시설</label>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>백필터</label>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>전기집진기</label>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>사이클론</label>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>바이오필터</label>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>토양탈취</label>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>바이오커튼</label>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>연소시설</label>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>응축시설</label>
+                    </div>
+                    <div class="checkbox-row">
+                        <input type="checkbox">
+                        <label>기타</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <button type="button" class="btn primary">저장</button>
+                <button type="button" class="btn secondary">취소</button>
+            </div>
+
+            <script>
+                document.querySelector('#tcs_002_02-4_popup .btn.primary').addEventListener('click', () => {
+                    console.log('confirm');
+                    closeCustomPopup('tcs_002_02-4_popup');
+                });
+                document.querySelector('#tcs_002_02-4_popup .btn.secondary').addEventListener('click', () => {
+                    console.log('cancel');
+                    closeCustomPopup('tcs_002_02-4_popup');
+                });
+            </script>
+
+        </div>
+    </div>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+    });
+
+    const selectPopup = () => {
+        openCustomPopup('tcs_002_02-4_popup');
+    }
+
+    const gridTcs00202Popup = () => {
+        openCustomPopup('tcs_002_02_popup');
+    }
+
+</script>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            실태조사
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            지자체실태조사
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            목록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">실태조사</div>
+                    <div class="menus">
+                        <a href="./CNE_001_01.html" class="menu current">지자체실태조사</a>
+                        <a href="./CNE_002_01.html" class="menu">공단 실태조사</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">지자체 실태조사 목록</div>
+                <div class="contents">
+
+
+                    <div class="table-button-row padding-top-0">
+                        <div class="section-header">조회 조건</div>
+                        <button type="button" class="btn icon search primary">
+                            조회
+                        </button>
+                    </div>
+
+                    <div class="search-area">
+
+                        <div class="col">
+                            <label>조사 연도</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>2025</option>
+                                </select>
+                                년
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <label>시도/시구군</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>시도 선택</option>
+                                </select>
+                                <select>
+                                    <option>시구군 선택</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">조회 결과</div>
+                        <button type="button" class="btn icon add green" onclick="location.href = './CNE_001_02.html'; ">신규 작성</button>
+                        <button type="button" class="btn icon excel">엑셀다운로드</button>
+                    </div>
+
+                    <div id="grid_tcs_004_01">grid area</div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+    });
+
+</script>
+</html>

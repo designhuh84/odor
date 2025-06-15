@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술지원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            분석결과
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            목록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">기술지원</div>
+                    <div class="menus">
+                        <a href="./TCS_001_01.html" class="menu">신청정보</a>
+                        <a href="./TCS_002_01.html" class="menu">기술지원</a>
+                        <a href="./TCS_003_01.html" class="menu current">분석결과</a>
+                        <a href="./TCS_004_01.html" class="menu">공정코드관리</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">분석결과 상세</div>
+                <div class="contents">
+
+
+                    <div class="table-button-row padding-top-0">
+                        <div class="section-header">기본 정보</div>
+                        <button type="button" class="btn icon excel">
+                            엑셀다운로드
+                        </button>
+                        <button type="button" class="btn icon list black">
+                            목록
+                        </button>
+                    </div>
+                    <div id="grid_tcs_003_02-01">grid area</div>
+
+                    <div class="section-header">분석결과</div>
+                    <div id="grid_tcs_003_02-02">grid area</div>
+                    <br><br>
+                    <div class="chart">chart</div>
+                    <br><br>
+                    <div class="chart">chart</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+    });
+
+</script>
+</html>

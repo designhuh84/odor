@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            실태조사
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            공단 실태조사
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            목록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">실태조사</div>
+                    <div class="menus">
+                        <a href="./CNE_001_01.html" class="menu">지자체실태조사</a>
+                        <a href="./CNE_002_01.html" class="menu current">공단 실태조사</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">공단실태조사 목록</div>
+                <div class="contents">
+
+                    <div class="infobox">
+                        <span class="red">* 필수입력 항목입니다.</span>
+                    </div>
+
+
+                    <div class="table-button-row padding-top-0">
+                        <div class="section-header">기본 정보</div>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">조사기간</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <select>
+                                            <option>2021</option>
+                                        </select>
+                                        <span>년</span>
+                                        <select>
+                                            <option>01</option>
+                                        </select>
+                                        <span>월</span>
+                                        <span>&nbsp;&nbsp;~&nbsp;&nbsp;</span>
+                                        <select>
+                                            <option>2021</option>
+                                        </select>
+                                        <span>년</span>
+                                        <select>
+                                            <option>01</option>
+                                        </select>
+                                        <span>월</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">조사대상</th>
+                                <td colspan="3">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">시도/시구군</th>
+                                <td>
+                                    <div class="row">
+                                        <select>
+                                            <option>시도 선택</option>
+                                        </select>
+                                        <select>
+                                            <option>시구군 선택</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>악취관리지역지정 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="cne_002_02_radio" value="Y">
+                                            <label>Y</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="cne_002_02_radio" value="N" checked>
+                                            <label>N</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">실태조사 정보</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">개선방안</th>
+                                <td>
+                                    <div class="common__checkbox-group">
+                                        <input type="checkbox">
+                                        <label>악취관리지역 선정필요</label>
+                                    </div>
+                                    <div class="common__checkbox-group">
+                                        <input type="checkbox">
+                                        <label>신고대상시설 지정검토</label>
+                                    </div>
+                                    <div class="common__checkbox-group">
+                                        <input type="checkbox">
+                                        <label>악취모니터링 실시</label>
+                                    </div>
+                                    <div class="common__checkbox-group">
+                                        <input type="checkbox">
+                                        <label>악취배출사업장 시설개선 재원 확충</label>
+                                    </div>
+                                    <div class="common__checkbox-group">
+                                        <input type="checkbox">
+                                        <label>악취저감 자율협약 체결 활성화</label>
+                                    </div>
+                                    <div class="common__checkbox-group">
+                                        <input type="checkbox">
+                                        <div class="label-row">
+                                            <label>기타(</label>
+                                            <input type="text">
+                                            <label>)</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비고</th>
+                                <td>
+                                    <textarea rows="6"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">첨부파일</div>
+                        <button type="button" class="btn icon plus primary">파일추가</button>
+                        <button type="button" class="btn icon minus secondary">파일삭제</button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id=""></th>
+                                    <th>구분</th>
+                                    <th>첨부파일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center"><input type="checkbox"></td>
+                                    <td>악취 배출 실태조사 요약본</td>
+                                    <td>
+                                        <a href="#!">OO시 실태조사 요약본.hwp</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="contents-bottom-button-row">
+                        <button type="button" class="btn icon save blue">저장</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+    });
+
+</script>
+</html>

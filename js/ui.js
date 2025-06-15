@@ -42,6 +42,7 @@ GlobalHeaderUI.html = `
         <nav>
             <a href="./EBP_001.html">배출사업장</a>
             <a href="./TCS_001_01.html">기술지원</a>
+            <a href="./CNE_001_01.html">실태조사</a>
             <a href="./TCD_003_01.html">기술진단</a>
             <a href="./SCM_001_01.html">시료관리</a>
             <a href="./STS_028_03.html">통계현황</a>
@@ -178,6 +179,21 @@ GlobalHeaderMenuUI.html = `
                     <div class="sub-category">기술지원</div>
                     <div class="menus">
                         <a href="./TCS_001_01.html" class="menu">신청정보</a>
+                        <a href="./TCS_002_01.html" class="menu">기술지원</a>
+                        <a href="./TCS_003_01.html" class="menu">분석결과</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="category">실태조사</div>
+            <div class="rows">
+                <div class="row">
+                    <div class="sub-category">실태조사</div>
+                    <div class="menus">
+                        <a href="./CNE_001_01.html" class="menu">지자체 실태조사</a>
+                        <a href="./CNE_002_01.html" class="menu">공단 실태조사</a>
                     </div>
                 </div>
             </div>
@@ -223,6 +239,19 @@ GlobalHeaderMenuUI.html = `
         <div class="col">
             <div class="category">통계현황</div>
             <div class="rows">
+                <div class="row">
+                    <div class="sub-category">배출사업장현황</div>
+                    <div class="menus">
+                        <a href="./STS_001_01.html" class="menu">악취배출사업장</a>
+                        <a href="./STS_001_02.html" class="menu">업종별현황</a>
+                        <a href="./STS_001_03.html" class="menu">중점관리사업장</a>
+                        <a href="./STS_001_04.html" class="menu">악취검사현황</a>
+                        <a href="./STS_001_05.html" class="menu">악취검사결과</a>
+                        <a href="./STS_001_06.html" class="menu">과징금현황</a>
+                        <a href="./STS_001_07.html" class="menu">위반내역</a>
+                        <a href="./STS_001_08.html" class="menu">행정처분현황</a>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="sub-category">악취민원실태조사</div>
                     <div class="menus">
@@ -501,6 +530,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.checkbox-row label').forEach(label => {
         label.addEventListener('click', event => {
             const checkbox = event.target.parentElement.querySelector('input[type=checkbox]');
+            checkbox.checked = checkbox.checked ? false : true;
+        });
+    });
+
+    document.querySelectorAll('.common__checkbox-group label').forEach(label => {
+        label.addEventListener('click', event => {
+            const checkbox = event.target.closest('.common__checkbox-group').querySelector('input[type=checkbox]');
             checkbox.checked = checkbox.checked ? false : true;
         });
     });

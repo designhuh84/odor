@@ -236,6 +236,111 @@
                         </div>
                     </div>
 
+                    <div class="section-header">Write Table</div>
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>Label</th>
+                                <td><input type="text" placeholder="input text"></td>
+                                <th class="required">Label Required</th>
+                                <td><input type="date"></td>
+                            </tr>
+                            <tr>
+                                <th>Select</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <select>
+                                            <option>select</option>
+                                        </select>
+                                        <span>span</span>
+                                        <select class="mid">
+                                            <option>select mid</option>
+                                        </select>
+                                        <span>span</span>
+                                        <select class="small">
+                                            <option>select small</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Radio Button</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="sample-radio" value="Y">
+                                            <label>Y</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="sample-radio" value="N">
+                                            <label>N</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>Checkbox</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>checkbox label</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>checkbox label</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Textarea</th>
+                                <td colspan="3">
+                                    <textarea placeholder="textarea" rows="6"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">첨부파일</div>
+                        <button type="button" class="btn icon plus primary">파일추가</button>
+                        <button type="button" class="btn icon minus secondary">파일삭제</button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id=""></th>
+                                    <th>구분</th>
+                                    <th>첨부파일</th>
+                                    <th>등록일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center"><input type="checkbox"></td>
+                                    <td>악취저감기술 지원 신청서</td>
+                                    <td>
+                                        <a href="#!">OO사업장기술지원신청서.hwp</a>
+                                    </td>
+                                    <td class="center">2023-00-00 00:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="contents-bottom-button-row">
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon write green">수정</button>
+                        <button type="button" class="btn icon delete red">삭제</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+
                     <div class="section-header">Grid</div>
                     <div id="grid"></div>
 
@@ -281,6 +386,8 @@
         { 'class': '난초반', 'name': '국영수',  'number': '51125', 'korean': '80', 'english': '80', 'math': '80', 'btn': 'test' },
         { 'class': '난초반', 'name': '영수',    'number': '51126', 'korean': '70', 'english': '80', 'math': '80', 'btn': 'test' },
         { 'class': '난초반', 'name': '국영',    'number': '51127', 'korean': '80', 'english': '80', 'math': '60', 'btn': 'test' },
+        { 'class': '기타반', 'name': '국영',    'number': '51127', 'korean': '80', 'english': '80', 'math': '60', 'btn': 'test' },
+        { 'class': '기타반', 'name': '국영',    'number': '51127', 'korean': '80', 'english': '80', 'math': '60', 'btn': 'test' },
     ];
     let gridConfig = {
         dataSource: localData,    // 상단에 정의되어 있는 데이터를 이용
@@ -288,6 +395,18 @@
         width: '100%',
         height: '400px',
         theme: 'common-grid', //grid에 theme: 'common-grid' 속성을 추가해주세요.
+        rowCss: (data) => {
+            switch(data.class) {
+                case '매화반':
+                    return 'green'
+                case '국화반':
+                    return 'blue'
+                case '난초반':
+                    return 'red'
+                case '기타반':
+                    return 'gray'
+            }
+        },
         columns: [
             { field: 'class' , caption:'반',   },
             { field: 'name' ,  caption:'성명', },

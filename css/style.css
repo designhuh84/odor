@@ -91,6 +91,10 @@ input.small {
   max-width: 3rem;
 }
 
+input.mid {
+  max-width: 6rem;
+}
+
 select {
   font: inherit;
   color: inherit;
@@ -103,6 +107,12 @@ select {
 select:focus {
   outline: none;
   border-color: var(--primary);
+}
+select.mid {
+  max-width: 6rem;
+}
+select.small {
+  max-width: 3rem;
 }
 
 textarea {
@@ -1293,6 +1303,9 @@ global-header-menu .col .menu:hover {
   font-weight: 700;
   color: #000;
 }
+.table-container table th span, .table-container table td span {
+  white-space: nowrap;
+}
 .table-container table th {
   font-weight: 600;
   background-color: #F8FBF8;
@@ -1503,6 +1516,7 @@ table.stat td {
   display: block;
   min-width: 5rem;
   cursor: pointer;
+  white-space: nowrap;
 }
 .checkbox-row input[type=checkbox] {
   width: 1.3em;
@@ -1576,6 +1590,21 @@ table.sub01-1-tables input, table.sub01-1-tables select {
 .common__radio-group label {
   display: block;
   cursor: pointer;
+  white-space: nowrap;
+}
+
+.common__checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.common__checkbox-group .label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.common__checkbox-group .label-row label {
+  white-space: nowrap;
 }
 
 .contents-bottom-button-row {
@@ -2277,6 +2306,30 @@ table.sub01-1 tbody td {
 .sbgrid-theme-common-grid .sbgrid-custom > button:disabled::before {
   filter: brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(0%) hue-rotate(149deg) brightness(103%) contrast(87%);
 }
+.sbgrid-theme-common-grid .sbgrid-row.green {
+  background-color: #ECFEEC;
+}
+.sbgrid-theme-common-grid .sbgrid-row.green:hover {
+  background-color: #C0FCC0 !important;
+}
+.sbgrid-theme-common-grid .sbgrid-row.blue {
+  background-color: #E9FBF8;
+}
+.sbgrid-theme-common-grid .sbgrid-row.blue:hover {
+  background-color: #D1FAF3 !important;
+}
+.sbgrid-theme-common-grid .sbgrid-row.red {
+  background-color: #FAF4F4;
+}
+.sbgrid-theme-common-grid .sbgrid-row.red:hover {
+  background-color: #F2E3E3 !important;
+}
+.sbgrid-theme-common-grid .sbgrid-row.gray {
+  background-color: #FAF8F4;
+}
+.sbgrid-theme-common-grid .sbgrid-row.gray:hover {
+  background-color: #F2EDE3 !important;
+}
 
 .loading {
   position: fixed;
@@ -2311,4 +2364,13 @@ table.sub01-1 tbody td {
   color: #FFF;
   text-align: center;
   line-height: 150%;
+}
+
+.tcs_002_02-4_popup_checks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem 1rem;
+}
+.tcs_002_02-4_popup_checks .checkbox-row {
+  gap: 0.25rem;
 }/*# sourceMappingURL=style.css.map */

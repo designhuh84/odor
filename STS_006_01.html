@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            통계현황
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            배출사업장현황
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            과징금현황
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">배출사업장현황</div>
+                    <div class="menus">
+                        <a href="./STS_001_01.html" class="menu">악취배출사업장</a>
+                        <a href="./STS_002_01.html" class="menu">업종별현황</a>
+                        <a href="./STS_003_01.html" class="menu">중점관리사업장</a>
+                        <a href="./STS_004_01.html" class="menu">악취검사현황</a>
+                        <a href="./STS_005_01.html" class="menu">악취검사결과</a>
+                        <a href="./STS_006_01.html" class="menu current">과징금현황</a>
+                        <a href="./STS_007_01.html" class="menu">위반내역</a>
+                        <a href="./STS_008_01.html" class="menu">행정처분현황</a>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="title">악취민원실태조사</div>
+                    <div class="menus">
+                        <a href="./STS_028_03.html" class="menu">월별현황</a>
+                        <a href="./STS_029_01.html" class="menu">지역별현황</a>
+                        <a href="./STS_031_02.html" class="menu">환경기초시설현황</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">과징금현황</div>
+                <div class="contents">
+
+                    <div class="table-button-row padding-top-0">
+                        <div class="section-header">조회 조건</div>
+                        <button type="button" class="btn icon search primary">
+                            조회
+                        </button>
+                    </div>
+
+                    <div class="search-area">
+                        <div class="col">
+                            <label>연도</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>2023</option>
+                                </select>
+                                <span>~</span>
+                                <select>
+                                    <option>2024</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>시도</label>
+                            <select>
+                                <option>전체</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="table-button-row">
+                        <button type="button" class="btn icon excel">
+                            엑셀다운로드
+                        </button>
+                    </div>
+                    
+                    <div id="grid_sts_006_01">grid area</div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

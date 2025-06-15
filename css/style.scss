@@ -95,6 +95,10 @@ input.small{
     max-width: 3rem;
 }
 
+input.mid{
+    max-width: 6rem;
+}
+
 select{
     font: inherit;
     color: inherit;
@@ -106,6 +110,12 @@ select{
     &:focus{
         outline: none;
         border-color: var(--primary);
+    }
+    &.mid{
+        max-width: 6rem;
+    }
+    &.small{
+        max-width: 3rem;
     }
 }
 
@@ -1403,6 +1413,9 @@ global-header-menu{
                 font-weight: 700;
                 color: #000;
             }
+            span{
+                white-space: nowrap;
+            }
         }
         th{
             font-weight: 600;
@@ -1661,6 +1674,7 @@ table.stat{
         display: block;
         min-width: 5rem;
         cursor: pointer;
+        white-space: nowrap;
     }
     input[type='checkbox']{
         width: 1.3em;
@@ -1750,6 +1764,21 @@ table.sub01-1-tables{
     label{
         display: block;
         cursor: pointer;
+        white-space: nowrap;
+    }
+}
+
+.common__checkbox-group{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    .label-row{
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        label{
+            white-space: nowrap;
+        }
     }
 }
 
@@ -2285,17 +2314,6 @@ table.sub01-1{
     }
 }
 
-// .sbgrid-grid{
-//     position: static;
-//     *{
-//         position: static;
-
-//         .sbgrid-resize-indicator{
-//             position: absolute;
-//         }
-//     }
-// }
-
 //grid에 theme: 'common-grid' 속성을 추가해주세요.
 .sbgrid-theme-common-grid{
     &.sbgrid-grid{
@@ -2598,6 +2616,33 @@ table.sub01-1{
             }
         }
     }
+
+    .sbgrid-row{
+        &.green{
+            background-color: #ECFEEC;
+            &:hover{
+                background-color: #C0FCC0 !important;
+            }
+        }
+        &.blue{
+            background-color: #E9FBF8;
+            &:hover{
+                background-color: #D1FAF3 !important;
+            }
+        }
+        &.red{
+            background-color: #FAF4F4;
+            &:hover{
+                background-color: #F2E3E3 !important;
+            }
+        }
+        &.gray{
+            background-color: #FAF8F4;
+            &:hover{
+                background-color: #F2EDE3 !important;
+            }
+        }
+    }
 }
 
 .loading{
@@ -2632,5 +2677,14 @@ table.sub01-1{
         color: #FFF;
         text-align: center;
         line-height: 150%;
+    }
+}
+
+.tcs_002_02-4_popup_checks{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem 1rem;
+    .checkbox-row{
+        gap: 0.25rem;
     }
 }
