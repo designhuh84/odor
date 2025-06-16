@@ -128,10 +128,12 @@
                     <br><br>
                     <div class="tab-row">
                         <button type="button" class="tab on" data-name="01">기본정보</button>
-                        <button type="button" class="tab" data-name="02">악취발생 및 관리현황</button>
-                        <button type="button" class="tab" data-name="03">악취 방지시설</button>
-                        <button type="button" class="tab" data-name="04">악취 측정결과</button>
-                        <button type="button" class="tab" data-name="05">악취 저감방안 및 개선사항</button>
+                        <button type="button" class="tab" data-name="02">퇴비장 운영 현황</button>
+                        <button type="button" class="tab" data-name="02-1">축사 운영 현황</button>
+                        <button type="button" class="tab" data-name="03">악취발생 및 관리현황</button>
+                        <button type="button" class="tab" data-name="04">악취 방지시설</button>
+                        <button type="button" class="tab" data-name="05">악취 측정결과</button>
+                        <button type="button" class="tab" data-name="06">악취 저감방안 및 개선사항</button>
                     </div>
                     
                     <div class="tab-contents on" data-name="01">
@@ -411,26 +413,222 @@
                         </div>
                     </div>
 
+                    <div class="tab-contents" data-name="02-1">
+                        <div class="table-button-row">
+                            <div class="section-header">축사 운영 현황</div>
+                        </div>
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>경영방식</th>
+                                    <td>
+                                        <div class="row">
+                                            <select class="mid">
+                                                <option>일관</option>
+                                                <option>위탁</option>
+                                                <option>자돈생산</option>
+                                            </select>
+                                            <span>일관/위탁/자돈생산</span>
+                                        </div>
+                                    </td>
+                                    <th>분뇨처리</th>
+                                    <td>
+                                        <div class="row">
+                                            <input type="text">
+                                            <select>
+                                                <option>위탁</option>
+                                                <option>자가</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>사육두수</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <th>고액분리</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="tcs_002_02-1" value="Y">
+                                                <label>Y</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="tcs_002_02-1" value="N">
+                                                <label>N</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>사육동수</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <th>퇴비장</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="tcs_002_02-2" value="Y">
+                                                <label>Y</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="tcs_002_02-2" value="N">
+                                                <label>N</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>액비처리</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="common__radio-group">
+                                                <div class="radio">
+                                                    <input type="radio" name="tcs_002_02-3" value="Y">
+                                                    <label>Y</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input type="radio" name="tcs_002_02-3" value="N">
+                                                    <label>N</label>
+                                                </div>
+                                            </div>
+                                            <select class="mid">
+                                                <option>폭기</option>
+                                                <option>비폭기</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th>폐수처리</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="tcs_002_02-4" value="Y">
+                                                <label>Y</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="tcs_002_02-4" value="N">
+                                                <label>N</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="category">
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <td rowspan="2" class="category">축사 형식</td>
+                                    <th>무창</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <th rowspan="2">분뇨순환시스템</th>
+                                    <td rowspan="2">
+                                        <div class="row">
+                                            <div class="common__radio-group">
+                                                <div class="radio">
+                                                    <input type="radio" name="tcs_002_02-5" value="Y">
+                                                    <label>Y</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input type="radio" name="tcs_002_02-5" value="N">
+                                                    <label>N</label>
+                                                </div>
+                                            </div>
+                                            <input type="text">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>원치</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="4" class="category">바닥형식</td>
+                                    <th>전면슬러리</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                    <th rowspan="4">비고</th>
+                                    <td rowspan="4">
+                                        <textarea></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>부분슬러리</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>스크래퍼</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>평사</th>
+                                    <td>
+                                        <input type="text">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="contents-bottom-button-row">
+                            <button type="button" class="btn icon save blue">저장</button>
+                            <button type="button" class="btn icon delete red">삭제</button>
+                        </div>
+                    </div>
+
+
                     <div class="tab-contents" data-name="03">
+                        <div class="table-button-row">
+                            <div class="section-header">악취발생 및 관리현황</div>
+                            <button type="button" class="btn icon plus secondary">행추가</button>
+                            <button type="button" class="btn icon save blue">저장</button>
+                        </div>
+                        <div id="grid_tcs_002_02-3">grid area</div>
+                    </div>
+
+                    <div class="tab-contents" data-name="04">
                         <div class="table-button-row">
                             <div class="section-header">악취 방지시설</div>
                             <button type="button" class="btn icon plus secondary">행추가</button>
                             <button type="button" class="btn icon save blue">저장</button>
                         </div>
-                        <div id="grid_tcs_002_02-2">grid area</div>
-                    </div>
-
-                    <div class="tab-contents" data-name="04">
-                        <div class="section-header">악취 측정결과</div>
-                        <div id="grid_tcs_002_02-3">grid area</div>
+                        <div id="grid_tcs_002_02-4">grid area</div>
                     </div>
 
                     <div class="tab-contents" data-name="05">
+                        <div class="section-header">악취 측정결과</div>
+                        <div id="grid_tcs_002_02-5">grid area</div>
+                    </div>
+
+                    <div class="tab-contents" data-name="06">
                         <div class="table-button-row">
                             <div class="section-header">악취 저감방안 및 개선사항</div>
                             <button type="button" class="btn icon save blue">저장</button>
                         </div>
-                        <div id="grid_tcs_002_02-4">grid area</div>
+                        <div id="grid_tcs_002_02-6">grid area</div>
                         <button type="button" class="btn primary" onclick="selectPopup()">방지시설선택</button>
                     </div>
 
