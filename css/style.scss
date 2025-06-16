@@ -58,7 +58,7 @@ label{
     color: inherit;
 }
 
-input:not([type='radio'], [type='checkbox']){
+input:not([type='radio'], [type='checkbox'], [type='file']){
     font: inherit;
     color: inherit;
     margin: 0;
@@ -76,6 +76,12 @@ input:not([type='radio'], [type='checkbox']){
         pointer-events: none;
         background-color: rgba(0,0,0,0.05);
     }
+}
+
+input[type='file']{
+    padding: 0.25rem;
+    background-color: #FFF;
+    border: solid 1px #BFBFBF;
 }
 
 input[type='radio']{
@@ -99,6 +105,10 @@ input.mid{
     max-width: 6rem;
 }
 
+input.large{
+    max-width: 15rem;
+}
+
 select{
     font: inherit;
     color: inherit;
@@ -116,6 +126,9 @@ select{
     }
     &.small{
         max-width: 3rem;
+    }
+    &.large{
+        max-width: 15rem;
     }
 }
 
@@ -185,6 +198,19 @@ global-header{
     background-image: url(../image/user.svg);
     background-size: cover;
     margin-left: auto;
+}
+
+.btn-header-userinfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 2rem;
+    padding: 0 1rem;
+    border-radius: 0.25rem;
+    background-color: #347DC5;
+    color: #FFF;
 }
 
 .btn-header-logout{
@@ -899,6 +925,10 @@ global-header-menu{
                     gap: 0.75rem;
                 }
             }
+
+            .login-area{
+                width: 100%;
+            }
         }
     }
 
@@ -1418,9 +1448,10 @@ global-header-menu{
             }
         }
         th{
+            position: relative;
             font-weight: 600;
             background-color: #F8FBF8;
-            border: solid 1px var(--primary);
+            // border-bottom: solid 1px var(--primary);
             &.required{
                 padding-left: 2rem;
                 text-indent: -0.5rem;
@@ -1439,6 +1470,16 @@ global-header-menu{
             & + td:has(+ th){
                 border-right: 0;
             }
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0;
+                box-shadow: 0px 0px 0px 0.5px var(--primary);
+                pointer-events: none;
+            }
         }
         td{
             color: #4D4D4D;
@@ -1449,6 +1490,7 @@ global-header-menu{
 
             input[type='text'],
             input[type='date'],
+            input[type='password'],
             select
             {
                 width: 100%;

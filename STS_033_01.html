@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            통계현황
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            통계관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            배치관리
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">엑셀 업로드</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">엑셀 업로드</div>
+                        <button  type="button" class="btn icon upload primary">업로드</button>
+                    </div>
+                    <div class="search-area">
+                        <div class="col">
+                            <label>기준 연도</label>
+                            <select>
+                                <option>2025</option>
+                            </select>
+                        </div>
+                        <div class="col full-width">
+                            <label>파일 1 (붙임 1)</label>
+                            <input type="file">
+                        </div>
+                        <div class="col full-width">
+                            <label>파일 2 (붙임 2)</label>
+                            <input type="file">
+                        </div>
+                        <div class="col full-width">
+                            <label>파일 3 (붙임 3)</label>
+                            <input type="file">
+                        </div>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">업로드된 파일 목록</div>
+                        <button  type="button" class="btn icon search primary">조회</button>
+                    </div>
+                    <div class="search-area">
+                        <div class="col">
+                            <label>연도</label>
+                            <select>
+                                <option>전체</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="sts_033_01">grid area</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            마이페이지
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원정보수정
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">회원정보수정</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">정보입력</div>
+                        <button type="button" class="btn icon print skyblue">계정 발급신청서 출력</button>
+                        <button  type="button" class="btn red">탈퇴</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">성명</th>
+                                <td colspan="3">
+                                    <input type="text" class="large" value="나나나" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">휴대전화번호</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <select class="mid">
+                                            <option>010</option>
+                                        </select>
+                                        <span> - </span>
+                                        <input type="text" class="large">
+                                        <span> - </span>
+                                        <input type="text" class="large">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">이메일주소</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="text">
+                                        <span>@</span>
+                                        <input type="text">
+                                        <select>
+                                            <option>직접입력</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">회사주소</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="text" id="address-01" placeholder="주소검색 버튼을 누르세요" readonly>
+                                        <input type="text" id="address-02" placeholder="나머지 주소">
+                                        <button type="button" class="btn icon search primary" id="search-address">주소검색</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">회사 전화번호</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <select class="mid">
+                                            <option>02</option>
+                                        </select>
+                                        <span> - </span>
+                                        <input type="text" class="large">
+                                        <span> - </span>
+                                        <input type="text" class="large">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">소속구분</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="01" value="Y">
+                                            <label>환경공단</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="01" value="N">
+                                            <label>환경부</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="01" value="N">
+                                            <label>지자체</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="01" value="N">
+                                            <label>기타</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th class="required">소속명</th>
+                                <td>
+                                    <input type="text" value="환경부" class="large" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">부서명</th>
+                                <td colspan="3">
+                                    <input type="text" class="large" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">직위</th>
+                                <td>
+                                    <select class="large">
+                                        <option>대리</option>
+                                    </select>
+                                </td>
+                                <th class="required">권한유형</th>
+                                <td>
+                                    <select class="large">
+                                        <option>시스템관리자</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>승인상태</th>
+                                <td>
+                                    <select class="large" disabled>
+                                        <option></option>
+                                    </select>
+                                </td>
+                                <th>승인반려사유</th>
+                                <td>
+                                    IP 변경하여 재신청
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>관할지역</th>
+                                <td>
+                                    <select class="large">
+                                        <option>인천서구</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>정보수신 동의</th>
+                                <td colspan="3">
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="01" value="Y">
+                                            <label>예</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="01" value="N">
+                                            <label>아니오</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>정보수신 채널</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>SMS</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>E-MAIL</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>카카오톡</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>수수료 입금계좌</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="text" class="large">
+                                        <select class="large">
+                                            <option>국민은행</option>
+                                            <option>카카오뱅크</option>
+                                        </select>
+                                        <button type="button" class="btn primary">인증</button>
+                                        <span>계좌명: 인천서구청</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="contents-bottom-button-row">
+                        <button type="button" class="btn cancel">취소</button>
+                        <button type="button" class="btn blue">정보수정</button>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('#search-address').addEventListener('click', () => {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    console.log(data);
+                    document.querySelector('#address-01').value = data.address;
+                    document.querySelector('#address-02').focus();
+                }
+            }).open();
+        });
+    });
+
+</script>
+</html>

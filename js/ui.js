@@ -51,6 +51,7 @@ GlobalHeaderUI.html = `
             <a href="#!">고객센터</a>
         </nav>
         <button type="button" class="btn-header-login"></button>
+        <button type="button" class="btn-header-userinfo">내정보</button>
         <button type="button" class="btn-header-logout">로그아웃</button>
         <div class="header-login-sub">
             <a href="#!">
@@ -258,6 +259,13 @@ GlobalHeaderMenuUI.html = `
                         <a href="./STS_028_03.html" class="menu">월별현황</a>
                         <a href="./STS_029_01.html" class="menu">지역별현황</a>
                         <a href="./STS_031_02.html" class="menu">환경기초시설현황</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sub-category">통계관리</div>
+                    <div class="menus">
+                        <a href="./STS_025_01.html" class="menu">모니터링</a>
+                        <a href="./STS_026_01.html" class="menu">배치관리</a>
                     </div>
                 </div>
             </div>
