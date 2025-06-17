@@ -1784,7 +1784,10 @@ table.sub01-1 tbody td {
   flex-grow: 1;
 }
 .popup .htmls {
+  display: block;
   padding: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .btn-code-search {

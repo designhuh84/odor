@@ -1967,7 +1967,10 @@ table.sub01-1{
         }
     }
     .htmls{
+        display: block;
         padding: 2rem;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 }
 
