@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            통합검색
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="aside">
+                <div class="search-aside">
+                    <div class="top">
+                        <div class="label">조건검색</div>
+                        <button type="button" class="refresh">초기화</button>
+                    </div>
+                    <div class="re-search-title on">결과내 재검색</div>
+                    <div class="re-search-contents">
+                        
+                        <div class="common__radio-group">
+                            <div class="radio">
+                                <input type="radio" name="re-search-radio" value="Y">
+                                <label>검색어 포함</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" name="re-search-radio" value="N">
+                                <label>검색어 제외</label>
+                            </div>
+                        </div>
+
+                        <input type="text" placeholder="검색어를 입력하세요.">
+
+                        <button type="button" class="btn icon search primary">선택된 조건 검색하기</button>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                
+                <div class="search-top">
+                    <div class="search-container">
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="btn primary">검색</button>
+                        <div class="common__checkbox-group check">
+                            <input type="checkbox">
+                            <label>결과내재검색</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-result-text">
+                    <span class="keyword">'민원'</span> 에 대해 전체 <span class="count">14</span>건의 검색결과를 찾았습니다.
+                </div>
+
+                <div class="contents">
+
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01" onclick="viewChange('on')">전체 (14)</div>
+                        <div class="tab" data-name="02" onclick="viewChange('off')">메뉴 (12)</div>
+                        <div class="tab" data-name="03" onclick="viewChange('off')">공지사항 (1)</div>
+                        <div class="tab" data-name="04" onclick="viewChange('off')">정보소통 (0)</div>
+                        <div class="tab" data-name="05" onclick="viewChange('off')">업무담당자 (1)</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+
+                        <div class="search-result-group">
+                            <div class="title-row">
+                                <div class="title">메뉴</div>
+                                <div class="count">(검색결과 12건)</div>
+                                <div class="link">검색결과 더보기</div>
+                            </div>                            
+                            <div class="search-result-list">
+                                <div class="li">
+                                    <div class="name"><span>민원</span>서비스</div>
+                                    <div class="detail"><span>민원</span>서비스 > <span>민원</span>서비스</div>
+                                </div>
+                                <div class="li">
+                                    <div class="name"><span>민원</span>MAP</div>
+                                    <div class="detail"><span>민원</span>현황 > <span>민원</span>현황 > <span>민원</span>MAP</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="search-result-group">
+                            <div class="title-row">
+                                <div class="title">공지사항</div>
+                                <div class="count">(검색결과 1건)</div>
+                                <div class="link">검색결과 더보기</div>
+                            </div>
+                            <div class="search-result-list">
+                                <div class="li">
+                                    <div class="name">악취통합관리시스템(<span>민원</span> 부문) 테스트 운영 안내</div>
+                                    <div class="detail"><span>민원</span>서비스 > <span>민원</span>서비스</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagenation">
+                            <button type="button" class="btn secondary">&lt; 이전</button>
+                            <a href="#!" class="current">1</a>
+                            <a href="#!">2</a>
+                            <a href="#!">3</a>
+                            <button type="button" class="btn secondary">다음 &gt;</button>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+
+                        <div class="search-result-group">
+                            <div class="title-row">
+                                <div class="title">메뉴</div>
+                                <div class="count">(검색결과 12건)</div>
+                                <div class="link">검색결과 더보기</div>
+                            </div>                            
+                            <div class="search-result-list">
+                                <div class="li">
+                                    <div class="name"><span>민원</span>서비스</div>
+                                    <div class="detail"><span>민원</span>서비스 > <span>민원</span>서비스</div>
+                                </div>
+                                <div class="li">
+                                    <div class="name"><span>민원</span>MAP</div>
+                                    <div class="detail"><span>민원</span>현황 > <span>민원</span>현황 > <span>민원</span>MAP</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagenation">
+                            <button type="button" class="btn secondary">&lt; 이전</button>
+                            <a href="#!" class="current">1</a>
+                            <a href="#!">2</a>
+                            <a href="#!">3</a>
+                            <button type="button" class="btn secondary">다음 &gt;</button>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-contents" data-name="03">03</div>
+
+                    <div class="tab-contents" data-name="04">04</div>
+
+                    <div class="tab-contents" data-name="05">05</div>
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const reSearchContents = document.querySelector('.search-aside .re-search-contents');
+        const reSearchContentsHeight = reSearchContents.scrollHeight;
+        reSearchContents.style.height = reSearchContentsHeight + 'px';
+
+        console.log(reSearchContentsHeight);
+
+        document.querySelector('.search-aside .re-search-title').addEventListener('click', event => {
+            const element = event.target.closest('.re-search-title');
+            
+
+            if(element.classList.contains('on')){
+                element.classList.remove('on');
+                reSearchContents.style.height = '0px';
+            }else{
+                element.classList.add('on');
+                reSearchContents.style.height = reSearchContentsHeight + 'px';
+            }
+        });
+    });
+
+    const viewChange = mode => {
+        if(mode === 'off'){
+            document.querySelector('.aside').style.display = 'none';
+            document.querySelector('.search-container .check').style.display = 'flex';
+        }
+        if(mode === 'on'){
+            document.querySelector('.aside').style.display = 'block';
+            document.querySelector('.search-container .check').style.display = 'none';
+        }
+        
+    }
+
+</script>
+</html>
