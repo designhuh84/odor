@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험통합판정
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            판정원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            판정원 선정 1단계
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">판정원 선정 1단계</div>
+                <div class="contents">
+
+                    <div class="test-contents-area">
+                        <div class="top">
+                            <div class="table-container">
+                                <table>
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <tr>
+                                        <th>고유번호</th>
+                                        <td colspan="2">A</td>
+                                        <th>판정원</th>
+                                        <td colsapn="2">1</td>
+                                    </tr>
+                                    <tr>
+                                        <th>성별</th>
+                                        <td>남</td>
+                                        <th>흡연</th>
+                                        <th>악취판정시험장소</th>
+                                        <td colspan="2">공기희석관능실험실</td>
+                                    </tr>
+                                    <tr>
+                                        <th>나이</th>
+                                        <td>20</td>
+                                        <td>예</td>
+                                        <th>판정시험년월일</th>
+                                        <td colspan="2">2025년 00월 00일</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="test-contents">
+
+                            <div class="scm_014_01_test-box">
+                                <div class="box">
+                                    <div class="title">악취강도 인식시험 [1단계]</div>
+                                    <div class="text">1도 인식</div>
+                                </div>
+                                <div class="buttons">
+                                    <button type="button">O</button>
+                                    <button type="button">X</button>
+                                </div>
+                                <div class="bottom">
+                                    <button type="button" class="btn primary" disabled>제 출</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="scm_014_01_test-next">
+                            <button type="button" class="btn primary" disabled>NEXT</button>
+                            <div class="info">
+                                악취강도 인식 시험액 (1도~5도)의<br>
+                                악취강도 인식 후 다음 단계로 진행 합니다.
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        resizeContents();
+
+        document.querySelectorAll('.scm_014_01_test-box .buttons button').forEach(button => {
+            button.addEventListener('click', event => {
+                document.querySelectorAll('.scm_014_01_test-box .buttons button').forEach(item => item.classList.remove('on') );
+                event.target.classList.add('on');
+            });
+        });
+    });
+
+    window.addEventListener('resize', () => {
+        resizeContents();
+    });
+
+    const resizeContents = () => {
+        const contentHeight = document.querySelector('.layout').offsetHeight - document.querySelector('.page-title').offsetHeight - (16*5) - (16*1.5);
+        document.querySelector('.contents').style.height = contentHeight + 'px';
+    }
+
+</script>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험통합판정
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            판정원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            판정원 선정 2단계
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">판정원 선정 2단계</div>
+                <div class="contents">
+
+                    <div class="test-contents-area">
+                        <div class="top">
+                            <div class="table-container">
+                                <table>
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <tr>
+                                        <th>고유번호</th>
+                                        <td colspan="2">A</td>
+                                        <th>판정원</th>
+                                        <td colsapn="2">1</td>
+                                    </tr>
+                                    <tr>
+                                        <th>성별</th>
+                                        <td>남</td>
+                                        <th>흡연</th>
+                                        <th>악취판정시험장소</th>
+                                        <td colspan="2">공기희석관능실험실</td>
+                                    </tr>
+                                    <tr>
+                                        <th>나이</th>
+                                        <td>20</td>
+                                        <td>예</td>
+                                        <th>판정시험년월일</th>
+                                        <td colspan="2">2025년 00월 00일</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="test-contents">
+
+                            <div class="scm_014_02_test-box">
+                                <div class="col">
+                                    <div class="table-container">
+                                        <table>
+                                            <tr>
+                                                <th colspan="6">악취판정원 선정액 시험 [2단계]</th>
+                                            </tr>
+                                            <tr>
+                                                <td>시약번호</td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>4</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>냄새종류</td>
+                                                <td class="clickable type"></td>
+                                                <td class="clickable type"></td>
+                                                <td class="clickable type"></td>
+                                                <td class="clickable type"></td>
+                                                <td class="clickable type"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>악취강도</td>
+                                                <td class="clickable level"></td>
+                                                <td class="clickable level"></td>
+                                                <td class="clickable level"></td>
+                                                <td class="clickable level"></td>
+                                                <td class="clickable level"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <button type="button" class="btn primary" disabled>제 출</button>
+                                </div>
+                                <div class="aside">
+                                    <div class="table-container">
+                                        <table>
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                            </colgroup>
+                                            <tr>
+                                                <th>냄새 물질 기호</th>
+                                                <th>냄새물질명</th>
+                                                <th>냄새특징</th>
+                                            </tr>
+                                            <tr>
+                                                <td>A</td>
+                                                <td>Acetic acid</td>
+                                                <td>식초냄새</td>
+                                            </tr>
+                                            <tr>
+                                                <td>B</td>
+                                                <td>TMA</td>
+                                                <td>생선썩은냄새</td>
+                                            </tr>
+                                            <tr>
+                                                <td>C</td>
+                                                <td>Methylcyclo Pentenolone</td>
+                                                <td>달콤한 설탕타는냄새</td>
+                                            </tr>
+                                            <tr>
+                                                <td>D</td>
+                                                <td>베타-Penylethyl alcohol</td>
+                                                <td>장미향</td>
+                                            </tr>
+                                            <tr>
+                                                <td>E</td>
+                                                <td>증류수</td>
+                                                <td>무취</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        resizeContents();
+
+        document.querySelectorAll('.scm_014_02_test-box .clickable').forEach(td => {
+            td.addEventListener('click', () => {
+                if(td.classList.contains('type')){
+                    document.querySelectorAll('.scm_014_02_test-box .clickable').forEach(item => item.classList.add('disabled'));
+                    new ODORTypePopup(td).show();
+                }
+                if(td.classList.contains('level')){
+                    document.querySelectorAll('.scm_014_02_test-box .clickable').forEach(item => item.classList.add('disabled'));
+                    new ODORLevelPopup(td).show();
+                }
+            });
+        });
+    });
+
+    window.addEventListener('resize', () => {
+        resizeContents();
+    });
+
+    const resizeContents = () => {
+        const contentHeight = document.querySelector('.layout').offsetHeight - document.querySelector('.page-title').offsetHeight - (16*5) - (16*1.5);
+        document.querySelector('.contents').style.height = contentHeight + 'px';
+    }
+
+    class ODORTypePopup {
+        constructor(target) {
+            this.target = target;
+            this.root = document.createElement('div');
+            this.root.classList.add('scm_014_02_select');
+            this.root.classList.add('type');
+            this.root.style.top = this.target.getBoundingClientRect().top + 'px';
+            this.root.style.left = this.target.getBoundingClientRect().left + 'px';
+
+            this.before = document.createElement('div');
+            this.before.classList.add('scm_014_02_select_before');
+            this.before.addEventListener('click', () => {
+                this.close();
+            });
+
+            this.init().then(() => {
+                this.onload();
+            });
+        }
+        init() {
+            return new Promise(resolve => {
+                this.root.innerHTML = ODORTypePopup.html;
+                resolve();
+            });
+        }
+        onload() {
+            this.root.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', event => {
+                    const value = event.target.textContent;
+                    this.target.textContent = value;
+                    this.close();
+                });
+            });
+        }
+        show() {
+            document.body.append(this.root);
+            document.body.append(this.before);
+        }
+        close() {
+            this.root.remove();
+            this.before.remove();
+            document.querySelectorAll('.clickable.disabled').forEach(item => item.classList.remove('disabled'));
+        }
+    }
+    ODORTypePopup.html = `
+        <div class="title-row">* 냄새 종류를 선택하세요</div>
+        <div class="select-row">
+            <button type="button">A</button>
+            <button type="button">B</button>
+            <button type="button">C</button>
+            <button type="button">D</button>
+            <button type="button">E</button>
+        </div>
+    `;
+
+    class ODORLevelPopup {
+        constructor(target) {
+            this.target = target;
+            this.root = document.createElement('div');
+            this.root.classList.add('scm_014_02_select');
+            this.root.classList.add('level');
+            this.root.style.top = this.target.getBoundingClientRect().top + 'px';
+            this.root.style.left = this.target.getBoundingClientRect().left + 'px';
+
+            this.before = document.createElement('div');
+            this.before.classList.add('scm_014_02_select_before');
+            this.before.addEventListener('click', () => {
+                this.close();
+            });
+
+            this.init().then(() => {
+                this.onload();
+            });
+        }
+        init() {
+            return new Promise(resolve => {
+                this.root.innerHTML = ODORLevelPopup.html;
+                resolve();
+            });
+        }
+        onload() {
+            this.root.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', event => {
+                    const value = event.target.textContent;                    
+                    this.target.textContent = value;
+                    this.target.style.backgroundColor = event.target.dataset.color;
+                    this.close();
+                });
+            });
+        }
+        show() {
+            document.body.append(this.root);
+            document.body.append(this.before);
+        }
+        close() {
+            this.root.remove();
+            this.before.remove();
+            document.querySelectorAll('.clickable.disabled').forEach(item => item.classList.remove('disabled'));
+        }
+    }
+    ODORLevelPopup.html = `
+        <div class="title-row">* 악취 강도를 선택하세요</div>
+        <div class="select-row">
+            <button type="button" data-color="rgba(255,77,0,0)">0</button>
+            <button type="button" data-color="rgba(255,77,0,0.2)">1</button>
+            <button type="button" data-color="rgba(255,77,0,0.4)">2</button>
+            <button type="button" data-color="rgba(255,77,0,0.6)">3</button>
+            <button type="button" data-color="rgba(255,77,0,0.8)">4</button>
+            <button type="button" data-color="rgba(255,77,0,1)">5</button>
+        </div>
+    `;
+</script>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험통합판정
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            판정원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">관능시험</div>
+                <div class="contents">
+
+                    <div class="test-contents-area">
+                        <div class="top">
+                            <div class="table-container">
+                                <table class="fixed">
+                                    <colgroup>
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <tr>
+                                        <th>시료 NO</th>
+                                        <td>1</td>
+                                        <th rowspan="2">판정원</th>
+                                        <td rowspan="2">1</td>
+                                    </tr>
+                                    <tr>
+                                        <th>고유번호</th>
+                                        <td>A</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <span class="red">* 평가대상 냄새를 충분히 인지하고 휴식을 취한 후 실험을 시작합니다.</span>
+                        </div>
+
+                        <div class="test-contents">
+
+                            <div class="scm_014_03_test-box">
+                                <div class="select">
+                                    <div class="button">
+                                        <img src="./image/sample.png">
+                                        <div class="label">1</div>
+                                    </div>
+                                    <div class="button">
+                                        <img src="./image/sample.png">
+                                        <div class="label">2</div>
+                                    </div>
+                                    <div class="button">
+                                        <img src="./image/sample.png">
+                                        <div class="label">3</div>
+                                    </div>
+                                    <div class="button">
+                                        <img src="./image/sample.png">
+                                        <div class="label">4</div>
+                                        <div class="info">
+                                            판별 불가능시 선택함 (냄새안남 표시)
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn primary" disabled>제 출</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        resizeContents();
+    });
+
+    window.addEventListener('resize', () => {
+        resizeContents();
+    });
+
+    const resizeContents = () => {
+        const contentHeight = document.querySelector('.layout').offsetHeight - document.querySelector('.page-title').offsetHeight - (16*5) - (16*1.5);
+        document.querySelector('.contents').style.height = contentHeight + 'px';
+    }
+
+</script>
+</html>
