@@ -3034,7 +3034,7 @@ table.sub01-1 tbody td {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: calc(100% - 1rem);
   transform: translate(-50%, -50%);
   z-index: 1;
 }
@@ -3056,6 +3056,12 @@ table.sub01-1 tbody td {
   border-radius: 0.5rem;
   padding: 0.5rem;
   color: var(--red);
+}
+.scm_014_03_test-box .select .button.on {
+  box-shadow: inset 0px 0px 0px 3px var(--primary);
+}
+.scm_014_03_test-box .select .button.on .label {
+  color: var(--primary);
 }
 .scm_014_03_test-box > button {
   width: 100%;

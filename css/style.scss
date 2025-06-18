@@ -3386,7 +3386,7 @@ table.sub01-1{
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                width: 100%;
+                width: calc(100% - 1rem);
                 transform: translate(-50%, -50%);
                 z-index: 1;
             }
@@ -3408,6 +3408,13 @@ table.sub01-1{
                 border-radius: 0.5rem;
                 padding: 0.5rem;
                 color: var(--red);
+            }
+
+            &.on{
+                box-shadow: inset 0px 0px 0px 3px var(--primary);
+                .label{
+                    color: var(--primary);
+                }
             }
         }
     }

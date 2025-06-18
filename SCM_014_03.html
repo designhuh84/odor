@@ -99,6 +99,13 @@
 
     document.addEventListener('DOMContentLoaded', () => {
         resizeContents();
+
+        document.querySelectorAll('.scm_014_03_test-box .select .button').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelectorAll('.scm_014_03_test-box .select .button').forEach(item => item.classList.remove('on'));
+                button.classList.add('on');
+            });
+        });
     });
 
     window.addEventListener('resize', () => {
