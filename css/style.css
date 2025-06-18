@@ -156,6 +156,13 @@ span.green {
   color: var(--primary);
 }
 
+small {
+  font-size: 0.8rem;
+}
+small.red {
+  color: #FF4D00;
+}
+
 global-header {
   flex-shrink: 0;
   display: flex;
@@ -1322,6 +1329,9 @@ global-header-menu .col .menu:hover {
 .table-container table th.center .checkbox-row label, .table-container table td.center .checkbox-row label {
   text-indent: 1.3rem;
 }
+.table-container table th.left, .table-container table td.left {
+  text-align: left;
+}
 .table-container table th.right, .table-container table td.right {
   text-align: right;
 }
@@ -1395,6 +1405,10 @@ global-header-menu .col .menu:hover {
 .table-container table td > .row + .row {
   margin-top: 0.5rem;
 }
+.table-container table td > .row + small {
+  display: block;
+  margin-top: 0.5rem;
+}
 .table-container table td button {
   height: 1.75rem;
 }
@@ -1412,6 +1426,12 @@ global-header-menu .col .menu:hover {
   font-weight: 700;
   background-color: #359787;
   color: #FFF;
+}
+.table-container table td.category.left {
+  text-align: left;
+}
+.table-container table td.category.right {
+  text-align: right;
 }
 .table-container table thead {
   border-bottom: solid 2px var(--primary);

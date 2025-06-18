@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            마이페이지
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원정보 수정
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">회원정보 수정</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">사업자 정보</div>
+                        <button  type="button" class="btn primary">대표자 변경</button>
+                        <button  type="button" class="btn red">탈퇴</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td colspan="4" class="left category">업체정보</td>
+                            </tr>
+                            <tr>
+                                <th class="required">사업자등록번호</th>
+                                <td>
+                                    <input type="text" class="large" disabled>
+                                </td>
+                                <th class="required">사업장 명</th>
+                                <td>
+                                    <input type="text" class="large" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">영업상태</th>
+                                <td>
+                                    <select class="large" disabled>
+                                        <option></option>
+                                    </select>
+                                </td>
+                                <th class="required">법인등록번호</th>
+                                <td>
+                                    <input type="text" class="large" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>회사(사업장) 전화번호</th>
+                                <td>
+                                    <input type="text" class="large" disabled>
+                                </td>
+                                <th>종업원수</th>
+                                <td>
+                                    <input type="text" class="large" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">회사(사업장)주소</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="text" class="large" disabled>
+                                        <input type="text" class="large" disabled>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>주요 생산품</th>
+                                <td>
+                                    <input type="text" class="large" disabled>
+                                </td>
+                                <th>업종</th>
+                                <td>
+                                    <input type="text" class="large" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">배출원유형</th>
+                                <td colspan="3">
+                                    <select class="large" disabled>
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">첨부파일</div>
+                        <button type="button" class="btn icon plus primary">파일추가</button>
+                        <button type="button" class="btn icon minus secondary">파일삭제</button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th><input type="checkbox" id=""></th>
+                                    <th>첨부파일 명</th>
+                                    <th>첨부 파일 크기 (kb)</th>
+                                    <th>비고</th>
+                                    <th>등록일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">1</td>
+                                    <td class="center"><input type="checkbox"></td>
+                                    <td>테스트 운영 메뉴얼.pptx</td>
+                                    <td class="right">9,123,123</td>
+                                    <td></td>
+                                    <td class="center">2023-00-00 00:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">대표자 정보</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">대표자 여부</th>
+                                <td colspan="3">
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="sample-radio" value="Y" checked disabled>
+                                            <label>예</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="sample-radio" value="N" disabled>
+                                            <label>아니오</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">대표자명</th>
+                                <td>
+                                    <input type="text" class="large" value="김빛나" disabled>
+                                </td>
+                                <th class="required">대표자 생년월일</th>
+                                <td>
+                                    <input type="text" class="large" value="1999.01.01" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">대표자 휴대전화번호</th>
+                                <td colspan="3">
+                                    <input type="text" class="large" value="">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <div class="table-button-row">
+                        <div class="section-header">정보입력</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required"></th>
+                                <td colspan="3">
+                                    <input type="text" class="large" value="나나나" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">휴대전화번호</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <select class="mid">
+                                            <option>010</option>
+                                        </select>
+                                        <input type="text" class="large">
+                                        <input type="text" class="large">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일주소</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="text" class="large">
+                                        <span>@</span>
+                                        <input type="text" class="large">
+                                        <select class="large">
+                                            <option>직접입력</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>부서명</th>
+                                <td colspan="3">
+                                    <input type="text" class="large">
+                                </td>
+                            </tr>
+                            <tr class="required">
+                                <th>직급</th>
+                                <td colspan="3">
+                                    <input type="text" class="large">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>정보수신 동의</th>
+                                <td colspan="3">
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="01" value="Y">
+                                            <label>예</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="01" value="N">
+                                            <label>아니오</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>정보수신 채널</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>SMS</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>E-MAIL</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>카카오톡</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>직원</th>
+                                <td colspan="3">
+                                    <button type="button" class="btn primary" onclick="employeePopup()">직원목록</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>승인상태</th>
+                                <td>승인반려</td>
+                                <th>반려사유</th>
+                                <td>사업자등록증 재업로드</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="contents-bottom-button-row">
+                        <button type="button" class="btn cancel">취소</button>
+                        <button type="button" class="btn blue">정보수정</button>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="employeeList">
+        <div class="container">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row padding-top-0 margin-top-0">
+                    <div class="section-header">직원목록</div>
+                    <button type="button" class="btn icon delete red">만료처리</button>
+                </div>
+                <div style="min-width:640px">grid area</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+    const employeePopup = () => {
+        openCustomPopup('employeeList');
+    }
+
+</script>
+</html>
