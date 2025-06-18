@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험통합판정
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            판정원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            판정원 대시보드
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">판정원 대시보드</div>
+                <div class="contents">
+
+                    <div class="scm_005_02">
+                        <div class="top">
+                            <div class="position">1 실험실 / B 석</div>
+                            <button type="button" class="btn secondary">로그아웃</button>
+                        </div>
+                        <div class="mid">관능시험통합판정관리</div>
+                        <button type="button" class="btn primary" disabled>판정원</button>
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        resizeContents();
+    });
+
+    window.addEventListener('resize', () => {
+        resizeContents();
+    });
+
+    const resizeContents = () => {
+        const contentHeight = document.querySelector('.layout').offsetHeight - document.querySelector('.page-title').offsetHeight - (16*5) - (16*1.5);
+        document.querySelector('.contents').style.height = contentHeight + 'px';
+    }
+
+</script>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험통합판정
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시험원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시험원 대시보드
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">시험원 대시보드</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">시험 승인 관리</div>
+                    </div>
+
+                    <div class="scm_005_01_top-row">
+                        <div class="count-box">
+                            <span>2월 시험완료</span>
+                            <div class="count">총 15건</div>
+                        </div>
+                        <div class="count-box">
+                            <span>2월 미 승인</span>
+                            <div class="count">총 3건</div>
+                        </div>
+                        <button type="button" class="btn primary">전체보기</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>사업장</th>
+                                    <th>시험일자</th>
+                                    <th>악취판정시험장소</th>
+                                    <th>관능시험<br>완료여부</th>
+                                    <th>담당자</th>
+                                    <th>기술책임자</th>
+                                    <th>부장</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">공공하수처리시설</td>
+                                    <td class="center">2025-00-00</td>
+                                    <td class="center">공기희석관능실험실</td>
+                                    <td class="center"><span class="gray">미완료</span></td>
+                                    <td class="center">홍길동<br>(2025-00-00)</td>
+                                    <td class="center">김책임<br>(2025-00-00)</td>
+                                    <td class="center">-</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">공공폐수시설</td>
+                                    <td class="center">2025-00-00</td>
+                                    <td class="center">공기희석관능실험실</td>
+                                    <td class="center"><span class="green">진행중</span></td>
+                                    <td class="center">-</td>
+                                    <td class="center">-</td>
+                                    <td class="center">-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

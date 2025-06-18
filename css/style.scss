@@ -160,6 +160,9 @@ span{
     &.green{
         color: var(--primary);
     }
+    &.gray{
+        color: #666;
+    }
 }
 
 small{
@@ -3006,5 +3009,78 @@ table.sub01-1{
 
     .pagenation{
         margin-top: auto;
+    }
+}
+
+.scm_005_01_top-row{
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    .count-box{
+        display: flex;
+        flex-direction: column;
+        span{
+            display: block;
+            width: 100%;
+            background-color: var(--primary);
+            color: #FFF;
+            padding: 0.5rem 1rem;
+        }
+        .count{
+            padding: 0.5rem 1rem;
+            text-align: center;
+            border: solid 1px #BFBFBF;
+            border-top: 0;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+    }
+    button{
+        margin-left: auto;
+    }
+}
+
+.contents:has(.scm_005_02){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scm_005_02{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 30rem;
+
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .position{
+            font-size: 1rem;
+            font-weight: 600;
+            border: solid 1px #666;
+            padding: 0.5rem 1.5rem;
+            box-shadow: 2px 2px 0px 2px rgba(0,0,0,0.2);
+        }
+    }
+
+    .mid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        aspect-ratio: 16/9;
+        border: solid 1px #666;
+    }
+
+    & > button{
+        width: 100%;
     }
 }

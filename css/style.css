@@ -155,6 +155,9 @@ span.red {
 span.green {
   color: var(--primary);
 }
+span.gray {
+  color: #666;
+}
 
 small {
   font-size: 0.8rem;
@@ -2673,4 +2676,74 @@ table.sub01-1 tbody td {
 }
 .tab-contents.on:has(.search-result-group) .pagenation {
   margin-top: auto;
+}
+
+.scm_005_01_top-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+.scm_005_01_top-row .count-box {
+  display: flex;
+  flex-direction: column;
+}
+.scm_005_01_top-row .count-box span {
+  display: block;
+  width: 100%;
+  background-color: var(--primary);
+  color: #FFF;
+  padding: 0.5rem 1rem;
+}
+.scm_005_01_top-row .count-box .count {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border: solid 1px #BFBFBF;
+  border-top: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.scm_005_01_top-row button {
+  margin-left: auto;
+}
+
+.contents:has(.scm_005_02) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scm_005_02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 30rem;
+}
+.scm_005_02 .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.scm_005_02 .top .position {
+  font-size: 1rem;
+  font-weight: 600;
+  border: solid 1px #666;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 2px 2px 0px 2px rgba(0, 0, 0, 0.2);
+}
+.scm_005_02 .mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: solid 1px #666;
+}
+.scm_005_02 > button {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
