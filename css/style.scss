@@ -77,6 +77,15 @@ input:not([type='radio'], [type='checkbox'], [type='file']){
         pointer-events: none;
         background-color: rgba(0,0,0,0.05);
     }
+
+    &.error{
+        border-color: var(--red);
+
+        & + small{
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
+    }
 }
 
 input[type='file']{
@@ -3082,7 +3091,9 @@ table.sub01-1{
         align-items: center;
         width: 100%;
         aspect-ratio: 16/9;
-        border: solid 1px #666;
+        background-image: url(../image/scm_005_02.png);
+        background-size: cover;
+        background-position: center;
     }
 
     & > button{
@@ -3389,6 +3400,7 @@ table.sub01-1{
                 width: calc(100% - 1rem);
                 transform: translate(-50%, -50%);
                 z-index: 1;
+                border-radius: 0.25rem;
             }
             .label{
                 z-index: 2;
@@ -3400,9 +3412,9 @@ table.sub01-1{
             .info{
                 z-index: 2;
                 position: absolute;
-                bottom: 0.5rem;
-                left: 0.5rem;
-                width: calc(100% - 1rem);
+                bottom: 1rem;
+                left: 1rem;
+                width: calc(100% - 2rem);
                 background-color: #FFF;
                 text-align: center;
                 border-radius: 0.5rem;
