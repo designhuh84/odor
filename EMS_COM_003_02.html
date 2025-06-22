@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원가입
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관리자 회원가입
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">약관동의</div>
+                <div class="contents">
+
+                    <div class="table-container terms-container">
+                        <table>
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>제목</th>
+                                <td>개인정보 수집 및 이용 동의</td>
+                            </tr>
+                            <tr>
+                                <th>구분</th>
+                                <td>필수</td>
+                            </tr>
+                            <tr>
+                                <th>대상</th>
+                                <td>업무(지자체, 환경부, 공단)</td>
+                            </tr>
+                            <tr>
+                                <th>내용</th>
+                                <td>
+                                    <div class="terms-contents">
+                                        <div class="li">
+                                            1. $000시스템은 원활한 업무 지원을 위해 아래와 같이 최소한의 [필수] 개인정보를 수집하고 있습니다.
+                                        </div>
+                                        <table>
+                                            <tr>
+                                                <th>개인정보 항목</th>
+                                                <th>수집목적</th>
+                                                <th>개인정보 보유기간</th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    개인식별번호(CI), 성명, 휴대전화 번호, 이메일주소, 직위(직급), 회사(사업장)주소, 회사(사업장)전화번호, 소속(업체)명, 부서명
+                                                </td>
+                                                <td>
+                                                    악취 관련 업무 처리 등 행정 서비스 이용
+                                                </td>
+                                                <td>
+                                                    <strong>계정 만료일로부터 3년*</strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="li">
+                                            ※ 공단 소속일 경우 부서 이동/퇴사 시 자동 계정 만료
+                                        </div>
+                                        <div class="li">
+                                            ※ 계정말료예정일 설정 또는 6개월 미접속 시 자동 계정 만료
+                                        </div>
+                                        <div class="li">
+                                            ※ 이 외 퇴사 및 부서 이동 확인 시 계정 만료 처리
+                                        </div>
+                                        <div class="li">
+                                            2. 상기 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다. 다만, 동의 거부 시 이용이 제한됩니다.
+                                        </div>
+                                        <div class="li">
+                                            3. 온라인 서비스 이용중 부정이용 방지, 서비스 유효성 확인, 이용 빈도 확인을 위해 IP Address, 방문일시, 서비스 이용이 기록될 수 있습니다.
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>버튼</th>
+                                <td>
+                                    <div class="row">
+                                        <span>[필수] 개인정보 수집 및 이용에 [ </span>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="radio" value="Y">
+                                                <label>동의합니다</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio" value="N">
+                                                <label>동의하지 않습니다</label>
+                                            </div>
+                                        </div>
+                                        <span> ]</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="contents-bottom-button-row">
+                            <button type="button" class="btn secondary">취소</button>
+                            <button type="button" class="btn primary">회원가입</button>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시스템운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            업무담당자 관리 목록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">업무담당자관리 등록/상세</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">업무담당자 정보</div>
+                        <button  type="button" class="btn icon save blue">저장</button>
+                        <button  type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">이름</th>
+                                <td>
+                                    <input type="text" value="">
+                                </td>
+                                <th>소속부서</th>
+                                <td>
+                                    <input type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">관할지역</th>
+                                <td>
+                                    <div class="row">
+                                        <select>
+                                            <option></option>
+                                        </select>
+                                        <select>
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>직위</th>
+                                <td>
+                                    <input type="text" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">휴대폰 번호</th>
+                                <td>
+                                    <div class="row">
+                                        <select>
+                                            <option></option>
+                                        </select>
+                                        <span>-</span>
+                                        <input type="text" value="">
+                                        <span>-</span>
+                                        <input type="text" value="">
+                                    </div>
+                                </td>
+                                <th>업무 담당</th>
+                                <td>
+                                    <select>
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text">
+                                        <span>@</span>
+                                        <input type="text">
+                                        <select>
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>전화번호</th>
+                                <td>
+                                    <div class="row">
+                                        <select>
+                                            <option></option>
+                                        </select>
+                                        <span>-</span>
+                                        <input type="text" value="">
+                                        <span>-</span>
+                                        <input type="text" value="">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">알림동의여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="radio-01" value="Y">
+                                            <label>동의</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio-01" value="N">
+                                            <label>미동의</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>문자수신여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="radio-02" value="Y">
+                                            <label>수신</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio-02" value="N">
+                                            <label>미수신</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일수신여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="radio-03" value="Y">
+                                            <label>수신</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio-03" value="N">
+                                            <label>미수신</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>SNS수신여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="radio-04" value="Y">
+                                            <label>수신</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio-04" value="N">
+                                            <label>미수신</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">계정정보</div>
+                        <button  type="button" class="btn cancel">비밀번호 초기화</button>
+                        <button  type="button" class="btn primary">승인</button>
+                        <button  type="button" class="btn red">승인거절</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>아이디</th>
+                                <td><input type="text" value="" disabled></td>
+                                <th>권한</th>
+                                <td>
+                                    <select>
+                                        <option>지자체</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호</th>
+                                <td><input type="password" value="" disabled></td>
+                                <th>상태</th>
+                                <td><input type="text" value="" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>로그인 실패횟수</th>
+                                <td><input type="text" value="" disabled></td>
+                                <th>마지막접속 일시</th>
+                                <td><input type="text" value="" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>탈퇴여부</th>
+                                <td>
+                                    <select disabled>
+                                        <option></option>
+                                    </select>
+                                </td>
+                                <th>관리자 탈퇴 일시</th>
+                                <td><input type="text" value="" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>가입 일시</th>
+                                <td><input type="text" value="" disabled></td>
+                                <th>비밀번호변경 일시</th>
+                                <td><input type="text" value="" disabled></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

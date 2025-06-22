@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원가입
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관리자 회원가입
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">관리자 회원가입</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">정보입력</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">관리자 ID</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" class="large" value="">
+                                        <button type="button" class="btn primary">중복체크</button>
+                                        <small>*영문 또는 숫자를 입력해주세요.</small>
+                                    </div>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">비밀번호</th>
+                                <td>
+                                    <input type="password" class="large">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">비밀번호 확인</th>
+                                <td>
+                                    <input type="password" class="large">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이름</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" value="" class="large">
+                                        <button type="button" class="btn primary">본인인증</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">휴대폰 번호</th>
+                                <td>
+                                    <div class="row">
+                                        <select class="large">
+                                            <option>010</option>
+                                        </select>
+                                        <span>-</span>
+                                        <input type="text" class="large">
+                                        <span>-</span>
+                                        <input type="text" class="large">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>소속부서</th>
+                                <td>
+                                    <input type="text" value="" class="large">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>직위/직급</th>
+                                <td>
+                                    <input type="text" class="large">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">관할지역</th>
+                                <td>
+                                    <div class="row">
+                                        <select class="large">
+                                            <option>전체</option>
+                                        </select>
+                                        <select class="large">
+                                            <option>전체</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" class="large">
+                                        <span>@</span>
+                                        <input type="text" class="large">
+                                        <select class="large">
+                                            <option>naver.com</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>연락처</th>
+                                <td>
+                                    <div class="row">
+                                        <select class="large">
+                                            <option></option>
+                                        </select>
+                                        <span> - </span>
+                                        <input type="text" class="large">
+                                        <span> - </span>
+                                        <input type="text" class="large">
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th class="required">정보수신 동의</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="01" value="Y">
+                                            <label>예</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="01" value="N">
+                                            <label>아니오</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>정보수신 채널</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>SMS</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>E-MAIL</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>카카오톡</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="contents-bottom-button-row">
+                        <button type="button" class="btn secondary">취소</button>
+                        <button type="button" class="btn primary">가입</button>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>
