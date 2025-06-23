@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시스템운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            업무담당자 관리 상세
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">업무담당자 관리 상세</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">담당자 정보</div>
+                        <button  type="button" class="btn icon save blue">저장</button>
+                        <button  type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>이름</th>
+                                <td><input type="text" disabled></td>
+                                <th>소속구분</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="radio-01" value="">
+                                            <label>환경공단</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio-01" value="">
+                                            <label>환경부</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio-01" value="">
+                                            <label>지자체</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio-01" value="">
+                                            <label>기타</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>휴대폰번호</th>
+                                <td><input type="text" disabled></td>
+                                <th>소속명</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td><input type="text" disabled></td>
+                                <th>부서명</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th>회사주소</th>
+                                <td><input type="text"></td>
+                                <th>전화번호</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th>알림동의여부</th>
+                                <td></td>
+                                <th>회사전화번호</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th>이메일수신여부</th>
+                                <td></td>
+                                <th>문자수신여부</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>SNS수신여부</th>
+                                <td></td>
+                                <th></th>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">계정 정보</div>
+                        <button  type="button" class="btn primary">승인</button>
+                        <button  type="button" class="btn secondary">승인반려</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>가입일시</th>
+                                <td><input type="text" disabled></td>
+                                <th>권한</th>
+                                <td>
+                                    <select>
+                                        <option>시스템관리자</option>
+                                        <option>관리자</option>
+                                        <option>관능시험</option>
+                                        <option>판정원</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호 변경일시</th>
+                                <td><input type="text" disabled></td>
+                                <th>계정승인 상태</th>
+                                <td>
+                                    <select>
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>계정만료구분</th>
+                                <td><input type="text" disabled></td>
+                                <th>마지막 접속일시</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>계정정보삭제일시</th>
+                                <td><input type="text" disabled></td>
+                                <th>회원탈퇴 일시</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>계정만료일시</th>
+                                <td><input type="text" disabled></td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>
