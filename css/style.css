@@ -1473,6 +1473,12 @@ global-header-menu .col .menu:hover {
 .table-container table.write tr:hover td.category {
   background-color: #359787;
 }
+.table-container table.write th.center, .table-container table.write td.center {
+  text-align: center;
+}
+.table-container table.write th.right, .table-container table.write td.right {
+  text-align: right;
+}
 .table-container table tr.total td {
   background-color: #E9FBF8;
   color: #000;

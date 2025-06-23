@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술진단
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            환경기초시설 수정
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">기술진단</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="main">
+                <div class="page-title">환경기초시설 수정</div>
+                <div class="contents">
+
+                    <div class="table-button-row padding-top-0">
+                        <div class="section-header">기초 정보</div>
+                        <button type="button" class="btn icon write green">수정</button>
+                        <button type="button" class="btn icon delete red">삭제</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">시설명</th>
+                                <td><input type="text"></td>
+                                <th>시설 ID</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th class="required">시설구분</th>
+                                <td>
+                                    <div class="row">
+                                        <select>
+                                            <option></option>
+                                        </select>
+                                        <select>
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>지역구분</th>
+                                <td>
+                                    <select>
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">시도/시군구</th>
+                                <td>
+                                    <div class="row">
+                                        <select>
+                                            <option></option>
+                                        </select>
+                                        <select>
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>관리청</th>
+                                <td>
+                                    <select>
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>처리시설 가동일자</th>
+                                <td><input type="date"></td>
+                                <th>운영주체</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th>악취관리지역 여부</th>
+                                <td>
+                                    <select>
+                                        <option></option>
+                                    </select>
+                                </td>
+                                <th>신고대상시설 여부</th>
+                                <td>
+                                    <select>
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">소재지</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="text" id="zip-01" class="mid" readonly>
+                                        <button type="button" id="search-address-01" class="btn primary">우편번호</button>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" id="address-01" readonly>
+                                        <input type="text" id="address-01-1">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">기초 정보</div>
+                        <button type="button" class="btn icon plus secondary">행추가</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <thead>
+                                <tr>
+                                    <th class="required center">실적연도</th>
+                                    <th class="required center">신청일자</th>
+                                    <th class="required center">시설규모(용량)</th>
+                                    <th class="center">비고</th>
+                                    <th class="center">행 삭제</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center">
+                                        <select>
+                                            <option>2024년</option>
+                                        </select>
+                                    </td>
+                                    <td class="center"><input type="date"></td>
+                                    <td class="center"><input type="text"></td>
+                                    <td class="center"><input type="text"></td>
+                                    <td class="center"><button type="button" class="btn red">행 삭제</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        document.querySelector('#search-address-01').addEventListener('click', () => {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    console.log(data);
+                    document.querySelector('#zip-01').value = data.zonecode;
+                    document.querySelector('#address-01').value = data.address;
+                    document.querySelector('#address-01-1').focus();
+                }
+            }).open();
+        });
+
+    });
+
+    
+
+</script>
+</html>

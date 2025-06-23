@@ -1607,6 +1607,14 @@ global-header-menu{
                     }
                 }
             }
+            th, td{
+                &.center{
+                    text-align: center;
+                }
+                &.right{
+                    text-align: right;
+                }
+            }
         }
         tr{
             &.total{
