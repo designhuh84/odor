@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기초정보관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            악취관리지역
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">악취관리지역</div>
+                <div class="contents">
+
+                    <div class="table-button-row padding-top-0">
+                        <div class="section-header">조회 조건</div>
+                        <button type="button" class="btn icon search primary">
+                            조회
+                        </button>
+                    </div>
+
+                    <div class="search-area">
+                        <div class="col">
+                            <label>시도/시구군</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>시도 선택</option>
+                                </select>
+                                <select>
+                                    <option>시구군 선택</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="infobox">
+                        <p>※ “엑셀양식다운로드” 버튼 클릭 후 양식을 다운받아 데이터 입력 후 “엑셀업로드” 버튼을 활용하여 작성한 데이터를 일괄로 업로드하실 수 있습니다.</p>
+                        <div class="button-row">
+                            <button type="button" class="btn icon download secondary">
+                                엑셀양식다운로드
+                            </button>
+                            <button type="button" class="btn icon upload secondary">
+                                엑셀업로드
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="table-button-row">
+                        <button type="button" class="btn icon plus secondary">행추가</button>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon excel">엑셀다운로드</button>
+                    </div>
+
+                    <div class="EBP_004_01_grid">grid area</div>
+                    <br><br>
+                    <button type="button" onclick="openCustomPopup('custom-01')">지정지역 내 사업장 팝업</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container EBP_004_01_popup">
+            
+            <div class="header">
+                <div class="title">지정지역 내 사업장</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="section-header padding-top-0 mt-0">지정지역 : 온산국가산업단지</div>
+                <div>grid area</div>
+            </div>
+
+            <div class="footer">
+                <button type="button" class="btn primary btn-popup-close">닫기</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+    
+
+    
+
+    
+
+</script>
+</html>

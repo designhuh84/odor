@@ -3312,4 +3312,9 @@ table.sub01-1 tbody td {
   padding: 1rem;
   font-size: 1rem;
   margin-top: auto;
+}
+
+.popup .container.EBP_004_01_popup {
+  width: 100%;
+  max-width: 45rem;
 }/*# sourceMappingURL=style.css.map */
