@@ -3229,4 +3229,87 @@ table.sub01-1 tbody td {
 }
 .popup .container.EMS_OPM_011_05 textarea {
   height: 10rem;
+}
+
+.layout .main .contents.loginPage {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+.layout .main .contents.loginPage .tab-contents {
+  flex-grow: 1;
+}
+.layout .main .contents.loginPage .login-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.layout .main .contents.loginPage .login-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 24rem;
+}
+.layout .main .contents.loginPage .login-box button {
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+}
+.layout .main .contents.loginPage .login-box .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.layout .main .contents.loginPage .login-box .title img {
+  width: 2rem;
+  filter: brightness(0) saturate(100%) invert(37%) sepia(21%) saturate(6509%) hue-rotate(99deg) brightness(101%) contrast(58%);
+}
+.layout .main .contents.loginPage .login-box input {
+  width: 100%;
+  height: 4rem;
+  font-size: 1.25rem;
+  padding: 1rem;
+}
+.layout .main .contents.loginPage .login-box .btn-login {
+  width: 100%;
+  height: 4rem;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+}
+.layout .main .contents.loginPage .login-box .bottom {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+.layout .main .contents.loginPage .login-box .bottom button {
+  width: 100%;
+}
+.layout .main .contents.loginPage .login-box .result {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.layout .main .contents.loginPage .login-box .row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-bottom-join-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  border-top: solid 1px var(--primary);
+  padding: 1rem;
+  font-size: 1rem;
+  margin-top: auto;
 }/*# sourceMappingURL=style.css.map */

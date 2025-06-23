@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            로그인
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시스템 관리자 로그인
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            
+            <div class="main">
+                
+                <div class="contents loginPage">
+
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">아이디 찾기</div>
+                        <div class="tab" data-name="02">비밀번호 찾기</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <div class="login-area">
+                            <div class="login-box">
+                                <div class="title">
+                                    아이디 찾기
+                                </div>
+                                <input type="text" placeholder="이름">
+                                <input type="text" placeholder="휴대전화번호">
+                                <div class="bottom">
+                                    <button type="button" class="btn primary">아이디 찾기</button>
+                                    <button type="button" class="btn secondary">취소</button>
+                                </div>
+                            </div>
+
+                            <!--  UID_EMS_COM_002_04 본인인증 이후 아이디 값 확인
+                            <div class="login-box">
+                                <div class="title">
+                                    아이디 찾기
+                                </div>
+                                <div class="result">
+                                    [ 아이디 : <span class="green">test001</span> ]
+                                </div>
+                                <div class="bottom">
+                                    <button type="button" class="btn primary">로그인하러가기</button>
+                                    <button type="button" class="btn secondary">임시비밀번호 발송</button>
+                                </div>
+                            </div>
+                            -->
+
+                        </div>
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+                        <div class="login-area">
+                            <div class="login-box">
+                                <div class="title">
+                                    비밀번호 찾기
+                                </div>
+                                <input type="text" placeholder="아이디">
+                                <div class="row">
+                                    <div class="label">이름</div>
+                                    <input type="text" value="김빛나" readonly>
+                                </div>
+                                <div class="row">
+                                    <div class="label">휴대전화번호</div>
+                                    <input type="text" value="010-1234-5678" readonly>
+                                </div>
+                                
+                                <div class="bottom">
+                                    <button type="button" class="btn primary">비밀번호 찾기</button>
+                                    <button type="button" class="btn secondary">취소</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        resizeContents();
+    });
+
+    const resizeContents = () => {
+        const contentHeight = document.querySelector('.layout').offsetHeight - (16*5) - (16*1.5);
+        document.querySelector('.contents').style.height = contentHeight + 'px';
+    }
+
+</script>
+</html>
