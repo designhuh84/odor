@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험통합판정
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시험원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시험승인관리
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">시험승인관리</div>
+                <div class="contents">
+
+                    <div class="table-button-row margin-top-0 padding-top-0">
+                        <div class="section-header">검색조건</div>
+                        <button type="button" class="btn icon search primary">조회</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="category">
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th colspan="2">사업장</th>
+                                <td><input type="text"></td>
+                                <th>시험원</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">시험일자</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="date">
+                                        <span>~</span>
+                                        <input type="date">
+                                    </div>
+                                </td>
+                                <th>관능시험 완료여부</th>
+                                <td>
+                                    <select>
+                                        <option>전체</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class="category">확인<br>여부</td>
+                                <th>담당자</th>
+                                <td colspan="3">
+                                    <select class="large">
+                                        <option>전체</option>
+                                        <option>확인</option>
+                                        <option>미확인</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>기술책임자</th>
+                                <td colspan="3">
+                                    <select class="large">
+                                        <option>전체</option>
+                                        <option>확인</option>
+                                        <option>미확인</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>부장</th>
+                                <td colspan="3">
+                                    <select class="large">
+                                        <option>전체</option>
+                                        <option>확인</option>
+                                        <option>미확인</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <button type="button" class="btn icon excel">엑셀 다운로드</button>
+                    </div>
+
+                    <div>grid area</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

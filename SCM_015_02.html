@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시료관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            검사기관 관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            검사기관 신규 등록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">검사기관 신규 등록</div>
+                <div class="contents">
+
+                    <div class="infobox">
+                        <span class="red">* 필수입력 항목입니다.</span>
+                    </div>
+
+                    <div class="table-button-row margin-top-0">
+                        <div class="section-header">검사기관 정보</div>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">순번</th>
+                                <td>
+                                    <div class="row">
+                                        <span>제</span>
+                                        <input type="text" class="small">
+                                        <span>호</span>
+                                    </div>
+                                </td>
+                                <th class="required">지정일자</th>
+                                <td>
+                                    <input type="date">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">기관명</th>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <th class="required">지정상태</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="radio" value="Y">
+                                            <label>지정</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio" value="N">
+                                            <label>지정취소</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">성명 (대표자)</th>
+                                <td><input type="text"></td>
+                                <th>대표자 생년월일</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th class="required">비고</th>
+                                <td><input type="text"></td>
+                                <th>사업자(법인)등록번호</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th class="required" rowspan="5">검사항목</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>복합악취</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>암모니아</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>트라이메틸아민</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>황화합물 4종 ( 황화수소, 메틸머캅탄, 다이메틸설파이드, 다이메틸다이설파이드 )</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>지방산 4종 ( 프로피온산, n-뷰티르산, n-발레르산, i-발레르산 )</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>알데하이드 5종 (아세트알데하이드, 프로피온알데하이드, 뷰틸알데하이드, i-발레르알데하이드, n-발레르알데하이드)</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>VOCs 7종 (메틸에틸케톤,  i-뷰틸알코올, 메틸아이소뷰틸케톤, 톨루엔, 뷰틸아세테이트, 자일렌, 스타이렌)</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">소재지 정보</div>
+                    </div>
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="category">
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th rowspan="2">사무실</th>
+                                <th>소재지</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" id="zip-01" class="mid" readonly>
+                                        <button type="button" id="search-address-01" class="btn primary">우편번호</button>
+                                        <input type="text" id="address-01" readonly>
+                                        <input type="text" id="address-01-1">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>전화번호</th>
+                                <td><input type="text" class="large"></td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">실험실</th>
+                                <th>소재지</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" id="zip-02" class="mid" readonly>
+                                        <button type="button" id="search-address-02" class="btn primary">우편번호</button>
+                                        <input type="text" id="address-02" readonly>
+                                        <input type="text" id="address-02-1">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>전화번호</th>
+                                <td><input type="text" class="large"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">검사기관 지정서</div>
+                        <button type="button" class="btn icon plus primary">파일추가</button>
+                        <button type="button" class="btn icon minus secondary">파일삭제</button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <th>구분</th>
+                                    <th>첨부파일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center"><input type="checkbox"></td>
+                                    <td>검사기관 지정서</td>
+                                    <td>
+                                        <a href="#!">OO검사기관 지정서.PDF</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('#search-address-01').addEventListener('click', () => {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    console.log(data);
+                    document.querySelector('#zip-01').value = data.zonecode;
+                    document.querySelector('#address-01').value = data.address;
+                    document.querySelector('#address-01-1').focus();
+                }
+            }).open();
+        });
+
+        document.querySelector('#search-address-02').addEventListener('click', () => {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    console.log(data);
+                    document.querySelector('#zip-02').value = data.zonecode;
+                    document.querySelector('#address-02').value = data.address;
+                    document.querySelector('#address-02-1').focus();
+                }
+            }).open();
+        });
+    });
+
+</script>
+</html>
