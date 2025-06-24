@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/ui.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    <!-- 테스트용 -->
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <!-- 테스트용 -->
+
     <title>악취통합관리시스템</title>
 </head>
 <body class="sub">
@@ -36,7 +41,7 @@
             </div>
             <div class="main">
                 <div class="page-title">보안서약서동의</div>
-                <div class="contents">
+                <div class="contents print-container" id="EMS_COM_003_05_PRINT">
                     
                     <div class="EMS_COM_003_05">
                         <div class="title">악취통합관리시스템 담당자 계정 발급 신청서</div>
@@ -214,7 +219,7 @@
                             ※ (주의) 사용만료일 및 6개월 초과 미사용(로그인 포함) 시 계정 자동 만료
                         </span>
 
-                        <button type="button" class="btn icon print skyblue">출력</button>
+                        <button type="button" class="btn icon print skyblue" data-print="false" onclick="printContents()">출력</button>
 
                     </div>
                     
@@ -232,6 +237,14 @@
     document.addEventListener('DOMContentLoaded', () => {
         
     });
+
+    const printContents = () => {
+        printJS({
+            printable: 'EMS_COM_003_05_PRINT',
+            type: 'html',
+            css: './css/style.css'
+        });
+    }
 
 </script>
 </html>

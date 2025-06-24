@@ -3615,6 +3615,15 @@ table.sub01-1{
      [data-print="false"]{
         display: none;
      }
+     .print-container{
+        margin: 0;
+        padding: 0;
+        padding-top: 1cm;
+     }
+     .EMS_COM_003_05{
+        padding: 1rem;
+        margin: 0 auto;
+     }
 }
 
 .popup{
