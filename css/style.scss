@@ -1370,6 +1370,10 @@ global-header-menu{
         margin-right: auto;
     }
 
+    .left{
+        margin-right: auto;
+    }
+
     #add-new{
         img{
             filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -1933,6 +1937,9 @@ table.sub01-1{
                 padding: 0;
                 padding-left: 1rem;
             }
+        }
+        col.header{
+            display: table-column;
         }
     }
     &::before{
@@ -3729,7 +3736,6 @@ table.sub01-1{
                     colgroup{
                         col{
                             &.header{
-                                display: table-column;
                                 width: 8rem;
                             }
                         }
@@ -3741,5 +3747,25 @@ table.sub01-1{
         .table-container + div{
             margin-top: 1rem;
         }
+    }
+    &.SCM_007_01_popup{
+        width: 100%;
+        max-width: 60rem;
+    }
+}
+
+.tab-row-divide{
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 1rem 0;
+
+    .tab-row{
+        width: 100%;
+    }
+
+    .table-button-row{
+        margin: 0;
+        padding: 0;
     }
 }

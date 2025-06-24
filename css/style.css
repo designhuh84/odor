@@ -1266,6 +1266,9 @@ global-header-menu .col .menu:hover {
   padding: 0;
   margin-right: auto;
 }
+.table-button-row .left {
+  margin-right: auto;
+}
 .table-button-row #add-new img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
@@ -1744,6 +1747,9 @@ table.sub01-1 tbody td {
   text-indent: 0;
   padding: 0;
   padding-left: 1rem;
+}
+.popup.custom col.header {
+  display: table-column;
 }
 .popup::before {
   content: "";
@@ -3338,9 +3344,26 @@ table.sub01-1 tbody td {
   max-width: 60rem;
 }
 .popup .container.SCM_006_02_popup .table-container table.write colgroup col.header {
-  display: table-column;
   width: 8rem;
 }
 .popup .container.SCM_006_02_popup .table-container + div {
   margin-top: 1rem;
+}
+.popup .container.SCM_007_01_popup {
+  width: 100%;
+  max-width: 60rem;
+}
+
+.tab-row-divide {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.tab-row-divide .tab-row {
+  width: 100%;
+}
+.tab-row-divide .table-button-row {
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=style.css.map */
