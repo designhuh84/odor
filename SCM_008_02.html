@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험통합판정
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시험원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시험통합관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            실험
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">실험</div>
+                <div class="contents">
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>시료명</th>
+                                <td>배출1</td>
+                                <th>사업장명</th>
+                                <td>사업장1</td>
+                            </tr>
+                            <tr>
+                                <th>시료채취년월일</th>
+                                <td>2025년 00월 00일</td>
+                                <th>시험일자</th>
+                                <td>2025년 00월 00일</td>
+                            </tr>
+                            <tr>
+                                <th>판정시험장소</th>
+                                <td>공기희석관능실험실</td>
+                                <th>시험원</th>
+                                <td>홍길동 (서명)</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="left">
+                            <button type="button" class="btn primary">최초희석배수</button>    
+                        </div>
+
+                        <button type="button" class="btn icon marking secondary">정답표시</button>
+                        <button type="button" class="btn primary">결과출력</button>
+                        <button type="button" class="btn blue">일괄출력</button>
+                        <button type="button" class="btn secondary">이전시료</button>
+                        <button type="button" class="btn secondary">다음시료</button>
+                    </div>
+
+                    <div class="table-button-row margin-top-0 padding-top-0">
+                        <div class="left">
+                            <button type="button" class="btn icon play primary">시작</button>
+                            <button type="button" class="btn icon prev secondary">이전</button>
+                            <button type="button" class="btn icon next secondary">다음</button>
+                            <button type="button" class="btn icon done blue">완료</button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">정답지</div>
+                        <div class="tab" data-name="02">분석결과</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <div>grid area</div>
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+                        <div>grid area</div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

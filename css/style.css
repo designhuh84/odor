@@ -1033,6 +1033,9 @@ global-header-menu .col .menu:hover {
   height: 2.25rem;
   white-space: nowrap;
 }
+.btn img {
+  width: 1.5rem;
+}
 .btn.primary {
   background-color: var(--primary);
   color: #FFF;
@@ -1201,6 +1204,21 @@ global-header-menu .col .menu:hover {
 .btn.write::before {
   background-image: url(../image/Pen-2.svg);
 }
+.btn.marking::before {
+  background-image: url(../image/Close-Square.svg);
+}
+.btn.play::before {
+  background-image: url(../image/Play.svg);
+}
+.btn.prev::before {
+  background-image: url(../image/Arrow-Left.svg);
+}
+.btn.next::before {
+  background-image: url(../image/Arrow-Right.svg);
+}
+.btn.done::before {
+  background-image: url(../image/check.svg);
+}
 .btn:disabled {
   background-color: #EEE;
   color: #999;
@@ -1267,6 +1285,8 @@ global-header-menu .col .menu:hover {
   margin-right: auto;
 }
 .table-button-row .left {
+  display: flex;
+  gap: 0.5rem;
   margin-right: auto;
 }
 .table-button-row #add-new img {
@@ -3359,6 +3379,10 @@ table.sub01-1 tbody td {
   margin-top: 1rem;
 }
 .popup .container.SCM_007_01_popup {
+  width: 100%;
+  max-width: 60rem;
+}
+.popup .container.SCM_008_01_popup {
   width: 100%;
   max-width: 60rem;
 }

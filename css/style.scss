@@ -1080,6 +1080,10 @@ global-header-menu{
     height: 2.25rem;
     white-space: nowrap;
 
+    img{
+        width: 1.5rem;
+    }
+
     &.primary{
         background-color: var(--primary);
         color: #FFF;
@@ -1300,6 +1304,36 @@ global-header-menu{
         }
     }
 
+    &.marking{
+        &::before{
+            background-image: url(../image/Close-Square.svg);
+        }
+    }
+
+    &.play{
+        &::before{
+            background-image: url(../image/Play.svg);
+        }
+    }
+
+    &.prev{
+        &::before{
+            background-image: url(../image/Arrow-Left.svg);
+        }
+    }
+
+    &.next{
+        &::before{
+            background-image: url(../image/Arrow-Right.svg);
+        }
+    }
+
+    &.done{
+        &::before{
+            background-image: url(../image/check.svg);
+        }
+    }
+
     &:disabled{
         background-color: #EEE;
         color: #999;
@@ -1371,6 +1405,8 @@ global-header-menu{
     }
 
     .left{
+        display: flex;
+        gap: 0.5rem;
         margin-right: auto;
     }
 
@@ -3758,6 +3794,10 @@ table.sub01-1{
         }
     }
     &.SCM_007_01_popup{
+        width: 100%;
+        max-width: 60rem;
+    }
+    &.SCM_008_01_popup{
         width: 100%;
         max-width: 60rem;
     }
