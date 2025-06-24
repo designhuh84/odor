@@ -3386,6 +3386,16 @@ table.sub01-1 tbody td {
   width: 100%;
   max-width: 60rem;
 }
+.popup .container.SCM_009_01_popup {
+  width: 100%;
+  max-width: 70rem;
+}
+
+.SCM_009_01_select {
+  width: 100%;
+  max-width: 15rem;
+  margin: 1rem 0;
+}
 
 .tab-row-divide {
   display: flex;
