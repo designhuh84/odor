@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험통합판정
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시험원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시험통합관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험 신규등록 /수정
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">관능시험 신규등록 /수정</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">시험 정보</div>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>시험명</th>
+                                <td><input type="text" class="large"></td>
+                            </tr>
+                            <tr>
+                                <th>시험일자</th>
+                                <td><input type="date" class="large"></td>
+                            </tr>
+                            <tr>
+                                <th>악취판정시험장소</th>
+                                <td><input type="text" class="large"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">관능시험 시료 정보</div>
+                        <button type="button" class="btn primary" onclick="openCustomPopup('custom-01')">분석의뢰 조회</button>
+                    </div>
+
+                    <div>grid area</div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container SCM_006_02_popup">
+            
+            <div class="header">
+                <div class="title">분석의뢰 조회</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">시험 정보</div>
+                    <button type="button" class="btn icon search primary">조회</button>
+                </div>
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header">
+                            <col>
+                            <col class="header">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>시료채취일자</th>
+                            <td>
+                                <div class="row">
+                                    <select>
+                                        <option></option>
+                                    </select>
+                                    <span>~</span>
+                                    <select>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>신청부서</th>
+                            <td>
+                                <select>
+                                    <option></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>사업장</th>
+                            <td><input type="text"></td>
+                            <th>진행상태</th>
+                            <td>
+                                <select>
+                                    <option></option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div>grid area</div>
+            </div>
+
+            <div class="footer">
+                <button type="button" class="btn primary">확인</button>
+                <button type="button" class="btn secondary btn-popup-close">닫기</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

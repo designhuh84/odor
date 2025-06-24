@@ -3548,7 +3548,7 @@ table.sub01-1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     max-width: 45rem;
     margin: 0 auto;
@@ -3578,6 +3578,10 @@ table.sub01-1{
     }
 
     table{
+        th, td{
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
         th{
             text-align: center;
             small{
@@ -3598,6 +3602,12 @@ table.sub01-1{
         font-size: 1rem;
         min-width: 10rem;
     }
+}
+
+@media print{
+     [data-print="false"]{
+        display: none;
+     }
 }
 
 .popup{
@@ -3708,5 +3718,28 @@ table.sub01-1{
     &.EBP_004_01_popup{
         width: 100%;
         max-width: 45rem;
+    }
+    &.SCM_006_02_popup{
+        width: 100%;
+        max-width: 60rem;
+
+        .table-container{
+            table{
+                &.write{
+                    colgroup{
+                        col{
+                            &.header{
+                                display: table-column;
+                                width: 8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .table-container + div{
+            margin-top: 1rem;
+        }
     }
 }

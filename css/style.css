@@ -3178,7 +3178,7 @@ table.sub01-1 tbody td {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   max-width: 45rem;
   margin: 0 auto;
@@ -3207,6 +3207,10 @@ table.sub01-1 tbody td {
 .EMS_COM_003_05 .table-container + .table-container {
   margin-top: 0;
 }
+.EMS_COM_003_05 table th, .EMS_COM_003_05 table td {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
 .EMS_COM_003_05 table th {
   text-align: center;
 }
@@ -3229,6 +3233,11 @@ table.sub01-1 tbody td {
   min-width: 10rem;
 }
 
+@media print {
+  [data-print=false] {
+    display: none;
+  }
+}
 .popup .container.EMS_OPM_011_05 {
   width: 100%;
   max-width: 45rem;
@@ -3323,4 +3332,15 @@ table.sub01-1 tbody td {
 .popup .container.EBP_004_01_popup {
   width: 100%;
   max-width: 45rem;
+}
+.popup .container.SCM_006_02_popup {
+  width: 100%;
+  max-width: 60rem;
+}
+.popup .container.SCM_006_02_popup .table-container table.write colgroup col.header {
+  display: table-column;
+  width: 8rem;
+}
+.popup .container.SCM_006_02_popup .table-container + div {
+  margin-top: 1rem;
 }/*# sourceMappingURL=style.css.map */
