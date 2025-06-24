@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관능시험통합판정
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시험원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            판정원집계
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            판정원집계
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">판정원집계</div>
+                <div class="contents">
+
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">판정원 집계</div>
+                        <div class="tab" data-name="02">시료별 판정원 집계</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <div class="table-button-row">
+                            <div class="section-header">검색 조건</div>
+                        </div>
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>사업장</th>
+                                    <td>
+                                        <button type="button" class="btn primary" onclick="openCustomPopup('custom-01')">사업장 조회</button>
+                                    </td>
+                                    <th>판정원</th>
+                                    <td>
+                                        <div class="row">
+                                            <select class="large">
+                                                <option>A</option>
+                                            </select>
+                                            <button type="button" class="btn icon search primary">조회</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">판정원 정보</div>
+                            <button type="button" class="btn icon print skyblue">결과출력</button>
+                            <button type="button" class="btn primary">일괄출력</button>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>사업장명</th>
+                                    <td colspan="3">공공하수처리시설</td>
+                                </tr>
+                                <tr>
+                                    <th>시험일자</th>
+                                    <td>2025년 00월 00일</td>
+                                    <th>판정원고유기호</th>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <th>판정시험장소</th>
+                                    <td>공기희석관능실험실</td>
+                                    <th>판정원</th>
+                                    <td>홍길동</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">집계 정보</div>
+                        </div>
+                        <div>grid area</div>
+
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+
+                        <div class="table-button-row">
+                            <div class="section-header">검색 조건</div>
+                        </div>
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>사업장</th>
+                                    <td>
+                                        <button type="button" class="btn primary" onclick="openCustomPopup('custom-01')">사업장 조회</button>
+                                    </td>
+                                    <th>시료</th>
+                                    <td>
+                                        <div class="row">
+                                            <select class="large">
+                                                <option>시료A</option>
+                                            </select>
+                                            <button type="button" class="btn icon search primary">조회</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">사업장정보</div>
+                            <button type="button" class="btn icon print skyblue">결과출력</button>
+                            <button type="button" class="btn primary">일괄출력</button>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th>사업장명</th>
+                                    <td>공공하수처리시설</td>
+                                    <th>시험일자</th>
+                                    <td>2025년 00월 00일</td>
+                                </tr>
+                                <tr>
+                                    <th>시료명</th>
+                                    <td>시료A</td>
+                                    <th>최초희석배수</th>
+                                    <td>300</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">집계 정보</div>
+                        </div>
+                        <div>grid area</div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container SCM_010_01_popup">
+            
+            <div class="header">
+                <div class="title">사업장 조회</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <button type="button" class="btn icon search primary">조회</button>
+                </div>
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header">
+                            <col>
+                            <col class="header">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>사업장</th>
+                            <td><input type="text"></td>
+                            <th>시험원</th>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>시험일자</th>
+                            <td>
+                                <div class="row">
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </td>
+                            <th>악취판정시험장소</th>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table-button-row">
+                    <div class="section-header">시험 정보</div>
+                </div>
+                <div>grid area</div>
+            </div>
+
+            <div class="footer">
+                <button type="button" class="btn primary">확인</button>
+                <button type="button" class="btn secondary btn-popup-close">닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>
