@@ -3414,6 +3414,10 @@ table.sub01-1 tbody td {
   width: 100%;
   max-width: 60rem;
 }
+.popup .container.TCD_004_02_popup {
+  width: 100%;
+  max-width: 60rem;
+}
 
 .SCM_009_01_select {
   width: 100%;
