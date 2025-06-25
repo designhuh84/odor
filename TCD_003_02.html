@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술진단
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술진단 신청 등록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">기술진단</div>
+                    <div class="menus">
+                        <a href="./TCS_001_01.html" class="menu current">접수 및 수행관리</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">기술진단 신청 등록</div>
+                <div class="contents">
+
+                    <div class="infobox">
+                        <p><span class="red">* 필수입력 항목입니다.</span></p>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">시설 기본 정보</div>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>시설명</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" value="" placeholder="시설을 검색해 주세요" disabled>
+                                        <button type="button" class="btn primary" onclick="openCustomPopup('custom-01')">시설검색</button>
+                                    </div>
+                                </td>
+                                <th>시설 ID</th>
+                                <td>
+                                    <input type="text" value="" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>시설구분</th>
+                                <td>
+                                    <input type="text" value="" disabled>
+                                </td>
+                                <th>지역구분</th>
+                                <td>
+                                    <input type="text" value="" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>소재지</th>
+                                <td>
+                                    <input type="text" value="" placeholder="상세주소" disabled>
+                                </td>
+                                <th>가동연월일</th>
+                                <td>
+                                    <input type="text" value="" disabled>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="section-header">시설 기본 정보</div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="category">
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td rowspan="7" class="category">
+                                    신청기관
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">신청일자</th>
+                                <td>
+                                    <input type="date">
+                                </td>
+                                <th class="required">실적연도</th>
+                                <td>
+                                    <select>
+                                        <option>2024년</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>접수일자</th>
+                                <td><input type="date"></td>
+                                <th>시도/시군구</th>
+                                <td>
+                                    <div class="row">
+                                        <select>
+                                            <option>시도</option>
+                                        </select>
+                                        <select>
+                                            <option>시군구</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>대표자</th>
+                                <td colspan="3">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>소재지</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="text" class="zipcode">
+                                        <button type="button" class="btn primary">우편번호</button>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text">
+                                        <input type="text">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당자</th>
+                                <td><input type="text"></td>
+                                <th>신청 부서</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th>전화번호</th>
+                                <td><input type="text" placeholder="휴대전화는 입력이 불가합니다"></td>
+                                <th>희망일자</th>
+                                <td><input type="date"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="section-header">진단 신청 추가 정보</div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="category">
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td rowspan="5" class="category">
+                                    처리시설
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>설계 용량</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text">
+                                        <select>
+                                            <option>단위</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>처리 공법</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th>담당자</th>
+                                <td><input type="text"></td>
+                                <th>전화 (사무실)</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th>운영기관</th>
+                                <td colspan="3"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th>기타사항</th>
+                                <td colspan="3"><input type="text"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container TCD_003_02_popup">
+            
+            <div class="header">
+                <div class="title">Popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row padding-top-0 margin-top-0">
+                    <div class="section-header">조회 조건</div>
+                    <button  type="button" class="btn icon search primary">조회</button>
+                </div>
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header">
+                            <col>
+                            <col class="header">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>시설명</th>
+                            <td><input type="text"></td>
+                            <th>시설ID</th>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table-button-row">
+                    <div class="section-header">조회 결과</div>
+                </div>
+                <div>grid area</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술진단
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술진단 진단 정보
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            악취방지시설 상세정보
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">기술진단</div>
+                    <div class="menus">
+                        <a href="./TCS_001_01.html" class="menu current">접수 및 수행관리</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">악취방지시설 상세정보</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">시설 기본 정보</div>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn cancel">취소</button>
+                        <button type="button" class="btn icon delete red">삭제</button>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>시설명</th>
+                                <td><input type="text" disabled></td>
+                                <th>시설 ID</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>시설구분</th>
+                                <td><input type="text" disabled></td>
+                                <th>지역구분</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>소재지</th>
+                                <td><input type="text" disabled></td>
+                                <th>가동연월일</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">악취 방지 시설</div>
+                    </div>
+
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">탈취 팬 상세정보</div>
+                        <button type="button" class="btn icon plus secondary">행 추가</button>
+                    </div>
+
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">악취방지 시설 상세정보</div>
+                        <button type="button" class="btn icon plus secondary">행 추가</button>
+                    </div>
+
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">악취포집 계통도</div>
+                        <button type="button" class="btn icon plus primary">파일추가</button>
+                        <button type="button" class="btn icon minus secondary">파일삭제</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>구분</th>
+                                    <th>첨부파일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center"><input type="checkbox"></td>
+                                    <td>악취저감기술 지원 신청서</td>
+                                    <td>
+                                        <a href="#!">OO사업장기술지원신청서.hwp</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

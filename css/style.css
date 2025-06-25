@@ -169,12 +169,24 @@ span.green {
 span.gray {
   color: #666;
 }
+span.yellow {
+  color: #F1CD0E;
+}
 
 small {
   font-size: 0.8rem;
 }
 small.red {
   color: #FF4D00;
+}
+small.green {
+  color: var(--primary);
+}
+small.gray {
+  color: #666;
+}
+small.yellow {
+  color: #F1CD0E;
 }
 
 global-header {
@@ -3395,6 +3407,10 @@ table.sub01-1 tbody td {
   max-width: 70rem;
 }
 .popup .container.SCM_011_01_popup {
+  width: 100%;
+  max-width: 60rem;
+}
+.popup .container.TCD_003_02_popup {
   width: 100%;
   max-width: 60rem;
 }

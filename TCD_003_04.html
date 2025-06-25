@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술진단
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술진단 진단 비용 및 수입처리
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">기술진단</div>
+                    <div class="menus">
+                        <a href="./TCS_001_01.html" class="menu current">접수 및 수행관리</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">기술진단 진단 비용 및 수입처리</div>
+                <div class="contents">
+
+                    <div class="infobox">
+                        <p><span class="red">* 필수입력 항목입니다.</span></p>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">시설 기본 정보</div>
+                        <button type="button" class="btn icon save blue">
+                            저장
+                        </button>
+                        <button type="button" class="btn icon delete red">
+                            삭제
+                        </button>
+                        <button type="button" class="btn icon list black">
+                            목록
+                        </button>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>시설명</th>
+                                <td>
+                                    <input type="text" value="OO 공공하수처리시설" disabled>
+                                </td>
+                                <th>시설 ID</th>
+                                <td>
+                                    <input type="text" value="2024XXX" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>시설구분</th>
+                                <td>
+                                    <input type="text" value="하수" disabled>
+                                </td>
+                                <th>지역구분</th>
+                                <td>
+                                    <input type="text" value="기타" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>소재지</th>
+                                <td>
+                                    <input type="text" value="서울특별시 성동구" disabled>
+                                </td>
+                                <th>가동연월일</th>
+                                <td>
+                                    <input type="text" value="2024-00-00" disabled>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">비용 알림</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">비용알림일자</th>
+                                <td><input type="date"></td>
+                                <th>문서번호</th>
+                                <td><input type="text"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">진단 비용 정보 등록</div>
+                    </div>
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="category">
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td class="category">시설정보</td>
+                                <th>시설용량</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" class="number" disabled>
+                                        <select class="mid" disabled>
+                                            <option>단위</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>시설규모</th>
+                                <td>
+                                    <input type="text" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="category">보정율</td>
+                                <th>전처리</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="checkbox">
+                                        <input type="text" class="number">
+                                    </div>
+                                </td>
+                                <th>공법 수</th>
+                                <td>
+                                    <div class="row">
+                                        <select>
+                                            <option>공법수 선택</option>
+                                        </select>
+                                        <input type="text">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>소화공정</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="checkbox">
+                                        <input type="text" class="number">
+                                    </div>
+                                </td>
+                                <th>합계</th>
+                                <td><input type="text" class="number" disabled></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3" class="category">
+                                    진단비용 (천원)<br><br>
+                                    <small class="yellow">* 천원미만 절사</small>
+                                </td>
+                                <th>기본진단 비용</th>
+                                <td><input type="text" class="number" disabled></td>
+                                <th>기준 M/D</th>
+                                <td><input type="text" class="number" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>부가세</th>
+                                <td><input type="text" class="number" disabled></td>
+                                <th>부가세 금액</th>
+                                <td><input type="text" class="number" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>최종 진단비용</th>
+                                <td><input type="text" class="number" disabled></td>
+                                <th>최종 M/D</th>
+                                <td><input type="text" class="number" disabled></td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                    <div class="table-button-row">
+                        <div class="section-header">기타시설비용 정보 등록</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="category">
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td rowspan="2" class="category">기타<br>시설비용</td>
+                                <th>기타시설비용</th>
+                                <td><input type="text" class="number large"></td>
+                            </tr>
+                            <tr>
+                                <th>기타시설비용 산정근거</th>
+                                <td><textarea></textarea></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">기타시설비용 첨부파일</div>
+                        <button type="button" class="btn icon plus primary">파일추가</button>
+                        <button type="button" class="btn icon minus secondary">파일삭제</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>구분</th>
+                                    <th>첨부파일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center"><input type="checkbox"></td>
+                                    <td>기타시설비용 산정근거</td>
+                                    <td>
+                                        <a href="#!">OOO 기타시설비용 산정근거.PDF</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">추가 비용 등록 <input type="checkbox"></div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="category">
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <td rowspan="2" class="category">추가비용</td>
+                                <th>추가비용</th>
+                                <td><input type="text" class="number large"></td>
+                            </tr>
+                            <tr>
+                                <th>추가비용 산정근거</th>
+                                <td><textarea></textarea></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">추가비용 첨부파일</div>
+                        <button type="button" class="btn icon plus primary">파일추가</button>
+                        <button type="button" class="btn icon minus secondary">파일삭제</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>구분</th>
+                                    <th>첨부파일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center"><input type="checkbox"></td>
+                                    <td>추가비용 산정근거</td>
+                                    <td>
+                                        <a href="#!">OOO 추가비용 산정근거.PDF</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">수입 처리 정보</div>
+                        <button type="button" class="btn icon plus secondary">행 추가</button>
+                    </div>
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">환불 처리 정보 <input type="checkbox"></div>
+                        <button type="button" class="btn icon plus secondary">행 추가</button>
+                    </div>
+                    <div>grid area</div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        document.querySelector('#TCD_003_03_request-cancel').addEventListener('change', event => {
+            const cancelForm = document.querySelector('#TCD_003_03_request-cancel-form');
+            const showcancelForm = () => {
+                cancelForm.style.display = 'block';
+                setTableWidth();
+            }
+            event.target.checked ? showcancelForm() : cancelForm.style.display = 'none';
+        });
+
+    });
+
+</script>
+</html>
