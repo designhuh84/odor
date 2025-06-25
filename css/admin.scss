@@ -1,0 +1,48 @@
+body.admin{
+    --primary: #0066CC;
+    --primary-hover: #0052A3;
+    --primary-press: #004080;
+    --red: #FF4D00;
+    --red-hover: #AA5518;
+    --blue: #443399;
+    --blue-hover: #2B2060;
+    --green: #00A89A;
+    --green-hover: #008075;
+    --skyblue: #2FB8C6;
+    --skyblue-hover: #25929D;
+    --cancel: #6B9C70;
+    --cancel-hover: #56805A;
+    --dark: #165B5A;
+    --dark-hover: #0E3939;
+    --th: #F6F7F9;
+    --tr-hover: #F2F8F7;
+    --infobox: #F4F6FA;
+
+    .section-header{
+        &::before{
+            filter: brightness(0) saturate(100%) invert(22%) sepia(98%) saturate(1520%) hue-rotate(192deg) brightness(110%) contrast(108%);
+        }
+    }
+
+    .layout{
+        .lnb{
+            .menu{
+                &.current{
+                    &::before{
+                        background-image: url(../image/Map-Arrow-Right-blue.svg);
+                    }
+                }
+            }
+        }
+    }
+
+    .tab-row{
+        .tab{
+            &:hover{
+                background-color: #E0F0FF;
+            }
+        }
+    }
+    
+
+}

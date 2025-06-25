@@ -1,17 +1,26 @@
 @import url(../fonts/pretendard.css);
+@import url(./admin.css);
 
 :root{
     font-size: 16px;
     --primary: #359735;
     --primary-hover: #14B814;
     --primary-press: #178217;
-    --admin-primary: #207FDF;
-    --admin-primary-hover: #0066CC;
     --red: #FF4D00;
-}
-
-body.admin{
-    --primary: red;
+    --red-hover: #AA5518;
+    --blue: #347DC5;
+    --blue-hover: #2A649D;
+    --green: #359787;
+    --green-hover: #2C7D6F;
+    --skyblue: #2FB8C6;
+    --skyblue-hover: #25929D;
+    --cancel: #6B9C70;
+    --cancel-hover: #56805A;
+    --dark: #165B5A;
+    --dark-hover: #0E3939;
+    --th: #F8FBF8;
+    --tr-hover: #F7F9EC;
+    --infobox: #F4FBF4;
 }
 
 *{
@@ -244,7 +253,7 @@ global-header{
     height: 2rem;
     padding: 0 1rem;
     border-radius: 0.25rem;
-    background-color: #347DC5;
+    background-color: var(--blue);
     color: #FFF;
 }
 
@@ -287,7 +296,7 @@ global-header{
             width: 1.25rem;
         }
         &:hover{
-            background-color: #F4FBF4;
+            background-color: var(--infobox);
             color: var(--primary);
             img{
                 filter: brightness(0) saturate(100%) invert(37%) sepia(21%) saturate(6509%) hue-rotate(99deg) brightness(101%) contrast(58%);
@@ -562,7 +571,7 @@ golbal-footer{
             padding: 1.5rem 1rem;
             border-bottom: solid 1px #BCC1C8;
             &:hover{
-                background-color: #F4FBF4;
+                background-color: var(--infobox);
             }
             .subject{
                 flex-grow: 1;
@@ -588,7 +597,7 @@ golbal-footer{
 }
 
 .main-complaints-area{
-    background-color: #F4FBF4;
+    background-color: var(--infobox);
     .inner{
         padding: 5.75rem 1rem;
         display: flex;
@@ -752,7 +761,7 @@ global-header-menu{
         border-bottom: solid 1px #BCC1C8;
         padding: 0.5rem 1rem;
         &:hover{
-            background-color: #F7F9EC;
+            background-color: var(--tr-hover);
             .category{
                 color: var(--primary);
             }
@@ -773,7 +782,7 @@ global-header-menu{
             }
             &:hover{
                 .sub-category{
-                    color: #359787;
+                    color: var(--green);
                 }
             }
         }
@@ -913,7 +922,7 @@ global-header-menu{
                 color: var(--primary);
             }
             &.current{
-                background-color: #F4FBF4;
+                background-color: var(--infobox);
                 font-weight: 700;
                 pointer-events: none;
                 &::before{
@@ -957,7 +966,7 @@ global-header-menu{
                 flex-direction: column;
                 gap: 0.75rem;
                 border-radius: 0.5rem;
-                background-color: #F4FBF4;
+                background-color: var(--infobox);
                 padding: 1.5rem;
                 width: 100%;
 
@@ -1018,7 +1027,7 @@ global-header-menu{
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem 3rem;
     padding: 1.38rem;
-    background-color: #F4FBF4;
+    background-color: var(--infobox);
     border: solid 1px var(--primary);
     input{
         width: 100%;
@@ -1117,10 +1126,10 @@ global-header-menu{
     }
 
     &.blue{
-        background-color: #347DC5;
+        background-color: var(--blue);
         color: #FFF;
         &:hover{
-            background-color: #2A649D;
+            background-color: var(--blue-hover);
         }
         &::before{
             filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -1139,10 +1148,10 @@ global-header-menu{
     }
 
     &.green{
-        background-color: #359787;
+        background-color: var(--green);
         color: #FFF;
         &:hover{
-            background-color: #2C7D6F;
+            background-color: var(--green-hover);
         }
         &::before{
             filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -1153,7 +1162,7 @@ global-header-menu{
         background-color: #D2691E;
         color: #FFF;
         &:hover{
-            background-color: #AA5518;
+            background-color: var(--red-hover);
         }
         &::before{
             filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -1161,10 +1170,10 @@ global-header-menu{
     }
 
     &.skyblue{
-        background-color: #2FB8C6;
+        background-color: var(--skyblue);
         color: #FFF;
         &:hover{
-            background-color: #25929D;
+            background-color: var(--skyblue-hover);
         }
         &::before{
             filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -1172,10 +1181,10 @@ global-header-menu{
     }
 
     &.cancel{
-        background-color: #6B9C70;
+        background-color: var(--cancel);
         color: #FFF;
         &:hover{
-            background-color: #56805A;
+            background-color: var(--cancel-hover);
         }
         &::before{
             filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -1205,10 +1214,10 @@ global-header-menu{
     }
 
     &.dark{
-        background-color: #165B5A;
+        background-color: var(--dark);
         color: #FFF;
         &:hover{
-            background-color: #0E3939;
+            background-color: var(--dark-hover);
         }
         &::before{
             filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -1361,7 +1370,7 @@ global-header-menu{
     flex-direction: column;
     gap: 0.75rem;
     border-radius: 0.5rem;
-    background-color: #F4FBF4;
+    background-color: var(--infobox);
     padding: 1rem;
     margin-top: 1rem;
 
@@ -1422,62 +1431,62 @@ global-header-menu{
         margin-right: auto;
     }
 
-    #add-new{
-        img{
-            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-        }
-    }
+    // #add-new{
+    //     img{
+    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    //     }
+    // }
 
-    #save{
-        background-color: #207FDF;
-        color: #FFF;
-        border: 0;
-        img{
-            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-        }
-        &:hover{
-            background-color: #0066CC;
-        }
-    }
+    // #save{
+    //     background-color: #207FDF;
+    //     color: #FFF;
+    //     border: 0;
+    //     img{
+    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    //     }
+    //     &:hover{
+    //         background-color: #0066CC;
+    //     }
+    // }
 
-    #excel{
-        background-color: #107C41;
-        color: #FFF;
-        border: 0;
-        img{
-            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-        }
-        &:hover{
-            background-color: #0C5A2F;
-        }
-    }
+    // #excel{
+    //     background-color: #107C41;
+    //     color: #FFF;
+    //     border: 0;
+    //     img{
+    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    //     }
+    //     &:hover{
+    //         background-color: #0C5A2F;
+    //     }
+    // }
 
-    #modify{
-        background-color: #359787;
-        color: #FFF;
-        border: 0;
-        img{
-            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-        }
-    }
+    // #modify{
+    //     background-color: var(--green);
+    //     color: #FFF;
+    //     border: 0;
+    //     img{
+    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    //     }
+    // }
 
-    #delete{
-        background-color: #FF4D00;
-        color: #FFF;
-        border: 0;
-        img{
-            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-        }
-        &:hover{
-            background-color: #CC3D00;
-        }
-    }
+    // #delete{
+    //     background-color: #FF4D00;
+    //     color: #FFF;
+    //     border: 0;
+    //     img{
+    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    //     }
+    //     &:hover{
+    //         background-color: #CC3D00;
+    //     }
+    // }
 
-    #list{
-        img{
-            filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-        }
-    }
+    // #list{
+    //     img{
+    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    //     }
+    // }
 }
 
 .table-container{
@@ -1536,7 +1545,7 @@ global-header-menu{
         th{
             position: relative;
             font-weight: 600;
-            background-color: #F8FBF8;
+            background-color: var(--th);
             // border-bottom: solid 1px var(--primary);
             &.required{
                 padding-left: 2rem;
@@ -1610,7 +1619,7 @@ global-header-menu{
             &.category{
                 text-align: center;
                 font-weight: 700;
-                background-color: #359787;
+                background-color: var(--green);
                 color: #FFF;
 
                 &.left{
@@ -1628,7 +1637,7 @@ global-header-menu{
             tr{
                 &:hover{
                     td:not(.red){
-                        background-color: #F7F9EC;
+                        background-color: var(--tr-hover);
                     }
                 }
             }
@@ -1654,7 +1663,7 @@ global-header-menu{
                     td{
                         background-color: inherit;
                         &.category{
-                            background-color: #359787;
+                            background-color: var(--green);
                         }
                     }
                 }
@@ -1779,7 +1788,7 @@ table.stat{
     .summary{
         padding: 1.5rem;
         border-radius: 0.5rem;
-        background-color: #F4FBF4;
+        background-color: var(--infobox);
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
@@ -2377,7 +2386,7 @@ table.sub01-1{
             tr{
                 &:nth-of-type(even){
                     td{
-                        background-color: #F7F9EC;
+                        background-color: var(--tr-hover);
                     }
                 }
             }
@@ -2435,7 +2444,7 @@ table.sub01-1{
             text-align: center;
             font-weight: 600;
             font-size: 0.75rem;
-            background-color: #F4FBF4;
+            background-color: var(--infobox);
         }
     }
 }
@@ -2505,7 +2514,7 @@ table.sub01-1{
     }
     .sbgrid-caption{
         .sbgrid-thead{
-            background-color: #F8FBF8;
+            background-color: var(--th);
             border: solid 1px var(--primary);
             border-bottom: 0;
             position: relative;
@@ -2539,7 +2548,7 @@ table.sub01-1{
         border-top: 0;
         .sbgrid-row{
             &:hover{
-                background-color: #F7F9EC;
+                background-color: var(--tr-hover);
             }
         }
     }
@@ -2574,10 +2583,10 @@ table.sub01-1{
         }
 
         &.blue{
-            background-color: #347DC5;
+            background-color: var(--blue);
             color: #FFF;
             &:hover{
-                background-color: #2A649D;
+                background-color: var(--blue-hover);
             }
             &::before{
                 filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -2596,10 +2605,10 @@ table.sub01-1{
         }
 
         &.green{
-            background-color: #359787;
+            background-color: var(--green);
             color: #FFF;
             &:hover{
-                background-color: #2C7D6F;
+                background-color: var(--green-hover);
             }
             &::before{
                 filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -2610,7 +2619,7 @@ table.sub01-1{
             background-color: #D2691E;
             color: #FFF;
             &:hover{
-                background-color: #AA5518;
+                background-color: var(--red-hover);
             }
             &::before{
                 filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -2618,10 +2627,10 @@ table.sub01-1{
         }
 
         &.skyblue{
-            background-color: #2FB8C6;
+            background-color: var(--skyblue);
             color: #FFF;
             &:hover{
-                background-color: #25929D;
+                background-color: var(--skyblue-hover);
             }
             &::before{
                 filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -2629,10 +2638,10 @@ table.sub01-1{
         }
 
         &.cancel{
-            background-color: #6B9C70;
+            background-color: var(--cancel);
             color: #FFF;
             &:hover{
-                background-color: #56805A;
+                background-color: var(--cancel-hover);
             }
             &::before{
                 filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -2662,10 +2671,10 @@ table.sub01-1{
         }
 
         &.dark{
-            background-color: #165B5A;
+            background-color: var(--dark);
             color: #FFF;
             &:hover{
-                background-color: #0E3939;
+                background-color: var(--dark-hover);
             }
             &::before{
                 filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -3219,7 +3228,7 @@ table.sub01-1{
             padding: 1rem;
             font-weight: 600;
             text-align: center;
-            background-color: #F8FBF8;
+            background-color: var(--th);
         }
         .text{
             text-align: center;
@@ -3245,7 +3254,7 @@ table.sub01-1{
             border: solid 1px #BFBFBF;
             font-size: 2rem;
             font-weight: 700;
-            background-color: #F8FBF8;
+            background-color: var(--th);
 
             &:hover{
                 color: var(--primary);
@@ -3319,7 +3328,7 @@ table.sub01-1{
                     line-height: 100%;
                     cursor: pointer;
                     &:hover{
-                        background-color: #F7F9EC;
+                        background-color: var(--tr-hover);
                     }
                     &.disabled{
                         pointer-events: none;
@@ -3365,7 +3374,7 @@ table.sub01-1{
         .select-row{
             button{
                 &:hover{
-                    background-color: #F7F9EC;
+                    background-color: var(--tr-hover);
                     color: var(--primary);
                 }
             }

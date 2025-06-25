@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://sbgrid.co.kr/SBGridV3/api/lib/SBGrid3/sbgrid3.js"></script>
+    <link rel="stylesheet" href="https://sbgrid.co.kr/SBGridV3/api/lib/SBGrid3/css/sbgrid3.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub admin">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            breadcrumb
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            breadcrumb
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            breadcrumb
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+
+                <div class="group on">
+                    <div class="title">LNB Page Category</div>
+                    <div class="menus">
+                        <a href="./#!" class="menu current">Current Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="#!" class="menu">Menu</a>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="title">LNB Page Category Page Category</div>
+                    <div class="menus">
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="#!" class="menu">Menu</a>
+                    </div>
+                </div>
+
+                <div class="group">
+                    <div class="title">LNB Page Category</div>
+                    <div class="menus">
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="./#!" class="menu">Menu</a>
+                        <a href="#!" class="menu">Menu</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="main">
+                <div class="page-title">Page Title</div>
+                <div class="contents">
+                    
+
+                    <div class="section-header">Tabs</div>
+
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">Current Tab</div>
+                        <div class="tab" data-name="02">Tab 02</div>
+                        <div class="tab" data-name="03">Tab 03</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <br>
+                        Current Tab Contents
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+                        <br>
+                        tab 02 contents
+                    </div>
+
+                    <div class="tab-contents" data-name="03">
+                        <br>
+                        tab 03 contents
+                    </div>
+                    
+
+                    <div class="section-header">Buttons</div>
+
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <button type="button" class="btn primary">Primary</button>
+                        <button type="button" class="btn secondary">Secondary</button>
+                        <button type="button" class="btn blue">Blue</button>
+                        <button type="button" class="btn excel">Excel</button>
+                        <button type="button" class="btn green">Green</button>
+                        <button type="button" class="btn red">Red</button>
+                        <button type="button" class="btn skyblue">Skyblue</button>
+                        <button type="button" class="btn cancel">Cancel</button>
+                        <button type="button" class="btn brown">Brown</button>
+                        <button type="button" class="btn yellow">Yellow</button>
+                        <button type="button" class="btn dark">Dark</button>
+                        <button type="button" class="btn black">Black</button>
+                        <button type="button" class="btn primary" disabled>Disabled</button>
+                    </div>
+
+                    <div class="section-header">Icon Buttons</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <button type="button" class="btn icon search primary">Search 01</button>
+                        <button type="button" class="btn icon search secondary">Search 02</button>
+                        <button type="button" class="btn icon excel">Excel</button>
+                        <button type="button" class="btn icon save blue">Save</button>
+                        <button type="button" class="btn icon add green">Add</button>
+                        <button type="button" class="btn icon delete red">Delete</button>
+                        <button type="button" class="btn icon list black">List</button>
+                        <button type="button" class="btn icon print skyblue">Print</button>
+                        <button type="button" class="btn icon link secondary">Link</button>
+                        <button type="button" class="btn icon plus secondary">plus</button>
+                        <button type="button" class="btn icon minus secondary">minus</button>
+                        <button type="button" class="btn icon download secondary">Download</button>
+                        <button type="button" class="btn icon upload secondary">Upload</button>
+                        <button type="button" class="btn icon write green">write</button>
+                        <button type="button" class="btn icon write green" disabled>Disabled</button>
+                        <button type="button" class="btn icon marking secondary">marking</button>
+                        <button type="button" class="btn icon play primary">play</button>
+                        <button type="button" class="btn icon prev secondary">prev</button>
+                        <button type="button" class="btn icon next secondary">next</button>
+                        <button type="button" class="btn icon done blue">done</button>
+                    </div>
+
+                    <div class="section-header">Popup</div>
+                    <div style="display: flex; gap: 1rem;">
+                        <button 
+                            type="button" 
+                            class="btn icon link primary"
+                            onclick="new CommonModal(2, '팝업타이틀','팝업메세지 내용<br>HTML태그도 됨').show()"
+                        >
+                            Modal Popup
+                        </button>
+                        <button 
+                            type="button" 
+                            class="btn icon link primary"
+                            onclick="new CommonModal(1, '팝업타이틀','팝업메세지 내용<br>HTML태그도 됨').show()"
+                        >
+                            확인버튼만 있는 팝업
+                        </button>
+                        <button 
+                            type="button" 
+                            class="btn icon link blue"
+                            onclick="openCustomPopup('custom-01')"
+                        >
+                            HTML Modal Popup
+                        </button>
+                        <button 
+                            type="button" 
+                            class="btn icon link primary"
+                            onclick="new CommonLayerPopup('팝업타이틀', 'html 들어가는 부분', {top: 100, left: 100, width: 600, height: 600}).show()"
+                        >
+                            Layer Popup
+                        </button>
+                    </div>
+
+                    <div class="section-header">Grid</div>
+                    <div style="display: flex; gap: 1rem;">
+                        <button type="button" class="btn primary" id="show-loading">Show Loading UI</button>
+                    </div>
+                    
+
+                    <div class="table-button-row">
+                        <div class="section-header">검색 조건 영역</div>
+                        <button  type="button" class="btn icon search primary">검색</button>
+                    </div>
+                    <div class="search-area">
+                        <div class="col">
+                            <label>Label</label>
+                            <input type="text">
+                        </div>
+                        <div class="col">
+                            <label>Select Lable</label>
+                            <select>
+                                <option>Option</option>
+                                <option>Option</option>
+                                <option>Option</option>
+                            </select>
+                        </div>
+                        <div class="col full-width">
+                            <label>Select Multi</label>
+                            <div class="col__row">
+                                <select class="city">
+                                    <option>시도</option>
+                                    <option>서울</option>
+                                    <option>인천</option>
+                                    <option>경기</option>
+                                    <option>강원</option>
+                                </select>
+                                <select class="city">
+                                    <option>시군구</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                </select>
+                                <select class="city">
+                                    <option>시군구</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>Date Label</label>
+                            <input type="date">
+                        </div>
+                        <div class="col">
+                            <label>Date Multi</label>
+                            <div class="col__row">
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-header">Info box</div>
+                    <div class="infobox">
+                        <p>Info text</p>
+                        <p>Info text</p>
+                        <p>Info text</p>
+                        <div class="button-row">
+                            <button type="button" class="btn icon download secondary">
+                                다운로드
+                            </button>
+                            <button type="button" class="btn icon upload secondary">
+                                업로드
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="section-header">Write Table</div>
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th>Label</th>
+                                <td><input type="text" placeholder="input text"></td>
+                                <th class="required">Label Required</th>
+                                <td><input type="date"></td>
+                            </tr>
+                            <tr>
+                                <th>Select</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <select>
+                                            <option>select</option>
+                                        </select>
+                                        <span>span</span>
+                                        <select class="mid">
+                                            <option>select mid</option>
+                                        </select>
+                                        <span>span</span>
+                                        <select class="small">
+                                            <option>select small</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Radio Button</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="sample-radio" value="Y">
+                                            <label>Y</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="sample-radio" value="N">
+                                            <label>N</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>Checkbox</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>checkbox label</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>checkbox label</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Textarea</th>
+                                <td colspan="3">
+                                    <textarea placeholder="textarea" rows="6"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">첨부파일</div>
+                        <button type="button" class="btn icon plus primary">파일추가</button>
+                        <button type="button" class="btn icon minus secondary">파일삭제</button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id=""></th>
+                                    <th>구분</th>
+                                    <th>첨부파일</th>
+                                    <th>등록일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center"><input type="checkbox"></td>
+                                    <td>악취저감기술 지원 신청서</td>
+                                    <td>
+                                        <a href="#!">OO사업장기술지원신청서.hwp</a>
+                                    </td>
+                                    <td class="center">2023-00-00 00:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="contents-bottom-button-row">
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon write green">수정</button>
+                        <button type="button" class="btn icon delete red">삭제</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="section-header">Grid</div>
+                    <div id="grid"></div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container">
+            
+            <div class="header">
+                <div class="title">팝업타이틀</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                이곳에 html 작성
+                <div style="width: 720px"></div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    var localData = [
+        { 'class': '매화반', 'name': '홍길동',  'number': '30534', 'korean': '75', 'english': '50', 'math': '88', 'btn': 'test' },
+        { 'class': '매화반', 'name': '김철수',  'number': '30115', 'korean': '94', 'english': '84', 'math': '79', 'btn': 'test' },
+        { 'class': '국화반', 'name': '최민지',  'number': '30742', 'korean': '84', 'english': '98', 'math': '62', 'btn': 'test' },
+        { 'class': '국화반', 'name': '김갑수',  'number': '31124', 'korean': '61', 'english': '64', 'math': '77', 'btn': 'test' },
+        { 'class': '국화반', 'name': '이순신',  'number': '40534', 'korean': '95', 'english': '85', 'math': '78', 'btn': 'test' },
+        { 'class': '국화반', 'name': '임꺽정',  'number': '40115', 'korean': '91', 'english': '74', 'math': '89', 'btn': 'test' },
+        { 'class': '국화반', 'name': '을지문덕','number': '40311', 'korean': '75', 'english': '81', 'math': '91', 'btn': 'test' },
+        { 'class': '난초반', 'name': '신사임당','number': '51124', 'korean': '81', 'english': '74', 'math': '67', 'btn': 'test' },
+        { 'class': '난초반', 'name': '국영수',  'number': '51125', 'korean': '80', 'english': '80', 'math': '80', 'btn': 'test' },
+        { 'class': '난초반', 'name': '영수',    'number': '51126', 'korean': '70', 'english': '80', 'math': '80', 'btn': 'test' },
+        { 'class': '난초반', 'name': '국영',    'number': '51127', 'korean': '80', 'english': '80', 'math': '60', 'btn': 'test' },
+        { 'class': '기타반', 'name': '국영',    'number': '51127', 'korean': '80', 'english': '80', 'math': '60', 'btn': 'test' },
+        { 'class': '기타반', 'name': '국영',    'number': '51127', 'korean': '80', 'english': '80', 'math': '60', 'btn': 'test' },
+    ];
+    let gridConfig = {
+        dataSource: localData,    // 상단에 정의되어 있는 데이터를 이용
+        container: '#grid',
+        width: '100%',
+        height: '400px',
+        theme: 'common-grid', //grid에 theme: 'common-grid' 속성을 추가해주세요.
+        rowCss: (data) => {
+            switch(data.class) {
+                case '매화반':
+                    return 'green'
+                case '국화반':
+                    return 'blue'
+                case '난초반':
+                    return 'red'
+                case '기타반':
+                    return 'gray'
+            }
+        },
+        columns: [
+            { field: 'class' , caption:'반',   },
+            { field: 'name' ,  caption:'성명', },
+            { field: 'number', caption:'학번', },
+            { field: 'korean', caption:'국어', align:'right'},
+            { field: 'english',caption:'영어', align:'right'},
+            { 
+                field: 'math',
+                type: 'button',
+                caption:'Icon Buttons',
+                align:'center',
+                command: container => {
+                    const button = document.createElement('button');
+                    button.setAttribute('class', 'btn icon minus primary');
+                    button.innerText = '행 삭제';
+                    button.onclick = () => alert('행 삭제');
+                    container.append(button);
+                }
+            },
+            { 
+                field: 'btn',
+                type: 'button',
+                caption:'Buttons',
+                align:'center',
+                command: container => {
+                    const button = document.createElement('button');
+                    button.setAttribute('class', 'btn red');
+                    button.innerText = '행 삭제';
+                    button.onclick = () => alert('행 삭제');
+                    container.append(button);
+                }
+            },
+        ],
+        resizable: {
+            mode: 'column',       // 'guideLine' 또는 'column'
+            minWidth: 10,          // 최소 너비
+            maxWidth: 200,         // 최대 너비
+            autoFit: ['caption', 'data']  // 자동 리사이즈 기준
+        }
+    }
+
+    datagrid = SBGrid3.createGrid(gridConfig);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        const showLoadingUI = (loading) => {
+            return new Promise(resolve => {
+                loading.show();
+                setTimeout(() => {
+                    resolve();
+                }, 5000);
+            });
+        }
+
+        document.querySelector('#show-loading').addEventListener('click', () => {
+            const loading = new LoadingUI('로딩중입니다.<br>잠시만 기다려 주세요.');
+            showLoadingUI(loading).then(() => {
+                loading.hide();
+            });
+        });
+
+        
+        
+    });
+
+</script>
+</html>
