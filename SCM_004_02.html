@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시료관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            악취 외부 분석 의뢰 등록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">악취시료</div>
+                    <div class="menus">
+                        <a href="./SCM_001_01.html" class="menu current">기술지원 분석</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">악취 외부 분석 의뢰 등록</div>
+                <div class="contents">
+
+                    <div class="infobox">
+                        <span class="red">* 필수입력 항목입니다.</span>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">기본 정보</div>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                        <button type="button" class="btn icon delete red">삭제</button>
+                        <button type="button" class="btn primary">제출</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">사업장 명칭</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" placeholder="시설을 검색해 주세요" disabled>
+                                        <button type="button" class="btn primary" onclick="openCustomPopup('custom-01')">시설검색</button>
+                                    </div>
+                                </td>
+                                <th class="required">사업장 ID</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th class="required">사업장 주소</th>
+                                <td><input type="text" disabled></td>
+                                <th class="required">구분</th>
+                                <td>
+                                    <div class="row">
+                                        <select disabled>
+                                            <option>전체</option>
+                                        </select>
+                                        <input type="text">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">신청자</th>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <th class="required">신청일자</th>
+                                <td><input type="date"></td>
+                            </tr>
+                            <tr>
+                                <th>측정자</th>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <th>측정일자</th>
+                                <td><input type="date"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">신청 내용</div>
+                    </div>
+                    
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">분석의뢰서 첨부파일</div>
+                        <button type="button" class="btn icon plus primary">파일추가</button>
+                        <button type="button" class="btn icon minus secondary">파일삭제</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>구분</th>
+                                    <th>첨부파일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="center"><input type="checkbox"></td>
+                                    <td>외부 분석의뢰서 첨부파일</td>
+                                    <td>
+                                        <a href="#!">OOO 의뢰서.PDF</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container SCM_004_02_popup">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">조회 조건</div>
+                    <button  type="button" class="btn icon search primary">조회</button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header">
+                            <col>
+                            <col class="header">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>사업장 명</th>
+                            <td><input type="text"></td>
+                            <th>사업장 ID</th>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="table-button-row">
+                    <div class="section-header">조회 결과</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>
