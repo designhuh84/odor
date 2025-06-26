@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            통계현황
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술지원 연도별
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            악취배출시설 종류별
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">LNB Title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">악취배출시설 종류별</div>
+                <div class="contents">
+
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">악취배출시설 종류별</div>
+                        <div class="tab" data-name="02">배출허용기준 초과사업장</div>
+                        <div class="tab" data-name="03">악취저감방안 및 개선사항</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+
+                        <div class="search-area">
+                            <div class="col">
+                                <label>기술지원 년도</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>2025</option>
+                                    </select>
+                                    <span>~</span>
+                                    <select>
+                                        <option>2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>실태조사 여부</label>
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="sample-radio" value="Y">
+                                        <label>Y</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="sample-radio" value="N">
+                                        <label>N</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>소재지</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>시도 선택</option>
+                                    </select>
+                                    <select>
+                                        <option>시구군 선택</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-row">
+                            <div class="chart-col">
+                                <div class="table-button-row">
+                                    <div class="section-header">조회 결과</div>
+                                    <button type="button" class="btn icon excel">
+                                        엑셀다운로드
+                                    </button>
+                                </div>
+                                <div>grid area <button type="button" onclick="openCustomPopup('custom-01')">기술지원사업장목록팝업</button></div>
+                            </div>
+
+                            <div class="chart-col">
+                                <div class="chart">
+                                    chart
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tab-contents" data-name="02">
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+
+                        <div class="search-area">
+                            <div class="col">
+                                <label>기술지원 년도</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>2025</option>
+                                    </select>
+                                    <span>~</span>
+                                    <select>
+                                        <option>2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>실태조사 여부</label>
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="sample-radio" value="Y">
+                                        <label>Y</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="sample-radio" value="N">
+                                        <label>N</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <select>
+                                    <option>악취관리지역</option>
+                                    <option>악취관리지역 외</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>신고대상시설 여부</label>
+                                <select>
+                                    <option>신고대상시설</option>
+                                    <option>신고대상시설 외</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">조회 결과</div>
+                            <button type="button" class="btn icon excel">
+                                엑셀다운로드
+                            </button>
+                        </div>
+                        <div>grid area</div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">지역별 현황</div>
+                        </div>
+
+                        <div class="chart-row">
+                            <div class="chart-col">chart</div>
+                            <div class="chart-col">chart</div>
+                        </div>
+
+
+
+                    </div>
+
+
+
+                    <div class="tab-contents" data-name="03">
+
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+
+                        <div class="search-area">
+                            <div class="col">
+                                <label>기술지원 년도</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>2025</option>
+                                    </select>
+                                    <span>~</span>
+                                    <select>
+                                        <option>2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>실태조사 여부</label>
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="sample-radio" value="Y">
+                                        <label>Y</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="sample-radio" value="N">
+                                        <label>N</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <select>
+                                    <option>악취관리지역</option>
+                                    <option>악취관리지역 외</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>신고대상시설 여부</label>
+                                <select>
+                                    <option>신고대상시설</option>
+                                    <option>신고대상시설 외</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">조회 결과</div>
+                            <button type="button" class="btn icon excel">
+                                엑셀다운로드
+                            </button>
+                        </div>
+                        <div>grid area</div>
+                        <div class="chart-row">
+                            <div class="chart-col">chart</div>
+                        </div>
+
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container STS_009_01_popup">
+            
+            <div class="header">
+                <div class="title">Popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">
+                        기술지원 사업장 목록
+                    </div>
+                </div>
+                <div>grid area</div>
+            </div>
+
+            <div class="footer">
+                <button type="button" class="btn secondary btn-popup-close">닫기</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>
