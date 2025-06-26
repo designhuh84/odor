@@ -1431,6 +1431,12 @@ global-header-menu{
         margin-right: auto;
     }
 
+    .right{
+        display: flex;
+        gap: 0.5rem;
+        margin-left: auto;
+    }
+
     // #add-new{
     //     img{
     //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -3839,6 +3845,10 @@ table.sub01-1{
         max-width: 60rem;
     }
     &.TCD_004_02_popup{
+        width: 100%;
+        max-width: 60rem;
+    }
+    &.SCM_002_02_popup{
         width: 100%;
         max-width: 60rem;
     }

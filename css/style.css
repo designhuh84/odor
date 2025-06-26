@@ -1310,6 +1310,11 @@ global-header-menu .col .menu:hover {
   gap: 0.5rem;
   margin-right: auto;
 }
+.table-button-row .right {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}
 
 .table-container {
   width: 100%;
@@ -3377,6 +3382,10 @@ table.sub01-1 tbody td {
   max-width: 60rem;
 }
 .popup .container.TCD_004_02_popup {
+  width: 100%;
+  max-width: 60rem;
+}
+.popup .container.SCM_002_02_popup {
   width: 100%;
   max-width: 60rem;
 }

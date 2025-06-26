@@ -1,19 +1,19 @@
 body.admin{
-    --primary: #0066CC;
-    --primary-hover: #0052A3;
-    --primary-press: #004080;
+    --primary: #2966A3;
+    --primary-hover: #204F7E;
+    --primary-press: #1B426A;
     --red: #FF4D00;
     --red-hover: #AA5518;
-    --blue: #443399;
-    --blue-hover: #2B2060;
-    --green: #00A89A;
-    --green-hover: #008075;
-    --skyblue: #2FB8C6;
-    --skyblue-hover: #25929D;
-    --cancel: #6B9C70;
-    --cancel-hover: #56805A;
-    --dark: #165B5A;
-    --dark-hover: #0E3939;
+    --blue: #2947A3;
+    --blue-hover: #1F367A;
+    --green: #689F38;
+    --green-hover: #4F792B;
+    --skyblue: #0288D1;
+    --skyblue-hover: #01669D;
+    --cancel: #757575;
+    --cancel-hover: #5C5C5C;
+    --dark: #424242;
+    --dark-hover: #292929;
     --th: #F6F7F9;
     --tr-hover: #F2F8F7;
     --infobox: #F4F6FA;
@@ -41,6 +41,13 @@ body.admin{
             &:hover{
                 background-color: #E0F0FF;
             }
+        }
+    }
+
+    .color-label{
+        &.green{
+            background-color: #0288D1;
+            color: #FFF;
         }
     }
     
