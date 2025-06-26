@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시료관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            악취 기타 시료채취기록표 등록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">악취시료</div>
+                    <div class="menus">
+                        <a href="./SCM_001_01.html" class="menu current">기술지원 분석</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">악취 기타 시료채취기록표 등록</div>
+                <div class="contents">
+
+                    <div class="table-button-row margin-top-0 padding-top-0">
+                        <div class="section-header">시료채취기록표</div>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon delete red">삭제</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                        <button type="button" class="btn icon print skyblue">출력</button>
+                    </div>
+                    
+                    <div>grid area</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container SCM_002_02_popup">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">조회 조건</div>
+                    <button  type="button" class="btn icon search primary">조회</button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header">
+                            <col>
+                            <col class="header">
+                            <col>
+                            <col class="header">
+                            <col>
+                        </colgroup>
+                        <tr>
+                            <th>실적년도</th>
+                            <td>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </td>
+                            <th>시설명</th>
+                            <td><input type="text"></td>
+                            <th>시설 ID</th>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="table-button-row">
+                    <div class="section-header">조회 결과</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>
