@@ -1581,6 +1581,10 @@ global-header-menu{
                 box-shadow: 0px 0px 0px 0.5px var(--primary);
                 pointer-events: none;
             }
+            &.marking{
+                background-color: var(--green);
+                color: #FFF;
+            }
         }
         td{
             color: #4D4D4D;

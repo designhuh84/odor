@@ -1400,6 +1400,10 @@ global-header-menu .col .menu:hover {
   box-shadow: 0px 0px 0px 0.5px var(--primary);
   pointer-events: none;
 }
+.table-container table th.marking {
+  background-color: var(--green);
+  color: #FFF;
+}
 .table-container table td {
   color: #4D4D4D;
 }
