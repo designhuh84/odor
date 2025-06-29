@@ -3420,4 +3420,48 @@ table.sub01-1 tbody td {
 .tab-row-divide .table-button-row {
   margin: 0;
   padding: 0;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin: 1rem 0;
+}
+.grid-layout .col-1 {
+  grid-column: span 1;
+}
+.grid-layout .col-2 {
+  grid-column: span 2;
+}
+.grid-layout .col-3 {
+  grid-column: span 3;
+}
+.grid-layout .col-4 {
+  grid-column: span 4;
+}
+.grid-layout .col-5 {
+  grid-column: span 5;
+}
+.grid-layout .col-6 {
+  grid-column: span 6;
+}
+.grid-layout .col-7 {
+  grid-column: span 7;
+}
+.grid-layout .col-8 {
+  grid-column: span 8;
+}
+.grid-layout .col-9 {
+  grid-column: span 9;
+}
+.grid-layout .col-10 {
+  grid-column: span 10;
+}
+.grid-layout .col-11 {
+  grid-column: span 11;
+}
+.grid-layout .col-12 {
+  grid-column: span 12;
 }/*# sourceMappingURL=style.css.map */
