@@ -170,10 +170,13 @@ textarea:focus {
 }
 
 span.red {
-  color: #FF4D00;
+  color: var(--red);
 }
 span.green {
   color: var(--primary);
+}
+span.blue {
+  color: var(--blue);
 }
 span.gray {
   color: #666;
@@ -3487,4 +3490,31 @@ table.sub01-1 tbody td {
 
 .SCM_010_01_table colgroup col.fix {
   width: 5.75rem;
+}
+
+.TCS_001_03_img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.TCS_001_03_img img {
+  width: 100%;
+  max-width: 20rem;
+}
+.TCS_001_03_img .text {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.PTS_TCS_001_04_table tbody td {
+  cursor: pointer;
+}
+
+.attached-file {
+  display: block;
+  text-decoration: underline;
+  color: var(--primary);
+  margin: 0.5rem 0;
 }/*# sourceMappingURL=style.css.map */
