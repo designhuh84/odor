@@ -3476,4 +3476,8 @@ table.sub01-1 tbody td {
 
 .table-container:has(.SCM_007_02_table2) {
   height: 100%;
+}
+
+.SCM_010_01_table colgroup col.fix {
+  width: 5.75rem;
 }/*# sourceMappingURL=style.css.map */
