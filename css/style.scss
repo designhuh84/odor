@@ -1959,6 +1959,11 @@ table.sub01-1-tables{
             white-space: nowrap;
         }
     }
+    &:has(input[type='text']){
+        label{
+            white-space: nowrap;
+        }
+    }
 }
 
 .contents-bottom-button-row{
@@ -3867,6 +3872,10 @@ table.sub01-1{
     &.STS_009_01_popup{
         width: 100%;
         max-width: 45rem;
+    }
+    &.TCS_001_02_popup{
+        width: 100%;
+        max-width: 60rem;
     }
 }
 

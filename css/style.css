@@ -1710,6 +1710,9 @@ table.sub01-1-tables input, table.sub01-1-tables select {
 .common__checkbox-group .label-row label {
   white-space: nowrap;
 }
+.common__checkbox-group:has(input[type=text]) label {
+  white-space: nowrap;
+}
 
 .contents-bottom-button-row {
   display: flex;
@@ -3404,6 +3407,10 @@ table.sub01-1 tbody td {
 .popup .container.STS_009_01_popup {
   width: 100%;
   max-width: 45rem;
+}
+.popup .container.TCS_001_02_popup {
+  width: 100%;
+  max-width: 60rem;
 }
 
 .SCM_009_01_select {
