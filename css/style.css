@@ -3464,4 +3464,12 @@ table.sub01-1 tbody td {
 }
 .grid-layout .col-12 {
   grid-column: span 12;
+}
+
+.SCM_007_02_table2 {
+  height: 100%;
+}
+
+.table-container:has(.SCM_007_02_table2) {
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
