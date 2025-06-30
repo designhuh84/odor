@@ -3480,15 +3480,22 @@ table.sub01-1 tbody td {
   grid-column: span 12;
 }
 
-.SCM_007_02_table2 {
-  height: 100%;
-}
-
 .table-container:has(.SCM_007_02_table2) {
   height: 100%;
 }
-
-.SCM_010_01_table colgroup col.fix {
+.table-container table.SCM_007_02_table1 th, .table-container table.SCM_007_02_table1 td {
+  padding: 0.3rem 1rem;
+}
+.table-container table.SCM_007_02_table2 {
+  height: 100%;
+}
+.table-container table.SCM_007_02_table2 th {
+  padding: 0.3rem 1rem;
+}
+.table-container table.SCM_007_02_table3 th, .table-container table.SCM_007_02_table3 td {
+  padding: 0.3rem 1rem;
+}
+.table-container table.SCM_010_01_table colgroup col.fix {
   width: 5.75rem;
 }
 

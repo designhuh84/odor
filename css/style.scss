@@ -3948,22 +3948,41 @@ table.sub01-1{
     }
 }
 
-.SCM_007_02_table2{
-    height: 100%;
-}
-.table-container:has(.SCM_007_02_table2){
-    height: 100%;
-}
+.table-container{
+    &:has(.SCM_007_02_table2){
+        height: 100%;
+    }
+    table{
+        &.SCM_007_02_table1{
+            th, td{
+                padding: 0.3rem 1rem;
+            }
+        }
 
-.SCM_010_01_table{
-    colgroup{
-        col{
-            &.fix{
-                width: 5.75rem;
+        &.SCM_007_02_table2{
+            th{
+                padding: 0.3rem 1rem;
+            }
+            height: 100%;
+        }
+        &.SCM_007_02_table3{
+            th, td{
+                padding: 0.3rem 1rem;
+            }
+        }
+        &.SCM_010_01_table{
+            colgroup{
+                col{
+                    &.fix{
+                        width: 5.75rem;
+                    }
+                }
             }
         }
     }
 }
+
+
 
 .TCS_001_03_img{
     display: flex;

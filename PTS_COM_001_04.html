@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원가입
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            사업자 회원가입
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">사업자 - 정보입력</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">사업자 정보입력</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col><col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <td class="category" colspan="4">업체정보</td>
+                            </tr>
+                            <tr>
+                                <th class="required">사업자등록번호</th>
+                                <td><input type="text" disabled></td>
+                                <th class="required">사업장 명</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th class="required">영업상태</th>
+                                <td>
+                                    <select class="large">
+                                        <option>영업</option>
+                                    </select>
+                                </td>
+                                <th class="required">법인등록번호</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>회사(사업장) 전화번호</th>
+                                <td><input type="text"></td>
+                                <th>종업원수</th>
+                                <td><input type="text" class="mid"></td>
+                            </tr>
+                            <tr>
+                                <th class="required">회사(사업장)주소</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="text" id="address-01" placeholder="주소검색 버튼을 누르세요" readonly class="large">
+                                        <input type="text" id="address-02" placeholder="나머지 주소" class="large">
+                                        <button type="button" class="btn icon search primary" id="search-address">주소검색</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>주요 생산품</th>
+                                <td><input type="text"></td>
+                                <th>업종</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text">
+                                        <button type="button" class="btn primary">업종검색</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">배출원유형</th>
+                                <td colspan="3">
+                                    <select class="large">
+                                        <option>규모미만</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">첨부파일</div>
+                        <button type="button" class="btn icon plus primary">파일추가</button>
+                        <button type="button" class="btn icon minus secondary">파일삭제</button>
+                    </div>
+
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">대표자 추가 정보입력</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col><col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">대표자 여부</th>
+                                <td colspan="3">
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="sample-radio" value="Y">
+                                            <label>예</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="sample-radio" value="N">
+                                            <label>아니오</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">대표자명</th>
+                                <td><input type="text" disabled></td>
+                                <th>대표자 생년월일</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th class="required">대표자 휴대전화번호</th>
+                                <td colspan="3"><input type="text"></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">정보입력</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">성명</th>
+                                <td><input type="text" class="large" disabled></td>
+                            </tr>
+                            <tr>
+                                <th class="required">휴대전화번호</th>
+                                <td>
+                                    <div class="row">
+                                        <select class="mid" disabled>
+                                            <option>010</option>
+                                        </select>
+                                        <span>-</span>
+                                        <input type="text" class="large" disabled>
+                                        <span>-</span>
+                                        <input type="text" class="large" disabled>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일주소</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" class="large">
+                                        <span>@</span>
+                                        <input type="text" class="large">
+                                        <select class="large">
+                                            <option>직접입력</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>부서명</th>
+                                <td>
+                                    <input type="text" class="large">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">직급</th>
+                                <td><input type="text" class="large"></td>
+                            </tr>
+                            <tr>
+                                <th>정보수신동의</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="radio" value="Y">
+                                            <label>예</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio" value="N">
+                                            <label>아니오</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>정보수신채널</th>
+                                <td>
+                                    <div class="row">
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>SMS</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>E-Mail</label>
+                                        </div>
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>카카오톡</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="contents-bottom-button-row">
+                        <button type="button" class="btn secondary">취소</button>
+                        <button type="button" class="btn primary">가입</button>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('#search-address').addEventListener('click', () => {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    console.log(data);
+                    document.querySelector('#address-01').value = data.address;
+                    document.querySelector('#address-02').focus();
+                }
+            }).open();
+        });
+    });
+
+</script>
+</html>
