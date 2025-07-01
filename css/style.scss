@@ -1591,6 +1591,7 @@ global-header-menu{
         }
         td{
             color: #4D4D4D;
+            background-color: #FFF;
 
             .common__search{
                 height: 1.75rem;
@@ -1598,6 +1599,7 @@ global-header-menu{
 
             input[type='text'],
             input[type='date'],
+            input[type='datetime-local'],
             input[type='password'],
             select
             {
@@ -1640,6 +1642,35 @@ global-header-menu{
                 }
                 &.right{
                     text-align: right;
+                }
+            }
+            .label{
+                font-weight: 600;
+                color: #000;
+                padding: 0.5rem 0;
+                padding-left: 1em;
+                text-indent: -1em;
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    width: 0.4em;
+                    height: 0.4em;
+                    border-radius: 0.2em;
+                    background-color: var(--primary);
+                    margin-right: 0.6em;
+                    transform: translateY(-50%);
+                }
+            }
+
+            .td-info{
+                display: flex;
+                align-items: center;
+                padding: 1rem;
+                background-color: var(--th);
+                gap: 1rem;
+                .text{
+                    font-weight: 600;
+                    color: var(--primary);
                 }
             }
         }
@@ -3880,6 +3911,70 @@ table.sub01-1{
         width: 100%;
         max-width: 60rem;
     }
+    &.CCS_003_01_popup{
+        width: 100%;
+        max-width: 45rem;
+    }
+    &.CCS_003_01_popup-02{
+        width: 100%;
+        max-width: 45rem;
+    }
+    &.CCS_003_01_popup-03{
+        width: 100%;
+        max-width: 60rem;
+    }
+    &.CCS_003_01_popup-04{
+        width: 100%;
+        max-width: 67rem;
+    }
+    &.CCS_003_02_popup{
+        width: 100%;
+        max-width: 67rem;
+    }
+    &.CCS_003_02_popup-02{
+        width: 100%;
+        max-width: 60rem;
+        table{
+            colgroup{
+                col{
+                    &.header2{
+                        width: 7.5rem;
+                    }
+                    &.td{
+                        width: 10rem;
+                    }
+                }
+            }
+        }
+    }
+    &.CCS_003_02_popup-03{
+        width: 100%;
+        max-width: 60rem;
+    }
+    &.CCS_003_02_popup-04{
+        width: 100%;
+        max-width: 60rem;
+    }
+    &.CCS_003_02_popup-05{
+        width: 100%;
+        max-width: 60rem;
+        table{
+            colgroup{
+                col{
+                    &.header2{
+                        width: 7.5rem;
+                    }
+                    &.td{
+                        width: 10rem;
+                    }
+                }
+            }
+        }
+    }
+    &.CCS_003_02_popup-06{
+        width: 100%;
+        max-width: 60rem;
+    }
 }
 
 .SCM_009_01_select{
@@ -4012,5 +4107,13 @@ table.sub01-1{
     display: block;
     text-decoration: underline;
     color: var(--primary);
+    margin: 0.5rem 0;
+}
+
+.map-area{
+    width: 100%;
+    aspect-ratio: 5/1;
+    background-color: #FFF;
+    border: solid 1px #BFBFBF;
     margin: 0.5rem 0;
 }

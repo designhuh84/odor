@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원서비스
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원접수
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">민원접수 목록</div>
+                <div class="contents">
+                    
+                    <div class="table-button-row">
+                        <div class="section-header">조회 조건</div>
+                        <button type="button" class="btn secondary">수동접수</button>
+                        <button type="button" class="btn icon search primary">조회</button>
+                    </div>
+
+                    <div class="search-area">
+                        <div class="col">
+                            <label>민원 등록유형</label>
+                            <select>
+                                <option>전체</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>처리상태</label>
+                            <select>
+                                <option>전체</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>악취종류</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>전체</option>
+                                </select>    
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>관할지역</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>악취강도</label>
+                            <select>
+                                <option>전체</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>접수일자</label>
+                            <div class="col__row">
+                                <input type="date">
+                                <input type="date">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>접수번호</label>
+                            <input type="text">
+                        </div>
+                        <div class="col">
+                            <label>접수자</label>
+                            <input type="text">
+                        </div>
+                        <div class="col">
+                            <label>민원인 연락처</label>
+                            <input type="text">
+                        </div>
+                        <div class="col">
+                            <label>민원인</label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">조회 결과</div>
+                        <button type="button" class="btn secondary" onclick="openCustomPopup('custom-03')">민원 병합 및 접수</button>
+                        <button type="button" class="btn secondary" onclick="openCustomPopup('custom-04')">민원 병합관리</button>
+                        <button type="button" class="btn icon excel">엑셀다운로드</button>
+                    </div>
+                    <div>
+                        grid area
+                        <br><button type="button" onclick="openCustomPopup('custom-01')">접수처리 업무담당자 알림 지정 팝업</button>
+                        <br><button type="button" onclick="openCustomPopup('custom-02')">기한연장 사유 입력 팝업</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container CCS_003_01_popup">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">처리 담당자 지정</div>
+                    <button type="button" class="btn secondary">단순종결</button>
+                    <button type="button" class="btn secondary">알림없이 접수</button>
+                    <button type="button" class="btn primary">알림발송 후 접수</button>
+                </div>
+                <div>grid area</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-02">
+        <div class="container CCS_003_01_popup-02">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">처리기한 연장 사유 입력</div>
+                    <button type="button" class="btn primary">연장하기</button>
+                </div>
+                <textarea rows="4"></textarea>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-03">
+        <div class="container CCS_003_01_popup-03">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">민원 병합 및 접수</div>
+                    <button type="button" class="btn secondary">알림없이 병합</button>
+                    <button type="button" class="btn primary">알림발송 후 병합</button>
+                </div>
+                <div>grid area</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-04">
+        <div class="container CCS_003_01_popup-04">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">민원 병합관리</div>
+                    <button type="button" class="btn icon search primary">조회</button>
+                </div>
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header"><col><col class="header"><col>
+                        </colgroup>
+                        <tr>
+                            <th>병합 일자</th>
+                            <td>
+                                <div class="row">
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </td>
+                            <th>병합 ID</th>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>병합 사유</th>
+                            <td><input type="text"></td>
+                            <th>병합자</th>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th>접수번호</th>
+                            <td colspan="3"><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="table-button-row">
+                    <div class="section-header">민원병합 목록</div>
+                    <button type="button" class="btn icon save blue">저장</button>
+                </div>
+                <div>grid area</div>
+
+                <div class="table-button-row">
+                    <div class="section-header">병합처리된 민원신청 목록</div>
+                    <button type="button" class="btn primary">민원 추가병합</button>
+                    <button type="button" class="btn icon save blue">저장</button>
+                </div>
+                <div>grid area</div>
+
+                
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

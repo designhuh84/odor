@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원서비스
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원접수
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">민원접수 상세</div>
+                <div class="contents">
+                    
+                    <div class="table-button-row margin-top-0 padding-top-0">
+                        <div class="section-header">민원 접수</div>
+                        <button type="button" class="btn icon write green">민원접수 수정</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col><col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th rowspan="2" class="required">대상주소</th>
+                                <td colspan="3">
+                                    <div class="label">악취 감지지역</div>
+                                    <div class="row">
+                                        <input type="text" class="large">
+                                        <button type="button" class="btn primary">주소검색</button>
+                                    </div>
+                                    <div class="map-area">map</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="td-info">
+                                        <div class="text">짐작되는 악취 발생 예상 지역이 있나요?</div>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="radio" value="Y">
+                                                <label>예</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio" value="N">
+                                                <label>아니오</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="label">악취 발생 예상지역</div>
+                                    <div class="row">
+                                        <input type="text" class="large">
+                                        <button type="button" class="btn primary">주소검색</button>
+                                    </div>
+                                    <div class="map-area">map</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">악취종류</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <select class="large">
+                                            <option></option>
+                                        </select>
+                                        <select class="large">
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>악취강도</th>
+                                <td>
+                                    <select class="large">
+                                        <option></option>
+                                    </select>
+                                </td>
+                                <th class="required">악취감지일시</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="date">
+                                        <input type="date">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">민원인 성명</th>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <th class="required">민원인 연락처</th>
+                                <td>
+                                    <div class="row">
+                                        <select class="mid">
+                                            <option>010</option>
+                                        </select>
+                                        <input type="text" class="large">
+                                        <input type="text" class="large">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">민원인 구분</th>
+                                <td colspan="3">
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="radio" value="Y">
+                                            <label>개인</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio" value="N">
+                                            <label>다수</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>민원내용</th>
+                                <td colspan="3">
+                                    <textarea rows="3"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">민원 접수</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col><col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">접수자</th>
+                                <td><input type="text" disabled></td>
+                                <th class="required">접수일시</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th class="required">처리 담당자</th>
+                                <td><input type="text" disabled></td>
+                                <th>처리상태</th>
+                                <td><input type="text" disabled></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">민원 현장조사</div>
+                        <button type="button" class="btn icon plus primary" onclick="openCustomPopup('custom-01')">현장조사 등록</button>
+                    </div>
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">민원 대상 배출원</div>
+                        <button type="button" class="btn icon plus primary" onclick="openCustomPopup('custom-02')">배출원 등록</button>
+                    </div>
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">민원 시료채취</div>
+                        <button type="button" class="btn icon plus primary" onclick="openCustomPopup('custom-05')">시료채취 등록</button>
+                    </div>
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">시료 분석결과</div>
+                        <button type="button" class="btn icon save blue">저장</button>
+                    </div>
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">민원 위반사항 및 행정처분</div>
+                        <button type="button" class="btn icon plus primary" onclick="openCustomPopup('custom-06')">위반 및 처분내용 등록</button>
+                    </div>
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">최종 처리결과 입력 (민원인에게 보여질 내용)</div>
+                        <button type="button" class="btn icon save blue">저장 및 처리완료</button>
+                    </div>
+                    <div>grid area</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container CCS_003_02_popup">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">현장조사 결과 입력</div>
+                    <button type="button" class="btn icon save blue">저장</button>
+                </div>
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header"><col><col class="header"><col>
+                        </colgroup>
+                        <tr>
+                            <th class="required">조사일시</th>
+                            <td><input type="datetime-local" class="large"></td>
+                            <th class="required">조사자</th>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="td-info">
+                                    <div class="text">악취 배출원이 무엇인지 특정 가능한가요?</div>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="radio" value="Y">
+                                            <label>예</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="radio" value="N">
+                                            <label>아니오(원인불명)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="required">악취 유형</th>
+                            <td colspan="3">
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="radio1" value="1">
+                                        <label>산업 악취</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio1" value="2">
+                                        <label>축산 악취</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio1" value="3">
+                                        <label>생활 악취</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>악취 발생지역</th>
+                            <td colspan="3">
+                                <div class="row">
+                                    <button type="button" class="btn skyblue">악취 감지지역 가져오기</button>
+                                    <button type="button" class="btn skyblue">악취 발생예상지역 가져오기</button>
+                                </div>
+                                <div class="row">
+                                    <input type="text" id="address-01" class="large">
+                                    <button type="button" class="btn primary" id="search-address">주소검색</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>비고</th>
+                            <td colspan="3">
+                                <textarea rows="3"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-02">
+        <div class="container CCS_003_02_popup-02">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">대상 배출원 정보 입력</div>
+                    <button type="button" class="btn icon save blue">저장</button>
+                </div>
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header"><col class="header2"><col class="td"><col class="header"><col>
+                        </colgroup>
+                        <tr>
+                            <th rowspan="3">배출원</th>
+                            <th class="required">유형</th>
+                            <td colspan="3">
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="Y">
+                                        <label>사업장</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="N">
+                                        <label>환경기초시설</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="N">
+                                        <label>생활악취시설</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="required">사업장 명</th>
+                            <td colspan="3">
+                                <div class="row">
+                                    <input type="text" class="large" disabled>
+                                    <button type="button" class="btn primary">선택</button>
+                                    <button type="button" class="btn secondary">초기화</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="required">업종</th>
+                            <td colspan=3>
+                                <select class="large">
+                                    <option>전체</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="required">악취관리지역</th>
+                            <td colspan="2">
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="Y">
+                                        <label>대상</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="N">
+                                        <label>대상 아님</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <th class="required">악취배출시설</th>
+                            <td>
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="Y">
+                                        <label>설치함</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="N">
+                                        <label>설치 안함</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="required">신고대상시설</th>
+                            <td colspan="2">
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="Y">
+                                        <label>대상</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="N">
+                                        <label>대상 아님</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>소속 산업·농공단지</th>
+                            <td>
+                                <div class="row">
+                                    <input type="text">
+                                    <button type="button" class="btn primary">선택</button>
+                                    <button type="button" class="btn secondary">초기화</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="required">규모미만 사업장</th>
+                            <td colspan="2">
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="Y">
+                                        <label>대상</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="N">
+                                        <label>대상 아님</label>
+                                    </div>
+                                </div>
+                            </td>
+                            <th class="required">시료채취</th>
+                            <td>
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="Y">
+                                        <label>채취함</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio" value="N">
+                                        <label>채취 안함</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- on => display: table-row; / off => display: none; -->
+                        <tr>
+                            <th>환경기초시설 내용</th>
+                            <td colspan="4"></td>
+                        </tr>
+                        <tr>
+                            <th>비고</th>
+                            <td colspan="4">
+                                <input type="text">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-03">
+        <div class="container CCS_003_02_popup-03">
+            
+            <div class="header">
+                <div class="title">배출원 사업장 선택 팝업</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">조회 조건</div>
+                    <button type="button" class="btn icon search primary">조회</button>
+                </div>
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header"><col><col class="header"><col>
+                        </colgroup>
+                        <tr>
+                            <th>소재지(시/도)</th>
+                            <td>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </td>
+                            <th>배출원 사업장 명</th>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table-button-row">
+                    <div class="section-header">조회 결과</div>
+                    <button type="button" class="btn primary">선택</button>
+                </div>
+                <div>grid area</div>
+                
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-04">
+        <div class="container CCS_003_02_popup-04">
+            
+            <div class="header">
+                <div class="title">환경기초시설 선택 팝업</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">조회 조건</div>
+                    <button type="button" class="btn icon search primary">조회</button>
+                </div>
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header"><col><col class="header"><col>
+                        </colgroup>
+                        <tr>
+                            <th>소재지(시/도)</th>
+                            <td>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </td>
+                            <th>환경기초시설명</th>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table-button-row">
+                    <div class="section-header">조회 결과</div>
+                    <button type="button" class="btn primary">선택</button>
+                </div>
+                <div>grid area</div>
+                
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-05">
+        <div class="container CCS_003_02_popup-05">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">시료채취 정보 입력</div>
+                    <button type="button" class="btn icon save blue">저장</button>
+                </div>
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header"><col class="header2"><col class="td"><col class="header"><col>
+                        </colgroup>
+                        <tr>
+                            <th class="required">일시</th>
+                            <td colspan="2"><input type="datetime-local" class="large"></td>
+                            <th class="required">채취자</th>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th class="required">종류</th>
+                            <td colspan="2">
+                                <div class="row">
+                                    <select>
+                                        <option>전체</option>
+                                    </select>
+                                    <select>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>시료명</th>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">채취 위치</th>
+                            <th class="required">지점</th>
+                            <td colspan="3">
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="radio1" value="1">
+                                        <label>부지경계</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio1" value="2">
+                                        <label>배출구</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio1" value="3">
+                                        <label>기타</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="row">
+                                    <input type="text">
+                                    <button type="button" class="btn primary">주소검색</button>
+                                    <button type="button" class="btn skyblue">악취 감지지역 가져오기</button>
+                                </div>
+                                <div class="map-area">map</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="required">엄격기준</th>
+                            <td colspan="4">
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="radio1" value="1">
+                                        <label>적용</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="radio1" value="2">
+                                        <label>미적용</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>비고</th>
+                            <td colspan="4">
+                                <textarea rows="3"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-06">
+        <div class="container CCS_003_02_popup-06">
+            
+            <div class="header">
+                <div class="title">popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">위반사항 및 행정처분 결과 입력</div>
+                    <button type="button" class="btn icon save blue">저장</button>
+                </div>
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header"><col>
+                        </colgroup>
+                        <tr>
+                            <td class="category" colspan="2">위반사항</td>
+                        </tr>
+                        <tr>
+                            <th class="required">일자</th>
+                            <td><input type="date" class="large"></td>
+                        </tr>
+                        <tr>
+                            <th class="required">종류</th>
+                            <td>
+                                <select class="large">
+                                    <option>전체</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="category" colspan="2">행정처분</td>
+                        </tr>
+                        <tr>
+                            <th>일자</th>
+                            <td><input type="datetime-local" class="large"></td>
+                        </tr>
+                        <tr>
+                            <th>종류</th>
+                            <td>
+                                <select class="large">
+                                    <option>전체</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>처분 내용</th>
+                            <td><input type="text" placeholder="종류가 ‘기타‘인 경우 입력해주세요."></td>
+                        </tr>
+                        <tr>
+                            <th>비고</th>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('#search-address').addEventListener('click', () => {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    console.log(data);
+                    document.querySelector('#address-01').value = data.address;
+                }
+            }).open();
+        });
+    });
+
+
+
+</script>
+</html>
