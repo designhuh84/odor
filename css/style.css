@@ -20,6 +20,8 @@
   --th: #F8FBF8;
   --tr-hover: #F7F9EC;
   --infobox: #F4FBF4;
+  --gray: #A2A8B3;
+  --gray-hover: #848B9A;
 }
 
 * {
@@ -103,6 +105,10 @@ input[type=file] {
 input[type=radio] {
   margin: 0;
   padding: 0;
+}
+
+input.center {
+  text-align: center;
 }
 
 input.number {
@@ -1178,6 +1184,13 @@ global-header-menu .col .menu:hover {
 .btn.black::before {
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
+.btn.lightgray {
+  background-color: var(--gray);
+  color: #FFF;
+}
+.btn.lightgray:hover {
+  background-color: var(--gray-hover);
+}
 .btn.icon {
   gap: 0.38rem;
 }
@@ -1317,6 +1330,10 @@ global-header-menu .col .menu:hover {
   display: flex;
   gap: 0.5rem;
   margin-left: auto;
+}
+.table-button-row .row {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .table-container {
@@ -1745,6 +1762,12 @@ table.sub01-1-tables input, table.sub01-1-tables select {
 }
 .common__checkbox-group:has(input[type=text]) label {
   white-space: nowrap;
+}
+.common__checkbox-group.red input[type=checkbox] {
+  accent-color: var(--red);
+}
+.common__checkbox-group.red label {
+  color: var(--red);
 }
 
 .contents-bottom-button-row {
@@ -3579,6 +3602,21 @@ table.sub01-1 tbody td {
 }
 .table-container table.SCM_010_01_table colgroup col.fix {
   width: 5.75rem;
+}
+.table-container table.SCM_001_03_table th, .table-container table.SCM_001_03_table td {
+  padding: 0.25rem 1rem;
+}
+.table-container table.SCM_001_03_table td {
+  padding: 0.25rem;
+}
+.table-container table.SCM_001_03_table td:hover {
+  background-color: var(--tr-hover) !important;
+}
+.table-container table.SCM_001_03_table td.category {
+  pointer-events: none;
+}
+.table-container table.SCM_001_03_table tbody tr:hover td {
+  background-color: #FFF;
 }
 
 .TCS_001_03_img {

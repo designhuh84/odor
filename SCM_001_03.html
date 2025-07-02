@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시료관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            악취 기술지원 시료채취기록표 등록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">악취시료</div>
+                    <div class="menus">
+                        <a href="./SCM_001_01.html" class="menu current">기술지원 분석</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">악취 기술지원 시료채취기록표 등록</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">시료채취기록표</div>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon delete red">삭제</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                        <button type="button" class="btn icon print skyblue">출력</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write fixed SCM_001_03_table">
+                            <colgroup>
+                                <col><col><col><col><col><col><col><col><col><col>
+                                <col><col><col><col><col><col><col><col><col><col>
+                                <col><col><col><col><col><col><col><col><col><col>
+                            </colgroup>
+                            <tr>
+                                <th colspan="6">시료채취일자</th>
+                                <td colspan="6">
+                                    <input type="text" disabled>
+                                </td>
+                                <th colspan="6">시료채취시간</th>
+                                <td colspan="12">
+                                    <div class="row">
+                                        <select class="mid">
+                                            <option></option>
+                                        </select>
+                                        <span>시</span>
+                                        <select class="mid">
+                                            <option></option>
+                                        </select>
+                                        <span>분 ~</span>
+                                        <select class="mid">
+                                            <option></option>
+                                        </select>
+                                        <span>시</span>
+                                        <select class="mid">
+                                            <option></option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="6" rowspan="3">시료채취자 인적사항</th>
+                                <th colspan="6" class="center">① 소 속</th>
+                                <th colspan="6" class="center">② 직 명</th>
+                                <th colspan="6" class="center">③ 성 명</th>
+                                <th colspan="6" class="center">④ 성 별</th>
+                            </tr>
+                            <tr>
+                                <td colspan="6"><input type="text"></td>
+                                <td colspan="6"><input type="text"></td>
+                                <td colspan="6"><input type="text"></td>
+                                <td colspan="6"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6"><input type="text"></td>
+                                <td colspan="6"><input type="text"></td>
+                                <td colspan="6"><input type="text"></td>
+                                <td colspan="6"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="6" rowspan="2">시료채취업소</th>
+                                <th colspan="6">① 업 소 명</th>
+                                <td colspan="18"><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th colspan="6">② 소 재 지</th>
+                                <td colspan="18"><input type="text" disabled></td>
+                            </tr>
+                            <tr>
+                                <th colspan="6">공장의 조업상태</th>
+                                <td colspan="24"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="6">시료채취 장소</th>
+                                <th colspan="6">① 위 치</th>
+                                <td colspan="6"><input type="text" disabled></td>
+                                <th colspan="6">② 특 징</th>
+                                <td colspan="6">
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="" checked>
+                                            <label>배출구</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>부지경계</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="6">시료채취지점</th>
+                                <td colspan="12">
+                                    <div class="row">
+                                        ① 채취지점 (높이, m)    - 지상으로부터 (
+                                        <input type="text" class="mid">
+                                        ) m
+                                    </div>
+                                </td>
+                                <td colspan="12">
+                                    <div class="row">
+                                        ② 공정 및 시설 -
+                                        <div class="common__checkbox-group">
+                                            <input type="checkbox">
+                                            <label>지  하</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="6" rowspan="2">(5) 시료채취시 기상상태</th>
+                                <th colspan="5" class="center">① 날 씨</th>
+                                <th colspan="5" class="center">② 기 온</th>
+                                <th colspan="5" class="center">③ 풍 향</th>
+                                <th colspan="5" class="center">④ 풍 속</th>
+                                <th colspan="4" class="center">⑤ 기타 기상상태</th>
+                            </tr>
+                            <tr>
+                                <td colspan="5"><input type="text"></td>
+                                <td colspan="5">
+                                    <div class="row">
+                                        <input type="text" class="number">
+                                        <span>℃</span>
+                                    </div>
+                                </td>
+                                <td colspan="5"><input type="text"></td>
+                                <td colspan="5">
+                                    <div class="row">
+                                        <input type="text" class="number">
+                                        <span>m/s</span>
+                                    </div>
+                                </td>
+                                <td colspan="4"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4" class="category">복합악취</td>
+                                <th colspan="5">시료채취주머니 종류</th>
+                                <td colspan="24"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="5">
+                                    시료채취자 의견
+                                    <small>(사업장, 현황, 시료채취사항 등)</small>
+                                </th>
+                                <td colspan="24"><textarea rows="2"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th colspan="5">현장시료채취 냄새강도</th>
+                                <td colspan="14">
+                                    <select>
+                                        <option>① 냄새가 느낄 수 없다.</option>
+                                        <option>② 무슨 냄새인지 알 수 없으나, (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) 한 냄새가 느껴진다.</option>
+                                        <option>③ 무슨 냄새인지 알 수 없으나 복합적으로 여러 물질이 혼합되어 나타나는 냄새로 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)한 냄새를 느낄 수 있다.</option>
+                                        <option>④ (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)한 냄새를 느낄 수 있으나, 어떤 물질인지는 알 수가 없고, 심미적으로 혐오감을 느낀다.</option>
+                                        <option>⑤ 강한 혐오감을 느낀다.</option>
+                                        <option>⑥ 기타 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</option>
+                                    </select>
+                                </td>
+                                <th colspan="3">내용</th>
+                                <td colspan="7"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="5">냄새의 주성분</th>
+                                <td colspan="24"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="30" class="category">지정악취<br>(채취방법 및 측정조건)</td>
+                            </tr>
+                            <tr>
+                                <th colspan="5">① 황화합물 (시료채취백)</th>
+                                <th colspan="5">② TMA (임핀져)</th>
+                                <th colspan="5">③ 암모니아 (임핀져)</th>
+                                <th colspan="5">④ 지방산류 (임핀져)</th>
+                                <th colspan="5">⑤ 알데하이드류(DNPH)</th>
+                                <th colspan="5">⑥ VOCs (고체흡착관)</th>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="center">
+                                    <div class="row">
+                                        <input type="text" class="number">
+                                        <span>L</span>
+                                    </div>
+                                </td>
+                                <td colspan="5" class="center">
+                                    <div class="row">
+                                        <span>&nbsp;</span>
+                                        <input type="text" class="number">
+                                        <span>L</span>
+                                    </div>
+                                    <div class="row">
+                                        <span>(</span>
+                                        <input type="text" class="number">
+                                        <span>L/min)</span>
+                                    </div>
+                                </td>
+                                <td colspan="5" class="center">
+                                    <div class="row">
+                                        <span>&nbsp;</span>
+                                        <input type="text" class="number">
+                                        <span>L</span>
+                                    </div>
+                                    <div class="row">
+                                        <span>(</span>
+                                        <input type="text" class="number">
+                                        <span>L/min)</span>
+                                    </div>
+                                </td>
+                                <td colspan="5" class="center">
+                                    <div class="row">
+                                        <span>&nbsp;</span>
+                                        <input type="text" class="number">
+                                        <span>L</span>
+                                    </div>
+                                    <div class="row">
+                                        <span>(</span>
+                                        <input type="text" class="number">
+                                        <span>L/min)</span>
+                                    </div>
+                                </td>
+                                <td colspan="5" class="center">
+                                    <div class="row">
+                                        <span>&nbsp;</span>
+                                        <input type="text" class="number">
+                                        <span>L</span>
+                                    </div>
+                                    <div class="row">
+                                        <span>(</span>
+                                        <input type="text" class="number">
+                                        <span>L/min)</span>
+                                    </div>
+                                </td>
+                                <td colspan="5" class="center">
+                                    <div class="row">
+                                        <span>&nbsp;</span>
+                                        <input type="text" class="number">
+                                        <span>L</span>
+                                    </div>
+                                    <div class="row">
+                                        <span>(</span>
+                                        <input type="text" class="number">
+                                        <span>L/min)</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="6" rowspan="2">(11) 기타 사항</th>
+                                <td colspan="6">
+                                    <div class="row">
+                                        <select>
+                                            <option>정상조업</option>
+                                            <option>부분조업</option>
+                                            <option>비조업</option>
+                                        </select>
+                                        <select>
+                                            <option>0도</option>
+                                            <option>1도</option>
+                                            <option>2도</option>
+                                            <option>3도</option>
+                                            <option>4도</option>
+                                            <option>5도</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th colspan="6">측정지점 특이사항</th>
+                                <td colspan="12">
+                                    <div class="row">
+                                        <select>
+                                            <option>개방상태</option>
+                                            <option>밀폐상태</option>
+                                        </select>
+                                        <select>
+                                            <option>포기중</option>
+                                            <option>비포기</option>
+                                        </select>
+                                        <select>
+                                            <option>방지시설가동</option>
+                                            <option>방지시설비가동</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="24">
+                                    <div class="common__checkbox-group red">
+                                        <input type="checkbox">
+                                        <label>유해화학물질 함유 가능성으로 인한 복합악취 분석(취급) 주의 요망</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        
+
+    });
+
+</script>
+</html>

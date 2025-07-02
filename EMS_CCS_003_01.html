@@ -111,9 +111,21 @@
 
                     <div class="table-button-row">
                         <div class="section-header">조회 결과</div>
-                        <button type="button" class="btn secondary" onclick="openCustomPopup('custom-03')">민원 병합 및 접수</button>
-                        <button type="button" class="btn secondary" onclick="openCustomPopup('custom-04')">민원 병합관리</button>
-                        <button type="button" class="btn icon excel">엑셀다운로드</button>
+                        <div class="row">
+                            <button type="button" class="btn yellow">처리기한 임박</button>
+                            <button type="button" class="btn red">처리기한 초과</button>
+                            <button type="button" class="btn green">민원 처리완료</button>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="btn lightgray">처리대기</button>
+                            <button type="button" class="btn lightgray">처리중</button>
+                            <button type="button" class="btn lightgray">전체</button>
+                        </div>
+                        <div class="row">
+                            <button type="button" class="btn secondary" onclick="openCustomPopup('custom-03')">민원 병합 및 접수</button>
+                            <button type="button" class="btn secondary" onclick="openCustomPopup('custom-04')">민원 병합관리</button>
+                            <button type="button" class="btn icon excel">엑셀다운로드</button>
+                        </div>
                     </div>
                     <div>
                         grid area

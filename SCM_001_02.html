@@ -101,7 +101,7 @@
                     </div>
 
                     <div class="table-button-row">
-                        <div class="section-header">기본 정보</div>
+                        <div class="section-header">분석의뢰 세부항목</div>
                         <button type="button" class="btn icon plus secondary">
                             행 추가
                         </button>
@@ -172,9 +172,6 @@
                         </table>
                     </div>
 
-
-
-
                 </div>
             </div>
         </div>
@@ -187,14 +184,7 @@
 
     document.addEventListener('DOMContentLoaded', () => {
 
-        document.querySelector('#TCD_003_03_request-cancel').addEventListener('change', event => {
-            const cancelForm = document.querySelector('#TCD_003_03_request-cancel-form');
-            const showcancelForm = () => {
-                cancelForm.style.display = 'block';
-                setTableWidth();
-            }
-            event.target.checked ? showcancelForm() : cancelForm.style.display = 'none';
-        });
+        
 
     });
 

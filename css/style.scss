@@ -21,6 +21,8 @@
     --th: #F8FBF8;
     --tr-hover: #F7F9EC;
     --infobox: #F4FBF4;
+    --gray: #A2A8B3;
+    --gray-hover: #848B9A;
 }
 
 *{
@@ -109,6 +111,10 @@ input[type='file']{
 input[type='radio']{
     margin: 0;
     padding: 0;
+}
+
+input.center{
+    text-align: center;
 }
 
 input.number{
@@ -1238,6 +1244,14 @@ global-header-menu{
         }
     }
 
+    &.lightgray{
+        background-color: var(--gray);
+        color: #FFF;
+        &:hover{
+            background-color: var(--gray-hover);
+        }
+    }
+
     &.icon{
         gap: 0.38rem;
         &::before{
@@ -1438,6 +1452,11 @@ global-header-menu{
         display: flex;
         gap: 0.5rem;
         margin-left: auto;
+    }
+
+    .row{
+        display: flex;
+        gap: 0.5rem;
     }
 
     // #add-new{
@@ -1996,6 +2015,14 @@ table.sub01-1-tables{
     &:has(input[type='text']){
         label{
             white-space: nowrap;
+        }
+    }
+    &.red{
+        input[type='checkbox']{
+            accent-color: var(--red);
+        }
+        label{
+            color: var(--red);
         }
     }
 }
@@ -4072,6 +4099,23 @@ table.sub01-1{
                         width: 5.75rem;
                     }
                 }
+            }
+        }
+        &.SCM_001_03_table{
+            th, td{
+                padding: 0.25rem 1rem;
+            }
+            td{
+                padding: 0.25rem;
+                &:hover{
+                    background-color: var(--tr-hover) !important;
+                }
+                &.category{
+                    pointer-events: none;
+                }
+            }
+            tbody tr:hover td{
+                background-color: #FFF;
             }
         }
     }
