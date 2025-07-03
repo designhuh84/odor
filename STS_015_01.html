@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            통계현황
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            배출 허용기준 통계
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">LNB Title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">배출 허용기준 통계</div>
+                <div class="contents">
+                    
+                    <div class="table-button-row padding-top-0">
+                        <div class="section-header">조회 조건</div>
+                        <button type="button" class="btn icon search primary">
+                            조회
+                        </button>
+                    </div>
+
+                    <div class="search-area">
+                        <div class="col">
+                            <label>시설 명</label>
+                            <input type="text">
+                        </div>
+                        <div class="col">
+                            <label>실적연도 기간</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>2019년</option>
+                                </select>
+                                <select>
+                                    <option>2024년</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>시설 구분</label>
+                            <select>
+                                <option>전체</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>지역 구분</label>
+                            <select>
+                                <option>전체</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>관리청</label>
+                            <select>
+                                <option>전체</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label>시도 / 시군구</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>측정 구분</label>
+                            <select>
+                                <option>전체</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-button-row">
+                        <button type="button" class="btn icon excel">엑셀다운로드</button>
+                    </div>
+                    <div>grid area</div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

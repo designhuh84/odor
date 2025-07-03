@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            사업장정보관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            사업장관리
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">사업장정보관리</div>
+                    <div class="menus">
+                        <a href="./EBP_001.html" class="menu current">사업장관리</a>
+                        <a href="./EBP_002.html" class="menu">변경신고서관리</a>
+                        <a href="./EBP_003_01.html" class="menu">지도점검 및 행정처분</a>
+                        <a href="#!" class="menu">악취관리지역</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">악취배출시설 사업장 상세</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <button type="button" class="btn icon list black">목록</button>
+                        <button type="button" class="btn icon delete red">삭제</button>
+                        <button type="button" class="btn primary" onclick="openCustomPopup('custom-01')">시료검사현황</button>
+                    </div>
+                    <div class="infobox margin-top-0">
+                        <div class="grid-layout">
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>사업장명</label>
+                                    자몽농장
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>사업자등록번호</label>
+                                    111-11-12345
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>법인등록번호</label>
+                                    123456-1234567
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>분류</label>
+                                    악취대기 공통
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>사업장 전화번호</label>
+                                    032-123-1234
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>산업분류번호</label>
+                                    00000 / OO업종
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>소재지</label>
+                                    강원도 영월군 한반로 123
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>대표자</label>
+                                    박대표
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>생년월일</label>
+                                    1954-12-25
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>주 생산품명</label>
+                                    자몽음료
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>악취관리지역여부 여부</label>
+                                    Y (남동국가산업단지)
+                                </div>
+                            </div>
+                            <div class="col-4"></div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>신고대상시설 여부</label>
+                                    N
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>중점관리 사업장 대상 여부</label>
+                                    Y
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>산업농공단지 대상 여부</label>
+                                    Y (창원산업단지)
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>설치예정일</label>
+                                    2023-11-12
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>가동 개시 예정일</label>
+                                    2023-11-20
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>종업원 수</label>
+                                    00명
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>연간매출금액</label>
+                                    10,000,000,000 원
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="li">
+                                    <label>계좌번호</label>
+                                    00은행 12323-01-31243
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="infobox">
+                        <p>※ “배출시설 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “배출시설 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
+                        <div class="button-row">
+                            <button type="button" class="btn icon download secondary">
+                                배출시설 양식 다운로드
+                            </button>
+                            <button type="button" class="btn icon upload secondary">
+                                배출시설 양식 업로드
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">악취 배출시설</div>
+                        <button type="button" class="btn icon plus secondary">행 추가</button>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon excel">엑셀다운로드</button>
+                    </div>
+
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">첨부파일</div>
+                    </div>
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">배출시설 수정 이력</div>
+                    </div>
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">배출시설 수정 상세이력</div>
+                    </div>
+                    <div>grid area</div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container EBP_001_03_popup">
+            
+            <div class="header">
+                <div class="title">시료검사 현황</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">분석의뢰 세부항목</div>
+                </div>
+                <div>grid area</div>
+
+                <div class="table-button-row">
+                    <div class="section-header">분석결과</div>
+                </div>
+                <div>grid area</div>
+
+            </div>
+
+            <div class="footer">
+                <button type="button" class="btn secondary btn-popup-close">닫기</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+    
+
+    
+
+</script>
+</html>

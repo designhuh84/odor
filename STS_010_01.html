@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            통계현황
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기술지원 공정별
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            공정별
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">LNB Title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">공정별</div>
+                <div class="contents">
+
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">공정별</div>
+                        <div class="tab" data-name="02">방지시설별</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+
+                        <div class="search-area">
+                            <div class="col full-width">
+                                <label>업종</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>대분류</option>
+                                    </select>
+                                    <select>
+                                        <option>중분류</option>
+                                    </select>
+                                    <select>
+                                        <option>소분류</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>공정</label>
+                                <select>
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>측정위치</label>
+                                <select>
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>기술지원 년도</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>2025</option>
+                                    </select>
+                                    <span>~</span>
+                                    <select>
+                                        <option>2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>실태조사 여부</label>
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="sample-radio" value="Y">
+                                        <label>Y</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="sample-radio" value="N">
+                                        <label>N</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>소재지</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>시도 선택</option>
+                                    </select>
+                                    <select>
+                                        <option>시구군 선택</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">조회 결과</div>
+                            <button type="button" class="btn icon excel">
+                                엑셀다운로드
+                            </button>
+                        </div>
+                        <div>grid area</div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">그룹별 통계</div>
+                        </div>
+                        
+                        <div class="chart-row">
+                            <div class="chart-col">
+                                <div class="chart">chart</div>
+                            </div>
+                            <div class="chart-col">
+                                <div class="chart">chart</div>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">악취물질별 통계</div>
+                        </div>
+                        
+                        <div class="chart-row">
+                            <div class="chart-col">
+                                <div class="chart">chart</div>
+                            </div>
+                            <div class="chart-col">
+                                <div class="chart">chart</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="tab-contents" data-name="02">
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+
+                        <div class="search-area">
+                            <div class="col full-width">
+                                <label>방지시설 종류</label>
+                                <select class="large">
+                                    <option>없음</option>
+                                </select>
+                            </div>
+
+                            <div class="col">
+                                <label>기술지원 년도</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>2025</option>
+                                    </select>
+                                    <span>~</span>
+                                    <select>
+                                        <option>2025</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <label>실태조사 여부</label>
+                                <div class="common__radio-group">
+                                    <div class="radio">
+                                        <input type="radio" name="sample-radio" value="Y">
+                                        <label>Y</label>
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="sample-radio" value="N">
+                                        <label>N</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">조회 결과</div>
+                            <button type="button" class="btn icon excel">
+                                엑셀다운로드
+                            </button>
+                        </div>
+                        <div>grid area</div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">그룹별 통계</div>
+                        </div>
+
+                        <div class="chart-row">
+                            <div class="chart-col">chart</div>
+                            <div class="chart-col">
+                                <div>chart</div>
+                                <div>chart</div>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <div class="section-header">악취물질별 통계</div>
+                        </div>
+
+                        <div class="chart-row">
+                            <div class="chart-col">chart</div>
+                            <div class="chart-col">
+                                <div>chart</div>
+                                <div>chart</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

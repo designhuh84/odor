@@ -207,6 +207,18 @@ small.yellow {
   color: #F1CD0E;
 }
 
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+
+.padding-top-0 {
+  padding-top: 0 !important;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
 global-header {
   flex-shrink: 0;
   display: flex;
@@ -994,7 +1006,7 @@ global-header-menu .col .menu:hover {
   background-color: var(--infobox);
   border: solid 1px var(--primary);
 }
-.search-area input {
+.search-area input:not([type=checkbox]) {
   width: 100%;
 }
 .search-area select {
@@ -1024,6 +1036,12 @@ global-header-menu .col .menu:hover {
   border-radius: 0.125rem;
   background-color: var(--primary);
 }
+.search-area .col > label input[type=checkbox] {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  transform: translateY(0.2rem);
+}
 .search-area .col.full-width {
   grid-column: 1/-1;
   grid-template-columns: 10.3125rem auto;
@@ -1033,6 +1051,21 @@ global-header-menu .col .menu:hover {
   gap: 0.5rem;
   flex-grow: 1;
   align-items: center;
+}
+.search-area .col__row.gap-1 {
+  gap: 1rem;
+}
+.search-area .col__row.gap-2 {
+  gap: 2rem;
+}
+.search-area .col__row.gap-3 {
+  gap: 3rem;
+}
+.search-area .col__row.gap-4 {
+  gap: 4rem;
+}
+.search-area .col__row.gap-5 {
+  gap: 5rem;
 }
 .search-area .common-search {
   display: flex;
@@ -1202,6 +1235,17 @@ global-header-menu .col .menu:hover {
   background-size: cover;
   background-position: center;
 }
+.btn.iconOnly {
+  gap: 0;
+}
+.btn.iconOnly::before {
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .btn.search::before {
   background-image: url(../image/Magnifer-bk.svg);
 }
@@ -1256,6 +1300,12 @@ global-header-menu .col .menu:hover {
 .btn.done::before {
   background-image: url(../image/check.svg);
 }
+.btn.arrowUp::before {
+  background-image: url(../image/Arrow-Up.svg);
+}
+.btn.arrowDown::before {
+  background-image: url(../image/Arrow-Down.svg);
+}
 .btn:disabled {
   background-color: #EEE;
   color: #999;
@@ -1281,6 +1331,26 @@ global-header-menu .col .menu:hover {
 .infobox .button-row {
   display: flex;
   gap: 0.44rem;
+}
+.infobox .li {
+  font-size: 0.875rem;
+  padding-left: 0.65rem;
+  text-indent: -0.65rem;
+}
+.infobox .li label {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0.3rem 0 0.65rem;
+}
+.infobox .li::before {
+  content: "";
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: var(--primary);
+  transform: translateY(-0.1rem);
 }
 
 .color-label {
@@ -1938,7 +2008,7 @@ table.sub01-1 tbody td {
   flex-direction: column;
   justify-content: flex-start;
 }
-.chart-row .chart-col .chart {
+.chart-row .chart {
   flex-grow: 1;
   display: flex;
   align-items: center;
@@ -2428,6 +2498,17 @@ table.sub01-1 tbody td {
   background-size: cover;
   background-position: center;
 }
+.sbgrid-theme-common-grid .sbgrid-custom > button.iconOnly {
+  gap: 0;
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.iconOnly::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .sbgrid-theme-common-grid .sbgrid-custom > button.search::before {
   background-image: url(../image/Magnifer-bk.svg);
 }
@@ -2475,6 +2556,12 @@ table.sub01-1 tbody td {
 .sbgrid-theme-common-grid .sbgrid-custom > button:disabled::before {
   filter: brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(0%) hue-rotate(149deg) brightness(103%) contrast(87%);
 }
+.sbgrid-theme-common-grid .sbgrid-custom > button.arrowUp::before {
+  background-image: url(../image/Arrow-Up.svg);
+}
+.sbgrid-theme-common-grid .sbgrid-custom > button.arrowDown::before {
+  background-image: url(../image/Arrow-Down.svg);
+}
 .sbgrid-theme-common-grid .sbgrid-row.green {
   background-color: #ECFEEC;
 }
@@ -2498,6 +2585,12 @@ table.sub01-1 tbody td {
 }
 .sbgrid-theme-common-grid .sbgrid-row.gray:hover {
   background-color: #F2EDE3 !important;
+}
+.sbgrid-theme-common-grid .sbgrid-row.yellow {
+  background-color: #FEFAE7;
+}
+.sbgrid-theme-common-grid .sbgrid-row.yellow:hover {
+  background-color: #FCF4CF !important;
 }
 
 .loading {
@@ -3517,6 +3610,14 @@ table.sub01-1 tbody td {
   width: 10rem;
 }
 .popup .container.CCS_003_02_popup-06 {
+  width: 100%;
+  max-width: 60rem;
+}
+.popup .container.EBP_001_01_popup {
+  width: 100%;
+  max-width: 45rem;
+}
+.popup .container.EBP_001_03_popup {
   width: 100%;
   max-width: 60rem;
 }

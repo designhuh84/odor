@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            사업장정보관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            사업장관리
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">사업장정보관리</div>
+                    <div class="menus">
+                        <a href="./EBP_001.html" class="menu current">사업장관리</a>
+                        <a href="./EBP_002.html" class="menu">변경신고서관리</a>
+                        <a href="./EBP_003_01.html" class="menu">지도점검 및 행정처분</a>
+                        <a href="#!" class="menu">악취관리지역</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">사업장관리</div>
+                <div class="contents">
+                    
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">악취배출시설 사업장</div>
+                        <div class="tab" data-name="02">규모미만 사업장</div>
+                        <div class="tab" data-name="03">생활악취 사업장</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+
+                        <div class="search-area">
+
+                            <div class="col">
+                                <label>사업장명</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>사업자등록번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>산업분류번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>주소</label>
+                                <div class="col__row">
+                                    <select class="city">
+                                        <option>시도</option>
+                                        <option>서울</option>
+                                        <option>인천</option>
+                                        <option>경기</option>
+                                        <option>강원</option>
+                                    </select>
+                                    <select class="city">
+                                        <option>시군구</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>산업ㆍ농공단지 대상 여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>중점관리 사업장 대상 여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>신고대상 시설여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="infobox">
+                            <p>※ “사업장 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “사업장 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
+                            <div class="button-row">
+                                <button type="button" class="btn icon download secondary">
+                                    사업장 양식 다운로드
+                                </button>
+                                <button type="button" class="btn icon upload secondary">
+                                    사업장 양식 업로드
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <button type="button" class="btn icon link secondary" onclick="openCustomPopup('custom-01')">
+                                악취배출사업장 현황
+                            </button>
+                            <button type="button" class="btn icon plus secondary">
+                                행 추가
+                            </button>
+                            <button type="button" class="btn icon save blue">
+                                저장
+                            </button>
+                            <button type="button" class="btn icon excel">
+                                엑셀다운로드
+                            </button>
+                        </div>
+
+                        <div>grid area</div>
+
+                        <div class="section-header">이력</div>
+
+                        <div>grid area</div>
+
+                        <div class="section-header">상세이력</div>
+
+                        <div>grid area</div>
+
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+
+                        <div class="search-area">
+                            <div class="col">
+                                <label>사업장명</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>사업자등록번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>산업분류번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>주소</label>
+                                <div class="col__row">
+                                    <select class="city">
+                                        <option>시도</option>
+                                        <option>서울</option>
+                                        <option>인천</option>
+                                        <option>경기</option>
+                                        <option>강원</option>
+                                    </select>
+                                    <select class="city">
+                                        <option>시군구</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취배출시설</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="infobox">
+                            <p>※ “사업장 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “사업장 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
+                            <div class="button-row">
+                                <button type="button" class="btn icon download secondary">사업장 양식 다운로드</button>
+                                <button type="button" class="btn icon upload secondary">사업장 양식 업로드</button>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <button type="button" class="btn icon plus secondary">행 추가</button>                            
+                            <button type="button" class="btn icon save blue">저장</button>
+                            <button type="button" class="btn icon delete red">삭제</button>
+                            <button type="button" class="btn icon excel">엑셀다운로드</button>
+                        </div>
+
+                        <div>grid area</div>
+
+                        <div class="section-header">이력</div>
+                        <div>grid area</div>
+
+                        <div class="section-header">상세이력</div>
+                        <div>grid area</div>
+
+                    </div>
+
+                    <div class="tab-contents" data-name="03">
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+                        <div class="search-area">
+                            <div class="col">
+                                <label>사업장명</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>사업자등록번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>산업분류번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>주소</label>
+                                <div class="col__row">
+                                    <select class="city">
+                                        <option>시도</option>
+                                        <option>서울</option>
+                                        <option>인천</option>
+                                        <option>경기</option>
+                                        <option>강원</option>
+                                    </select>
+                                    <select class="city">
+                                        <option>시군구</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취배출시설</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option></option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="infobox">
+                            <p>※ “사업장 양식 다운로드” 버튼 클릭 후 양식을 다운받아 엑셀에 작성 후 “사업장 양식 업로드” 버튼을 활용하여 업로드하실 수 있습니다.</p>
+                            <div class="button-row">
+                                <button type="button" class="btn icon download secondary">사업장 양식 다운로드</button>
+                                <button type="button" class="btn icon upload secondary">사업장 양식 업로드</button>
+                            </div>
+                        </div>
+
+                        <div class="table-button-row">
+                            <button type="button" class="btn icon plus secondary">행 추가</button>                            
+                            <button type="button" class="btn icon save blue">저장</button>
+                            <button type="button" class="btn icon delete red">삭제</button>
+                            <button type="button" class="btn icon excel">엑셀다운로드</button>
+                        </div>
+
+                        <div>grid area</div>
+
+                        <div class="section-header">이력</div>
+                        <div>grid area</div>
+
+                        <div class="section-header">상세이력</div>
+                        <div>grid area</div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container EBP_001_01_popup">
+            
+            <div class="header">
+                <div class="title">악취배출사업장 현황</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">1. 사업장 현황</div>
+                </div>
+                <div class="infobox margin-top-0">
+                    <div class="grid-layout">
+
+                        <div class="col-6">
+                            <div class="li">
+                                <label>사업장명</label>자몽농장
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="li">
+                                <label>사업자등록번호</label>111-11-12345
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="li">
+                                <label>대표자</label>박대표
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="li">
+                                <label>주소</label>강원도 영월군 한반로 123
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="li">
+                                <label>대표자 전화번호</label>033-123-1234
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="li">
+                                <label>생년월일</label>1954-12-25
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="li">
+                                <label>주 생산품명</label>자몽음료
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="li">
+                                <label>사업장 전화번호</label>032-123-1234
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="table-button-row">
+                    <div class="section-header">악취 배출시설</div>
+                </div>
+                <div>grid area</div>
+
+                <div class="table-button-row">
+                    <div class="section-header">2. 지도점검 및 행정처분 내용</div>
+                </div>
+                <div>grid area</div>
+
+                <div class="table-button-row">
+                    <div class="section-header">3. 악취민원 발생현황</div>
+                </div>
+                <div>grid area</div>
+
+                <div class="table-button-row">
+                    <div class="section-header">4. 변경사항</div>
+                </div>
+                <div>grid area</div>
+
+            </div>
+
+            <div class="footer">
+                <button type="button" class="btn icon print skyblue">출력</button>
+                <button type="button" class="btn secondary btn-popup-close">닫기</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+    
+
+    
+
+</script>
+</html>

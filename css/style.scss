@@ -215,6 +215,18 @@ small{
     }
 }
 
+.margin-top-0{
+    margin-top: 0 !important;
+}
+
+.padding-top-0{
+    padding-top: 0 !important;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
 global-header{
     flex-shrink: 0;
     display: flex;
@@ -1038,7 +1050,7 @@ global-header-menu{
     padding: 1.38rem;
     background-color: var(--infobox);
     border: solid 1px var(--primary);
-    input{
+    input:not([type='checkbox']){
         width: 100%;
     }
     select{
@@ -1067,6 +1079,12 @@ global-header-menu{
                 border-radius: calc(0.25rem * 0.5);
                 background-color: var(--primary);
             }
+            input[type='checkbox']{
+                display: inline-block;
+                margin-top: 0;
+                margin-bottom: 0;
+                transform: translateY(0.2rem);
+            }
         }
 
         &.full-width{
@@ -1079,6 +1097,21 @@ global-header-menu{
         gap: 0.5rem;
         flex-grow: 1;
         align-items: center;
+        &.gap-1{
+            gap: 1rem;
+        }
+        &.gap-2{
+            gap: 2rem;
+        }
+        &.gap-3{
+            gap: 3rem;
+        }
+        &.gap-4{
+            gap: 4rem;
+        }
+        &.gap-5{
+            gap: 5rem;
+        }
     }
 
     .common-search{
@@ -1264,6 +1297,18 @@ global-header-menu{
         }
     }
 
+    &.iconOnly{
+        gap: 0;
+        &::before{
+            content: '';
+            width: 1.25rem;
+            height: 1.25rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
     &.search{
         &::before{
             background-image: url(../image/Magnifer-bk.svg);
@@ -1372,6 +1417,18 @@ global-header-menu{
         }
     }
 
+    &.arrowUp{
+        &::before{
+            background-image: url(../image/Arrow-Up.svg);
+        }
+    }
+
+    &.arrowDown{
+        &::before{
+            background-image: url(../image/Arrow-Down.svg);
+        }
+    }
+
     &:disabled{
         background-color: #EEE;
         color: #999;
@@ -1399,6 +1456,27 @@ global-header-menu{
     .button-row{
         display: flex;
         gap: 0.44rem;
+    }
+
+    .li{
+        font-size: 0.875rem;
+        padding-left: 0.65rem;
+        text-indent: -0.65rem;
+        label{
+            display: inline-block;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0 0.3rem 0 0.65rem;
+        }
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 0.2rem;
+            background-color: var(--primary);
+            transform: translateY(-0.1rem);
+        }
     }
 }
 
@@ -1458,63 +1536,6 @@ global-header-menu{
         display: flex;
         gap: 0.5rem;
     }
-
-    // #add-new{
-    //     img{
-    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-    //     }
-    // }
-
-    // #save{
-    //     background-color: #207FDF;
-    //     color: #FFF;
-    //     border: 0;
-    //     img{
-    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-    //     }
-    //     &:hover{
-    //         background-color: #0066CC;
-    //     }
-    // }
-
-    // #excel{
-    //     background-color: #107C41;
-    //     color: #FFF;
-    //     border: 0;
-    //     img{
-    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-    //     }
-    //     &:hover{
-    //         background-color: #0C5A2F;
-    //     }
-    // }
-
-    // #modify{
-    //     background-color: var(--green);
-    //     color: #FFF;
-    //     border: 0;
-    //     img{
-    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-    //     }
-    // }
-
-    // #delete{
-    //     background-color: #FF4D00;
-    //     color: #FFF;
-    //     border: 0;
-    //     img{
-    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-    //     }
-    //     &:hover{
-    //         background-color: #CC3D00;
-    //     }
-    // }
-
-    // #list{
-    //     img{
-    //         filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-    //     }
-    // }
 }
 
 .table-container{
@@ -2199,11 +2220,11 @@ table.sub01-1{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        .chart{
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-        }
+    }
+    .chart{
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -2780,6 +2801,18 @@ table.sub01-1{
             }
         }
 
+        &.iconOnly{
+            gap: 0;
+            &::before{
+                content: '';
+                width: 1.5rem;
+                height: 1.5rem;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
         &.search{
             &::before{
                 background-image: url(../image/Magnifer-bk.svg);
@@ -2866,6 +2899,18 @@ table.sub01-1{
                 filter: brightness(0) saturate(100%) invert(60%) sepia(0%) saturate(0%) hue-rotate(149deg) brightness(103%) contrast(87%);
             }
         }
+
+        &.arrowUp{
+            &::before{
+                background-image: url(../image/Arrow-Up.svg);
+            }
+        }
+
+        &.arrowDown{
+            &::before{
+                background-image: url(../image/Arrow-Down.svg);
+            }
+        }
     }
 
     .sbgrid-row{
@@ -2891,6 +2936,12 @@ table.sub01-1{
             background-color: #FAF8F4;
             &:hover{
                 background-color: #F2EDE3 !important;
+            }
+        }
+        &.yellow{
+            background-color: #FEFAE7;
+            &:hover{
+                background-color: #FCF4CF !important;
             }
         }
     }
@@ -3999,6 +4050,14 @@ table.sub01-1{
         }
     }
     &.CCS_003_02_popup-06{
+        width: 100%;
+        max-width: 60rem;
+    }
+    &.EBP_001_01_popup{
+        width: 100%;
+        max-width: 45rem;
+    }
+    &.EBP_001_03_popup{
         width: 100%;
         max-width: 60rem;
     }
