@@ -30,4 +30,7 @@ body.admin .tab-row .tab:hover {
 body.admin .color-label.green {
   background-color: #0288D1;
   color: #FFF;
+}
+body.admin .table-container table td.category {
+  background-color: var(--blue);
 }/*# sourceMappingURL=admin.css.map */

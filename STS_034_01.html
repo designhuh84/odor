@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            통계현황
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            배출사업장현황(악취민원실태조사)
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            악취배출사업장
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">LNB Title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">악취배출사업장</div>
+                <div class="contents">
+
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">총계</div>
+                        <div class="tab" data-name="02">신고대상</div>
+                        <div class="tab" data-name="03">신고대상 외</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+                        <div class="search-area">
+                            <div class="col">
+                                <label>연도</label>
+                                <div class="col__row">
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>시도</label>
+                                <select>
+                                    <option selected disabled>선택</option>
+                                    <option>서울</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <select>
+                                    <option selected disabled>선택</option>
+                                    <option>00</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>신고대상시설 여부</label>
+                                <select>
+                                    <option selected disabled>선택</option>
+                                    <option>00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="table-button-row">
+                            <button type="button" class="btn icon excel">엑셀다운로드</button>
+                        </div>
+                        <div>grid area</div>
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+                        <div class="search-area">
+                            <div class="col">
+                                <label>연도</label>
+                                <div class="col__row">
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>시도</label>
+                                <select>
+                                    <option selected disabled>선택</option>
+                                    <option>서울</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>악취관리지역 여부</label>
+                                <select>
+                                    <option selected disabled>선택</option>
+                                    <option>00</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="table-button-row">
+                            <button type="button" class="btn icon excel">엑셀다운로드</button>
+                        </div>
+                        <div>grid area</div>
+                    </div>
+
+                    <div class="tab-contents" data-name="03">
+                        <div class="table-button-row padding-top-0">
+                            <div class="section-header">조회 조건</div>
+                            <button type="button" class="btn icon search primary">
+                                조회
+                            </button>
+                        </div>
+                        <div class="search-area">
+                            <div class="col">
+                                <label>연도</label>
+                                <div class="col__row">
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <label>시도</label>
+                                <select>
+                                    <option selected disabled>선택</option>
+                                    <option>서울</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="table-button-row">
+                            <button type="button" class="btn icon excel">엑셀다운로드</button>
+                        </div>
+                        <div>grid area</div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

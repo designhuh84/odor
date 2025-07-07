@@ -50,6 +50,16 @@ body.admin{
             color: #FFF;
         }
     }
+
+    .table-container{
+        table{
+            td{
+                &.category{
+                    background-color: var(--blue);
+                }
+            }
+        }
+    }
     
 
 }
