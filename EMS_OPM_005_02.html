@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기초정보관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            메뉴관리 상세
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">메뉴관리 추가 상세</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">메뉴정보</div>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col><col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">메뉴명</th>
+                                <td><input type="text"></td>
+                                <th class="required">메뉴 URI</th>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th class="required">계층</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>1</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>2</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>3</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>상위 메뉴</th>
+                                <td>
+                                    <select class="large">
+                                        <option></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>메뉴 설명</th>
+                                <td colspan="3">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">사용 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>정렬순서</th>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>민원인 사용 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>사용자 사용 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>관리자 사용 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>개인정보 사용 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>모바일 사용 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>시스템관리자 사용 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

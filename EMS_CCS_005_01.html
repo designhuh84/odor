@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원서비스
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시료채취 목록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">LNB TITLE</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">시료채취 목록</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">조회조건</div>
+                        <button type="button" class="btn icon search primary">조회</button>
+                    </div>
+
+                    <div class="search-area">
+                        <div class="col">
+                            <label>시도</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>시료채취일자</label>
+                            <div class="col__row">
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>시료채취종류</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>시료명</label>
+                            <input type="text">
+                        </div>
+                        <div class="col">
+                            <label>시료분석기관</label>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">조회결과</div>
+                        <button type="button" class="btn icon excel">엑셀다운로드</button>
+                    </div>
+
+                    <div>
+                        grid area<br>
+                        <button onclick="openCustomPopup('custom-01')">상세보기 팝업</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container EMS_CCS_005_01_popup">
+            
+            <div class="header">
+                <div class="title">민원상세조회 화면 팝업</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+
+                <div>grid area</div>
+
+                <div class="table-button-row">
+                    <div class="section-header">민원 대상 배출원</div>
+                </div>
+                <div>grid area</div>
+
+                <div class="table-button-row">
+                    <div class="section-header">민원 시료채취</div>
+                </div>
+                <div>grid area</div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+    });
+
+</script>
+</html>

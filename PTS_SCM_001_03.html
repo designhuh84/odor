@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시료관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            외부 시료 분석 목록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">LNB TITLE</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">외부 시료 분석 목록</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">기본 정보</div>
+                        <button  type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col><col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th>사업장 명칭</th>
+                                <td><input type="text" class="large" disabled></td>
+                                <th class="required">구분</th>
+                                <td>
+                                    <select class="large" disabled>
+                                        <option>전체</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>신청자</th>
+                                <td><input type="text" class="large" disabled></td>
+                                <th>신청일자</th>
+                                <td><input type="text" class="large" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>측정자</th>
+                                <td><input type="text" class="large" disabled></td>
+                                <th>측정일자</th>
+                                <td><input type="date" class="large" disabled></td>
+                            </tr>
+                            <tr>
+                                <th>주소 (측정 지점)</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="text" class="mid" disabled>
+                                        <input type="text" disabled>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">신청 내용</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">기타 세부사항</th>
+                                <td>
+                                    <textarea rows="7" disalbed></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">분석의뢰서 첨부파일</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>첨부파일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>외부 분석의뢰서 첨부파일</td>
+                                    <td>OOO 의뢰서.PDF</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">분석결과 내용</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">분석결과 내용</th>
+                                <td>
+                                    <textarea rows="7" disalbed></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">분석결과 첨부파일</div>
+                    </div>
+
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>첨부파일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>외부 분석결과 첨부파일</td>
+                                    <td>OOO 분석의뢰결과.PDF</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('#search-address-01').addEventListener('click', () => {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    console.log(data);
+                    document.querySelector('#zip-01').value = data.zonecode;
+                    document.querySelector('#address-01').value = data.address;
+                    document.querySelector('#address-01-1').focus();
+                }
+            }).open();
+        });
+    });
+
+</script>
+</html>

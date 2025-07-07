@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            기초정보관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            공통코드관리
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">공통코드관리</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">조회조건</div>
+                        <button  type="button" class="btn icon search primary">조회</button>
+                    </div>
+
+                    <div class="search-area">
+                        <div class="col">
+                            <label>사용여부</label>
+                            <select>
+                                <option>전체</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">상위공통코드</div>
+                        <button type="button" class="btn icon plus secondary">행추가</button>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon excel">엑셀다운로드</button>
+                    </div>
+                    <div>grid area</div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">하위공통코드</div>
+                        <button type="button" class="btn icon plus secondary">행추가</button>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon excel">엑셀다운로드</button>
+                    </div>
+                    <div>grid area</div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

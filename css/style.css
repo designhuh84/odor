@@ -153,6 +153,10 @@ select.small {
 select.large {
   max-width: 15rem;
 }
+select:disabled {
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.05);
+}
 
 textarea {
   font: inherit;
@@ -166,6 +170,10 @@ textarea {
 textarea:focus {
   outline: none;
   border-color: var(--primary);
+}
+textarea:disabled {
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .inner {
@@ -1521,6 +1529,9 @@ global-header-menu .col .menu:hover {
   display: block;
   margin-top: 0.5rem;
 }
+.table-container table td > .row.center {
+  justify-content: center;
+}
 .table-container table td button {
   height: 1.75rem;
 }
@@ -2288,7 +2299,7 @@ table.sub01-1 tbody td {
 
 .layer-popup {
   position: fixed;
-  z-index: 10;
+  z-index: 99;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -3621,6 +3632,26 @@ table.sub01-1 tbody td {
   width: 100%;
   max-width: 60rem;
 }
+.popup .container.EMS_CCS_004_01_popup {
+  width: 100%;
+  max-width: 60rem;
+}
+.popup .container.EMS_CCS_005_01_popup {
+  width: 100%;
+  max-width: 60rem;
+}
+.popup .container.EMS_CCS_006_01_popup {
+  width: 100%;
+  max-width: 60rem;
+}
+.popup .container.EMS_OPM_006_01_popup {
+  width: 100%;
+  max-width: 60rem;
+}
+.popup .container.EMS_COM_004_02_popup {
+  width: 100%;
+  max-width: 60rem;
+}
 
 .SCM_009_01_select {
   width: 100%;
@@ -3719,6 +3750,23 @@ table.sub01-1 tbody td {
 .table-container table.SCM_001_03_table tbody tr:hover td {
   background-color: #FFF;
 }
+.table-container table.survey {
+  width: 100%;
+  table-layout: fixed;
+}
+.table-container table.survey th, .table-container table.survey td {
+  font-size: 0.75rem;
+  padding: 0.5rem;
+}
+.table-container table.survey th {
+  letter-spacing: -0.05em;
+}
+.table-container table.survey td.required::before {
+  content: "*";
+  display: inline-block;
+  width: 0.5rem;
+  color: red;
+}
 
 .TCS_001_03_img {
   display: flex;
@@ -3753,4 +3801,34 @@ table.sub01-1 tbody td {
   background-color: #FFF;
   border: solid 1px #BFBFBF;
   margin: 0.5rem 0;
+}
+
+.EMS_CCS_001_02_img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.EMS_CCS_001_02_img img {
+  width: 100%;
+  max-width: 20rem;
+}
+.EMS_CCS_001_02_img .text {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.popup-footer-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+.popup-footer-row button {
+  padding: 0.25rem 0.5rem;
+  height: auto;
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
 }/*# sourceMappingURL=style.css.map */

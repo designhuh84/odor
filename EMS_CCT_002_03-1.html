@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            고객센터
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            고객센터
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            FAQ
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">LNB TITLE</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">FAQ 등록/수정</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">상세정보</div>
+                        <button type="button" class="btn cancel">취소</button>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header">
+                                <col>
+                                <col class="header">
+                                <col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">제목</th>
+                                <td colspan="3"><input type="text"></td>
+                            </tr>
+                            <tr>
+                                <th>메인 공지 여부</th>
+                                <td>
+                                    <select>
+                                        <option>예</option>
+                                        <option>아니오</option>
+                                    </select>
+                                </td>
+                                <th>카테고리 분류</th>
+                                <td>
+                                    <select>
+                                        <option>전체</option>
+                                        <option>교육</option>
+                                        <option>법령</option>
+                                        <option>공지</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>게시기간</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="date" class="large">
+                                        <span>~</span>
+                                        <input type="date" class="large">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <div>editor area</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+    });
+
+</script>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원서비스
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원서비스
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원신청
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">LNB TITLE</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">민원신청</div>
+                <div class="contents">
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col><col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">악취종류</th>
+                                <td>
+                                    <div class="row">
+                                        <select>
+                                            <option>전체</option>
+                                        </select>
+                                        <select>
+                                            <option>전체</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>악취강도</th>
+                                <td>
+                                    <select>
+                                        <option>전체</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">악취감지시간</th>
+                                <td colspan="3">
+                                    <input type="datetime-local" class="large">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">악취 감지지역</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="text" class="large" id="address-01">
+                                        <button type="button" class="btn primary" id="search-address-01">주소검색</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <div id="map-area">map area</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <div class="td-info">
+                                        <div class="text">짐작되는 악취 발생 예상지역이 있나요?</div>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="radio" value="Y">
+                                                <label>예</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio" value="N">
+                                                <label>아니오</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>민원내용</th>
+                                <td colspan="3">
+                                    <textarea rows="3"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="contents-bottom-button-row">
+                        <button type="button" class="btn secondary">취소</button>
+                        <button type="button" class="btn primary">신청하기</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('#search-address-01').addEventListener('click', () => {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    console.log(data);
+                    document.querySelector('#address-01').value = data.address;
+                }
+            }).open();
+        });
+    });
+
+</script>
+</html>

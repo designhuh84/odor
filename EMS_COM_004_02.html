@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    <!-- 테스트용 -->
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <!-- 테스트용 -->
+
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    const EmsCom00402Popup = `
+        <div class="section-header margin-top-0 padding-top-0">설문조사테스트</div>
+        <div class="infobox margin-top-0">
+            <p>설문조사관리</p>
+        </div>
+        <div class="table-button-row">
+            <div class="left">
+                <strong>설문 문항</strong>
+            </div>
+            <div class="right">
+                <small>
+                    *표시된 항목은 필수 응답 문항입니다.
+                </small>
+            </div>
+        </div>
+        <div class="table-container">
+            <table class="survey">
+                <colgroup>
+                    <col style="width: 4rem;">
+                    <col style="width: 30%;">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>문항번호</th>
+                        <th>설문사항</th>
+                        <th>매우그렇다</th>
+                        <th>그렇다</th>
+                        <th>다소그렇다</th>
+                        <th>보통이다</th>
+                        <th>다소아니다</th>
+                        <th>아니다</th>
+                        <th>전혀아니다</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center required">1</td>
+                        <td>설문조사 테스트 입니다.</td>
+                        <td class="center"><input type="radio" name="" value=""></td>
+                        <td class="center"><input type="radio" name="" value=""></td>
+                        <td class="center"><input type="radio" name="" value=""></td>
+                        <td class="center"><input type="radio" name="" value=""></td>
+                        <td class="center"><input type="radio" name="" value=""></td>
+                        <td class="center"><input type="radio" name="" value=""></td>
+                        <td class="center"><input type="radio" name="" value=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="popup-footer-row">
+            <input type="checkbox">
+            <label>오늘 하루 이 창을 열지 않음</label>
+            <button type="button" class="btn black">닫기</button>
+        </div>
+    `;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        new CommonLayerPopup('설문조사', EmsCom00402Popup, {top: 10, left: 10, width: 800, height: 400}).show();
+    });
+
+    
+
+</script>
+</html>

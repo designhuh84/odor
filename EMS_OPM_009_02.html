@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시스템운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            팝업관리 상세조회
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">팝업관리 상세조회</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">팝업정보</div>
+                        <button type="button" class="btn icon write green">수정</button>
+                        <button type="button" class="btn icon delete red">삭제</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col><col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">시작일</th>
+                                <td>
+                                    <input type="date" disabled>
+                                </td>
+                                <th class="required">종료일</th>
+                                <td>
+                                    <input type="date" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>팝업창 너비</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" disabled>
+                                        <span>px</span>
+                                    </div>
+                                </td>
+                                <th>팝업창 높이</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" disabled>
+                                        <span>px</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>팝업창 Top 위치</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" disabled>
+                                        <span>px</span>
+                                    </div>
+                                </td>
+                                <th>팝업창 Left 위치</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" disabled>
+                                        <span>px</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">사용여부</th>
+                                <td colspan="3">
+                                    <select class="large" disabled>
+                                        <option>사용</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">팝업창 호출대상 (메뉴)</th>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <input type="text" class="large" disabled>
+                                        <button type="button" class="btn primary" disabled>조회</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">제목</th>
+                                <td colspan="3">
+                                    <input type="text" disabled>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>내용</th>
+                                <td colspan="3">
+                                    <textarea rows="5" disabled></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

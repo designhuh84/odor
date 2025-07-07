@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시스템운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            사용자관리 목록
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">사용자관리 목록</div>
+                <div class="contents">
+
+                    <div class="tab-row">
+                        <div class="tab on" data-name="01">사업자</div>
+                        <div class="tab" data-name="02">사용자</div>
+                        <div class="tab" data-name="03">비회원</div>
+                    </div>
+
+                    <div class="tab-contents on" data-name="01">
+                        <div class="table-button-row">
+                            <div class="section-header">조회 조건</div>
+                            <button  type="button" class="btn icon search primary">조회</button>
+                        </div>
+                        <div class="search-area">
+                            <div class="col">
+                                <label>사업자등록번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>대표자명</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>대표자 휴대전화 번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>업종</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>담당 지자체</label>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>가입기간</label>
+                                <div class="col__row">
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-button-row">
+                            <div class="section-header">조회 결과</div>
+                            <button  type="button" class="btn icon excel">엑셀다운로드</button>
+                        </div>
+                        <div>grid area</div>
+                    </div>
+
+                    <div class="tab-contents" data-name="02">
+                        <div class="table-button-row">
+                            <div class="section-header">조회 조건</div>
+                            <button  type="button" class="btn icon search primary">조회</button>
+                        </div>
+                        <div class="search-area">
+                            <div class="col">
+                                <label>회원번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>회원이름</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>휴대전화번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>알림동의여부</label>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>탈퇴여부</label>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>가입기간</label>
+                                <div class="col__row">
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-button-row">
+                            <div class="section-header">조회 결과</div>
+                            <button  type="button" class="btn icon excel">엑셀다운로드</button>
+                        </div>
+                        <div>grid area</div>
+                    </div>
+
+                    <div class="tab-contents" data-name="03">
+                        <div class="table-button-row">
+                            <div class="section-header">조회 조건</div>
+                            <button  type="button" class="btn icon search primary">조회</button>
+                        </div>
+                        <div class="search-area">
+                            <div class="col">
+                                <label>비회원번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>비회원 이름</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>휴대전화 번호</label>
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <label>알림동의여부</label>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                            <div class="col full-width">
+                                <label>기간조회</label>
+                                <div class="col__row">
+                                    <select>
+                                        <option>최초로그인일자</option>
+                                    </select>
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-button-row">
+                            <div class="section-header">조회 결과</div>
+                            <button  type="button" class="btn icon excel">엑셀다운로드</button>
+                        </div>
+                        <div>grid area</div>
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+    
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

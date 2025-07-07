@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원서비스
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            민원관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            현장조사
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">LNB TITLE</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">현장조사 목록</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">조회조건</div>
+                        <button type="button" class="btn icon search primary">조회</button>
+                    </div>
+
+                    <div class="search-area">
+                        <div class="col">
+                            <label>시도</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>악취종류</label>
+                            <div class="col__row">
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                                <select>
+                                    <option>전체</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>조사일자</label>
+                            <div class="col__row">
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label>배출원특정가능여부</label>
+                            <select>
+                                <option>전체</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">조회결과</div>
+                        <button type="button" class="btn icon excel">엑셀다운로드</button>
+                    </div>
+
+                    <div>
+                        grid area<br>
+                        <button onclick="openCustomPopup('custom-01')">상세보기 팝업</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container EMS_CCS_004_01_popup">
+            
+            <div class="header">
+                <div class="title">민원상세조회 화면 팝업</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">민원 신청</div>
+                </div>
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header"><col><col class="header"><col>
+                        </colgroup>
+                        <tr>
+                            <th class="required">대상주소</th>
+                            <td colspan="3">
+                                <div class="label">악취 감지지역</div>
+                                <div class="row">
+                                    <input type="text" class="large" disabled>
+                                    <button type="button" class="btn primary" disabled>주소검색</button>
+                                </div>
+                                <div class="map-area">map</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="required">악취종류</th>
+                            <td colspan="3">
+                                <div class="row">
+                                    <select class="large" disabled>
+                                        <option></option>
+                                    </select>
+                                    <select class="large" disabled>
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>악취강도</th>
+                            <td>
+                                <select class="large">
+                                    <option></option>
+                                </select>
+                            </td>
+                            <th class="required">악취감지일시</th>
+                            <td>
+                                <input type="text" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="required">민원인 성명</th>
+                            <td>
+                                <input type="text" disabled>
+                            </td>
+                            <th class="required">민원인 연락처</th>
+                            <td>
+                                <input type="text" disabled>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>민원내용</th>
+                            <td colspan="3">
+                                <textarea rows="3" disabled></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="table-button-row">
+                    <div class="section-header">민원 접수</div>
+                </div>
+
+                <div class="table-container">
+                    <table class="write">
+                        <colgroup>
+                            <col class="header"><col><col class="header"><col>
+                        </colgroup>
+                        <tr>
+                            <th class="required">접수자</th>
+                            <td><input type="text" disabled></td>
+                            <th class="required">접수일시</th>
+                            <td><input type="text" disabled></td>
+                        </tr>
+                        <tr>
+                            <th class="required">처리 담당자</th>
+                            <td><input type="text" disabled></td>
+                            <th>처리상태</th>
+                            <td><input type="text" disabled></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="table-button-row">
+                    <div class="section-header">민원 현장조사</div>
+                </div>
+                <div>grid area</div>
+
+                <div class="table-button-row">
+                    <div class="section-header">민원 대상 배출원</div>
+                </div>
+                <div>grid area</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+    });
+
+</script>
+</html>
