@@ -3290,7 +3290,7 @@ table.sub01-1{
     gap: 1rem;
     flex-grow: 1;
     width: 100%;
-    max-width: 30rem;
+    max-width: 60rem;
 
     .top{
         display: flex;
@@ -3311,7 +3311,7 @@ table.sub01-1{
         justify-content: center;
         align-items: center;
         width: 100%;
-        aspect-ratio: 16/9;
+        aspect-ratio: 2816/1176;
         background-image: url(../image/scm_005_02.png);
         background-size: cover;
         background-position: center;
@@ -4089,6 +4089,14 @@ table.sub01-1{
         max-width: 60rem;
     }
     &.EMS_COM_004_02_popup{
+        width: 100%;
+        max-width: 60rem;
+    }
+    &.EMS_OPM_010_02_popup{
+        width: 100%;
+        max-width: 40rem;
+    }
+    &.EMS_OPM_013_04_popup{
         width: 100%;
         max-width: 60rem;
     }

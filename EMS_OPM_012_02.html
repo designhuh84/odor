@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시스템운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            게시판 관리
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">게시판 관리 상세조회</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">상세정보</div>
+                        <button type="button" class="btn icon save blue">저장</button>
+                        <button type="button" class="btn icon delete red">삭제</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col><col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th>게시판명</th>
+                                <td colspan="3">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>게시판 설명</th>
+                                <td colspan="3">
+                                    <textarea rows="3"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">사용여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th class="required">민원인 작성 가능 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">관리자 답변 가능 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th class="required">민원인 답변 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">첨부파일 사용 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th class="required">첨부파일 최대 개수</th>
+                                <td>
+                                    <select class="large">
+                                        <option>1</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">카테고리 사용 여부</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>사용</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>미사용</label>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th class="required">카테고리 분류 코드</th>
+                                <td>
+                                    <select class="large">
+                                        <option>1</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+    
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

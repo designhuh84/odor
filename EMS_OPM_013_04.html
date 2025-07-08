@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            시스템운영관리
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            알림목록관리
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            <div class="lnb">
+                <div class="group on">
+                    <div class="title">title</div>
+                    <div class="menus">
+                        <a href="#!" class="menu current">menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="page-title">알림목록관리 목록</div>
+                <div class="contents">
+
+                    <div class="table-button-row">
+                        <div class="section-header">알림발송</div>
+                        <button type="button" class="btn primary">전송</button>
+                        <button type="button" class="btn icon list black">목록</button>
+                    </div>
+
+                    <div class="table-container">
+                        <table class="write">
+                            <colgroup>
+                                <col class="header"><col>
+                            </colgroup>
+                            <tr>
+                                <th class="required">송신구분</th>
+                                <td>
+                                    <div class="common__radio-group">
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>문자</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>이메일</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" name="" value="">
+                                            <label>알림톡</label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">제목</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text">
+                                        <span>0/40byte</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">발신번호</th>
+                                <td>
+                                    <div class="row">
+                                        <input type="text" class="large">
+                                        <span>-</span>
+                                        <input type="text" class="large">
+                                        <span>-</span>
+                                        <input type="text" class="large">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>내용</th>
+                                <td>
+                                    <textarea rows="3"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="table-button-row">
+                        <div class="section-header">수신자 목록</div>
+                        <button type="button" class="btn icon plus green" onclick="openCustomPopup('custom-01')">수신자 추가</button>
+                    </div>
+
+                    <div>grid area</div>
+
+                    
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+    
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container EMS_OPM_013_04_popup">
+            
+            <div class="header">
+                <div class="title">수신자 추가 팝업</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">조회조건</div>
+                    <button type="button" class="btn icon search primary">조회</button>
+                </div>
+                <div class="search-area">
+                    <div class="col">
+                        <label>사용자명</label>
+                        <input type="text">
+                    </div>
+                    <div class="col">
+                        <label>휴대폰번호</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <br>
+                <div>grid area</div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+    });
+
+</script>
+</html>

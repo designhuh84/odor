@@ -40,7 +40,7 @@
                     <div class="table-button-row">
                         <div class="section-header">사업자 정보</div>
                         <button  type="button" class="btn primary">승인</button>
-                        <button  type="button" class="btn secondary">승인반려</button>
+                        <button  type="button" class="btn secondary" onclick="openCustomPopup('custom-01')">승인반려</button>
                         <button  type="button" class="btn icon save blue">저장</button>
                         <button  type="button" class="btn icon list black">목록</button>
                     </div>
@@ -256,6 +256,27 @@
     </div>
 
     <golbal-footer></golbal-footer>
+
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container EMS_OPM_010_02_popup">
+            
+            <div class="header">
+                <div class="title">Popup</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">승인반려 사유</div>
+                    <button type="button" class="btn primary">승인반려</button>
+                </div>
+                <textarea rows="5"></textarea>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
     
 
 </body>
