@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    <!-- 테스트용 -->
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <!-- 테스트용 -->
+
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    const EmsCom00407Popup = `
+        <div class="notice-popup">
+            <div class="subject">공지사항 제목입니다.</div>
+            <div class="notice-contents">
+                공지사항 내용입니다.
+            </div>
+            <div class="popup-footer-row">
+                <input type="checkbox">
+                <label>오늘 하루 이 창을 열지 않음</label>
+                <button type="button" class="btn black">닫기</button>
+            </div>
+        </div>
+    `;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        new CommonLayerPopup('공지사항', EmsCom00407Popup, {top: 10, left: 50, width: 480, height: 640}).show();
+    });
+
+    
+
+</script>
+</html>
