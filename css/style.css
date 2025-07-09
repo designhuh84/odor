@@ -3869,4 +3869,24 @@ table.sub01-1 tbody td {
   height: auto;
   margin-left: 0.5rem;
   font-size: 0.75rem;
+}
+
+@media (max-width: 1080px) {
+  .layout .inner {
+    flex-direction: column;
+  }
+  .layout .lnb {
+    width: 100%;
+    order: 2;
+    padding-bottom: 5rem;
+  }
+  .layout .main {
+    order: 1;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 1080px) {
+  .search-area {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */
