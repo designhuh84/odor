@@ -53,6 +53,7 @@ GlobalHeaderUI.html = `
         <button type="button" class="btn-header-login"></button>
         <button type="button" class="btn-header-userinfo">내정보</button>
         <button type="button" class="btn-header-logout">로그아웃</button>
+        <button type="button" class="btn-mobile-menu">1</button>
         <div class="header-login-sub">
             <a href="#!">
                 <img src="./image/User-bk.svg">

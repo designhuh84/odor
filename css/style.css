@@ -3884,9 +3884,76 @@ table.sub01-1 tbody td {
     order: 1;
     padding-bottom: 0;
   }
-}
-@media (max-width: 1080px) {
   .search-area {
     grid-template-columns: 1fr;
+  }
+  .search-area .col {
+    grid-template-columns: 7rem 1fr;
+  }
+  .search-area .col.full-width {
+    grid-template-columns: 7rem 1fr;
+  }
+  .search-area .col__row {
+    flex-direction: column;
+  }
+  .search-area input:not[type=radio],
+  .search-area input:not[type=checkbox],
+  .search-area select {
+    width: 100%;
+    max-width: 100%;
+  }
+  .search-area select.city {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  :root {
+    font-size: 14px;
+  }
+  global-header nav {
+    display: none;
+  }
+  .common__checkbox-group {
+    width: 100%;
+  }
+  table {
+    border-collapse: separate;
+    border: solid 1px #BFBFBF;
+    border-spacing: 0;
+  }
+  table colgroup col {
+    display: none;
+  }
+  table tr {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    width: 100%;
+    align-items: stretch;
+  }
+  table tr:last-of-type th:last-of-type, table tr:last-of-type td:last-of-type {
+    border-bottom: 0;
+  }
+  table th, table td {
+    display: flex;
+    align-items: center;
+    border: 0px;
+    border-bottom: solid 1px #BFBFBF;
+  }
+  table td.category {
+    grid-column: 1/-1;
+  }
+  table td .row {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  table td select {
+    max-width: 100%;
+  }
+  table td select.mid {
+    max-width: 100%;
+  }
+  table td select.small {
+    max-width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
