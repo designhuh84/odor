@@ -19,11 +19,19 @@ class GlobalHeaderUI extends HTMLElement {
     init() {
         return new Promise(resolve => {
             this.innerHTML = GlobalHeaderUI.html;
-            resolve();
+            setTimeout(() => {
+                resolve();
+            }, 100);
+            
         });
     }
     onload() {
-        
+
+        this.userBtnRow = document.createElement('div');
+        this.userBtnRow.classList.add('user-btn-row');
+        document.body.append(this.userBtnRow);
+
+
         document.addEventListener('mousemove', event => {
             if(isMobile() == false){
                 if(event.target.closest('nav') || event.target.closest('global-header-menu')){
@@ -54,9 +62,34 @@ class GlobalHeaderUI extends HTMLElement {
         window.addEventListener('resize', () => {
             if(isMobile()){
                 document.querySelector('global-header-menu').style.height = 'calc(100vh - 4.75rem)';
+            }else{
+                document.querySelector('global-header-menu').style.height = '0px';
             }
+            this.moveUserInfoButton();
         });
+
+        this.moveUserInfoButton();
+
     }
+
+    moveUserInfoButton() {
+
+        const globalHeaderMenu = document.querySelector('global-header-menu');
+        const btnMobileMenu = document.querySelector('.btn-mobile-menu');
+
+        const myInfoButton = document.querySelector('.btn-header-userinfo');
+        const logoutButton = document.querySelector('.btn-header-logout');
+
+        if(isMobile()){
+            globalHeaderMenu.insertAdjacentElement('afterbegin', this.userBtnRow);
+            this.userBtnRow.append(myInfoButton);
+            this.userBtnRow.append(logoutButton);
+        }else{
+            btnMobileMenu.insertAdjacentElement('beforebegin', myInfoButton);
+            btnMobileMenu.insertAdjacentElement('beforebegin', logoutButton);
+        }
+    }
+
     openMobileMenu() {
         document.querySelector('.btn-mobile-menu').classList.add('close');
         document.querySelector('global-header-menu').classList.add('on');

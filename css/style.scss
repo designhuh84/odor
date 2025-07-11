@@ -268,6 +268,7 @@ global-header{
     display: none;
     width: 2rem;
     height: 2rem;
+    margin-left: 0.5rem;
     background-image: url(../image/mobile-menu.svg);
     background-size: cover;
     background-position: center;
@@ -4358,6 +4359,7 @@ table.sub01-1{
 }
 
 .mobile-menu-before{
+    display: none;
     position: fixed;
     top: 4.75rem;
     left: 0;
@@ -4366,6 +4368,10 @@ table.sub01-1{
     background-color: rgba(0,0,0,0.3);
     backdrop-filter: blur(0.1rem);
     z-index: 89;
+}
+
+.user-btn-row{
+    display: none;
 }
 
 @media (max-width: 1080px){
@@ -4427,12 +4433,25 @@ table.sub01-1{
         }
     }
 
+    .mobile-menu-before{
+        display: block;
+    }
+
     global-header{
         position: fixed;
         top: 0;
         left: 0;
         z-index: 90;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
         nav{
+            display: none;
+        }
+
+        .btn-header-userinfo,
+        .btn-header-logout{
             display: none;
         }
     }
@@ -4455,13 +4474,19 @@ table.sub01-1{
         border-left: solid 1px #BFBFBF;
         transform: translateX(100%);
         transition: transform 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
         &.on{
             transform: translateX(0);
         }
         .inner{
+            flex-basis: 0;
+            flex-grow: 1;
             max-height: 100%;
             display: grid;
             grid-template-columns: 1fr;
+            margin-top: 0;
+            padding-bottom: 3rem;
             .col{
                 padding-left: 0;
                 padding-right: 0;
@@ -4491,6 +4516,20 @@ table.sub01-1{
                     padding: 0.5rem;
                     width: 100%;
                     background-color: var(--green);
+                    color: #FFF;
+                }
+            }
+        }
+        .user-btn-row{
+            display: flex;
+            width: 100%;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            button{
+                flex-grow: 1;
+
+                &.btn-header-logout{
+                    background-color: var(--primary);
                     color: #FFF;
                 }
             }
