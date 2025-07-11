@@ -61,5 +61,107 @@ body.admin{
         }
     }
     
+    global-header-menu{
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        background-color: #FFF;
+        border-bottom: solid 1px var(--primary);
+        top: 4.75rem;
+        left: 0;
+        z-index: 90;
+        transition: height 0.2s ease-in-out;
+        
+        .inner{
+            display: flex;
+            flex-direction: column;
+            max-height: 30rem;
+            overflow-y: auto;
+            overscroll-behavior: none;
+            margin: 1rem auto;
 
+            & > .col{
+                &:last-of-type{
+                    border-bottom: 0;
+                }
+            }
+        }
+        .col{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.75rem;
+            width: 100%;
+            border-bottom: solid 1px #BCC1C8;
+            padding: 0.5rem 1rem;
+            &:hover{
+                background-color: var(--tr-hover);
+                .category{
+                    color: var(--primary);
+                }
+            }
+            .rows{
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                gap: 0;
+                border-left: dashed 1px #BCC1C8;
+                width: auto;
+            }
+            .row{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-grow: 1;
+                padding: 0.5rem 0;
+                width: auto;
+                gap: 0;
+                & + .row{
+                    border-top: dashed 1px #BCC1C8;
+                }
+                &:hover{
+                    .sub-category{
+                        color: var(--green);
+                    }
+                }
+            }
+            .category{
+                flex-shrink: 0;
+                flex-basis: 7rem;
+                font-size: 1.15rem;
+                font-weight: 700;
+                cursor: default;
+            }
+            .sub-category{
+                font-size: 1rem;
+                font-weight: 600;
+                flex-basis: 10rem;
+                flex-shrink: 0;
+                padding: 0 0.75rem;
+                cursor: default;
+                padding-left: 1.5rem;
+                color: #000;
+            }
+            .menus{
+                flex-grow: 1;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+            .menu{
+                display: inline-block;
+                width: fit-content;
+                text-align: left;
+                font-size: 0.875rem;
+                font-weight: 500;
+                padding: 0 0.5rem;
+                color: hsla(0,0%,20%,1);
+                &:hover{
+                    color: var(--primary-hover);
+                }
+            }
+        }
+    }
 }

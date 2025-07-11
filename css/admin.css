@@ -33,4 +33,102 @@ body.admin .color-label.green {
 }
 body.admin .table-container table td.category {
   background-color: var(--blue);
+}
+body.admin global-header-menu {
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  background-color: #FFF;
+  border-bottom: solid 1px var(--primary);
+  top: 4.75rem;
+  left: 0;
+  z-index: 90;
+  transition: height 0.2s ease-in-out;
+}
+body.admin global-header-menu .inner {
+  display: flex;
+  flex-direction: column;
+  max-height: 30rem;
+  overflow-y: auto;
+  overscroll-behavior: none;
+  margin: 1rem auto;
+}
+body.admin global-header-menu .inner > .col:last-of-type {
+  border-bottom: 0;
+}
+body.admin global-header-menu .col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  border-bottom: solid 1px #BCC1C8;
+  padding: 0.5rem 1rem;
+}
+body.admin global-header-menu .col:hover {
+  background-color: var(--tr-hover);
+}
+body.admin global-header-menu .col:hover .category {
+  color: var(--primary);
+}
+body.admin global-header-menu .col .rows {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0;
+  border-left: dashed 1px #BCC1C8;
+  width: auto;
+}
+body.admin global-header-menu .col .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  padding: 0.5rem 0;
+  width: auto;
+  gap: 0;
+}
+body.admin global-header-menu .col .row + .row {
+  border-top: dashed 1px #BCC1C8;
+}
+body.admin global-header-menu .col .row:hover .sub-category {
+  color: var(--green);
+}
+body.admin global-header-menu .col .category {
+  flex-shrink: 0;
+  flex-basis: 7rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: default;
+}
+body.admin global-header-menu .col .sub-category {
+  font-size: 1rem;
+  font-weight: 600;
+  flex-basis: 10rem;
+  flex-shrink: 0;
+  padding: 0 0.75rem;
+  cursor: default;
+  padding-left: 1.5rem;
+  color: #000;
+}
+body.admin global-header-menu .col .menus {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+body.admin global-header-menu .col .menu {
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0 0.5rem;
+  color: hsl(0, 0%, 20%);
+}
+body.admin global-header-menu .col .menu:hover {
+  color: var(--primary-hover);
 }/*# sourceMappingURL=admin.css.map */

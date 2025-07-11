@@ -769,26 +769,21 @@ global-header-menu{
     transition: height 0.2s ease-in-out;
     
     .inner{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         max-height: 30rem;
         overflow-y: auto;
         overscroll-behavior: none;
         margin: 1rem auto;
-
-        & > .col{
-            &:last-of-type{
-                border-bottom: 0;
-            }
-        }
     }
     .col{
         display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 0.75rem;
         width: 100%;
         border-bottom: solid 1px #BCC1C8;
-        padding: 0.5rem 1rem;
+        padding: 1rem;
         &:hover{
             background-color: var(--tr-hover);
             .category{
@@ -798,17 +793,18 @@ global-header-menu{
         .rows{
             display: flex;
             flex-direction: column;
-            flex-grow: 1;
-            border-left: dashed 1px #BCC1C8;
+            gap: 1.5rem;
+            width: 100%;
         }
         .row{
             display: flex;
+            flex-direction: column;
             align-items: center;
             flex-grow: 1;
+            gap: 0.5rem;
             padding: 0.5rem 0;
-            & + .row{
-                border-top: dashed 1px #BCC1C8;
-            }
+            width: 100%;
+            
             &:hover{
                 .sub-category{
                     color: var(--green);
@@ -817,7 +813,6 @@ global-header-menu{
         }
         .category{
             flex-shrink: 0;
-            flex-basis: 7rem;
             font-size: 1.15rem;
             font-weight: 700;
             cursor: default;
@@ -825,19 +820,22 @@ global-header-menu{
         .sub-category{
             font-size: 1rem;
             font-weight: 600;
-            flex-basis: 10rem;
             flex-shrink: 0;
             padding: 0 0.75rem;
+            color: var(--green);
             cursor: default;
-            padding-left: 1.5rem;
         }
         .menus{
-            flex-grow: 1;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
             gap: 0.75rem;
+            width: 100%;
         }
         .menu{
+            display: block;
+            width: 100%;
+            text-align: center;
             font-size: 0.875rem;
             font-weight: 500;
             padding: 0 0.5rem;
@@ -845,6 +843,11 @@ global-header-menu{
             &:hover{
                 color: var(--primary-hover);
             }
+        }
+
+        &:nth-of-type(n + 6){
+            padding-top: 2rem;
+            border-bottom: 0;
         }
     }
 }
