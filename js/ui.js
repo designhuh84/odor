@@ -1,3 +1,12 @@
+const isMobile = () => {
+    const mobileButton = document.querySelector('.btn-mobile-menu');
+    if(window.getComputedStyle(mobileButton).display === 'block'){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 class GlobalHeaderUI extends HTMLElement {
     constructor() {
         super();
@@ -14,14 +23,19 @@ class GlobalHeaderUI extends HTMLElement {
         });
     }
     onload() {
+        
         document.addEventListener('mousemove', event => {
-            if(event.target.closest('nav') || event.target.closest('global-header-menu')){
-                const globalHeaderMenuHeight = document.querySelector('global-header-menu').scrollHeight;
-                document.querySelector('global-header-menu').style.height = globalHeaderMenuHeight + 'px';
-            }else{
-                document.querySelector('global-header-menu').style.height = '0px';
+            if(isMobile() == false){
+                if(event.target.closest('nav') || event.target.closest('global-header-menu')){
+                    const globalHeaderMenuHeight = document.querySelector('global-header-menu').scrollHeight;
+                    document.querySelector('global-header-menu').style.height = globalHeaderMenuHeight + 'px';
+                }else{
+                    document.querySelector('global-header-menu').style.height = '0px';
+                }
             }
         });
+        
+
         document.querySelector('.btn-header-login').addEventListener('click', () => {
             document.querySelector('.header-login-sub').classList.add('show');
             document.querySelector('.header-login-sub-before').classList.add('show');
@@ -30,6 +44,41 @@ class GlobalHeaderUI extends HTMLElement {
             document.querySelector('.header-login-sub').classList.remove('show');
             document.querySelector('.header-login-sub-before').classList.remove('show');
         });
+        document.querySelector('.btn-mobile-menu').addEventListener('click', event => {
+            if(event.target.classList.contains('close')){
+                this.closeMobileMenu();
+            }else{
+                this.openMobileMenu();
+            }
+        });
+        window.addEventListener('resize', () => {
+            if(isMobile()){
+                document.querySelector('global-header-menu').style.height = 'calc(100vh - 4.75rem)';
+            }
+        });
+    }
+    openMobileMenu() {
+        document.querySelector('.btn-mobile-menu').classList.add('close');
+        document.querySelector('global-header-menu').classList.add('on');
+        this.createMobileMenuBefore();
+        this.mobileMenuBefore.addEventListener('click', () => {
+            this.closeMobileMenu();
+        });
+        document.body.style.overflowY = 'hidden';
+    }
+    closeMobileMenu() {
+        document.querySelector('.btn-mobile-menu').classList.remove('close');
+        document.querySelector('global-header-menu').classList.remove('on');
+        this.removeMobileMenuBefore();
+        document.body.style.overflowY = 'auto';
+    }
+    createMobileMenuBefore() {
+        this.mobileMenuBefore = document.createElement('div');
+        this.mobileMenuBefore.classList.add('mobile-menu-before');
+        document.body.append(this.mobileMenuBefore);
+    }
+    removeMobileMenuBefore() {
+        this.mobileMenuBefore.remove();
     }
 }
 customElements.define('global-header', GlobalHeaderUI);
@@ -53,7 +102,7 @@ GlobalHeaderUI.html = `
         <button type="button" class="btn-header-login"></button>
         <button type="button" class="btn-header-userinfo">내정보</button>
         <button type="button" class="btn-header-logout">로그아웃</button>
-        <button type="button" class="btn-mobile-menu">1</button>
+        <button type="button" class="btn-mobile-menu"></button>
         <div class="header-login-sub">
             <a href="#!">
                 <img src="./image/User-bk.svg">
