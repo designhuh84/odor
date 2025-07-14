@@ -649,6 +649,10 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(textarea);
     });
 
+    document.querySelectorAll('table td').forEach(td => {
+        tableObserver.observe(td);
+    });
+
     const lnb = document.querySelector('.lnb');
     if(lnb){
         lnb.querySelector('.group.on .menus').style.height = lnb.querySelector('.group.on .menus').scrollHeight + 'px';
@@ -685,12 +689,32 @@ const observer = new IntersectionObserver(elements => {
     });
 });
 
+const tableObserver = new IntersectionObserver(elements => {
+    elements.forEach(element => {
+        if(element.isIntersecting){
+            responsiveTdColspan(element.target);
+        }
+    });
+});
+
+const responsiveTdColspan = element => {
+    const table = element.closest('table');
+    const colCount = table.querySelectorAll('colgroup col').length;
+    const elementColspan = element.getAttribute('colspan');
+    console.log(colCount, elementColspan);
+    if(colCount == elementColspan){
+        element.classList.add('td-full-width');
+    }
+}
+
 const setTextAreaHeight = element => {
     const target = element.parentElement.previousElementSibling;
     const targetHeight = target.getBoundingClientRect().height;
     const targetPaddingTop = parseFloat(window.getComputedStyle(target).paddingTop);
     const targetPaddingBottom = parseFloat(window.getComputedStyle(target).paddingBottom);
-    element.style.height = targetHeight - targetPaddingTop - targetPaddingBottom + 'px';
+    if(!isMobile()){
+        element.style.height = targetHeight - targetPaddingTop - targetPaddingBottom + 'px';
+    }
 }
 
 const openCustomPopup = id => {
