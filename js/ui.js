@@ -681,7 +681,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const observer = new IntersectionObserver(elements => {
-    console.log(elements);
     elements.forEach(element => {
         if(element.isIntersecting){
             setTextAreaHeight(element.target);
@@ -701,7 +700,6 @@ const responsiveTdColspan = element => {
     const table = element.closest('table');
     const colCount = table.querySelectorAll('colgroup col').length;
     const elementColspan = element.getAttribute('colspan');
-    console.log(colCount, elementColspan);
     if(colCount == elementColspan){
         element.classList.add('td-full-width');
     }

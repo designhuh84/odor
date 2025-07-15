@@ -34,6 +34,9 @@ body.admin .color-label.green {
 body.admin .table-container table td.category {
   background-color: var(--blue);
 }
+body.admin .table-container table tr:hover td.category {
+  background-color: var(--blue);
+}
 body.admin global-header-menu {
   position: absolute;
   width: 100%;

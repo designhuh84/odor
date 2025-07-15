@@ -416,8 +416,24 @@
             { field: 'class' , caption:'반',   },
             { field: 'name' ,  caption:'성명', },
             { field: 'number', caption:'학번', },
-            { field: 'korean', caption:'국어', align:'right'},
-            { field: 'english',caption:'영어', align:'right'},
+            { 
+                field: 'korean', 
+                caption:'국어',
+                align:'right',
+                total: {
+                    aggregates: [{ func: 'sum' }],
+                    footer: [{ template: '합계: {{sum}}' }]
+                }
+            },
+            { 
+                field: 'english',
+                caption:'영어', 
+                align:'right',
+                total: {
+                    aggregates: [{ func: 'sum' }],
+                    footer: [{ template: '합계: {{sum}}' }]
+                }
+            },
             { 
                 field: 'math',
                 type: 'button',

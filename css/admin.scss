@@ -58,6 +58,15 @@ body.admin{
                     background-color: var(--blue);
                 }
             }
+            tr{
+                &:hover{
+                    td{
+                        &.category{
+                            background-color: var(--blue);
+                        }
+                    }
+                }
+            }
         }
     }
     

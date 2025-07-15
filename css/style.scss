@@ -2646,15 +2646,7 @@ table.sub01-1{
 
 //grid에 theme: 'common-grid' 속성을 추가해주세요.
 .sbgrid-theme-common-grid{
-    &.sbgrid-grid{
-        border: 0;
-    }
-    // .sbgrid-panel.sbgrid-body .sbgrid-row .sbgrid-col{
-    //     padding-inline: 1rem;
-    //     .sbgrid-cell{
-    //         padding: 0;
-    //     }
-    // }
+    
     .sbgrid-panel{
         &.sbgrid-scroll{
             border: 0;
@@ -2691,13 +2683,7 @@ table.sub01-1{
             }
         }
     }
-    .sbgrid-part{
-        &.sbgrid-fixed{
-            & > .sbgrid-scroll{
-                border: 0;
-            }
-        }
-    }
+    
     .sbgrid-panel.sbgrid-body{
         border: solid 1px #BFBFBF;
         border-top: 0;
@@ -4247,6 +4233,7 @@ table.sub01-1{
             }
         }
         &.SCM_001_03_table{
+            min-width: 960px;
             th, td{
                 padding: 0.25rem 1rem;
             }
@@ -4713,6 +4700,9 @@ table.sub01-1{
     
     .table-button-row{
         flex-wrap: wrap;
+        .left, .right{
+            flex-wrap: wrap;
+        }
     }
 
     .search-result-group {
@@ -4767,6 +4757,24 @@ table.sub01-1{
 }
 
 @media (max-width: 640px){
+    .grid-layout{
+        .col{
+            &-1,
+            &-2,
+            &-3,
+            &-4,
+            &-5,
+            &-6,
+            &-7,
+            &-8,
+            &-9,
+            &-10,
+            &-11,
+            &-12{
+                grid-column: span 12;
+            }
+        }
+    }
     .main-complaints-area{
         .complaints{
             grid-template-columns: repeat(2, 1fr);
@@ -4805,6 +4813,18 @@ table.sub01-1{
             input[type='text']{
                 max-width: 10rem;
             }
+        }
+    }
+    .TCS_001_03_img{
+        .text{
+            font-size: 1.5rem;
+            text-align: center;
+            word-break: keep-all;
+        }
+    }
+    .popup{
+        .htmls{
+            padding: 1rem;
         }
     }
 }
