@@ -4501,6 +4501,8 @@ table.sub01-1{
         width: 100%;
         overflow-x: auto;
         .tab{
+            flex-shrink: 0;
+            width: fit-content;
             white-space: nowrap;
             &:hover{
                 background-color: var(--primary);
@@ -4670,6 +4672,11 @@ table.sub01-1{
                 gap: 0.5rem;
             }
             td{
+                &.category{
+                    br{
+                        display: none;
+                    }
+                }
                 &.category,
                 &.td-full-width{
                     grid-column: 1 / -1;
@@ -4699,6 +4706,7 @@ table.sub01-1{
 
     
     .table-button-row{
+        width: 100%;
         flex-wrap: wrap;
         .left, .right{
             flex-wrap: wrap;
@@ -4736,6 +4744,15 @@ table.sub01-1{
         &.mid,
         &.large{
             max-width: 100%;
+        }
+    }
+
+    .chart-row{
+        flex-direction: column;
+        align-items: flex-start;
+        .chart-col{
+            gap: 1rem;
+            width: 100%;
         }
     }
       
@@ -4825,6 +4842,11 @@ table.sub01-1{
     .popup{
         .htmls{
             padding: 1rem;
+        }
+    }
+    .search-area{
+        .common__radio-group{
+            flex-wrap: wrap;
         }
     }
 }
