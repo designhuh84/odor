@@ -4233,7 +4233,7 @@ table.sub01-1{
             }
         }
         &.SCM_001_03_table{
-            min-width: 960px;
+            min-width: 1160px;
             th, td{
                 padding: 0.25rem 1rem;
             }
@@ -4374,6 +4374,16 @@ table.sub01-1{
             }
         }
     }
+    .table-container{
+        table{
+            &.SCM_007_02_table2{
+                width: 100%;
+                th, td{
+                    word-break: keep-all;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1280px){
@@ -4410,11 +4420,13 @@ table.sub01-1{
             width: 100%;
             order: 2;
             padding-bottom: 5rem;
+
+            & + .main{
+                order: 1;
+                padding-bottom: 0;
+            }
         }
-        .main{
-            order: 1;
-            padding-bottom: 0;
-        }
+        
         .aside{
             order:2;
             width: 100%;
@@ -4701,6 +4713,36 @@ table.sub01-1{
                     min-height: 3rem;
                 }
             }
+
+            &.SCM_001_03_table,
+            &.SCM_007_02_table1,
+            &.SCM_007_02_table2,
+            &.SCM_007_02_table3
+            {
+                border-collapse: collapse;
+                colgroup{
+                    col{
+                        display: table-column;
+                    }
+                }
+                tr{
+                    display: table-row;
+                }
+                th, td{
+                    display: table-cell;
+                    border: solid 1px #BFBFBF;
+                }
+            }
+
+            &.SCM_007_02_table3{
+                min-width: 970px;
+            }
+
+            tr{
+                &.mobile__full-width{
+                    grid-template-columns: 1fr;
+                }
+            }
         }
     }
 
@@ -4755,7 +4797,15 @@ table.sub01-1{
             width: 100%;
         }
     }
-      
+    .SCM_007_02_layout{
+        grid-template-columns: 1fr 1fr;
+        & > div{
+            grid-column: 1 / -1 !important;
+        }
+    }
+    .tab-row-divide{
+        flex-direction: column;
+    } 
 }
 @media (max-width: 960px){
     .main-complaints-area{

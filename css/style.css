@@ -3786,7 +3786,7 @@ table.sub01-1 tbody td {
   width: 5.75rem;
 }
 .table-container table.SCM_001_03_table {
-  min-width: 960px;
+  min-width: 1160px;
 }
 .table-container table.SCM_001_03_table th, .table-container table.SCM_001_03_table td {
   padding: 0.25rem 1rem;
@@ -3915,6 +3915,12 @@ table.sub01-1 tbody td {
     width: 10rem;
     height: auto;
   }
+  .table-container table.SCM_007_02_table2 {
+    width: 100%;
+  }
+  .table-container table.SCM_007_02_table2 th, .table-container table.SCM_007_02_table2 td {
+    word-break: keep-all;
+  }
 }
 @media (max-width: 1280px) {
   .main-banner-contents .main-text {
@@ -3942,7 +3948,7 @@ table.sub01-1 tbody td {
     order: 2;
     padding-bottom: 5rem;
   }
-  .layout .main {
+  .layout .lnb + .main {
     order: 1;
     padding-bottom: 0;
   }
@@ -4195,6 +4201,25 @@ table.sub01-1 tbody td {
   .table-container table td:has(textarea) {
     min-height: 3rem;
   }
+  .table-container table.SCM_001_03_table, .table-container table.SCM_007_02_table1, .table-container table.SCM_007_02_table2, .table-container table.SCM_007_02_table3 {
+    border-collapse: collapse;
+  }
+  .table-container table.SCM_001_03_table colgroup col, .table-container table.SCM_007_02_table1 colgroup col, .table-container table.SCM_007_02_table2 colgroup col, .table-container table.SCM_007_02_table3 colgroup col {
+    display: table-column;
+  }
+  .table-container table.SCM_001_03_table tr, .table-container table.SCM_007_02_table1 tr, .table-container table.SCM_007_02_table2 tr, .table-container table.SCM_007_02_table3 tr {
+    display: table-row;
+  }
+  .table-container table.SCM_001_03_table th, .table-container table.SCM_001_03_table td, .table-container table.SCM_007_02_table1 th, .table-container table.SCM_007_02_table1 td, .table-container table.SCM_007_02_table2 th, .table-container table.SCM_007_02_table2 td, .table-container table.SCM_007_02_table3 th, .table-container table.SCM_007_02_table3 td {
+    display: table-cell;
+    border: solid 1px #BFBFBF;
+  }
+  .table-container table.SCM_007_02_table3 {
+    min-width: 970px;
+  }
+  .table-container table tr.mobile__full-width {
+    grid-template-columns: 1fr;
+  }
   .table-button-row {
     width: 100%;
     flex-wrap: wrap;
@@ -4228,6 +4253,15 @@ table.sub01-1 tbody td {
   .chart-row .chart-col {
     gap: 1rem;
     width: 100%;
+  }
+  .SCM_007_02_layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .SCM_007_02_layout > div {
+    grid-column: 1/-1 !important;
+  }
+  .tab-row-divide {
+    flex-direction: column;
   }
 }
 @media (max-width: 960px) {
