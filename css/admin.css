@@ -195,12 +195,18 @@ body.admin global-header-menu .col .menu:hover {
   body.admin global-header-menu .col .row + .row {
     border: 0;
   }
+  body.admin global-header-menu .col .row:hover .sub-category {
+    color: #FFF;
+  }
   body.admin global-header-menu .col .sub-category {
     padding: 0.5rem;
     width: 100%;
-    background-color: var(--green);
+    background-color: var(--blue);
     color: #FFF;
     flex-basis: 0;
+  }
+  body.admin global-header-menu .col .sub-category:hover {
+    color: #FFF;
   }
   body.admin global-header-menu .col .menus {
     flex-grow: 0;

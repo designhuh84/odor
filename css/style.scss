@@ -4615,6 +4615,11 @@ table.sub01-1{
                 }
                 .row{
                     align-items: flex-start;
+                    &:hover{
+                        .sub-category{
+                            color: #FFF;
+                        }
+                    }
                 }
                 .sub-category{
                     padding: 0.5rem;

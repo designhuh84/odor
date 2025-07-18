@@ -232,13 +232,21 @@ body.admin{
                     & + .row{
                         border: 0;
                     }
+                    &:hover{
+                        .sub-category{
+                            color: #FFF;
+                        }
+                    }
                 }
                 .sub-category{
                     padding: 0.5rem;
                     width: 100%;
-                    background-color: var(--green);
+                    background-color: var(--blue);
                     color: #FFF;
                     flex-basis: 0;
+                    &:hover{
+                        color: #FFF;
+                    }
                 }
                 .menus{
                     flex-grow: 0;

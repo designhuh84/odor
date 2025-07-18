@@ -4124,6 +4124,9 @@ table.sub01-1 tbody td {
   global-header-menu .inner .col .row {
     align-items: flex-start;
   }
+  global-header-menu .inner .col .row:hover .sub-category {
+    color: #FFF;
+  }
   global-header-menu .inner .col .sub-category {
     padding: 0.5rem;
     width: 100%;
