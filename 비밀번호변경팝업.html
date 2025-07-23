@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    
+    <!-- 커스텀 팝업창 START -->
+    <div class="popup custom" id="custom-01">
+        <div class="container changePassword_popup">
+            
+            <div class="header">
+                <div class="title">비밀번호 변경</div>
+                <button type="button" class="btn-popup-close"></button>
+            </div>
+
+            <div class="htmls">
+                
+                <div class="table-button-row margin-top-0 padding-top-0">
+                    <div class="section-header">
+                        보안 강화를 위해 3개월마다 비밀번호 변경을 권장합니다.
+                    </div>
+                </div>
+                
+                <div class="table-container">
+                    <table class="write changePasswordTable">
+                        <colgroup>
+                            <col class="header"><col>
+                        </colgroup>
+                        <tr>
+                            <th class="required">현재 비밀번호</th>
+                            <td>
+                                <input type="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="required">변경할 비밀번호</th>
+                            <td>
+                                <input type="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="required">변경할 비밀번호 확인</th>
+                            <td>
+                                <input type="password">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+
+            <div class="footer">
+                <button type="button" class="btn secondary">다음에 변경</button>
+                <button type="button" class="btn primary">확인</button>
+            </div>
+
+        </div>
+    </div>
+    <!-- 커스텀 팝업창 END -->
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        openCustomPopup('custom-01');
+    });
+
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub admin">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            로그인
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            관리자 로그인
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+            
+            <div class="main">
+                
+                <div class="contents loginPage">
+
+                    <div class="login-area">
+                        <div class="login-box">
+                            <div class="title">
+                                <img src="./image/user-fill.svg" class="blue">
+                                관리자 로그인
+                            </div>
+                            <input type="text" placeholder="아이디">
+                            <input type="password" placeholder="비밀번호">
+
+                            <div class="verification-box">
+                                <div class="verification-row">
+                                    <input type="text" placeholder="전화번호">
+                                    <button type="button" class="btn blue" id="send_verification-numner">인증번호 전송</button>
+                                    <!-- <button type="button" class="btn primary" id="re-send_verification-numner">인증번호 재전송</button> -->
+                                    <!-- verification-row 를 상황에 맞게 show/hide 해서 사용하시면 될 것 같습니다.  -->
+                                </div>
+                                <div class="verification-row">
+                                    <input type="text" placeholder="인증번호">
+                                    <button type="button" class="btn blue" id="confirm_verification-numner">인증완료</button>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn primary btn-login">로그인</button>
+                            <div class="bottom">
+                                <button type="button" class="btn secondary">회원가입</button>
+                                <button type="button" class="btn secondary">아이디/비밀번호 찾기</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        resizeContents();
+    });
+
+    const resizeContents = () => {
+        const contentHeight = document.querySelector('.layout').offsetHeight - (16*5) - (16*1.5);
+        document.querySelector('.contents').style.height = contentHeight + 'px';
+    }
+
+</script>
+</html>
