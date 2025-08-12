@@ -288,6 +288,7 @@ global-header .logo img {
   border-radius: 0.25rem;
   background-color: var(--blue);
   color: #FFF;
+  margin-right: 0.5rem;
 }
 
 .btn-header-logout {
@@ -886,6 +887,7 @@ global-header-menu .col:nth-of-type(n + 6) {
   width: 14.375rem;
   display: flex;
   flex-direction: column;
+  padding-bottom: 5rem;
 }
 .layout .lnb .group.on .title {
   font-weight: 700;
@@ -2386,9 +2388,6 @@ table.sub01-1 tbody td {
 
 .sbgrid-theme-common-grid .sbgrid-panel.sbgrid-scroll {
   border: 0;
-}
-.sbgrid-theme-common-grid .sbgrid-panel.sbgrid-caption .sbgrid-row .sbgrid-col {
-  padding: 0 1rem;
 }
 .sbgrid-theme-common-grid .sbgrid-caption .sbgrid-thead {
   background-color: var(--th);
@@ -3996,6 +3995,9 @@ table.sub01-1 tbody td {
   }
   .search-area .col.full-width {
     grid-template-columns: 7rem 1fr;
+  }
+  .search-area .col label {
+    word-break: break-all;
   }
   .search-area .col__row {
     flex-direction: column;

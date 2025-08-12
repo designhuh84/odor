@@ -261,6 +261,15 @@ body.admin{
                 }
             }
         }
+
+        .tab-row{
+            .tab{
+                &:hover{
+                    background-color: var(--primary);
+                    color: #FFF;
+                }
+            }
+        }
     
     }
 }

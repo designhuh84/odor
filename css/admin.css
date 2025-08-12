@@ -218,4 +218,8 @@ body.admin global-header-menu .col .menu:hover {
     display: flex;
     width: 100%;
   }
+  body.admin .tab-row .tab:hover {
+    background-color: var(--primary);
+    color: #FFF;
+  }
 }/*# sourceMappingURL=admin.css.map */

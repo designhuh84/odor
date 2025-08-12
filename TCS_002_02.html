@@ -628,8 +628,47 @@
                             <div class="section-header">악취 저감방안 및 개선사항</div>
                             <button type="button" class="btn icon save blue">저장</button>
                         </div>
-                        <div id="grid_tcs_002_02-6">grid area</div>
-                        <button type="button" class="btn primary" onclick="selectPopup()">방지시설선택</button>
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col>
+                                    <col style="width: 25%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>원료변경</th>
+                                        <th>공정변경</th>
+                                        <th>밀폐관리</th>
+                                        <th>방지시설유지관리</th>
+                                        <th>방지시설신규설치</th>
+                                        <th>방지시설선택</th>
+                                        <th>탈취제 등 사용</th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><select></select></td>
+                                        <td><select></select></td>
+                                        <td><select></select></td>
+                                        <td><select></select></td>
+                                        <td><select></select></td>
+                                        <td><button type="button" class="btn black" id="odpvftBtn" onclick="selectPopup()">방지시설선택</button></td>
+                                        <td><select></select></td>
+                                        <td>
+                                            <input type="text" id="rmrkCn" maxlength="100">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
+                        </div>
                     </div>
 
 

@@ -298,6 +298,7 @@ global-header{
     border-radius: 0.25rem;
     background-color: var(--blue);
     color: #FFF;
+    margin-right: 0.5rem;
 }
 
 .btn-header-logout{
@@ -916,6 +917,7 @@ global-header-menu{
         width: 14.375rem;
         display: flex;
         flex-direction: column;
+        padding-bottom: 5rem;
         .group{
             &.on{
                 .title{
@@ -2654,7 +2656,7 @@ table.sub01-1{
         &.sbgrid-caption{
             .sbgrid-row{
                 .sbgrid-col{
-                    padding: 0 1rem;
+                    // padding: 0 1rem;
                 }
             }
         }
@@ -4473,6 +4475,9 @@ table.sub01-1{
             grid-template-columns: 7rem 1fr;
             &.full-width{
                 grid-template-columns: 7rem 1fr;
+            }
+            label{
+                word-break: break-all;
             }
         }
         .col__row{
