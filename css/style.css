@@ -1914,6 +1914,10 @@ table.sub01-1 tbody td {
 .popup.custom col.header {
   display: table-column;
 }
+.popup.custom .htmls .table-button-row:nth-of-type(1) {
+  margin-top: 0;
+  padding-top: 0;
+}
 .popup::before {
   content: "";
   position: absolute;
