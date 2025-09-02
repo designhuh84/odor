@@ -24,18 +24,18 @@
                     <button type="button" class="btn-search"></button>
                 </div>
                 <div class="row">
-                    <button type="button" class="request">
+                    <a href="https://www.epeople.go.kr/" target="_blank" class="request">
                         <img src="./image/Chat-Round-Dots.svg">
                         <label>민원접수</label>
-                    </button>
-                    <button type="button" class="request">
+                    </a>
+                    <a href="https://keco.or.kr/web/lay1/S1T168C1031/contents.do" target="_blank" class="request">
                         <img src="./image/Clipboard-List.svg">
-                        <label>민원현황</label>
-                    </button>
-                    <button type="button" class="request">
+                        <label>기술지원</label>
+                    </a>
+                    <a href="#" class="request">
                         <img src="./image/Smile-Circle.svg">
-                        <label>민원결과</label>
-                    </button>
+                        <label>악취관리지역맵</label>
+                    </a>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    <div class="main-complaints-area">
+    <!-- <div class="main-complaints-area">
         <div class="inner">
             <div class="section-title">
                 <div class="caption">Complaints by Region</div>
@@ -79,7 +79,7 @@
             </div>
             <div class="complaints"></div>
         </div>
-    </div>
+    </div> -->
 
     <div class="main-odor-control-tips-area">
         <div class="inner">
@@ -167,7 +167,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         loadNotice();
         loadArchives();
-        loadComplaints();
+        // loadComplaints();
 
         let mainBanner = new Flickity('.main-banner-img', {
             imagesLoaded: true,

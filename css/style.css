@@ -251,7 +251,7 @@ global-header .logo {
 }
 global-header .logo img {
   display: block;
-  height: 2rem;
+  height: 2.5rem;
 }
 
 .btn-mobile-menu {
@@ -424,7 +424,7 @@ golbal-footer .footer-terms {
 .main-banner {
   position: relative;
   width: 100%;
-  aspect-ratio: 1920/750;
+  aspect-ratio: 1920/600;
   overflow: hidden;
   background: linear-gradient(180deg, #DFEBAD 0%, #82C082 100%);
 }
@@ -448,21 +448,21 @@ golbal-footer .footer-terms {
   height: 100%;
 }
 .main-banner-img .mb-01 {
-  aspect-ratio: 1920/750;
+  aspect-ratio: 1920/600;
   width: 100%;
   background-image: url(../image/main-banner.png);
   background-size: cover;
   background-position: center;
 }
 .main-banner-img .mb-02 {
-  aspect-ratio: 1920/750;
+  aspect-ratio: 1920/600;
   width: 100%;
   background-image: url(../image/main-banner-02.png);
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 .main-banner-img .mb-03 {
-  aspect-ratio: 1920/750;
+  aspect-ratio: 1920/600;
   width: 100%;
   background-image: url(../image/main-banner-03.png);
   background-size: cover;
@@ -530,42 +530,44 @@ golbal-footer .footer-terms {
   background-color: var(--primary-press);
 }
 .main-banner-contents .row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  margin-top: 3.63rem;
+  margin-top: 1.5rem;
+  gap: 1rem;
 }
-.main-banner-contents .row button {
+.main-banner-contents .row .request {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.62rem;
-  width: 12rem;
-  height: 12rem;
-  border-radius: 6rem;
+  aspect-ratio: 1;
+  border-radius: 2rem;
   background-color: var(--primary);
 }
-.main-banner-contents .row button img {
-  width: 3.5rem;
+.main-banner-contents .row .request img {
+  width: 100%;
+  max-width: 3.5rem;
 }
-.main-banner-contents .row button label {
+.main-banner-contents .row .request label {
   font-size: 1.5rem;
   line-height: 100%;
   color: #FFF;
+  text-align: center;
 }
-.main-banner-contents .row button:hover {
+.main-banner-contents .row .request:hover {
   background-color: var(--primary-hover);
 }
-.main-banner-contents .row button:active {
+.main-banner-contents .row .request:active {
   background-color: var(--primary-press);
 }
 
 .main-notice-area .inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4.5rem;
-  padding: 6rem 1rem;
+  gap: 2rem;
+  padding: 4rem 1rem;
 }
 .main-notice-area .title-row {
   display: flex;
@@ -576,7 +578,7 @@ golbal-footer .footer-terms {
   width: 100%;
 }
 .main-notice-area .title-row .title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 100%;
 }
@@ -598,7 +600,7 @@ golbal-footer .footer-terms {
   align-items: center;
   width: 100%;
   gap: 2rem;
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem;
   border-bottom: solid 1px #BCC1C8;
 }
 .main-notice-area .list .row:hover {
@@ -684,7 +686,7 @@ main-complaints .datas .row .data {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.38rem;
+  gap: 0.5rem;
 }
 .section-title .caption {
   font-size: 1.25rem;
@@ -700,12 +702,16 @@ main-complaints .datas .row .data {
   font-size: 1.0625rem;
 }
 
+.main-odor-control-tips-area {
+  background-color: var(--th);
+}
 .main-odor-control-tips-area .inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
   padding: 6rem 1rem;
+  padding-top: 4rem;
 }
 .main-odor-control-tips-area .odor-control-tips {
   display: grid;
@@ -719,9 +725,10 @@ main-complaints .datas .row .data {
   border-radius: 1.5rem;
   overflow: hidden;
   background-color: #DBF0DB;
+  box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.2);
 }
 .main-odor-control-tips-area .odor-control-tips .col:nth-of-type(2), .main-odor-control-tips-area .odor-control-tips .col:nth-of-type(4) {
-  background-color: #ECF8EC;
+  background-color: #FFF;
 }
 .main-odor-control-tips-area .odor-control-tips .img {
   width: 100%;
@@ -938,7 +945,7 @@ global-header-menu .col .menu:hover {
   gap: 0.5rem;
   padding: 0.75rem 0.5rem;
   border-bottom: solid 1px #999;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 .layout .lnb .menu:hover {
   color: var(--primary);
@@ -2062,7 +2069,7 @@ table.sub01-1 tbody td {
   height: 100%;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 16.875rem 1fr;
+  grid-template-columns: 20rem 1fr;
   border: solid 1px #BFBFBF;
 }
 #minwon-map .sidebar {
@@ -2105,7 +2112,7 @@ table.sub01-1 tbody td {
 #minwon-map .sidebar .type-row .type {
   display: flex;
   align-items: center;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   word-break: keep-all;
 }
 #minwon-map .sidebar .radio-row {
@@ -2118,7 +2125,7 @@ table.sub01-1 tbody td {
   gap: 0.2rem;
 }
 #minwon-map .sidebar .radio-row .radio label {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
 }
 #minwon-map .map-area {
   overflow: hidden;
@@ -3949,13 +3956,9 @@ table.sub01-1 tbody td {
   .main-banner-contents {
     padding: 1.5rem;
   }
-  .main-banner-contents .row {
-    margin-top: 1.5rem;
-  }
-  .main-banner-contents .row button {
-    aspect-ratio: 1;
-    width: 10rem;
-    height: auto;
+  .main-banner-contents .row .request {
+    aspect-ratio: 4/3;
+    border-radius: 1.5rem;
   }
   .table-container table.SCM_007_02_table2 {
     width: 100%;
@@ -3971,10 +3974,7 @@ table.sub01-1 tbody td {
   .main-banner-contents .search {
     height: 3rem;
   }
-  .main-banner-contents .row button {
-    width: 8rem;
-  }
-  .main-banner-contents .row button label {
+  .main-banner-contents .row .request label {
     font-size: 1rem;
   }
   .main-complaints-area .complaints {
@@ -4048,7 +4048,7 @@ table.sub01-1 tbody td {
     justify-content: center;
     gap: 1rem;
   }
-  .main-banner .main-banner-contents .row button {
+  .main-banner .main-banner-contents .row .request {
     aspect-ratio: auto;
     width: 100%;
     padding: 1rem;
