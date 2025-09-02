@@ -1375,6 +1375,9 @@ global-header-menu .col .menu:hover {
   display: flex;
   gap: 0.44rem;
 }
+.infobox .button-row.items-center {
+  align-items: center;
+}
 .infobox .li {
   font-size: 0.875rem;
   padding-left: 0.65rem;
@@ -1394,6 +1397,9 @@ global-header-menu .col .menu:hover {
   border-radius: 0.2rem;
   background-color: var(--primary);
   transform: translateY(-0.1rem);
+}
+.infobox.st2 .li::before {
+  margin-right: 0.5rem;
 }
 
 .color-label {
@@ -4256,16 +4262,16 @@ table.sub01-1 tbody td {
   .table-container table td:has(textarea) {
     min-height: 3rem;
   }
-  .table-container table.SCM_001_03_table, .table-container table.SCM_007_02_table1, .table-container table.SCM_007_02_table2, .table-container table.SCM_007_02_table3 {
+  .table-container table.SCM_001_03_table, .table-container table.SCM_007_02_table1, .table-container table.SCM_007_02_table2, .table-container table.SCM_007_02_table3, .table-container table.ETC_01_table {
     border-collapse: collapse;
   }
-  .table-container table.SCM_001_03_table colgroup col, .table-container table.SCM_007_02_table1 colgroup col, .table-container table.SCM_007_02_table2 colgroup col, .table-container table.SCM_007_02_table3 colgroup col {
+  .table-container table.SCM_001_03_table colgroup col, .table-container table.SCM_007_02_table1 colgroup col, .table-container table.SCM_007_02_table2 colgroup col, .table-container table.SCM_007_02_table3 colgroup col, .table-container table.ETC_01_table colgroup col {
     display: table-column;
   }
-  .table-container table.SCM_001_03_table tr, .table-container table.SCM_007_02_table1 tr, .table-container table.SCM_007_02_table2 tr, .table-container table.SCM_007_02_table3 tr {
+  .table-container table.SCM_001_03_table tr, .table-container table.SCM_007_02_table1 tr, .table-container table.SCM_007_02_table2 tr, .table-container table.SCM_007_02_table3 tr, .table-container table.ETC_01_table tr {
     display: table-row;
   }
-  .table-container table.SCM_001_03_table th, .table-container table.SCM_001_03_table td, .table-container table.SCM_007_02_table1 th, .table-container table.SCM_007_02_table1 td, .table-container table.SCM_007_02_table2 th, .table-container table.SCM_007_02_table2 td, .table-container table.SCM_007_02_table3 th, .table-container table.SCM_007_02_table3 td {
+  .table-container table.SCM_001_03_table th, .table-container table.SCM_001_03_table td, .table-container table.SCM_007_02_table1 th, .table-container table.SCM_007_02_table1 td, .table-container table.SCM_007_02_table2 th, .table-container table.SCM_007_02_table2 td, .table-container table.SCM_007_02_table3 th, .table-container table.SCM_007_02_table3 td, .table-container table.ETC_01_table th, .table-container table.ETC_01_table td {
     display: table-cell;
     border: solid 1px #BFBFBF;
   }
@@ -4426,4 +4432,24 @@ body:has(.error-page) {
   padding: 1rem 2rem;
   font-size: 1.5rem;
   margin-top: 2rem;
+}
+
+.etc01-image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 2rem;
+}
+.etc01-image-box img {
+  width: 100%;
+}
+
+.etc-01-infobox-button-row {
+  padding-left: 1.2rem;
+  padding-top: 0.5rem;
+  gap: 0.5rem;
+}
+.etc-01-infobox-button-row button {
+  height: 2rem;
 }/*# sourceMappingURL=style.css.map */
