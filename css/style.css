@@ -4262,16 +4262,16 @@ table.sub01-1 tbody td {
   .table-container table td:has(textarea) {
     min-height: 3rem;
   }
-  .table-container table.SCM_001_03_table, .table-container table.SCM_007_02_table1, .table-container table.SCM_007_02_table2, .table-container table.SCM_007_02_table3, .table-container table.ETC_01_table {
+  .table-container table.SCM_001_03_table, .table-container table.SCM_007_02_table1, .table-container table.SCM_007_02_table2, .table-container table.SCM_007_02_table3, .table-container table.ETC_01_table, .table-container table.ETC_02_table {
     border-collapse: collapse;
   }
-  .table-container table.SCM_001_03_table colgroup col, .table-container table.SCM_007_02_table1 colgroup col, .table-container table.SCM_007_02_table2 colgroup col, .table-container table.SCM_007_02_table3 colgroup col, .table-container table.ETC_01_table colgroup col {
+  .table-container table.SCM_001_03_table colgroup col, .table-container table.SCM_007_02_table1 colgroup col, .table-container table.SCM_007_02_table2 colgroup col, .table-container table.SCM_007_02_table3 colgroup col, .table-container table.ETC_01_table colgroup col, .table-container table.ETC_02_table colgroup col {
     display: table-column;
   }
-  .table-container table.SCM_001_03_table tr, .table-container table.SCM_007_02_table1 tr, .table-container table.SCM_007_02_table2 tr, .table-container table.SCM_007_02_table3 tr, .table-container table.ETC_01_table tr {
+  .table-container table.SCM_001_03_table tr, .table-container table.SCM_007_02_table1 tr, .table-container table.SCM_007_02_table2 tr, .table-container table.SCM_007_02_table3 tr, .table-container table.ETC_01_table tr, .table-container table.ETC_02_table tr {
     display: table-row;
   }
-  .table-container table.SCM_001_03_table th, .table-container table.SCM_001_03_table td, .table-container table.SCM_007_02_table1 th, .table-container table.SCM_007_02_table1 td, .table-container table.SCM_007_02_table2 th, .table-container table.SCM_007_02_table2 td, .table-container table.SCM_007_02_table3 th, .table-container table.SCM_007_02_table3 td, .table-container table.ETC_01_table th, .table-container table.ETC_01_table td {
+  .table-container table.SCM_001_03_table th, .table-container table.SCM_001_03_table td, .table-container table.SCM_007_02_table1 th, .table-container table.SCM_007_02_table1 td, .table-container table.SCM_007_02_table2 th, .table-container table.SCM_007_02_table2 td, .table-container table.SCM_007_02_table3 th, .table-container table.SCM_007_02_table3 td, .table-container table.ETC_01_table th, .table-container table.ETC_01_table td, .table-container table.ETC_02_table th, .table-container table.ETC_02_table td {
     display: table-cell;
     border: solid 1px #BFBFBF;
   }
@@ -4452,4 +4452,38 @@ body:has(.error-page) {
 }
 .etc-01-infobox-button-row button {
   height: 2rem;
+}
+
+.ETC_02_table {
+  min-width: 720px !important;
+}
+.ETC_02_table th {
+  padding: 0 !important;
+}
+.ETC_02_table th a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+}
+.ETC_02_table th a::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../image/Square-Top-Down.svg);
+  background-size: cover;
+}
+.ETC_02_table th a:hover {
+  background-color: var(--primary);
+  color: #FFF;
+}
+.ETC_02_table th a:hover::after {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(88deg) brightness(105%) contrast(102%);
+}
+
+.table-container:has(.ETC_02_table) {
+  margin-top: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

@@ -4965,7 +4965,8 @@ table.sub01-1{
             &.SCM_007_02_table1,
             &.SCM_007_02_table2,
             &.SCM_007_02_table3,
-            &.ETC_01_table
+            &.ETC_01_table,
+            &.ETC_02_table
             {
                 border-collapse: collapse;
                 colgroup{
@@ -5232,4 +5233,39 @@ body:has(.error-page){
     button{
         height: 2rem;
     }
+}
+
+.ETC_02_table{
+    min-width: 720px !important;
+    th{
+        padding: 0 !important;
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.7rem 1rem;
+            &::after{
+                content: '';
+                display: block;
+                width: 1rem;
+                height: 1rem;
+                background-image: url(../image/Square-Top-Down.svg);
+                background-size: cover;
+            }
+
+            &:hover{
+                background-color: var(--primary);
+                color: #FFF;
+                &::after{
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(88deg) brightness(105%) contrast(102%);
+                }
+            }
+        }
+    }
+}
+
+.table-container:has(.ETC_02_table){
+    margin-top: 0.5rem;
 }
