@@ -132,10 +132,25 @@ GlobalHeaderUI.html = `
             <a href="./SOC_001_01.html">민원현황</a>
             <a href="#!">고객센터</a>
         </nav>
-        <button type="button" class="btn-header-login"></button>
-        <button type="button" class="btn-header-userinfo">내정보</button>
-        <button type="button" class="btn-header-logout">로그아웃</button>
-        <button type="button" class="btn-mobile-menu"></button>
+
+        
+        <div class="right">
+            <div class="logout-timer">
+                <div class="icon"></div>
+                <div class="time">10:00</div>
+                <button type="button" class="time-extension-button">연장하기</button>
+                <div class="row">
+                    <input type="checkbox" id="auto-time-extention">
+                    <label for="auto-time-extention">자동연장</label>
+                </div>
+            </div>
+
+            <button type="button" class="btn-header-login"></button>
+            <button type="button" class="btn-header-userinfo">내정보</button>
+            <button type="button" class="btn-header-logout">로그아웃</button>
+            <button type="button" class="btn-mobile-menu"></button>
+        </div>
+
         <div class="header-login-sub">
             <a href="#!">
                 <img src="./image/User-bk.svg">
