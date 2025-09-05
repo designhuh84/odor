@@ -39,6 +39,7 @@
 
 
                     <div id="minwon-map">
+                        <button type="button" class="minwonmap-sidebar-button"></button>
                         <div class="sidebar">
                             <div class="row">
                                 <div class="title">주소검색</div>
@@ -264,9 +265,20 @@
 
     document.addEventListener('DOMContentLoaded', () => {
 
-        
+        document.querySelector('.minwonmap-sidebar-button').addEventListener('click', () => {
+            showHideMinwonmapSideBar();
+        });
 
     });
+
+    const showHideMinwonmapSideBar = () => {
+        const minwonmap =document.querySelector('#minwon-map');
+        if(minwonmap.classList.contains('expand')){
+            minwonmap.classList.remove('expand');
+        }else{
+            minwonmap.classList.add('expand');
+        }
+    }
 
 </script>
 </html>

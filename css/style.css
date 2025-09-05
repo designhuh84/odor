@@ -2122,19 +2122,62 @@ table.sub01-1 tbody td {
 }
 
 #minwon-map {
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: 20rem 1fr;
   border: solid 1px #BFBFBF;
 }
+#minwon-map.expand .sidebar {
+  transform: translateX(-20rem);
+}
+#minwon-map.expand .minwonmap-sidebar-button {
+  transform: translateX(-20rem);
+}
+#minwon-map.expand .minwonmap-sidebar-button::before {
+  background-image: url(../image/Arrow-Right.svg);
+}
+#minwon-map.expand .map-area {
+  width: 100%;
+}
+#minwon-map .minwonmap-sidebar-button {
+  position: absolute;
+  top: 3rem;
+  left: 20rem;
+  transform: translate(-1px, 0);
+  z-index: 80;
+  width: 1.5rem;
+  height: 3rem;
+  background-color: #FFF;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border-right: solid 1px #BFBFBF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+#minwon-map .minwonmap-sidebar-button::before {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../image/Arrow-Left.svg);
+  background-size: cover;
+}
 #minwon-map .sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
   border-right: solid 1px #BFBFBF;
+  width: 20rem;
+  height: 100%;
+  background-color: #FFF;
+  z-index: 2;
+  transition: transform 0.3s ease;
 }
 #minwon-map .sidebar .row {
   display: flex;
@@ -2187,6 +2230,9 @@ table.sub01-1 tbody td {
 #minwon-map .map-area {
   overflow: hidden;
   position: relative;
+  width: calc(100% - 20rem);
+  margin-left: auto;
+  transition: width 0.3s ease;
 }
 #minwon-map .rank {
   position: absolute;
