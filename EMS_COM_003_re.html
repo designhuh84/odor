@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원가입
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            사업자 회원가입
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">관리자 - 회원가입</div>
+                <div class="contents">
+
+                    <div class="join-top-tabs admin">
+                        <button type="button" class="tab-01 tab on" data-name="tab-01">약관동의</button>
+                        <button type="button" class="tab-02 tab" data-name="tab-02">본인인증</button>
+                        <button type="button" class="tab-03 tab" data-name="tab-03">정보입력</button>
+                        <button type="button" class="tab-01 tab" data-name="tab-04">보안서약서동의</button>
+                        <button type="button" class="tab-01 tab" data-name="tab-05">계정발급신청서 출력</button>
+                        <button type="button" class="tab-04 tab" data-name="tab-06">가입완료</button>
+                    </div>
+
+                    <div class="join-tab-contents on" data-name="tab-01">
+                        <form>
+                            <div class="section-header">개인정보 수집 및 이용 동의</div>
+                            <p>1. $000시스템은 원활한 업무 지원을 위해 아래와 같이 최소한의 [필수] 개인정보를 수집하고 있습니다.</p>
+                            <div class="table-container">
+                                <table class="fixed">
+                                    <tr>
+                                        <th>개인정보 항목</th>
+                                        <th>수집목적</th>
+                                        <th>개인정보 보유기간</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            개인식별번호(CI), 성명, 휴대전화 번호, 이메일주소, 직위(직급), 회사(사업장)주소, 회사(사업장)전화번호, 소속(업체)명, 부서명
+                                        </td>
+                                        <td>
+                                            악취 관련 업무 처리 등 행정 서비스 이용
+                                        </td>
+                                        <td>
+                                            <strong>계정 만료일로부터 3년*</strong>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="infobox">
+                                <p>※ 공단 소속일 경우 부서 이동/퇴사 시 자동 계정 만료</p>
+                                <p>※ 계정말료예정일 설정 또는 6개월 미접속 시 자동 계정 만료</p>
+                                <p>※ 이 외 퇴사 및 부서 이동 확인 시 계정 만료 처리</p>
+                                <p>2. 상기 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다. 다만, 동의 거부 시 이용이 제한됩니다.</p>
+                                <p>3. 온라인 서비스 이용중 부정이용 방지, 서비스 유효성 확인, 이용 빈도 확인을 위해 IP Address, 방문일시, 서비스 이용이 기록될 수 있습니다.</p>
+                            </div>
+                            <div class="join-agreed-box">
+                                <span>[필수] 개인정보 수집 및 이용에 [</span>
+                                <input type="radio">
+                                <span>동의합니다</span>
+                                <input type="radio">
+                                <span>동의하지 않습니다 ]</span>
+                            </div>
+
+                            <div class="infobox join-agreed-box-02">
+                                <input type="checkbox">
+                                <label>위와 같이 개인정보 수집 및 이용에 동의합니다.</label>
+                            </div>
+
+                            <div class="join-agreed-submit">
+                                <button type="button" class="btn primary">회원가입</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="join-tab-contents" data-name="tab-02">
+                        정부통합로그인
+                    </div>
+
+                    <div class="join-tab-contents" data-name="tab-03">
+                        <div class="table-button-row">
+                            <div class="section-header">정보입력</div>
+                        </div>
+
+
+                        <!-- 시스템 관리자 S -->
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th class="required">성명</th>
+                                    <td colspan="3">
+                                        <input type="text" class="large" value="나나나" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">휴대전화번호</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select class="mid" disabled>
+                                                <option>010</option>
+                                            </select>
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">이메일주소</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" class="large">
+                                            <span>@</span>
+                                            <input type="text" class="large">
+                                            <select class="large">
+                                                <option>직접입력</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">회사주소</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" id="address-01" placeholder="주소검색 버튼을 누르세요" readonly class="large">
+                                            <input type="text" id="address-02" placeholder="나머지 주소" class="large">
+                                            <button type="button" class="btn icon search primary" id="search-address">주소검색</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">회사 전화번호</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select class="mid">
+                                                <option>02</option>
+                                            </select>
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">소속구분</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="Y">
+                                                <label>환경공단</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>환경부</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>지자체</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>기타</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th class="required">소속명</th>
+                                    <td>
+                                        <input type="text" value="환경부" class="large" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">부서명</th>
+                                    <td>
+                                        <input type="text" class="large" disabled>
+                                    </td>
+                                    <th>
+                                        공단 사원번호
+                                    </th>
+                                    <td>
+                                        <div class="row">
+                                            <input type="text" class="large">
+                                            <button type="button" class="btn primary">공단인증</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">직위</th>
+                                    <td>
+                                        <select class="large">
+                                            <option>대리</option>
+                                        </select>
+                                    </td>
+                                    <th class="required">권한유형</th>
+                                    <td>
+                                        <select class="large">
+                                            <option>시스템관리자</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">관리자ID</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" class="large">
+                                            <button type="button" class="btn primary">중복체크</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호</th>
+                                    <td colspan="3">
+                                        <input type="password" class="large">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호 확인</th>
+                                    <td colspan="3">
+                                        <input type="password" class="large">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">접속IP</th>
+                                    <td colspan="3">
+                                        <input type="text" class="large">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>정보수신 동의</th>
+                                    <td colspan="3">
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="Y">
+                                                <label>예</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>아니오</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>정보수신 채널</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>SMS</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>E-MAIL</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>카카오톡</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 시스템 관리자 E -->
+
+                        <!-- 관능시험 S -->
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th class="required">성명</th>
+                                    <td colspan="3">
+                                        <input type="text" class="large" value="나나나" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">휴대전화번호</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select class="mid" disabled>
+                                                <option>010</option>
+                                            </select>
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">이메일주소</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" class="large">
+                                            <span>@</span>
+                                            <input type="text" class="large">
+                                            <select class="large">
+                                                <option>직접입력</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">회사주소</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" id="address-01" placeholder="주소검색 버튼을 누르세요" readonly class="large">
+                                            <input type="text" id="address-02" placeholder="나머지 주소" class="large">
+                                            <button type="button" class="btn icon search primary" id="search-address">주소검색</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">회사 전화번호</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select class="mid">
+                                                <option>02</option>
+                                            </select>
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">소속구분</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="Y">
+                                                <label>환경공단</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>환경부</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>지자체</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>기타</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th class="required">소속명</th>
+                                    <td>
+                                        <input type="text" value="환경부" class="large" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">부서명</th>
+                                    <td>
+                                        <input type="text" class="large" disabled>
+                                    </td>
+                                    <th>
+                                        공단 사원번호
+                                    </th>
+                                    <td>
+                                        <div class="row">
+                                            <input type="text" class="large">
+                                            <button type="button" class="btn primary">공단인증</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">직위</th>
+                                    <td>
+                                        <select class="large">
+                                            <option>대리</option>
+                                        </select>
+                                    </td>
+                                    <th class="required">권한유형</th>
+                                    <td>
+                                        <select class="large">
+                                            <option>관능시험</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">정보수신 동의</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="Y">
+                                                <label>예</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>아니오</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th class="required">직책</th>
+                                    <td>
+                                        <select class="large">
+                                            <option>담당없음</option>
+                                            <option>담당자</option>
+                                            <option>기술책임자</option>
+                                            <option>부장</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>정보수신 채널</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>SMS</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>E-MAIL</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>카카오톡</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 관능시험 E -->
+
+                        <!-- 환경부 S -->
+                         <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th class="required">성명</th>
+                                    <td colspan="3">
+                                        <input type="text" class="large" value="나나나" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">휴대전화번호</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select class="mid" disabled>
+                                                <option>010</option>
+                                            </select>
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">이메일주소</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" class="large">
+                                            <span>@</span>
+                                            <input type="text" class="large">
+                                            <select class="large">
+                                                <option>직접입력</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">회사주소</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" id="address-01" placeholder="주소검색 버튼을 누르세요" readonly class="large">
+                                            <input type="text" id="address-02" placeholder="나머지 주소" class="large">
+                                            <button type="button" class="btn icon search primary" id="search-address">주소검색</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">회사 전화번호</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select class="mid">
+                                                <option>02</option>
+                                            </select>
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">소속구분</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="Y">
+                                                <label>환경공단</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>환경부</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>지자체</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>기타</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th class="required">소속명</th>
+                                    <td>
+                                        <input type="text" value="환경부" class="large" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">부서명</th>
+                                    <td colspan="3">
+                                        <input type="text" class="large" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">권한유형</th>
+                                    <td colspan="3">
+                                        <div class="common__radio-group disabled">
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="Y">
+                                                <label>시스템 관리자</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="N" checked>
+                                                <label>관리자</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="N">
+                                                <label>관능시험</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="N">
+                                                <label>판정원</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">직책</th>
+                                    <td colspan="3">
+                                        <select class="large">
+                                            <option>대리</option>
+                                            <option></option>
+                                            <option></option>
+                                            <option></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">정보수신 동의</th>
+                                    <td colspan="3">
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="Y">
+                                                <label>예</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>아니오</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>정보수신 채널</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>SMS</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>E-MAIL</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>카카오톡</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 환경부 E -->
+
+
+                        <!-- 지자체 S -->
+                         <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th class="required">성명</th>
+                                    <td colspan="3">
+                                        <input type="text" class="large" value="나나나" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">휴대전화번호</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select class="mid" disabled>
+                                                <option>010</option>
+                                            </select>
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">이메일주소</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" class="large">
+                                            <span>@</span>
+                                            <input type="text" class="large">
+                                            <select class="large">
+                                                <option>직접입력</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">회사주소</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" id="address-01" placeholder="주소검색 버튼을 누르세요" readonly class="large">
+                                            <input type="text" id="address-02" placeholder="나머지 주소" class="large">
+                                            <button type="button" class="btn icon search primary" id="search-address">주소검색</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">회사 전화번호</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select class="mid">
+                                                <option>02</option>
+                                            </select>
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">소속구분</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="Y">
+                                                <label>환경공단</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>환경부</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>지자체</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>기타</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th class="required">소속명</th>
+                                    <td>
+                                        <input type="text" value="지자체" class="large" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">부서명</th>
+                                    <td colspan="3">
+                                        <input type="text" class="large" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">관할지역</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select class="large">
+                                                <option></option>
+                                            </select>
+                                            <select class="large">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">권한유형</th>
+                                    <td colspan="3">
+                                        <div class="common__radio-group disabled">
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="Y">
+                                                <label>시스템 관리자</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="N" checked>
+                                                <label>관리자</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="N">
+                                                <label>관능시험</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="N">
+                                                <label>판정원</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>수수료 입금계좌</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" class="large">
+                                            <select class="large">
+                                                <option>국민은행</option>
+                                                <option>카카오뱅크</option>
+                                            </select>
+                                            <button type="button" class="btn primary">계좌인증</button>
+                                            <span>계좌명: 인천서구청</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">직위</th>
+                                    <td colspan="3">
+                                        <select class="large">
+                                            <option>대리</option>
+                                            <option></option>
+                                            <option></option>
+                                            <option></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">정보수신 동의</th>
+                                    <td colspan="3">
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="Y">
+                                                <label>예</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>아니오</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>정보수신 채널</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>SMS</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>E-MAIL</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>카카오톡</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 지자체 E -->
+
+                        <!-- 기타 S -->
+                         <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header">
+                                    <col>
+                                    <col class="header">
+                                    <col>
+                                </colgroup>
+                                <tr>
+                                    <th class="required">성명</th>
+                                    <td colspan="3">
+                                        <input type="text" class="large" value="나나나" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">휴대전화번호</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select class="mid" disabled>
+                                                <option>010</option>
+                                            </select>
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">이메일주소</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" class="large">
+                                            <span>@</span>
+                                            <input type="text" class="large">
+                                            <select class="large">
+                                                <option>직접입력</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">회사주소</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <input type="text" id="address-01" placeholder="주소검색 버튼을 누르세요" readonly class="large">
+                                            <input type="text" id="address-02" placeholder="나머지 주소" class="large">
+                                            <button type="button" class="btn icon search primary" id="search-address">주소검색</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">회사 전화번호</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <select class="mid">
+                                                <option>02</option>
+                                            </select>
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                            <span> - </span>
+                                            <input type="text" class="large">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">소속구분</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="Y">
+                                                <label>환경공단</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>환경부</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>지자체</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>기타</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th class="required">소속명</th>
+                                    <td>
+                                        <input type="text" value="" class="large">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">부서명</th>
+                                    <td colspan="3">
+                                        <input type="text" class="large" disabled>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">권한유형</th>
+                                    <td colspan="3">
+                                        <div class="common__radio-group disabled">
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="Y">
+                                                <label>시스템 관리자</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="N" checked>
+                                                <label>관리자</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="N">
+                                                <label>관능시험</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio-01" value="N">
+                                                <label>판정원</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">정보수신 동의</th>
+                                    <td colspan="3">
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="Y">
+                                                <label>예</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="01" value="N">
+                                                <label>아니오</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>정보수신 채널</th>
+                                    <td colspan="3">
+                                        <div class="row">
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>SMS</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>E-MAIL</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>카카오톡</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 기타 E -->
+
+
+                        
+
+                        <div class="contents-bottom-button-row">
+                            <button type="button" class="btn secondary">취소</button>
+                            <button type="button" class="btn primary">가입</button>
+                        </div>
+                    </div>
+
+
+                    <div class="join-tab-contents" data-name="tab-04">
+                        <div class="EMS_COM_003_04">
+                            <div class="title">개인정보 보안서약서</div>
+                            <div class="text">
+                                <p>
+                                    본인은 <span class="underline">악취통합관리시스템</span>의 접근권한을 부여받음으로써,
+                                    개인정보 보호법령을 준수하고 다음에 해당하는 행위를 하지 않을 것을 엄숙히 서약합니다.
+                                </p>
+                                <div class="li">
+                                    1. 정당한 사유 없이 정보주체의 동의를 받지 않고 개인정보를 수집ㆍ이용 또는 제공하는 행위
+                                </div>
+                                <div class="li">
+                                    2. 정당한 권한 없이 또는 허용된 권한을 초과하여 개인정보를 무단으로 조회하거나, 훼손, 멸실, 변경,
+                                    위조 또는 유출하는 행위
+                                </div>
+                                <div class="li">
+                                    3. 기타 내부관리계획에 명시된 사항을 위반하는 행위
+                                </div>
+                                <strong>
+                                    이와 관련된 개인정보 유출사고 및 정보주체의 민원, 민ㆍ형사상 피해 발생 시,
+                                    책임질 것을 약속합니다.
+                                </strong>
+                            </div>
+                            <div class="date">2025.00.00.</div>
+                            <div class="sign-area">
+                                <div class="group">소 속 : OOO</div>
+                                <div class="name">서약자 : OOO <span>(인)</span></div>
+                            </div>
+                            <button type="button" class="btn primary">동 의</button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="join-tab-contents print-container" data-name="tab-05" id="EMS_COM_003_05_PRINT">
+                        <div class="EMS_COM_003_05">
+                            <div class="title">악취통합관리시스템 담당자 계정 발급 신청서</div>
+                            <div class="title-p">
+                                계정 신청 정보를 다음과 같이 제출하오니 악취통합관리시스템 계정을 발급하여 주시기 바랍니다.
+                            </div>
+                            <div class="to">
+                                [ 개인정보처리시스템 관리(수신)처 : <strong>한국환경공단 악취기술지원부</strong> ]
+                            </div>
+
+                            <div class="table-container">
+                                <table class="write">
+                                    <colgroup>
+                                        <col class="header">
+                                        <col>
+                                    </colgroup>
+                                    <tr>
+                                        <th>
+                                            시스템 명칭
+                                        </th>
+                                        <td>악취통합관리시스템</td>
+                                        <th>
+                                            신청일
+                                        </th>
+                                        <td>
+                                            <input type="text" placeholder="(작성)">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div class="table-container">
+                                <table class="write">
+                                    <colgroup>
+                                        <col class="header">
+                                        <col>
+                                    </colgroup>
+                                    <tr>
+                                        <td colspan="2" class="category">계정 신청 정보</td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            소속기관
+                                            <small>(선택 및 작성)</small>
+                                        </th>
+                                        <td>
+                                            <div class="row">
+                                                <div class="common__radio-group">
+                                                    <div class="radio">
+                                                        <input type="radio" name="radio" value="Y">
+                                                        <label>환경부</label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <input type="radio" name="radio" value="N">
+                                                        <label>
+                                                            지자체 ( <input type="text" placeholder="시군구명"> )
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="common__radio-group">
+                                                    <div class="radio">
+                                                        <input type="radio" name="radio" value="Y">
+                                                        <label>한국환경공단</label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <input type="radio" name="radio" value="N">
+                                                        <label>
+                                                            기타 ( <input type="text" placeholder="작성"> )
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>소속부서</th>
+                                        <td><input type="text" placeholder="작성"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>직급/직위</th>
+                                        <td><input type="text" placeholder="작성"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>성명</th>
+                                        <td><input type="text" placeholder="작성"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            담당업무
+                                            <small>(해당시체크)</small>
+                                        </th>
+                                        <td>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>악취배출시설(사업장) 정보 관리</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>악취배출시설 설치ㆍ운영 및 변경 신고 관리</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>사업장 악취 저감 기술지원 및 진단</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>악취 시료 분석</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>악취실태조사 지원</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>
+                                                    기타 ( <input type="text" placeholder="작성" class="large"> )
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>신청권한</th>
+                                        <td>
+                                            <div class="common__radio-group">
+                                                <div class="radio">
+                                                    <input type="radio" name="radio-02" value="Y">
+                                                    <label>담당자</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <input type="radio" name="radio-02" value="N">
+                                                    <label>시스템관리자 (접속 IP : <input type="text" class="large"> )</label>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>사용시작일</th>
+                                        <td><input type="text" placeholder="작성"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>사용만료일</th>
+                                        <td><input type="text" placeholder="업무(또는 계약)종료일 작성, 한국환경공단은 기입 불필요"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>이메일(E-mail)</th>
+                                        <td><input type="text" placeholder="작성"></td>
+                                    </tr>
+                                    <tr>
+                                        <th rowspan="2">연락처</th>
+                                        <td>
+                                            <div class="row">
+                                                <span>(사무실)</span>
+                                                <input type="text" placeholder="작성">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="row">
+                                                <span>(휴대전화)</span>
+                                                <input type="text" placeholder="작성">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>비고</th>
+                                        <td><input type="text" placeholder="작성"></td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <span class="red">
+                                ※ (주의) 사용만료일 및 6개월 초과 미사용(로그인 포함) 시 계정 자동 만료
+                            </span>
+
+                            <button type="button" class="btn icon print skyblue" data-print="false" onclick="printContents()">출력</button>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="join-tab-contents" data-name="tab-06">
+                        <div class="EMS_CCS_001_02_img">
+                            <img src="./image/PTS_TCS_001_03_img.png">
+                            <div class="text">회원가입이 <span class="green">완료</span>되었습니다.</div>
+                        </div>
+
+                        <div class="contents-bottom-button-row">
+                            <button type="button" class="btn primary">로그인</button>
+                            <button type="button" class="btn secondary">메인으로 돌아가기</button>
+                            
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // 우선은 클릭이벤트를 걸어놨는데 joinAgreedTab 이 함수만 사용하시면 됩니다.
+        document.querySelectorAll('.join-top-tabs > .tab').forEach(tab => {
+            tab.addEventListener('click', event => {
+                joinAgreedTab(tab.dataset.name);
+            });
+        });
+
+    });
+
+    const joinAgreedTab = name => {
+        const joinTopTabs = document.querySelectorAll('.join-top-tabs > .tab');
+        const joinTabContents = document.querySelectorAll('.join-tab-contents');
+        joinTopTabs.forEach(tab => { 
+            tab.classList.remove('on');
+            if(tab.dataset.name === name){
+                tab.classList.add('on');
+            }
+        });
+        joinTabContents.forEach(content => { 
+            content.classList.remove('on');
+            if(content.dataset.name === name){
+                content.classList.add('on');
+            }
+        });
+
+    }
+
+    const printContents = () => {
+        printJS({
+            printable: 'EMS_COM_003_05_PRINT',
+            type: 'html',
+            css: './css/style.css'
+        });
+    }
+
+</script>
+</html>

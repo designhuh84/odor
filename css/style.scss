@@ -5370,3 +5370,118 @@ body:has(.error-page){
 .table-container:has(.ETC_02_table){
     margin-top: 0.5rem;
 }
+
+.join-top-tabs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    .tab{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.625rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #999;
+        background-color: #F6F7F9;
+        border: solid 1px #E3E7ED;
+        &::before{
+            content: '';
+            flex-shrink: 0;
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            background-size: cover;
+            filter: brightness(0) saturate(100%) invert(60%) sepia(29%) saturate(0%) hue-rotate(181deg) brightness(94%) contrast(99%);
+        }
+        &.tab-01{
+            &::before{
+                background-image: url(../image/Clipboard-Check.svg);
+            }
+        }
+        &.tab-02{
+            &::before{
+                background-image: url(../image/Shield-User.svg);
+            }
+        }
+        &.tab-03{
+            &::before{
+                background-image: url(../image/Document-Add.svg);
+            }
+        }
+        &.tab-04{
+            &::before{
+                background-image: url(../image/Monitor.svg);
+            }
+        }
+        &.on{
+            background-color: var(--primary);
+            color: #FFF;
+            &::before{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7424%) hue-rotate(7deg) brightness(119%) contrast(118%);
+            }
+        }
+    }
+    &.admin{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+.join-agreed-box{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    padding: 1rem 0;
+}
+
+.join-agreed-box-02{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000;
+    input[type='checkbox']{
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+
+.join-agreed-submit{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    button{
+        padding: 0 1.5rem;
+    }
+}
+
+.join-tab-contents{
+    display: none;
+    &.on{
+        display: block;
+    }
+}
+
+@media (max-width: 1080px){
+    .join-top-tabs{
+        &.admin{
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+
+@media (max-width: 640px){
+    .join-top-tabs{
+        grid-template-columns: 1fr 1fr;
+        &.admin{
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}

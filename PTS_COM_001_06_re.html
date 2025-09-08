@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ui.js"></script>
+    <title>악취통합관리시스템</title>
+</head>
+<body class="sub">
+    <global-header></global-header>
+    <global-header-menu></global-header-menu>
+
+    <div class="sub-top">
+        <div class="inner">
+            <a href="./index.html" class="sub-top-home"><img src="./image/Home.svg"></a>
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            회원가입
+            <img src="./image/Alt-Arrow-Right.svg" class="arrow">
+            사업자 회원가입
+        </div>
+    </div>
+    
+    <div class="layout">
+        <div class="inner">
+
+            <div class="main">
+                <div class="page-title">사용자 - 회원가입</div>
+                <div class="contents">
+
+                    <div class="join-top-tabs">
+                        <button type="button" class="tab-01 tab on" data-name="tab-01">약관동의</button>
+                        <button type="button" class="tab-02 tab" data-name="tab-02">본인인증</button>
+                        <button type="button" class="tab-03 tab" data-name="tab-03">정보입력</button>
+                        <button type="button" class="tab-04 tab" data-name="tab-04">가입완료</button>
+                    </div>
+
+                    <div class="join-tab-contents on" data-name="tab-01">
+                        <form>
+                            <div class="section-header">개인정보 수집 및 이용 동의</div>
+                            <p>1. $000시스템은 원활한 업무 지원을 위해 아래와 같이 최소한의 [필수] 개인정보를 수집하고 있습니다.</p>
+                            <div class="table-container">
+                                <table class="fixed">
+                                    <tr>
+                                        <th>개인정보 항목</th>
+                                        <th>수집목적</th>
+                                        <th>개인정보 보유기간</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            개인식별번호(CI), 성명, 휴대전화 번호, 이메일주소, 거주지역
+                                        </td>
+                                        <td>
+                                            악취 관련 민원 제출 등 행정 서비스 이용
+                                        </td>
+                                        <td>
+                                            <strong>최종 이용일시로부터 3년①</strong>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="infobox">
+                                <p>① 악취방지법과 관련하여 민원 처리 등 증명자료로서 가치를 가짐</p>
+                                <p>2. 상기 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다. 다만, 동의 거부 시 이용이 제한됩니다.</p>
+                                <p>3. 온라인 서비스 이용중 부정이용 방지, 서비스 유효성 확인, 이용 빈도 확인을 위해 IP Address, 방문일시, 서비스 이용이 기록될 수 있습니다.</p>
+                            </div>
+                            <div class="join-agreed-box">
+                                <span>[필수] 개인정보 수집 및 이용에 [</span>
+                                <input type="radio">
+                                <span>동의합니다</span>
+                                <input type="radio">
+                                <span>동의하지 않습니다 ]</span>
+                            </div>
+
+                            <div class="section-header">개인정보 제공 동의</div>
+                            <p>1. $000시스템은 원활한 업무 처리를 위해 상기와 같이 수집 및 이용할 개인정보 항목을 아래와 같이 제공하고 있습니다.</p>
+                            <div class="table-container">
+                                <table class="fixed">
+                                    <tr>
+                                        <th>개인정보를 제공받는 자</th>
+                                        <th>제공목적</th>
+                                        <th>개인정보 보유 및 이용 기간</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong>관할 시군구 지자체①</strong>
+                                        </td>
+                                        <td>
+                                            <strong>악취 관련 민원 치리 등 행정 서비스 제공</strong>
+                                        </td>
+                                        <td>
+                                            <strong>최종 이용일시로부터 #년②</strong>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="infobox">
+                                <p>① 사업자는 회사(사업장)주소지, 개인(민원인)은 거주지역 관할</p>
+                                <p>② 개인정보 수집 및 이용 동의 시 개인정보 보유기간과 동일함</p>
+                                <p>2. 상기 개인정보 수집 및 이용 동의를 거부할 권리가 있습니다. 다만, 동의 거부 시 이용이 제한됩니다.</p>
+                            </div>
+                            <div class="join-agreed-box">
+                                <span>[필수] 개인정보 수집 및 이용에 [</span>
+                                <input type="radio">
+                                <span>동의합니다</span>
+                                <input type="radio">
+                                <span>동의하지 않습니다 ]</span>
+                            </div>
+
+
+
+
+                            <div class="infobox join-agreed-box-02">
+                                <input type="checkbox">
+                                <label>위와 같이 개인정보 수집 및 이용에 동의합니다.</label>
+                            </div>
+
+                            <div class="join-agreed-submit">
+                                <button type="button" class="btn primary">회원가입</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="join-tab-contents" data-name="tab-02">
+                        정부통합로그인
+                    </div>
+
+                    <div class="join-tab-contents" data-name="tab-03">
+                        <div class="table-button-row">
+                            <div class="section-header">정보입력</div>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="write">
+                                <colgroup>
+                                    <col class="header"><col>
+                                </colgroup>
+                                <tr>
+                                    <th class="required">성명</th>
+                                    <td><input type="text" class="large" disabled></td>
+                                </tr>
+                                <tr>
+                                    <th class="required">휴대전화번호</th>
+                                    <td>
+                                        <div class="row">
+                                            <select class="mid" disabled>
+                                                <option>010</option>
+                                            </select>
+                                            <span>-</span>
+                                            <input type="text" class="large" disabled>
+                                            <span>-</span>
+                                            <input type="text" class="large" disabled>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이메일주소</th>
+                                    <td>
+                                        <div class="row">
+                                            <input type="text" class="large">
+                                            <span>@</span>
+                                            <input type="text" class="large">
+                                            <select class="large">
+                                                <option>직접입력</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="required">거주지역</th>
+                                    <td>
+                                        <div class="row">
+                                            <input type="text" id="address-01" placeholder="주소검색 버튼을 누르세요" readonly class="large">
+                                            <input type="text" id="address-02" placeholder="나머지 주소" class="large">
+                                            <button type="button" class="btn icon search primary" id="search-address">주소검색</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>정보수신동의</th>
+                                    <td>
+                                        <div class="common__radio-group">
+                                            <div class="radio">
+                                                <input type="radio" name="radio" value="Y">
+                                                <label>예</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" name="radio" value="N">
+                                                <label>아니오</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>정보수신채널</th>
+                                    <td>
+                                        <div class="row">
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>SMS</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>E-Mail</label>
+                                            </div>
+                                            <div class="common__checkbox-group">
+                                                <input type="checkbox">
+                                                <label>카카오톡</label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="contents-bottom-button-row">
+                            <button type="button" class="btn secondary">취소</button>
+                            <button type="button" class="btn primary">가입</button>
+                        </div>
+                    </div>
+
+                    <div class="join-tab-contents" data-name="tab-04">
+                        <div class="EMS_CCS_001_02_img">
+                            <img src="./image/PTS_TCS_001_03_img.png">
+                            <div class="text">회원가입이 <span class="green">완료</span>되었습니다.</div>
+                        </div>
+
+                        <div class="contents-bottom-button-row">
+                            <button type="button" class="btn primary">로그인</button>
+                            <button type="button" class="btn secondary">메인으로 돌아가기</button>
+                            
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <golbal-footer></golbal-footer>
+
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // 우선은 클릭이벤트를 걸어놨는데 joinAgreedTab 이 함수만 사용하시면 됩니다.
+        document.querySelectorAll('.join-top-tabs > .tab').forEach(tab => {
+            tab.addEventListener('click', event => {
+                joinAgreedTab(tab.dataset.name);
+            });
+        });
+
+    });
+
+    const joinAgreedTab = name => {
+        const joinTopTabs = document.querySelectorAll('.join-top-tabs > .tab');
+        const joinTabContents = document.querySelectorAll('.join-tab-contents');
+        joinTopTabs.forEach(tab => { 
+            tab.classList.remove('on');
+            if(tab.dataset.name === name){
+                tab.classList.add('on');
+            }
+        });
+        joinTabContents.forEach(content => { 
+            content.classList.remove('on');
+            if(content.dataset.name === name){
+                content.classList.add('on');
+            }
+        });
+
+    }
+
+</script>
+</html>
