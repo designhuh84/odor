@@ -5564,3 +5564,75 @@ body:has(.error-page){
     color: var(--primary);
     padding-bottom: 1rem;
 }
+
+.etc_03_img_01{
+    width: 100%;
+    margin: 1rem 0;
+}
+
+body .layout .contents{
+    &:has(.join-intro){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.join-intro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1080px;
+    & > button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 5rem 2rem;
+        border-radius: 1rem;
+        border: solid 1px #A2A8B3;
+        font-size: 1.5rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        .img{
+            width: 100%;
+            max-width: 10rem;
+            aspect-ratio: 1;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease;
+            transform-origin: center;
+        }
+        &.user{
+            .img{
+                background-image: url(../image/Users.png);
+            }
+        }
+        &.business{
+            .img{
+                background-image: url(../image/City.png);
+            }
+        }
+        &:hover{
+            background-color: var(--tr-hover);
+            .img{
+                transform: scale(1.3);
+            }
+            border-color: var(--primary);
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .join-intro{
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .join-intro{
+        grid-template-columns: 1fr;
+    }
+}
