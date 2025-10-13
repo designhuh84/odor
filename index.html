@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/flickity.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/flickity.pkgd.min.js"></script>
     <script src="./js/ui.js"></script>
     <title>악취통합관리시스템</title>
 </head>
@@ -168,16 +166,7 @@
         loadNotice();
         loadArchives();
         // loadComplaints();
-
-        let mainBanner = new Flickity('.main-banner-img', {
-            imagesLoaded: true,
-            draggable: true,
-            prevNextButtons: false,
-            pageDots: true,
-            wrapAround: true,
-            autoPlay: 3000,
-            selectedAttraction: 0.01,
-        });
+        
     });
 
     function loadNotice() {

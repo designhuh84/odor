@@ -231,34 +231,59 @@ global-header {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 100%;
-  height: 4.75rem;
-  background-color: var(--primary);
-}
-global-header .container {
+  height: 5.25rem;
+  background-color: #FFF;
+  padding: 0 3rem;
+  gap: 3rem;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100%;
-  max-width: 95.4375rem;
-  padding: 0 1rem;
-}
-global-header .container .right {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-left: auto;
 }
 global-header .logo {
   flex-shrink: 0;
+  margin-right: auto;
 }
 global-header .logo img {
   display: block;
-  height: 2.5rem;
+  height: 2.75rem;
+}
+global-header .right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+global-header .right .buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+global-header .header-search-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../image/Magnifer-bk.svg);
+  background-size: cover;
+  background-position: center;
+}
+global-header .header-search-button.on {
+  background-image: url(../image/close-bk.svg);
+}
+global-header .header-search-ui {
+  position: absolute;
+  top: 5.25rem;
+  left: 0;
+  width: 100%;
+  padding: 3rem;
+  background-color: #FFF;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  border-top: solid 1px #000;
+}
+global-header .header-search-ui.on {
+  z-index: 80;
+  opacity: 1;
+  pointer-events: all;
 }
 
 .logout-timer {
@@ -272,12 +297,10 @@ global-header .logo img {
   height: 1rem;
   background-image: url(../image/Clock-Circle.svg);
   background-size: cover;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(5%) saturate(0%) hue-rotate(124deg) brightness(106%) contrast(100%);
 }
 .logout-timer .time {
   font-size: 1rem;
   line-height: 100%;
-  color: #FFF;
 }
 .logout-timer .time-extension-button {
   display: flex;
@@ -305,7 +328,6 @@ global-header .logo img {
 .logout-timer .row label {
   display: block;
   font-size: 1rem;
-  color: #FFF;
 }
 
 .btn-mobile-menu {
@@ -322,23 +344,30 @@ global-header .logo img {
 }
 
 .btn-header-login {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url(../image/user.svg);
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.25rem;
+  border-radius: 1.125rem;
+  padding: 0 1rem;
+  background-color: #4574B0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 100%;
+  color: #FFF;
 }
 
 .btn-header-userinfo {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  font-weight: 600;
-  height: 2rem;
+  height: 2.25rem;
+  border-radius: 1.125rem;
   padding: 0 1rem;
-  border-radius: 0.25rem;
-  background-color: var(--blue);
+  background-color: var(--primary);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 100%;
   color: #FFF;
 }
 
@@ -346,19 +375,20 @@ global-header .logo img {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
-  font-weight: 600;
-  height: 2rem;
+  height: 2.25rem;
+  border-radius: 1.125rem;
   padding: 0 1rem;
-  border-radius: 0.25rem;
-  background-color: #FFF;
-  color: var(--primary);
+  background-color: #4574B0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 100%;
+  color: #FFF;
 }
 
 .header-login-sub {
   position: absolute;
   top: 100%;
-  right: 1rem;
+  right: 3rem;
   z-index: 3;
   padding: 1rem;
   background-color: #FFF;
@@ -422,24 +452,22 @@ global-header .logo img {
 
 nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2.25rem;
   height: 100%;
-  margin-left: 5rem;
 }
 nav a {
   display: flex;
   align-items: center;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #FFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
   height: 100%;
   transition: color 0.2s ease;
 }
 nav a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.3em;
+  color: var(--primary);
 }
 
 golbal-footer {
@@ -814,8 +842,7 @@ global-header-menu {
   height: 0px;
   overflow: hidden;
   background-color: #FFF;
-  border-bottom: solid 1px var(--primary);
-  top: 4.75rem;
+  top: 5.25rem;
   left: 0;
   z-index: 90;
   transition: height 0.2s ease-in-out;

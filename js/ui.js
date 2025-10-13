@@ -19,9 +19,9 @@ class GlobalHeaderUI extends HTMLElement {
     init() {
         return new Promise(resolve => {
             this.innerHTML = GlobalHeaderUI.html;
-            setTimeout(() => {
+            requestAnimationFrame(() => { 
                 resolve();
-            }, 100);
+            });
             
         });
     }
@@ -40,6 +40,16 @@ class GlobalHeaderUI extends HTMLElement {
                 }else{
                     document.querySelector('global-header-menu').style.height = '0px';
                 }
+            }
+        });
+
+        const headerSearchButton = this.querySelector('.header-search-button');
+
+        headerSearchButton.addEventListener('click', () => {
+            if(headerSearchButton.classList.contains('on')){
+                this.hideHeaderSearchUI();
+            }else{
+                this.showHeaderSearchUI();
             }
         });
         
@@ -72,6 +82,16 @@ class GlobalHeaderUI extends HTMLElement {
 
     }
 
+    showHeaderSearchUI() {
+        this.querySelector('.header-search-button').classList.add('on');
+        this.querySelector('.header-search-ui').classList.add('on');
+    }
+
+    hideHeaderSearchUI() {
+        this.querySelector('.header-search-button').classList.remove('on');
+        this.querySelector('.header-search-ui').classList.remove('on');
+    }
+
     moveUserInfoButton() {
 
         const globalHeaderMenu = document.querySelector('global-header-menu');
@@ -85,8 +105,10 @@ class GlobalHeaderUI extends HTMLElement {
             this.userBtnRow.append(myInfoButton);
             this.userBtnRow.append(logoutButton);
         }else{
-            btnMobileMenu.insertAdjacentElement('beforebegin', myInfoButton);
-            btnMobileMenu.insertAdjacentElement('beforebegin', logoutButton);
+            this.querySelector('.right .buttons').append(myInfoButton);
+            this.querySelector('.right .buttons').append(logoutButton);
+            // btnMobileMenu.insertAdjacentElement('beforebegin', myInfoButton);
+            // btnMobileMenu.insertAdjacentElement('beforebegin', logoutButton);
         }
     }
 
@@ -117,60 +139,65 @@ class GlobalHeaderUI extends HTMLElement {
 customElements.define('global-header', GlobalHeaderUI);
 
 GlobalHeaderUI.html = `
-    <div class="container">
-        <a href="./" class="logo">
-            <img src="./image/logo.svg">
-        </a>
-        <nav>
-            <a href="./EBP_001.html">배출사업장</a>
-            <a href="./TCS_001_01.html">기술지원</a>
-            <a href="./CNE_001_01.html">실태조사</a>
-            <a href="./TCD_003_01.html">기술진단</a>
-            <a href="./SCM_001_01.html">시료관리</a>
-            <a href="./STS_028_03.html">통계현황</a>
-            <a href="#!">민원서비스</a>
-            <a href="./SOC_001_01.html">민원현황</a>
-            <a href="#!">고객센터</a>
-        </nav>
+    
+    <a href="./" class="logo">
+        <img src="./image/logo.svg">
+    </a>
+    
+    <nav>
+        <a href="#!">배출사업장</a>
+        <a href="#!">실태조사</a>
+        <a href="#!">통계현황</a>
+        <a href="#!">민원서비스</a>
+        <a href="#!">고객센터</a>
+    </nav>
 
-        
-        <div class="right">
-            <div class="logout-timer">
-                <div class="icon"></div>
-                <div class="time">10:00</div>
-                <button type="button" class="time-extension-button">연장하기</button>
-                <div class="row">
-                    <input type="checkbox" id="auto-time-extention">
-                    <label for="auto-time-extention">자동연장</label>
-                </div>
+    <div class="right">
+        <button type="button" class="header-search-button"></button>
+        <div class="header-search-ui">search ui</div>
+
+        <div class="logout-timer">
+            <div class="icon"></div>
+            <div class="time">10:00</div>
+            <button type="button" class="time-extension-button">연장하기</button>
+            <div class="row">
+                <input type="checkbox" id="auto-time-extention">
+                <label for="auto-time-extention">자동연장</label>
             </div>
+        </div>
 
-            <button type="button" class="btn-header-login"></button>
+        <div class="buttons">
+            <button type="button" class="btn-header-login">로그인</button>
+            <!-- 로그인 된 경우에만 나타남 Start -->
             <button type="button" class="btn-header-userinfo">내정보</button>
             <button type="button" class="btn-header-logout">로그아웃</button>
-            <button type="button" class="btn-mobile-menu"></button>
+            <!-- 로그인 된 경우에만 나타남 End -->
         </div>
+        
 
-        <div class="header-login-sub">
-            <a href="#!">
-                <img src="./image/User-bk.svg">
-                로그인
-            </a>
-            <a href="#!">
-                <img src="./image/Document-Add.svg">
-                회원가입
-            </a>
-            <a href="#!" class="admin">
-                <img src="./image/User-bk.svg">
-                관리자 로그인
-            </a>
-            <a href="#!" class="admin">
-                <img src="./image/Document-Add.svg">
-                관리자 회원가입
-            </a>
-        </div>
-        <div class="header-login-sub-before"></div>
+        <button type="button" class="btn-mobile-menu"></button>
+        
     </div>
+    
+    <div class="header-login-sub">
+        <a href="#!">
+            <img src="./image/User-bk.svg">
+            로그인
+        </a>
+        <a href="#!">
+            <img src="./image/Document-Add.svg">
+            회원가입
+        </a>
+        <a href="#!" class="admin">
+            <img src="./image/User-bk.svg">
+            관리자 로그인
+        </a>
+        <a href="#!" class="admin">
+            <img src="./image/Document-Add.svg">
+            관리자 회원가입
+        </a>
+    </div>
+    <div class="header-login-sub-before"></div>
 `;
 
 class GlobalFooterUI extends HTMLElement {
