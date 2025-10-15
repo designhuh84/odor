@@ -212,20 +212,57 @@ class GlobalFooterUI extends HTMLElement {
     init() {
         return new Promise(resolve => {
             this.innerHTML = `
-                <div class="inner">
-                    <div class="footer-logo"><img src="./image/footer-logo.png"></div>
-                    <div class="info">
+                <div class="row1">
+                    <div class="left">
+                        <a href="#!" class="privacy">개인정보처리방침</a>
+                        <a href="#!" class="terms">이용약관</a>
+                        <a href="#!" class="email">이메일무단수집거부</a>
+                    </div>
+                    <div class="right">
+                        <div class="related-sites-button">
+                            관련사이트 바로가기
+                            <img src="./image/Arrow-up.svg">
+                        </div>
+                        <div class="related-sites">
+                            <a href="https://keco.or.kr/" target="_blank">한국환경공단</a>
+                            <a href="https://www.mcee.go.kr/" target="_blank">기후에너지환경부</a>
+                            <a href="https://joie.jams.or.kr/jams_info.html" target="_blank">한국냄새환경학회</a>
+                        </div>
+                        <button type="button" class="footer-top-button"></button>
+                    </div>
+                </div> 
+                <div class="row2">
+                    <div class="logos">
+                        <img src="./image/footer-logo-01.png">
+                        <img src="./image/footer-logo-02.png">
+                    </div>
+                    <div class="text">
                         (우:22689) 인천광역시 서구 환경로 42 (경서동, 종합환경연구단지)<br>
                         Copyrightⓒ2024 all rights reserved.
                     </div>
-                    <button type="button" class="footer-terms">개인정보취급방침</button>
                 </div>
             `;
-            resolve();
+            requestAnimationFrame(() => {
+                resolve();
+            });
         });
     }
     onload() {
-        console.log('footer');
+        this.querySelector('.related-sites-button').addEventListener('click', () => {
+            if(this.querySelector('.related-sites-button').classList.contains('on')){
+                this.querySelector('.related-sites-button').classList.remove('on');
+                this.querySelector('.related-sites').classList.remove('on');
+            }else{
+                this.querySelector('.related-sites-button').classList.add('on');
+                this.querySelector('.related-sites').classList.add('on');
+            }
+        });
+        this.querySelector('.footer-top-button').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
 }
 customElements.define('golbal-footer', GlobalFooterUI);
