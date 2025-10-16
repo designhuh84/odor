@@ -76,8 +76,8 @@ body.admin{
         height: 0px;
         overflow: hidden;
         background-color: #FFF;
-        border-bottom: solid 1px var(--primary);
-        top: 4.75rem;
+        
+        top: 5.25rem;
         left: 0;
         z-index: 90;
         transition: height 0.2s ease-in-out;
@@ -163,7 +163,7 @@ body.admin{
                 display: inline-block;
                 width: fit-content;
                 text-align: left;
-                font-size: 0.875rem;
+                font-size: 1rem;
                 font-weight: 500;
                 padding: 0 0.5rem;
                 color: hsla(0,0%,20%,1);

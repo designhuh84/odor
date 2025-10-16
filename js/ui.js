@@ -71,7 +71,7 @@ class GlobalHeaderUI extends HTMLElement {
         });
         window.addEventListener('resize', () => {
             if(isMobile()){
-                document.querySelector('global-header-menu').style.height = 'calc(100vh - 4.75rem)';
+                document.querySelector('global-header-menu').style.height = 'calc(100vh - 5.25rem)';
             }else{
                 document.querySelector('global-header-menu').style.height = '0px';
             }
@@ -95,20 +95,20 @@ class GlobalHeaderUI extends HTMLElement {
     moveUserInfoButton() {
 
         const globalHeaderMenu = document.querySelector('global-header-menu');
-        const btnMobileMenu = document.querySelector('.btn-mobile-menu');
 
         const myInfoButton = document.querySelector('.btn-header-userinfo');
         const logoutButton = document.querySelector('.btn-header-logout');
+        const logoutTimer = document.querySelector('.logout-timer');
 
         if(isMobile()){
             globalHeaderMenu.insertAdjacentElement('afterbegin', this.userBtnRow);
+            this.userBtnRow.append(logoutTimer);
             this.userBtnRow.append(myInfoButton);
             this.userBtnRow.append(logoutButton);
         }else{
+            this.querySelector('.right .buttons').insertAdjacentElement('afterbegin', logoutTimer);
             this.querySelector('.right .buttons').append(myInfoButton);
             this.querySelector('.right .buttons').append(logoutButton);
-            // btnMobileMenu.insertAdjacentElement('beforebegin', myInfoButton);
-            // btnMobileMenu.insertAdjacentElement('beforebegin', logoutButton);
         }
     }
 
@@ -154,7 +154,12 @@ GlobalHeaderUI.html = `
 
     <div class="right">
         <button type="button" class="header-search-button"></button>
-        <div class="header-search-ui">search ui</div>
+        <div class="header-search-ui">
+            <form class="search-input">
+                <input type="text" placeholder="검색어를 입력하세요">
+                <button type="submit"><img src="./image/Magnifer-bk.svg"></button>
+            </form>
+        </div>
 
         <div class="logout-timer">
             <div class="icon"></div>

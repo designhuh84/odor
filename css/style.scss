@@ -261,6 +261,10 @@ global-header{
         align-items: center;
         gap: 1.5rem;
 
+        button{
+            white-space: nowrap;
+        }
+
         .buttons{
             display: flex;
             align-items: center;
@@ -269,6 +273,7 @@ global-header{
     }
 
     .header-search-button{
+        flex-shrink: 0;
         width: 1.5rem;
         height: 1.5rem;
         background-image: url(../image/Magnifer-bk.svg);
@@ -296,6 +301,32 @@ global-header{
             opacity: 1;
             pointer-events: all;
         }
+        .search-input{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 91.4375rem;
+            margin: 0 auto;
+            height: 3rem;
+            border-radius: 1.5rem;
+            border: solid 2px #808080;
+            padding: 0 1.5rem;
+            gap: 0.5rem;
+            &:has(input:focus){
+                border-color: var(--primary);
+            }
+            input{
+                margin: 0;
+                padding: 0;
+                border: 0;
+                flex-grow: 1;
+                font-size: 1.25rem;
+            }
+            button{
+                width: 1.5rem;
+                flex-shrink: 0;
+            }
+        }
     }
 }
 
@@ -305,6 +336,7 @@ global-header{
     gap: 0.5rem;
     padding-right: 0.5rem;
     .icon{
+        flex-shrink: 0;
         width: 1rem;
         height: 1rem;
         background-image: url(../image/Clock-Circle.svg);
@@ -339,6 +371,7 @@ global-header{
         label{
             display: block;
             font-size: 1rem;
+            white-space: nowrap;
         }
     }
 }
@@ -350,9 +383,8 @@ global-header{
     background-image: url(../image/mobile-menu.svg);
     background-size: cover;
     background-position: center;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(88deg) brightness(105%) contrast(102%);
     &.close{
-        background-image: url(../image/close-wh.svg);
+        background-image: url(../image/close-bk.svg);
     }
 }
 
@@ -697,7 +729,7 @@ global-header-menu{
             display: inline-block;
             width: fit-content;
             text-align: left;
-            font-size: 0.875rem;
+            font-size: 1rem;
             font-weight: 500;
             padding: 0 0.5rem;
             color: hsla(0,0%,20%,1);
@@ -858,6 +890,8 @@ global-header-menu{
     text-align: center;
     color: #FFF;
     text-shadow: 0px 4px 4px rgba(0,0,0,0.9);
+    width: 100%;
+    pointer-events: none;
     small{
         font-size: 2.25rem;
         font-weight: 400;
@@ -1164,6 +1198,7 @@ $etcColor: #7B5BA5;
         .swiper-slide{
             img{
                 display: block;
+                width: 100%;
             }
         }
 
@@ -1620,7 +1655,6 @@ $etcColor: #7B5BA5;
         }
         .contents{
             margin-top: 1rem;
-            font-size: 0.875rem;
             width: 100%;
 
             .summary{
@@ -2103,7 +2137,6 @@ $etcColor: #7B5BA5;
     }
 
     .li{
-        font-size: 0.875rem;
         padding-left: 0.65rem;
         text-indent: -0.65rem;
         label{
@@ -2462,7 +2495,7 @@ $etcColor: #7B5BA5;
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     padding: 2rem 0 0.75rem 0.25rem;
 
@@ -2513,7 +2546,7 @@ table.stat{
 
 .popup-window{
     padding: 1rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
 
     .headers{
         font-size: 1.2rem;
@@ -3382,11 +3415,11 @@ table.sub01-1{
     }
     
     .sbgrid-title{
-        font-size: 0.875rem;
+        font-size: 1rem;
         font-weight: 600;
     }
     .sbgrid-cell{
-        font-size: 0.875rem;
+        font-size: 1rem;
     }
 
     .sbgrid-custom > button{
@@ -5255,8 +5288,8 @@ table.sub01-1{
         left: 0;
         z-index: 90;
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        gap: 0.25rem;
+        padding: 0 1rem;
 
         nav{
             display: none;
@@ -5273,95 +5306,15 @@ table.sub01-1{
         flex-shrink: 0;
     }
 
-    // global-header-menu{
-    //     position: fixed;
-    //     top: 4.75rem;
-    //     left: auto;
-    //     right: 0;
-    //     z-index: 90;
-    //     width: 70vw;
-    //     max-width: 20rem;
-    //     height: calc(100vh - 4.75rem);
-    //     border-bottom: 0;
-    //     border-left: solid 1px #BFBFBF;
-    //     transform: translateX(100%);
-    //     transition: transform 0.2s ease-in-out;
-    //     display: flex;
-    //     flex-direction: column;
-    //     &.on{
-    //         transform: translateX(0);
-    //     }
-    //     .inner{
-    //         flex-basis: 0;
-    //         flex-grow: 1;
-    //         max-height: 100%;
-    //         display: grid;
-    //         grid-template-columns: 1fr;
-    //         margin-top: 0;
-    //         padding-bottom: 3rem;
-    //         .col{
-    //             padding-left: 0;
-    //             padding-right: 0;
-    //             border-bottom: solid 1px #BCC1C8;
-    //             .menus{
-    //                 padding-top: 0.5rem;
-    //             }
-    //             .menu{
-    //                 display: flex;
-    //                 align-items: center;
-    //                 gap: 0.25rem;
-    //                 text-align: left;
-    //                 font-size: 1rem;
-    //                 &::before{
-    //                     content: '';
-    //                     display: block;
-    //                     width: 0.3rem;
-    //                     height: 0.3rem;
-    //                     border-radius: 0.15rem;
-    //                     background-color: var(--primary);
-    //                 }
-    //             }
-    //             .row{
-    //                 align-items: flex-start;
-    //                 &:hover{
-    //                     .sub-category{
-    //                         color: #FFF;
-    //                     }
-    //                 }
-    //             }
-    //             .sub-category{
-    //                 padding: 0.5rem;
-    //                 width: 100%;
-    //                 background-color: var(--green);
-    //                 color: #FFF;
-    //             }
-    //         }
-    //     }
-    //     .user-btn-row{
-    //         display: flex;
-    //         width: 100%;
-    //         gap: 0.5rem;
-    //         padding: 0.5rem;
-    //         button{
-    //             flex-grow: 1;
-
-    //             &.btn-header-logout{
-    //                 background-color: var(--primary);
-    //                 color: #FFF;
-    //             }
-    //         }
-    //     }
-    // }
-
     global-header-menu{
         position: fixed;
-        top: 4.75rem;
+        top: 5.25rem;
         left: auto;
         right: 0;
         z-index: 90;
         width: 70vw;
         max-width: 20rem;
-        height: calc(100vh - 4.75rem);
+        height: calc(100vh - 5.25rem);
         border-bottom: 0;
         border-left: solid 1px #BFBFBF;
         transform: translateX(100%);
@@ -5421,6 +5374,7 @@ table.sub01-1{
                 background-color: var(--blue);
                 color: #FFF;
                 flex-basis: 0;
+                text-align: center;
                 &:hover{
                     color: #FFF;
                 }
@@ -5435,6 +5389,17 @@ table.sub01-1{
                 display: flex;
                 width: 100%;
                 justify-content: center;
+            }
+        }
+        .user-btn-row{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem 0.25rem;
+            width: 100%;
+            padding: 0.5rem 0.875rem;
+            .logout-timer{
+                justify-content: center;
+                grid-column: span 2;
             }
         }
     }
@@ -5959,7 +5924,7 @@ body:has(.error-page){
     dt{
         margin: 0;
         padding: 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 700;
         color: var(--primary);
         margin-bottom: 0.5rem;
@@ -5971,7 +5936,7 @@ body:has(.error-page){
         margin: 0;
         padding: 0;
         padding-left: 0.5rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: 400;
         line-height: 130%;
         &::before{
@@ -6076,4 +6041,104 @@ body .layout .contents{
     .join-intro{
         grid-template-columns: 1fr;
     }
+}
+
+body{
+    min-width: 1500px;
+}
+
+@media (max-width: 1024px) {
+
+    body{
+        min-width: 0;
+    }
+
+    .main-banner-text{
+        transform: translate(-50%, calc(-50% - 2rem));
+    }
+
+    .main-banner-links{
+        width: calc(100% - 2rem);
+        a{
+            flex-direction: column;
+            height: auto;
+            padding: 1rem;
+            .text{
+                .title{
+                    text-align: center;
+                }
+                .subtext{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .main-section-01{
+        padding: 0 1rem;
+    }
+
+    .main-section-01-contents{
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .main-section-02{
+        padding: 0 1rem;
+    }
+
+    .main-section-02-contents{
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .main-links-box{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        gap: 1rem;
+        flex-direction: column;
+        .main-links{
+            width: 100%;
+        }
+    }
+
+    golbal-footer{
+        .row1{
+            padding: 0;
+            flex-direction: column;
+            justify-content: flex-start;
+            .left{
+                justify-content: center;
+                width: 100%;
+                height: 3rem;
+                border-bottom: solid 1px #676767;
+            }
+            .right{
+                width: 100%;
+                border: 0;
+                .related-sites-button{
+                    width: 100%;
+                }
+                .related-sites{
+                    max-width: 100%;
+                }
+            }
+        }
+        .row2{
+            padding: 1.5rem 1rem;
+            flex-direction: column;
+            .logos{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+                justify-content: center;
+                img{
+                    width: 100%;
+                }
+            }
+            .text{
+                text-align: center;
+            }
+        }
+    }
+
+    
+
 }
