@@ -748,36 +748,6 @@ global-header-menu{
     aspect-ratio: 1920/800;
 }
 
-@media (max-width: 1024px) {
-    .main-banner-area{
-        aspect-ratio: 4/3;
-        min-height: 400px;
-    }
-}
-
-@media (max-width: 640px) {
-    .main-banner-area{
-        .main-banner-text{
-            small{
-                font-size: 1.5rem;
-            }
-            p{
-                font-size: 3rem;
-            }
-        }
-        .main-banner-links{
-            bottom: 2rem;
-        }
-    }
-}
-
-@media (max-width: 420px) {
-    .main-banner-area{
-        aspect-ratio: auto;
-        height: 480px;
-    }
-}
-
 .main-banner-notice-row{
     position: absolute;
     top: 0;
@@ -6169,9 +6139,38 @@ body{
             }
         }
     }
+}
 
-    
+@media (max-width: 1024px) {
+    .main-banner-area{
+        aspect-ratio: 4/3;
+        min-height: 400px;
+    }
+}
 
+@media (max-width: 640px) {
+    .main-banner-area{
+        .main-banner-text{
+            padding: 0.5rem;
+            small{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 3rem;
+            }
+        }
+        .main-banner-links{
+            bottom: 2rem;
+        }
+    }
+
+    .main-latests-box{
+        .tab-content{
+            .li{
+                height: auto;
+            }
+        }
+    }
 }
 
 
@@ -6179,5 +6178,11 @@ body{
     body{
         max-width: 2160px;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 420px) {
+    :root{
+        font-size: 13px;
     }
 }

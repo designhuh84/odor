@@ -727,29 +727,6 @@ global-header-menu .col .menu:hover {
   aspect-ratio: 1920/800;
 }
 
-@media (max-width: 1024px) {
-  .main-banner-area {
-    aspect-ratio: 4/3;
-    min-height: 400px;
-  }
-}
-@media (max-width: 640px) {
-  .main-banner-area .main-banner-text small {
-    font-size: 1.5rem;
-  }
-  .main-banner-area .main-banner-text p {
-    font-size: 3rem;
-  }
-  .main-banner-area .main-banner-links {
-    bottom: 2rem;
-  }
-}
-@media (max-width: 420px) {
-  .main-banner-area {
-    aspect-ratio: auto;
-    height: 480px;
-  }
-}
 .main-banner-notice-row {
   position: absolute;
   top: 0;
@@ -5533,9 +5510,37 @@ body {
     text-align: center;
   }
 }
+@media (max-width: 1024px) {
+  .main-banner-area {
+    aspect-ratio: 4/3;
+    min-height: 400px;
+  }
+}
+@media (max-width: 640px) {
+  .main-banner-area .main-banner-text {
+    padding: 0.5rem;
+  }
+  .main-banner-area .main-banner-text small {
+    font-size: 1.5rem;
+  }
+  .main-banner-area .main-banner-text p {
+    font-size: 3rem;
+  }
+  .main-banner-area .main-banner-links {
+    bottom: 2rem;
+  }
+  .main-latests-box .tab-content .li {
+    height: auto;
+  }
+}
 @media (min-width: 2160px) {
   body {
     max-width: 2160px;
     margin: 0 auto;
+  }
+}
+@media (max-width: 420px) {
+  :root {
+    font-size: 13px;
   }
 }/*# sourceMappingURL=style.css.map */
