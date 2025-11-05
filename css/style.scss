@@ -321,6 +321,7 @@ global-header{
                 border: 0;
                 flex-grow: 1;
                 font-size: 1.25rem;
+                min-width: 0px;
             }
             button{
                 width: 1.5rem;
@@ -2123,6 +2124,7 @@ $etcColor: #7B5BA5;
     background-color: var(--infobox);
     padding: 1rem;
     margin-top: 1rem;
+    line-height: 150%;
 
     p{
         margin: 0;
@@ -2140,6 +2142,7 @@ $etcColor: #7B5BA5;
     .li{
         padding-left: 0.65rem;
         text-indent: -0.65rem;
+        line-height: 150%;
         label{
             display: inline-block;
             font-weight: 600;
@@ -5211,13 +5214,13 @@ table.sub01-1{
     }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1440px){
     :root{
         font-size: 14px;
     }
 
     body{
-        padding-top: 4.75rem;
+        padding-top: 5.25rem;
     }
 
     .main-banner{
@@ -6042,10 +6045,6 @@ body .layout .contents{
     .join-intro{
         grid-template-columns: 1fr;
     }
-}
-
-body{
-    min-width: 1500px;
 }
 
 @media (max-width: 1024px) {

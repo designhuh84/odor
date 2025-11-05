@@ -164,10 +164,10 @@ GlobalHeaderUI.html = `
         <div class="logout-timer">
             <div class="icon"></div>
             <div class="time">10:00</div>
-            <button type="button" class="time-extension-button">연장하기</button>
+            <button type="button" class="time-extension-button">연장</button>
             <div class="row">
                 <input type="checkbox" id="auto-time-extention">
-                <label for="auto-time-extention">자동연장</label>
+                <label for="auto-time-extention">자동</label>
             </div>
         </div>
 
@@ -830,3 +830,28 @@ class LoadingUI {
         this.root.remove();
     }
 }
+
+function setFontSize(element){
+    const deviceWidth = window.innerWidth;
+    const defaultScreenSize = 1920;
+    const defaultFontSize = 24;
+    const newFontSize = (deviceWidth / defaultScreenSize) * defaultFontSize;
+    if(newFontSize >= 14){
+        element.style.fontSize = newFontSize + 'px';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const targetElements = document.querySelectorAll('global-header > nav > a');
+    targetElements.forEach(element => {
+        setFontSize(element);
+    });
+    
+});
+
+window.addEventListener('resize', () => {
+    const targetElements = document.querySelectorAll('global-header > nav > a');
+    targetElements.forEach(element => {
+        setFontSize(element);
+    });
+});

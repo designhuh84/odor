@@ -310,6 +310,7 @@ global-header .header-search-ui .search-input input {
   border: 0;
   flex-grow: 1;
   font-size: 1.25rem;
+  min-width: 0px;
 }
 global-header .header-search-ui .search-input button {
   width: 1.5rem;
@@ -2017,6 +2018,7 @@ global-header-menu .col .menu:hover {
   background-color: var(--infobox);
   padding: 1rem;
   margin-top: 1rem;
+  line-height: 150%;
 }
 .infobox p {
   margin: 0;
@@ -2032,6 +2034,7 @@ global-header-menu .col .menu:hover {
 .infobox .li {
   padding-left: 0.65rem;
   text-indent: -0.65rem;
+  line-height: 150%;
 }
 .infobox .li label {
   display: inline-block;
@@ -4736,12 +4739,12 @@ table.sub01-1 tbody td {
     width: 100%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
   :root {
     font-size: 14px;
   }
   body {
-    padding-top: 4.75rem;
+    padding-top: 5.25rem;
   }
   .main-banner {
     aspect-ratio: auto;
@@ -5426,10 +5429,6 @@ body .layout .contents:has(.join-intro) {
     grid-template-columns: 1fr;
   }
 }
-body {
-  min-width: 1500px;
-}
-
 @media (max-width: 1024px) {
   body {
     min-width: 0;
