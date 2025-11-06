@@ -855,3 +855,9 @@ window.addEventListener('resize', () => {
         setFontSize(element);
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+        img.setAttribute('alt', '이미지 설명 필요');
+    });
+});
