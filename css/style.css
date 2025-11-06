@@ -5542,4 +5542,79 @@ body .layout .contents:has(.join-intro) {
   :root {
     font-size: 13px;
   }
+}
+@media (max-width: 1440px) {
+  .main-section-01-contents {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .main-section-01-contents .main-latests-box {
+    grid-column: span 4;
+  }
+  .main-section-01-contents .main-news-box {
+    grid-column: span 2;
+  }
+  .main-section-01-contents .main-tips-box {
+    grid-column: span 2;
+  }
+  .main-section-02-contents {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .main-section-02-contents .main-external-box {
+    grid-column: span 4;
+  }
+  .main-section-02-contents .main-bookmark-box {
+    grid-column: span 2;
+  }
+  .main-section-02-contents .main-bookmark-box a {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .main-section-02-contents .main-bookmark-box a img {
+    width: 100%;
+    height: auto;
+  }
+  .main-section-02-contents .main-youtube-box {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 1160px) {
+  .main-section-02-contents .main-bookmark-box a {
+    font-size: 1.25rem;
+  }
+  .main-section-02-contents .main-bookmark-box a img {
+    width: 5rem;
+    height: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .main-section-01-contents {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .main-section-01-contents .main-latests-box {
+    grid-column: span 1;
+  }
+  .main-section-01-contents .main-news-box {
+    grid-column: span 1;
+  }
+  .main-section-01-contents .main-tips-box {
+    grid-column: span 1;
+  }
+  .main-section-02-contents {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .main-section-02-contents .main-external-box {
+    grid-column: span 1;
+  }
+  .main-section-02-contents .main-bookmark-box {
+    grid-column: span 1;
+  }
+  .main-section-02-contents .main-bookmark-box a {
+    font-size: 1rem;
+  }
+  .main-section-02-contents .main-bookmark-box a img {
+    width: 4.5rem;
+  }
+  .main-section-02-contents .main-youtube-box {
+    grid-column: span 1;
+  }
 }/*# sourceMappingURL=style.css.map */

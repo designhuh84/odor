@@ -6184,3 +6184,86 @@ body .layout .contents{
         font-size: 13px;
     }
 }
+
+@media (max-width: 1440px) {
+    .main-section-01-contents{
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        .main-latests-box{
+            grid-column: span 4;
+        }
+        .main-news-box{
+            grid-column: span 2;
+        }
+        .main-tips-box{
+            grid-column: span 2;
+        }
+    }
+
+    .main-section-02-contents{
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        .main-external-box{
+            grid-column: span 4;
+        }
+        .main-bookmark-box{
+            grid-column: span 2;
+            a{
+                text-align: center;
+                font-size: 1.5rem;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        .main-youtube-box{
+            grid-column: span 2;
+        }
+    }
+}
+
+@media (max-width: 1160px) {
+    .main-section-02-contents{
+        .main-bookmark-box{
+            a{
+                font-size: 1.25rem;
+                img{
+                    width: 5rem;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-section-01-contents{
+        grid-template-columns: minmax(0, 1fr);
+        .main-latests-box{
+            grid-column: span 1;
+        }
+        .main-news-box{
+            grid-column: span 1;
+        }
+        .main-tips-box{
+            grid-column: span 1;
+        }
+    }
+    .main-section-02-contents{
+        grid-template-columns: minmax(0, 1fr);
+        .main-external-box{
+            grid-column: span 1;
+        }
+        .main-bookmark-box{
+            grid-column: span 1;
+            a{
+                font-size: 1rem;
+                img{
+                    width: 4.5rem;
+                }
+            }
+        }
+        .main-youtube-box{
+            grid-column: span 1;
+        }
+    }
+}
