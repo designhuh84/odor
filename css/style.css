@@ -4681,6 +4681,9 @@ table.sub01-1 tbody td {
   .table-container table.SCM_007_02_table2 th, .table-container table.SCM_007_02_table2 td {
     word-break: keep-all;
   }
+  .main-latests-box .tab-content .li {
+    height: auto;
+  }
 }
 @media (max-width: 1280px) {
   .main-banner-contents .main-text {
@@ -5527,9 +5530,6 @@ body .layout .contents:has(.join-intro) {
   }
   .main-banner-area .main-banner-links {
     bottom: 2rem;
-  }
-  .main-latests-box .tab-content .li {
-    height: auto;
   }
 }
 @media (min-width: 2160px) {

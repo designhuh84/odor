@@ -5139,6 +5139,13 @@ table.sub01-1{
             }
         }
     }
+    .main-latests-box{
+        .tab-content{
+            .li{
+                height: auto;
+            }
+        }
+    }
 }
 
 @media (max-width: 1280px){
@@ -6160,14 +6167,6 @@ body .layout .contents{
         }
         .main-banner-links{
             bottom: 2rem;
-        }
-    }
-
-    .main-latests-box{
-        .tab-content{
-            .li{
-                height: auto;
-            }
         }
     }
 }
