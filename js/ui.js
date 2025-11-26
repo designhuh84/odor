@@ -835,7 +835,7 @@ function setFontSize(element){
     const deviceWidth = window.innerWidth;
     const defaultScreenSize = 1920;
     const defaultFontSize = 24;
-    const newFontSize = (deviceWidth / defaultScreenSize) * defaultFontSize;
+    const newFontSize = Math.min((deviceWidth / defaultScreenSize) * defaultFontSize, defaultFontSize);
     if(newFontSize >= 14){
         element.style.fontSize = newFontSize + 'px';
     }
