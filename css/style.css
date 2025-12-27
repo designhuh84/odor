@@ -632,6 +632,7 @@ global-header-menu {
   left: 0;
   z-index: 90;
   transition: height 0.2s ease-in-out;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
 }
 global-header-menu .inner {
   display: flex;

@@ -844,7 +844,7 @@ function setFontSize(element){
 document.addEventListener('DOMContentLoaded', () => {
     const targetElements = document.querySelectorAll('global-header > nav > a');
     targetElements.forEach(element => {
-        setFontSize(element);
+        // setFontSize(element);
     });
     
 });
@@ -852,7 +852,7 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('resize', () => {
     const targetElements = document.querySelectorAll('global-header > nav > a');
     targetElements.forEach(element => {
-        setFontSize(element);
+        // setFontSize(element);
     });
 });
 
